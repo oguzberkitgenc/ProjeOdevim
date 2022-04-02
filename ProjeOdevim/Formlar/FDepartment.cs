@@ -84,6 +84,7 @@ namespace ProjeOdevim.Formlar
         }
         private void BClear_Click(object sender, EventArgs e)
         {
+            DepartmentList();
             Clear();
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
