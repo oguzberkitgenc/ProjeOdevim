@@ -56,22 +56,103 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formlar\FAddShopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FAddShopping.Designer.cs">
+      <DependentUpon>FAddShopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FCategory.Designer.cs">
+      <DependentUpon>FCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FCustomer.Designer.cs">
+      <DependentUpon>FCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FDepartment.Designer.cs">
+      <DependentUpon>FDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FDoviz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FDoviz.Designer.cs">
+      <DependentUpon>FDoviz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FEmployee.Designer.cs">
+      <DependentUpon>FEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FProductList.Designer.cs">
+      <DependentUpon>FProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FProductStatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FProductStatis.Designer.cs">
+      <DependentUpon>FProductStatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FShopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FShopping.Designer.cs">
+      <DependentUpon>FShopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FGooglee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FGooglee.Designer.cs">
+      <DependentUpon>FGooglee.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmHomePage.Designer.cs">
       <DependentUpon>FrmHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\FrmList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formlar\FrmList.Designer.cs">
-      <DependentUpon>FrmList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formlar\FrmList.resx">
-      <DependentUpon>FrmList.cs</DependentUpon>
+    <EmbeddedResource Include="Formlar\FAddShopping.resx">
+      <DependentUpon>FAddShopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FCategory.resx">
+      <DependentUpon>FCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FCustomer.resx">
+      <DependentUpon>FCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FDepartment.resx">
+      <DependentUpon>FDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FDoviz.resx">
+      <DependentUpon>FDoviz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FEmployee.resx">
+      <DependentUpon>FEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FProductList.resx">
+      <DependentUpon>FProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FProductStatis.resx">
+      <DependentUpon>FProductStatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FShopping.resx">
+      <DependentUpon>FShopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FGooglee.resx">
+      <DependentUpon>FGooglee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHomePage.resx">
       <DependentUpon>FrmHomePage.cs</DependentUpon>
@@ -85,6 +166,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\keyboard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

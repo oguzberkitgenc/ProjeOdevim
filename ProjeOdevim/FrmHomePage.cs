@@ -21,85 +21,116 @@ namespace ProjeOdevim
         {
 
         }
-
-        Formlar.FrmList Category;
         private void BKategori_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Category == null)
-            {
-                Category = new Formlar.FrmList();
-                Category.Text = "KATEGORİ LİSTESİ";
-                Category.label1.Text = "Category";
-                Category.MdiParent = this;
-                Category.Show();
-            }
-
+            Formlar.FCategory fCategory = new Formlar.FCategory();
+            fCategory.ShowDialog();
         }
-        Formlar.FrmList Product;
+        Formlar.FProductList f1;
         private void BUrun_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Product == null)
+            if (f1 == null || f1.IsDisposed)
             {
-                Product = new Formlar.FrmList();
-                Product.Text = "ÜRÜN LİSTESİ";
-                Product.label1.Text = "Product";
-                Product.MdiParent = this;
-                Product.Show();
+                f1 = new Formlar.FProductList();
+                f1.MdiParent = this;
+                f1.Show();
             }
-
         }
-
-        Formlar.FrmList Department;
         private void BDepartman_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Department == null)
-            {
-                Department = new Formlar.FrmList();
-                Department.Text = "DEPARTMAN LİSTESİ";
-                Department.label1.Text = "Department";
-                Department.MdiParent = this;
-                Department.Show();
-            }
-
+            Formlar.FDepartment fDepartment = new Formlar.FDepartment();
+            fDepartment.ShowDialog();
         }
 
-        Formlar.FrmList Shopping;
+        Formlar.FShopping fShopping;
         private void BMagaza_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Shopping == null)
+            if (fShopping == null || fShopping.IsDisposed)
             {
-                Shopping = new Formlar.FrmList();
-                Shopping.Text = "MAĞAZA LİSTESİ";
-                Shopping.label1.Text = "Shopping";
-                Shopping.MdiParent = this;
-                Shopping.Show();
+                fShopping = new Formlar.FShopping();
+                fShopping.MdiParent = this;
+                fShopping.Show();
             }
         }
-
-        Formlar.FrmList Personel;
+        Formlar.FEmployee f2;
         private void BPersonel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Personel == null)
+            if (f2 == null || f2.IsDisposed)
             {
-                Personel = new Formlar.FrmList();
-                Personel.Text = "PERSONEL LİSTESİ";
-                Personel.label1.Text = "Personel";
-                Personel.MdiParent = this;
-                Personel.Show();
+                f2 = new Formlar.FEmployee();
+                f2.MdiParent = this;
+                f2.Show();
+            }
+        }
+        Formlar.FCustomer fCustomer;
+        private void BMusteri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (fCustomer == null || fCustomer.IsDisposed)
+            {
+                fCustomer = new Formlar.FCustomer();
+                fCustomer.MdiParent = this;
+                fCustomer.Show();
+            }
+        }
+        private void BCalc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+
+        private void BWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("winword");
+        }
+
+        private void BPaint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("mspaint");
+        }
+
+        private void BExcell_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("excel");
+        }
+        Formlar.FDoviz fDoviz;
+        private void BDoviz_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (fDoviz == null || fDoviz.IsDisposed)
+            {
+                fDoviz = new Formlar.FDoviz();
+                fDoviz.MdiParent = this;
+                fDoviz.Show();
             }
         }
 
-        Formlar.FrmList Customer;
-        private void BMusteri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        Formlar.FGooglee FGooglee;
+        private void BYoutube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (Customer == null)
+            if (FGooglee == null || FGooglee.IsDisposed)
             {
-                Customer = new Formlar.FrmList();
-                Customer.Text = "MÜŞTERİ LİSTESİ";
-                Customer.label1.Text = "Customer";
-                Customer.MdiParent = this;
-                Customer.Show();
+                FGooglee = new Formlar.FGooglee();
+                FGooglee.MdiParent = this;
+                FGooglee.Show();
             }
+        }
+        Formlar.FProductStatis fProductStatis;
+        private void BProductSt_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (fProductStatis == null || fProductStatis.IsDisposed)
+            {
+                fProductStatis = new Formlar.FProductStatis();
+                fProductStatis.MdiParent = this;
+                fProductStatis.Show();
+            }
+        }
+
+        private void BBuyutec_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("magnify");
+        }
+
+        private void BKlavye_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("notepad");
         }
     }
 }
