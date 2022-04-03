@@ -50,7 +50,7 @@ namespace ProjeOdevim.Formlar
         }
         void GenderList()
         {
-            SqlCommand command = new SqlCommand("Select * From TBLCINSIYET",connection);
+            SqlCommand command = new SqlCommand("Select * From TBLCINSIYET", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -113,41 +113,68 @@ namespace ProjeOdevim.Formlar
             }
             connection.Close();
         }
-        private void BSave_Click(object sender, EventArgs e)
+        bool durum;
+        void UserReplayNo()
         {
-            if (TId.Text == "" & MskTc.Text != "" & TName.Text != "" & TSurname.Text != "" & CmbGender.Text != "" &
-                MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & CmbDep.Text != "" & CmbMagaza.Text != "" &
-                MskPhone.Text != "" & TPicture.Text != "" & TUser.Text != "" & TPass.Text != "")
+            connection.Open();
+            SqlCommand command = new SqlCommand("SELECT KADI FROM TBLPERSONEL WHERE KADI=@P1", connection);
+            command.Parameters.AddWithValue("@P1", TUser.Text);
+            SqlDataReader dr = command.ExecuteReader();
+            if (dr.Read())
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand("insert into TBLPERSONEL (TC,AD,SOYAD,CINSIYET,DTARIH,IL,ILCE,ADRES,DEPARTMANID,MAGAZAID,TEL,FOTO,KADI,SIFRE) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14)", connection);
-                command.Parameters.AddWithValue("@p1", MskTc.Text);
-                command.Parameters.AddWithValue("@p2", TName.Text);
-                command.Parameters.AddWithValue("@p3", TSurname.Text);
-                command.Parameters.AddWithValue("@p4", CmbGender.SelectedValue);
-                command.Parameters.AddWithValue("@p5", MskBirth.Text);
-                command.Parameters.AddWithValue("@p6", CmbIl.Text);
-                command.Parameters.AddWithValue("@p7", CmbIlce.Text);
-                command.Parameters.AddWithValue("@p8", RchAdres.Text);
-                command.Parameters.AddWithValue("@p9", CmbDep.SelectedValue);
-                command.Parameters.AddWithValue("@p10", CmbMagaza.SelectedValue);
-                command.Parameters.AddWithValue("@p11", MskPhone.Text);
-                command.Parameters.AddWithValue("@p12", TPicture.Text);
-                command.Parameters.AddWithValue("@p13", TUser.Text);
-                command.Parameters.AddWithValue("@p14", TPass.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                EmployeeList();
-                MessageBox.Show(" Yeni Takım Arkadaşımız Sisteme Başarıyla Kayıt Edildi \n\n Hoşgeldin " + TName.Text +
-                    "\n\n Görevin: " + CmbDep.Text +
-                      "\n\n Kullanıcı Adın: " + TUser.Text + "\n\n" + " Şifren: " + TPass.Text
-                     , "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Clear();
+                durum = false;
             }
             else
             {
-                MessageBox.Show(" Eksik Bilgi Girişi. \n Lütfen Eksik Yerleri Doldurunuz ve Tekrar Deneyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                durum = true;
             }
+            connection.Close();
+        }
+        private void BSave_Click(object sender, EventArgs e)
+        {
+            UserReplayNo();
+            if (durum == true)
+            {
+                if (TId.Text == "" & MskTc.Text != "" & TName.Text != "" & TSurname.Text != "" & CmbGender.Text != "" &
+               MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & CmbDep.Text != "" & CmbMagaza.Text != "" &
+               MskPhone.Text != "" & TPicture.Text != "" & TUser.Text != "" & TPass.Text != "")
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("insert into TBLPERSONEL (TC,AD,SOYAD,CINSIYET,DTARIH,IL,ILCE,ADRES,DEPARTMANID,MAGAZAID,TEL,FOTO,KADI,SIFRE,PUAN) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15)", connection);
+                    command.Parameters.AddWithValue("@p1", MskTc.Text);
+                    command.Parameters.AddWithValue("@p2", TName.Text);
+                    command.Parameters.AddWithValue("@p3", TSurname.Text);
+                    command.Parameters.AddWithValue("@p4", CmbGender.SelectedValue);
+                    command.Parameters.AddWithValue("@p5", MskBirth.Text);
+                    command.Parameters.AddWithValue("@p6", CmbIl.Text);
+                    command.Parameters.AddWithValue("@p7", CmbIlce.Text);
+                    command.Parameters.AddWithValue("@p8", RchAdres.Text);
+                    command.Parameters.AddWithValue("@p9", CmbDep.SelectedValue);
+                    command.Parameters.AddWithValue("@p10", CmbMagaza.SelectedValue);
+                    command.Parameters.AddWithValue("@p11", MskPhone.Text);
+                    command.Parameters.AddWithValue("@p12", TPicture.Text);
+                    command.Parameters.AddWithValue("@p13", TUser.Text);
+                    command.Parameters.AddWithValue("@p14", TPass.Text);
+                    command.Parameters.AddWithValue("@p15",0);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    EmployeeList();
+                    MessageBox.Show(" Yeni Takım Arkadaşımız Sisteme Başarıyla Kayıt Edildi \n\n Hoşgeldin " + TName.Text +
+                        "\n\n Görevin: " + CmbDep.Text +
+                          "\n\n Kullanıcı Adın: " + TUser.Text + "\n\n" + " Şifren: " + TPass.Text
+                         , "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show(" Eksik Bilgi Girişi. \n Lütfen Eksik Yerleri Doldurunuz ve Tekrar Deneyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+            }
+            else
+            {
+                MessageBox.Show(" Bu Kullanıcı Veri Tabanında Kayıtlı. \n Lütfen Farklı Kullanıcı Adı İle Tekrar Deneyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+
         }
 
 
