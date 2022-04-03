@@ -23,9 +23,10 @@ namespace ProjeOdevim.Formlar
             Application.Exit();
         }
         string adsoy, depart;
-
+        bool durum;
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            FrmHomePage frm = new FrmHomePage();
             connection.Open();
             SqlCommand command = new SqlCommand("Select KADI,SIFRE,AD,SOYAD,DEPARTMANID FROM TBLPERSONEL WHERE KADI=@P1 AND SIFRE=@P2", connection);
             command.Parameters.AddWithValue("@P1", TUser.Text);
@@ -33,15 +34,19 @@ namespace ProjeOdevim.Formlar
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
-                FrmHomePage frm = new FrmHomePage();
                 frm.LName.Text = reader["AD"].ToString() + " " + reader["SOYAD"].ToString();
                 frm.departman = int.Parse(reader["DEPARTMANID"].ToString());
                 depart = Convert.ToString(reader["DEPARTMANID"].ToString());
                 adsoy = reader["AD"].ToString() + " " + reader["SOYAD"].ToString();
-                
-                connection.Close();
-
-
+                durum = true;
+            }
+            else
+            {
+                MessageBox.Show(" Kullanıcı Adı Veya Şifre Yanlış. \n Lütfen Tekrar Deneyiniz", "HATALI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            connection.Close();
+            if (durum == true)
+            {
                 DateTime dateTime = DateTime.Now;
                 string dt = dateTime.ToString("MM/dd/yyyy HH:mm:ss");
                 connection.Open();
@@ -52,14 +57,10 @@ namespace ProjeOdevim.Formlar
                 komut.Parameters.AddWithValue("@A4", dt.ToString());
                 komut.ExecuteNonQuery();
                 connection.Close();
-
                 frm.ShowDialog();
                 this.Hide();
             }
-            else
-            {
-                MessageBox.Show(" Kullanıcı Adı Veya Şifre Yanlış. \n Lütfen Tekrar Deneyiniz", "HATALI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
+            
         }
     }
 }

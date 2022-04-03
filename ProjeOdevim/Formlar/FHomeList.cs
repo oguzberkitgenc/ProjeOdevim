@@ -72,6 +72,15 @@ namespace ProjeOdevim.Formlar
             NewEmployee();
             NewStajer();
             NewLogin();
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DecliningStok();
+            NewEmployee();
+            NewStajer();
+            NewLogin();
             gridView3.Columns[0].Visible = false;
             gridView5.Columns[0].Visible = false;
         }
