@@ -38,9 +38,6 @@ namespace ProjeOdevim.Formlar
                 chartControl1.Series["Markalar"].Points.AddPoint(Convert.ToString(dr[0]), int.Parse(dr[1].ToString()));
             }
             connection.Close();
-
-            int alis = 0;
-            int satis = 0;
             //// Alış Fiyatı Getir
             connection.Open();
             SqlCommand komut2 = new SqlCommand("Select Sum(ALISFIYAT) From TBLURUN", connection);
@@ -61,9 +58,14 @@ namespace ProjeOdevim.Formlar
             connection.Close();
 
 
-            chartControl2.Series["AlSat"].Points.AddPoint("Zarar", 750);
-            chartControl2.Series["AlSat"].Points.AddPoint("Kar", 1010);
+            chartControl2.Series["AlSat"].Points.AddPoint("Zarar", double.Parse(LSatisFiyat.Text));
+            chartControl2.Series["AlSat"].Points.AddPoint("Kar", double.Parse(LAlisFiyat.Text));
 
+            double alis = double.Parse(LAlisFiyat.Text);
+            double satis = double.Parse(LSatisFiyat.Text);
+            double kar = satis - alis;
+            double hesapla = kar * 100 / satis;
+            LHesap.Text = Convert.ToString("Satış ve Alış Fiyatına Oranlı Net Kar: %" + hesapla);
         }
     }
 }
