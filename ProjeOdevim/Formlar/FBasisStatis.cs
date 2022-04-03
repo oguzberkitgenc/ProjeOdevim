@@ -66,6 +66,9 @@ namespace ProjeOdevim.Formlar
             double kar = satis - alis;
             double hesapla = kar * 100 / satis;
             LHesap.Text = Convert.ToString("Satış ve Alış Fiyatına Oranlı Net Kar: %" + hesapla);
+            LAlisFiyat.Text = Convert.ToString(alis + ",00 ₺");
+            LSatisFiyat.Text = Convert.ToString(satis + ",00 ₺");
+
         }
     }
 }
