@@ -181,5 +181,12 @@ namespace ProjeOdevim
             DateTime dateTime = DateTime.Now;
             LTime.Text = dateTime.ToString("HH:MM:ss");
         }
+
+        private void BKullanici_Click(object sender, EventArgs e)
+        {
+            Formlar.FLogin fLogin = new Formlar.FLogin();
+            fLogin.Show();
+            this.Hide();
+        }
     }
 }

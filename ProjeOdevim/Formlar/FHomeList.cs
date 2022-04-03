@@ -55,11 +55,23 @@ namespace ProjeOdevim.Formlar
             gridControl5.DataSource = dataTable;
             connection.Close();
         }
+        void NewLogin()
+        {
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 10 TBLKULLANICIHAREKET.ID,KULLANICI,ADSOYAD,DEPARTMAN,TARIH" +
+                " FROM TBLKULLANICIHAREKET INNER JOIN TBLDEPARTMAN ON TBLKULLANICIHAREKET.DEPART=TBLDEPARTMAN.ID " +
+                "ORDER BY ID DESC", connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gridControl2.DataSource = dt;
+            connection.Close();
+        }
         private void FHomeList_Load(object sender, EventArgs e)
         {
             DecliningStok();
             NewEmployee();
             NewStajer();
+            NewLogin();
             gridView3.Columns[0].Visible = false;
             gridView5.Columns[0].Visible = false;
         }

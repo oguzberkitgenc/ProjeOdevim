@@ -31,51 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHomePage));
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.A = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BWord = new DevExpress.XtraBars.BarButtonItem();
-            this.BExcell = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BPaint = new DevExpress.XtraBars.BarButtonItem();
-            this.BCalc = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BDoviz = new DevExpress.XtraBars.BarButtonItem();
-            this.BYoutube = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BBuyutec = new DevExpress.XtraBars.BarButtonItem();
-            this.BKlavye = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BProductSt = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BTemelAnaliz = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BUrun = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BPersonel = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BMusteri = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BMagaza = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BKategori = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BDepartman = new DevExpress.XtraBars.BarButtonItem();
-            this.BKategoriEkle = new DevExpress.XtraBars.BarButtonItem();
-            this.BUrunEkle = new DevExpress.XtraBars.BarButtonItem();
-            this.BDepartmanEkle = new DevExpress.XtraBars.BarButtonItem();
-            this.BMagazaEkle = new DevExpress.XtraBars.BarButtonItem();
-            this.BPersonelEkle = new DevExpress.XtraBars.BarButtonItem();
-            this.BMusteriEkle = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BHomeList = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.LName = new System.Windows.Forms.Label();
@@ -83,8 +38,54 @@
             this.LDate = new System.Windows.Forms.Label();
             this.LTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            this.BKullanici = new DevExpress.XtraEditors.SimpleButton();
+            this.A = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.BKategori = new DevExpress.XtraBars.BarButtonItem();
+            this.BUrun = new DevExpress.XtraBars.BarButtonItem();
+            this.BDepartman = new DevExpress.XtraBars.BarButtonItem();
+            this.BPersonel = new DevExpress.XtraBars.BarButtonItem();
+            this.BMagaza = new DevExpress.XtraBars.BarButtonItem();
+            this.BMusteri = new DevExpress.XtraBars.BarButtonItem();
+            this.BKategoriEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.BUrunEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.BDepartmanEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.BMagazaEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.BPersonelEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.BMusteriEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.BCalc = new DevExpress.XtraBars.BarButtonItem();
+            this.BWord = new DevExpress.XtraBars.BarButtonItem();
+            this.BExcell = new DevExpress.XtraBars.BarButtonItem();
+            this.BPaint = new DevExpress.XtraBars.BarButtonItem();
+            this.BDoviz = new DevExpress.XtraBars.BarButtonItem();
+            this.BYoutube = new DevExpress.XtraBars.BarButtonItem();
+            this.BProductSt = new DevExpress.XtraBars.BarButtonItem();
+            this.BBuyutec = new DevExpress.XtraBars.BarButtonItem();
+            this.BKlavye = new DevExpress.XtraBars.BarButtonItem();
+            this.BTemelAnaliz = new DevExpress.XtraBars.BarButtonItem();
+            this.BHomeList = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // barButtonItem7
@@ -110,6 +111,92 @@
             this.barButtonItem7.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
             this.barButtonItem7.ItemInMenuAppearance.Pressed.Options.UseFont = true;
             this.barButtonItem7.Name = "barButtonItem7";
+            // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "MÜŞTERİLER";
+            this.barButtonItem3.Id = 8;
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.barButtonItem3.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem3.ItemAppearance.Disabled.Options.UseFont = true;
+            this.barButtonItem3.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem3.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem3.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem3.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem3.ItemAppearance.Pressed.Options.UseFont = true;
+            this.barButtonItem3.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem3.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.barButtonItem3.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem3.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem3.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem3.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem3.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem3.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // LName
+            // 
+            this.LName.AutoSize = true;
+            this.LName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LName.Location = new System.Drawing.Point(1364, 28);
+            this.LName.Name = "LName";
+            this.LName.Size = new System.Drawing.Size(87, 19);
+            this.LName.TabIndex = 2;
+            this.LName.Text = "AD SOYAD";
+            // 
+            // LDepart
+            // 
+            this.LDepart.AutoSize = true;
+            this.LDepart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LDepart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LDepart.Location = new System.Drawing.Point(1364, 47);
+            this.LDepart.Name = "LDepart";
+            this.LDepart.Size = new System.Drawing.Size(103, 19);
+            this.LDepart.TabIndex = 4;
+            this.LDepart.Text = "DEPARTMAN";
+            // 
+            // LDate
+            // 
+            this.LDate.AutoSize = true;
+            this.LDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LDate.Location = new System.Drawing.Point(1364, 66);
+            this.LDate.Name = "LDate";
+            this.LDate.Size = new System.Drawing.Size(54, 19);
+            this.LDate.TabIndex = 5;
+            this.LDate.Text = "TARİH";
+            // 
+            // LTime
+            // 
+            this.LTime.AutoSize = true;
+            this.LTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LTime.Location = new System.Drawing.Point(1364, 85);
+            this.LTime.Name = "LTime";
+            this.LTime.Size = new System.Drawing.Size(47, 19);
+            this.LTime.TabIndex = 6;
+            this.LTime.Text = "SAAT";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 20;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // BKullanici
+            // 
+            this.BKullanici.Location = new System.Drawing.Point(1368, 107);
+            this.BKullanici.Name = "BKullanici";
+            this.BKullanici.Size = new System.Drawing.Size(174, 23);
+            this.BKullanici.TabIndex = 8;
+            this.BKullanici.Text = "Kullanıcı Değiştir";
+            this.BKullanici.Click += new System.EventHandler(this.BKullanici_Click);
             // 
             // A
             // 
@@ -137,11 +224,344 @@
             this.ribbonPage5.Name = "ribbonPage5";
             this.ribbonPage5.Text = "ARAÇLAR";
             // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.BBuyutec);
+            this.ribbonPageGroup1.ItemLinks.Add(this.BKlavye);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            // 
+            // ribbonPageGroup18
+            // 
+            this.ribbonPageGroup18.ItemLinks.Add(this.BDoviz);
+            this.ribbonPageGroup18.ItemLinks.Add(this.BYoutube);
+            this.ribbonPageGroup18.Name = "ribbonPageGroup18";
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.BPaint);
+            this.ribbonPageGroup6.ItemLinks.Add(this.BCalc);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            // 
             // ribbonPageGroup15
             // 
             this.ribbonPageGroup15.ItemLinks.Add(this.BWord);
             this.ribbonPageGroup15.ItemLinks.Add(this.BExcell);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
+            // 
+            // ribbonPage4
+            // 
+            this.ribbonPage4.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.ribbonPage4.Appearance.Options.UseFont = true;
+            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup3});
+            this.ribbonPage4.Name = "ribbonPage4";
+            this.ribbonPage4.Text = "İSTATİSK";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.BTemelAnaliz);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.BProductSt);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ribbonPage3.Appearance.Options.UseFont = true;
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup9,
+            this.ribbonPageGroup10,
+            this.ribbonPageGroup11,
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup2});
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "KAYDET / LİSTELE";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.BDepartman);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            // 
+            // ribbonPageGroup12
+            // 
+            this.ribbonPageGroup12.ItemLinks.Add(this.BKategori);
+            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            // 
+            // ribbonPageGroup11
+            // 
+            this.ribbonPageGroup11.ItemLinks.Add(this.BMagaza);
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.BMusteri);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.BPersonel);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.BUrun);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.ribbonPage1.Appearance.Options.UseFont = true;
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup8});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ANA SAYFA";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.BHomeList);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 1;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // BKategori
+            // 
+            this.BKategori.ActAsDropDown = true;
+            this.BKategori.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
+            this.BKategori.Caption = "KATEGORI/MARKA";
+            this.BKategori.Id = 2;
+            this.BKategori.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BKategori.ImageOptions.Image")));
+            this.BKategori.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BKategori.ImageOptions.LargeImage")));
+            this.BKategori.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BKategori.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BKategori.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BKategori.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BKategori.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BKategori.ItemAppearance.Normal.Options.UseFont = true;
+            this.BKategori.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BKategori.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BKategori.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BKategori.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BKategori.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BKategori.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BKategori.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BKategori.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BKategori.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BKategori.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BKategori.Name = "BKategori";
+            this.BKategori.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BKategori_ItemClick);
+            // 
+            // BUrun
+            // 
+            this.BUrun.Caption = "ÜRÜNLER";
+            this.BUrun.Id = 3;
+            this.BUrun.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BUrun.ImageOptions.Image")));
+            this.BUrun.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BUrun.ImageOptions.LargeImage")));
+            this.BUrun.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BUrun.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BUrun.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BUrun.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BUrun.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BUrun.ItemAppearance.Normal.Options.UseFont = true;
+            this.BUrun.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BUrun.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BUrun.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BUrun.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BUrun.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BUrun.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BUrun.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BUrun.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BUrun.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BUrun.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BUrun.Name = "BUrun";
+            this.BUrun.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BUrun_ItemClick);
+            // 
+            // BDepartman
+            // 
+            this.BDepartman.Caption = "DEPARTMAN";
+            this.BDepartman.Id = 4;
+            this.BDepartman.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDepartman.ImageOptions.Image")));
+            this.BDepartman.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDepartman.ImageOptions.LargeImage")));
+            this.BDepartman.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BDepartman.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BDepartman.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BDepartman.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BDepartman.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BDepartman.ItemAppearance.Normal.Options.UseFont = true;
+            this.BDepartman.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BDepartman.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BDepartman.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BDepartman.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BDepartman.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BDepartman.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BDepartman.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BDepartman.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BDepartman.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BDepartman.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BDepartman.Name = "BDepartman";
+            this.BDepartman.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BDepartman_ItemClick);
+            // 
+            // BPersonel
+            // 
+            this.BPersonel.Caption = "PERSONELLER";
+            this.BPersonel.Id = 5;
+            this.BPersonel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BPersonel.ImageOptions.Image")));
+            this.BPersonel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BPersonel.ImageOptions.LargeImage")));
+            this.BPersonel.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BPersonel.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BPersonel.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BPersonel.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BPersonel.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BPersonel.ItemAppearance.Normal.Options.UseFont = true;
+            this.BPersonel.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BPersonel.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BPersonel.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BPersonel.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BPersonel.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BPersonel.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BPersonel.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BPersonel.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BPersonel.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BPersonel.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BPersonel.Name = "BPersonel";
+            this.BPersonel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BPersonel_ItemClick);
+            // 
+            // BMagaza
+            // 
+            this.BMagaza.Caption = "MAĞAZALAR";
+            this.BMagaza.Id = 6;
+            this.BMagaza.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMagaza.ImageOptions.Image")));
+            this.BMagaza.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMagaza.ImageOptions.LargeImage")));
+            this.BMagaza.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BMagaza.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BMagaza.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemAppearance.Normal.Options.UseFont = true;
+            this.BMagaza.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BMagaza.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BMagaza.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BMagaza.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BMagaza.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BMagaza.Name = "BMagaza";
+            this.BMagaza.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BMagaza_ItemClick);
+            // 
+            // BMusteri
+            // 
+            this.BMusteri.Caption = "MÜŞTERİLER";
+            this.BMusteri.Id = 8;
+            this.BMusteri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMusteri.ImageOptions.Image")));
+            this.BMusteri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMusteri.ImageOptions.LargeImage")));
+            this.BMusteri.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.BMusteri.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BMusteri.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.BMusteri.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BMusteri.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.BMusteri.ItemAppearance.Normal.Options.UseFont = true;
+            this.BMusteri.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.BMusteri.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BMusteri.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.BMusteri.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BMusteri.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.BMusteri.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BMusteri.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.BMusteri.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BMusteri.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.BMusteri.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BMusteri.Name = "BMusteri";
+            this.BMusteri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BMusteri_ItemClick);
+            // 
+            // BKategoriEkle
+            // 
+            this.BKategoriEkle.Caption = "EKLE";
+            this.BKategoriEkle.Id = 14;
+            this.BKategoriEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BKategoriEkle.ImageOptions.Image")));
+            this.BKategoriEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BKategoriEkle.ImageOptions.LargeImage")));
+            this.BKategoriEkle.Name = "BKategoriEkle";
+            // 
+            // BUrunEkle
+            // 
+            this.BUrunEkle.Caption = "EKLE";
+            this.BUrunEkle.Id = 15;
+            this.BUrunEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BUrunEkle.ImageOptions.Image")));
+            this.BUrunEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BUrunEkle.ImageOptions.LargeImage")));
+            this.BUrunEkle.Name = "BUrunEkle";
+            // 
+            // BDepartmanEkle
+            // 
+            this.BDepartmanEkle.Caption = "EKLE";
+            this.BDepartmanEkle.Id = 16;
+            this.BDepartmanEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDepartmanEkle.ImageOptions.Image")));
+            this.BDepartmanEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDepartmanEkle.ImageOptions.LargeImage")));
+            this.BDepartmanEkle.Name = "BDepartmanEkle";
+            // 
+            // BMagazaEkle
+            // 
+            this.BMagazaEkle.Caption = "EKLE";
+            this.BMagazaEkle.Id = 17;
+            this.BMagazaEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMagazaEkle.ImageOptions.Image")));
+            this.BMagazaEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMagazaEkle.ImageOptions.LargeImage")));
+            this.BMagazaEkle.Name = "BMagazaEkle";
+            // 
+            // BPersonelEkle
+            // 
+            this.BPersonelEkle.Caption = "EKLE";
+            this.BPersonelEkle.Id = 18;
+            this.BPersonelEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BPersonelEkle.ImageOptions.Image")));
+            this.BPersonelEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BPersonelEkle.ImageOptions.LargeImage")));
+            this.BPersonelEkle.Name = "BPersonelEkle";
+            // 
+            // BMusteriEkle
+            // 
+            this.BMusteriEkle.Caption = "EKLE";
+            this.BMusteriEkle.Id = 19;
+            this.BMusteriEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMusteriEkle.ImageOptions.Image")));
+            this.BMusteriEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMusteriEkle.ImageOptions.LargeImage")));
+            this.BMusteriEkle.Name = "BMusteriEkle";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "HESAP MAKİNASI";
+            this.barButtonItem2.Id = 20;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // BCalc
+            // 
+            this.BCalc.Caption = "HESAP MAKİNASI";
+            this.BCalc.Id = 21;
+            this.BCalc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BCalc.ImageOptions.Image")));
+            this.BCalc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BCalc.ImageOptions.LargeImage")));
+            this.BCalc.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BCalc.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BCalc.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BCalc.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BCalc.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BCalc.ItemAppearance.Normal.Options.UseFont = true;
+            this.BCalc.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BCalc.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BCalc.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BCalc.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BCalc.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BCalc.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BCalc.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BCalc.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BCalc.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BCalc.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BCalc.Name = "BCalc";
+            this.BCalc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BCalc_ItemClick);
             // 
             // BWord
             // 
@@ -193,12 +613,6 @@
             this.BExcell.Name = "BExcell";
             this.BExcell.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BExcell_ItemClick);
             // 
-            // ribbonPageGroup6
-            // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.BPaint);
-            this.ribbonPageGroup6.ItemLinks.Add(this.BCalc);
-            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            // 
             // BPaint
             // 
             this.BPaint.Caption = "PAİNT";
@@ -223,37 +637,6 @@
             this.BPaint.ItemInMenuAppearance.Pressed.Options.UseFont = true;
             this.BPaint.Name = "BPaint";
             this.BPaint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BPaint_ItemClick);
-            // 
-            // BCalc
-            // 
-            this.BCalc.Caption = "HESAP MAKİNASI";
-            this.BCalc.Id = 21;
-            this.BCalc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BCalc.ImageOptions.Image")));
-            this.BCalc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BCalc.ImageOptions.LargeImage")));
-            this.BCalc.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BCalc.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BCalc.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BCalc.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BCalc.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BCalc.ItemAppearance.Normal.Options.UseFont = true;
-            this.BCalc.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BCalc.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BCalc.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BCalc.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BCalc.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BCalc.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BCalc.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BCalc.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BCalc.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BCalc.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BCalc.Name = "BCalc";
-            this.BCalc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BCalc_ItemClick);
-            // 
-            // ribbonPageGroup18
-            // 
-            this.ribbonPageGroup18.ItemLinks.Add(this.BDoviz);
-            this.ribbonPageGroup18.ItemLinks.Add(this.BYoutube);
-            this.ribbonPageGroup18.Name = "ribbonPageGroup18";
             // 
             // BDoviz
             // 
@@ -305,11 +688,30 @@
             this.BYoutube.Name = "BYoutube";
             this.BYoutube.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BYoutube_ItemClick);
             // 
-            // ribbonPageGroup1
+            // BProductSt
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.BBuyutec);
-            this.ribbonPageGroup1.ItemLinks.Add(this.BKlavye);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.BProductSt.Caption = "GENEL VERİLER";
+            this.BProductSt.Id = 27;
+            this.BProductSt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BProductSt.ImageOptions.Image")));
+            this.BProductSt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BProductSt.ImageOptions.LargeImage")));
+            this.BProductSt.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BProductSt.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BProductSt.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BProductSt.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BProductSt.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BProductSt.ItemAppearance.Normal.Options.UseFont = true;
+            this.BProductSt.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BProductSt.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BProductSt.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BProductSt.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BProductSt.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BProductSt.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BProductSt.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BProductSt.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BProductSt.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BProductSt.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BProductSt.Name = "BProductSt";
+            this.BProductSt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BProductSt_ItemClick);
             // 
             // BBuyutec
             // 
@@ -360,51 +762,6 @@
             this.BKlavye.Name = "BKlavye";
             this.BKlavye.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BKlavye_ItemClick);
             // 
-            // ribbonPage4
-            // 
-            this.ribbonPage4.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.ribbonPage4.Appearance.Options.UseFont = true;
-            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5,
-            this.ribbonPageGroup3});
-            this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "İSTATİSK";
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.BProductSt);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            // 
-            // BProductSt
-            // 
-            this.BProductSt.Caption = "GENEL VERİLER";
-            this.BProductSt.Id = 27;
-            this.BProductSt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BProductSt.ImageOptions.Image")));
-            this.BProductSt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BProductSt.ImageOptions.LargeImage")));
-            this.BProductSt.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BProductSt.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BProductSt.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BProductSt.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BProductSt.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BProductSt.ItemAppearance.Normal.Options.UseFont = true;
-            this.BProductSt.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BProductSt.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BProductSt.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BProductSt.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BProductSt.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BProductSt.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BProductSt.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BProductSt.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BProductSt.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BProductSt.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BProductSt.Name = "BProductSt";
-            this.BProductSt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BProductSt_ItemClick);
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.BTemelAnaliz);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            // 
             // BTemelAnaliz
             // 
             this.BTemelAnaliz.Caption = "TEMEL İSTATİSKLER";
@@ -430,264 +787,6 @@
             this.BTemelAnaliz.Name = "BTemelAnaliz";
             this.BTemelAnaliz.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BTemelAnaliz_ItemClick);
             // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ribbonPage3.Appearance.Options.UseFont = true;
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4,
-            this.ribbonPageGroup9,
-            this.ribbonPageGroup10,
-            this.ribbonPageGroup11,
-            this.ribbonPageGroup12,
-            this.ribbonPageGroup2});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "KAYDET / LİSTELE";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.BUrun);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            // 
-            // BUrun
-            // 
-            this.BUrun.Caption = "ÜRÜNLER";
-            this.BUrun.Id = 3;
-            this.BUrun.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BUrun.ImageOptions.Image")));
-            this.BUrun.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BUrun.ImageOptions.LargeImage")));
-            this.BUrun.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BUrun.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BUrun.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BUrun.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BUrun.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BUrun.ItemAppearance.Normal.Options.UseFont = true;
-            this.BUrun.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BUrun.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BUrun.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BUrun.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BUrun.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BUrun.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BUrun.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BUrun.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BUrun.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BUrun.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BUrun.Name = "BUrun";
-            this.BUrun.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BUrun_ItemClick);
-            // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.BPersonel);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            // 
-            // BPersonel
-            // 
-            this.BPersonel.Caption = "PERSONELLER";
-            this.BPersonel.Id = 5;
-            this.BPersonel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BPersonel.ImageOptions.Image")));
-            this.BPersonel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BPersonel.ImageOptions.LargeImage")));
-            this.BPersonel.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BPersonel.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BPersonel.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BPersonel.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BPersonel.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BPersonel.ItemAppearance.Normal.Options.UseFont = true;
-            this.BPersonel.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BPersonel.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BPersonel.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BPersonel.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BPersonel.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BPersonel.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BPersonel.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BPersonel.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BPersonel.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BPersonel.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BPersonel.Name = "BPersonel";
-            this.BPersonel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BPersonel_ItemClick);
-            // 
-            // ribbonPageGroup10
-            // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.BMusteri);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            // 
-            // BMusteri
-            // 
-            this.BMusteri.Caption = "MÜŞTERİLER";
-            this.BMusteri.Id = 8;
-            this.BMusteri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMusteri.ImageOptions.Image")));
-            this.BMusteri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMusteri.ImageOptions.LargeImage")));
-            this.BMusteri.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.BMusteri.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BMusteri.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.BMusteri.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BMusteri.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.BMusteri.ItemAppearance.Normal.Options.UseFont = true;
-            this.BMusteri.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.BMusteri.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BMusteri.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.BMusteri.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BMusteri.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.BMusteri.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BMusteri.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.BMusteri.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BMusteri.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.BMusteri.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BMusteri.Name = "BMusteri";
-            this.BMusteri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BMusteri_ItemClick);
-            // 
-            // ribbonPageGroup11
-            // 
-            this.ribbonPageGroup11.ItemLinks.Add(this.BMagaza);
-            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
-            // 
-            // BMagaza
-            // 
-            this.BMagaza.Caption = "MAĞAZALAR";
-            this.BMagaza.Id = 6;
-            this.BMagaza.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMagaza.ImageOptions.Image")));
-            this.BMagaza.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMagaza.ImageOptions.LargeImage")));
-            this.BMagaza.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BMagaza.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BMagaza.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemAppearance.Normal.Options.UseFont = true;
-            this.BMagaza.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BMagaza.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BMagaza.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BMagaza.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BMagaza.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BMagaza.Name = "BMagaza";
-            this.BMagaza.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BMagaza_ItemClick);
-            // 
-            // ribbonPageGroup12
-            // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.BKategori);
-            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
-            // 
-            // BKategori
-            // 
-            this.BKategori.ActAsDropDown = true;
-            this.BKategori.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.BKategori.Caption = "KATEGORI/MARKA";
-            this.BKategori.Id = 2;
-            this.BKategori.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BKategori.ImageOptions.Image")));
-            this.BKategori.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BKategori.ImageOptions.LargeImage")));
-            this.BKategori.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BKategori.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BKategori.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BKategori.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BKategori.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BKategori.ItemAppearance.Normal.Options.UseFont = true;
-            this.BKategori.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BKategori.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BKategori.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BKategori.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BKategori.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BKategori.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BKategori.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BKategori.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BKategori.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BKategori.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BKategori.Name = "BKategori";
-            this.BKategori.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BKategori_ItemClick);
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.BDepartman);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            // 
-            // BDepartman
-            // 
-            this.BDepartman.Caption = "DEPARTMAN";
-            this.BDepartman.Id = 4;
-            this.BDepartman.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDepartman.ImageOptions.Image")));
-            this.BDepartman.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDepartman.ImageOptions.LargeImage")));
-            this.BDepartman.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BDepartman.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BDepartman.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BDepartman.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BDepartman.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BDepartman.ItemAppearance.Normal.Options.UseFont = true;
-            this.BDepartman.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BDepartman.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BDepartman.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BDepartman.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BDepartman.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BDepartman.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BDepartman.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BDepartman.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BDepartman.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BDepartman.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BDepartman.Name = "BDepartman";
-            this.BDepartman.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BDepartman_ItemClick);
-            // 
-            // BKategoriEkle
-            // 
-            this.BKategoriEkle.Caption = "EKLE";
-            this.BKategoriEkle.Id = 14;
-            this.BKategoriEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BKategoriEkle.ImageOptions.Image")));
-            this.BKategoriEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BKategoriEkle.ImageOptions.LargeImage")));
-            this.BKategoriEkle.Name = "BKategoriEkle";
-            // 
-            // BUrunEkle
-            // 
-            this.BUrunEkle.Caption = "EKLE";
-            this.BUrunEkle.Id = 15;
-            this.BUrunEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BUrunEkle.ImageOptions.Image")));
-            this.BUrunEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BUrunEkle.ImageOptions.LargeImage")));
-            this.BUrunEkle.Name = "BUrunEkle";
-            // 
-            // BDepartmanEkle
-            // 
-            this.BDepartmanEkle.Caption = "EKLE";
-            this.BDepartmanEkle.Id = 16;
-            this.BDepartmanEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDepartmanEkle.ImageOptions.Image")));
-            this.BDepartmanEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BDepartmanEkle.ImageOptions.LargeImage")));
-            this.BDepartmanEkle.Name = "BDepartmanEkle";
-            // 
-            // BMagazaEkle
-            // 
-            this.BMagazaEkle.Caption = "EKLE";
-            this.BMagazaEkle.Id = 17;
-            this.BMagazaEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMagazaEkle.ImageOptions.Image")));
-            this.BMagazaEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMagazaEkle.ImageOptions.LargeImage")));
-            this.BMagazaEkle.Name = "BMagazaEkle";
-            // 
-            // BPersonelEkle
-            // 
-            this.BPersonelEkle.Caption = "EKLE";
-            this.BPersonelEkle.Id = 18;
-            this.BPersonelEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BPersonelEkle.ImageOptions.Image")));
-            this.BPersonelEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BPersonelEkle.ImageOptions.LargeImage")));
-            this.BPersonelEkle.Name = "BPersonelEkle";
-            // 
-            // BMusteriEkle
-            // 
-            this.BMusteriEkle.Caption = "EKLE";
-            this.BMusteriEkle.Id = 19;
-            this.BMusteriEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMusteriEkle.ImageOptions.Image")));
-            this.BMusteriEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMusteriEkle.ImageOptions.LargeImage")));
-            this.BMusteriEkle.Name = "BMusteriEkle";
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.ribbonPage1.Appearance.Options.UseFont = true;
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup8});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ANA SAYFA";
-            // 
-            // ribbonPageGroup8
-            // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.BHomeList);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            // 
             // BHomeList
             // 
             this.BHomeList.Caption = "ANA SAYFA";
@@ -712,12 +811,6 @@
             this.BHomeList.ItemInMenuAppearance.Pressed.Options.UseFont = true;
             this.BHomeList.Name = "BHomeList";
             this.BHomeList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BHomeList_ItemClick);
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // ribbonControl1
             // 
@@ -763,95 +856,13 @@
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
             this.ribbonControl1.Size = new System.Drawing.Size(1554, 147);
             // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "HESAP MAKİNASI";
-            this.barButtonItem2.Id = 20;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "MÜŞTERİLER";
-            this.barButtonItem3.Id = 8;
-            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.barButtonItem3.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.barButtonItem3.ItemAppearance.Disabled.Options.UseFont = true;
-            this.barButtonItem3.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.barButtonItem3.ItemAppearance.Hovered.Options.UseFont = true;
-            this.barButtonItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.barButtonItem3.ItemAppearance.Normal.Options.UseFont = true;
-            this.barButtonItem3.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.barButtonItem3.ItemAppearance.Pressed.Options.UseFont = true;
-            this.barButtonItem3.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.barButtonItem3.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.barButtonItem3.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.barButtonItem3.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.barButtonItem3.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.barButtonItem3.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.barButtonItem3.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.barButtonItem3.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // LName
-            // 
-            this.LName.AutoSize = true;
-            this.LName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.LName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LName.Location = new System.Drawing.Point(1400, 51);
-            this.LName.Name = "LName";
-            this.LName.Size = new System.Drawing.Size(87, 19);
-            this.LName.TabIndex = 2;
-            this.LName.Text = "AD SOYAD";
-            // 
-            // LDepart
-            // 
-            this.LDepart.AutoSize = true;
-            this.LDepart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.LDepart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LDepart.Location = new System.Drawing.Point(1400, 70);
-            this.LDepart.Name = "LDepart";
-            this.LDepart.Size = new System.Drawing.Size(103, 19);
-            this.LDepart.TabIndex = 4;
-            this.LDepart.Text = "DEPARTMAN";
-            // 
-            // LDate
-            // 
-            this.LDate.AutoSize = true;
-            this.LDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.LDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LDate.Location = new System.Drawing.Point(1400, 89);
-            this.LDate.Name = "LDate";
-            this.LDate.Size = new System.Drawing.Size(54, 19);
-            this.LDate.TabIndex = 5;
-            this.LDate.Text = "TARİH";
-            // 
-            // LTime
-            // 
-            this.LTime.AutoSize = true;
-            this.LTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.LTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LTime.Location = new System.Drawing.Point(1400, 108);
-            this.LTime.Name = "LTime";
-            this.LTime.Size = new System.Drawing.Size(47, 19);
-            this.LTime.TabIndex = 6;
-            this.LTime.Text = "SAAT";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 20;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // FrmHomePage
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1554, 768);
+            this.Controls.Add(this.BKullanici);
             this.Controls.Add(this.LTime);
             this.Controls.Add(this.LDate);
             this.Controls.Add(this.LDepart);
@@ -868,8 +879,8 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmAnaSayfa_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -877,58 +888,59 @@
 
         #endregion
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.Ribbon.RibbonPage A;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.BarButtonItem BKategori;
-        private DevExpress.XtraBars.BarButtonItem BKategoriEkle;
-        private DevExpress.XtraBars.BarButtonItem BUrun;
-        private DevExpress.XtraBars.BarButtonItem BUrunEkle;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
-        private DevExpress.XtraBars.BarButtonItem BDepartman;
-        private DevExpress.XtraBars.BarButtonItem BDepartmanEkle;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
-        private DevExpress.XtraBars.BarButtonItem BMagaza;
-        private DevExpress.XtraBars.BarButtonItem BMagazaEkle;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
-        private DevExpress.XtraBars.BarButtonItem BPersonel;
-        private DevExpress.XtraBars.BarButtonItem BPersonelEkle;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
-        private DevExpress.XtraBars.BarButtonItem BMusteri;
-        private DevExpress.XtraBars.BarButtonItem BMusteriEkle;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem BCalc;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem BWord;
-        private DevExpress.XtraBars.BarButtonItem BExcell;
-        private DevExpress.XtraBars.BarButtonItem BPaint;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
-        private DevExpress.XtraBars.BarButtonItem BDoviz;
-        private DevExpress.XtraBars.BarButtonItem BYoutube;
-        private DevExpress.XtraBars.BarButtonItem BProductSt;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.BarButtonItem BBuyutec;
-        private DevExpress.XtraBars.BarButtonItem BKlavye;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private DevExpress.XtraBars.BarButtonItem BTemelAnaliz;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
-        private DevExpress.XtraBars.BarButtonItem BHomeList;
         private System.Windows.Forms.Label LDate;
         private System.Windows.Forms.Label LTime;
         private System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Label LName;
         public System.Windows.Forms.Label LDepart;
+        private DevExpress.XtraEditors.SimpleButton BKullanici;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem BKategori;
+        private DevExpress.XtraBars.BarButtonItem BUrun;
+        private DevExpress.XtraBars.BarButtonItem BDepartman;
+        private DevExpress.XtraBars.BarButtonItem BPersonel;
+        private DevExpress.XtraBars.BarButtonItem BMagaza;
+        private DevExpress.XtraBars.BarButtonItem BMusteri;
+        private DevExpress.XtraBars.BarButtonItem BKategoriEkle;
+        private DevExpress.XtraBars.BarButtonItem BUrunEkle;
+        private DevExpress.XtraBars.BarButtonItem BDepartmanEkle;
+        private DevExpress.XtraBars.BarButtonItem BMagazaEkle;
+        private DevExpress.XtraBars.BarButtonItem BPersonelEkle;
+        private DevExpress.XtraBars.BarButtonItem BMusteriEkle;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem BCalc;
+        private DevExpress.XtraBars.BarButtonItem BWord;
+        private DevExpress.XtraBars.BarButtonItem BExcell;
+        private DevExpress.XtraBars.BarButtonItem BPaint;
+        private DevExpress.XtraBars.BarButtonItem BDoviz;
+        private DevExpress.XtraBars.BarButtonItem BYoutube;
+        private DevExpress.XtraBars.BarButtonItem BProductSt;
+        private DevExpress.XtraBars.BarButtonItem BBuyutec;
+        private DevExpress.XtraBars.BarButtonItem BKlavye;
+        private DevExpress.XtraBars.BarButtonItem BTemelAnaliz;
+        private DevExpress.XtraBars.BarButtonItem BHomeList;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage A;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
     }
 }
 
