@@ -31,18 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FBasisStatis));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.StackedBarSeriesView stackedBarSeriesView1 = new DevExpress.XtraCharts.StackedBarSeriesView();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.LKadınPersonel = new System.Windows.Forms.Label();
+            this.LSatisFiyat = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.LErkekPersonel = new System.Windows.Forms.Label();
+            this.LAlisFiyat = new System.Windows.Forms.Label();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel13.SuspendLayout();
@@ -52,7 +54,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -228,8 +232,8 @@
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
             this.panel13.Controls.Add(this.pictureBox6);
             this.panel13.Controls.Add(this.label33);
-            this.panel13.Controls.Add(this.LKadınPersonel);
-            this.panel13.Location = new System.Drawing.Point(1218, 8);
+            this.panel13.Controls.Add(this.LSatisFiyat);
+            this.panel13.Location = new System.Drawing.Point(799, 462);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(300, 150);
             this.panel13.TabIndex = 113;
@@ -237,7 +241,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(44, 88);
+            this.pictureBox6.Location = new System.Drawing.Point(15, 94);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(50, 50);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -255,24 +259,24 @@
             this.label33.TabIndex = 14;
             this.label33.Text = "Ürünlerin Satış Fiyatı";
             // 
-            // LKadınPersonel
+            // LSatisFiyat
             // 
-            this.LKadınPersonel.AutoSize = true;
-            this.LKadınPersonel.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LKadınPersonel.ForeColor = System.Drawing.Color.White;
-            this.LKadınPersonel.Location = new System.Drawing.Point(120, 60);
-            this.LKadınPersonel.Name = "LKadınPersonel";
-            this.LKadınPersonel.Size = new System.Drawing.Size(132, 39);
-            this.LKadınPersonel.TabIndex = 13;
-            this.LKadınPersonel.Text = "1100101";
+            this.LSatisFiyat.AutoSize = true;
+            this.LSatisFiyat.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LSatisFiyat.ForeColor = System.Drawing.Color.White;
+            this.LSatisFiyat.Location = new System.Drawing.Point(37, 52);
+            this.LSatisFiyat.Name = "LSatisFiyat";
+            this.LSatisFiyat.Size = new System.Drawing.Size(249, 39);
+            this.LSatisFiyat.TabIndex = 13;
+            this.LSatisFiyat.Text = "999999999,99";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.label31);
-            this.panel9.Controls.Add(this.LErkekPersonel);
-            this.panel9.Location = new System.Drawing.Point(1218, 164);
+            this.panel9.Controls.Add(this.LAlisFiyat);
+            this.panel9.Location = new System.Drawing.Point(799, 306);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(300, 150);
             this.panel9.TabIndex = 112;
@@ -280,7 +284,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(44, 88);
+            this.pictureBox8.Location = new System.Drawing.Point(15, 97);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 50);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -294,46 +298,54 @@
             this.label31.ForeColor = System.Drawing.Color.White;
             this.label31.Location = new System.Drawing.Point(10, 15);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(191, 27);
+            this.label31.Size = new System.Drawing.Size(245, 27);
             this.label31.TabIndex = 14;
-            this.label31.Text = "Ürünlerin Alış Fiyatı";
+            this.label31.Text = "Mevcut Ürünlerin Maliyeti";
             // 
-            // LErkekPersonel
+            // LAlisFiyat
             // 
-            this.LErkekPersonel.AutoSize = true;
-            this.LErkekPersonel.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LErkekPersonel.ForeColor = System.Drawing.Color.White;
-            this.LErkekPersonel.Location = new System.Drawing.Point(120, 60);
-            this.LErkekPersonel.Name = "LErkekPersonel";
-            this.LErkekPersonel.Size = new System.Drawing.Size(132, 39);
-            this.LErkekPersonel.TabIndex = 13;
-            this.LErkekPersonel.Text = "1100101";
+            this.LAlisFiyat.AutoSize = true;
+            this.LAlisFiyat.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LAlisFiyat.ForeColor = System.Drawing.Color.White;
+            this.LAlisFiyat.Location = new System.Drawing.Point(37, 55);
+            this.LAlisFiyat.Name = "LAlisFiyat";
+            this.LAlisFiyat.Size = new System.Drawing.Size(249, 39);
+            this.LAlisFiyat.TabIndex = 13;
+            this.LAlisFiyat.Text = "999999999,99";
             // 
             // chartControl1
             // 
-            xyDiagram1.AxisX.Title.Text = "Markalar";
-            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Title.Text = "Stok";
-            xyDiagram1.AxisY.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram1;
-            this.chartControl1.Location = new System.Drawing.Point(397, -2);
+            this.chartControl1.Location = new System.Drawing.Point(398, 0);
             this.chartControl1.Name = "chartControl1";
-            series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Numerical;
-            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.Name = "Markar";
-            series1.View = stackedBarSeriesView1;
+            series1.Name = "Markalar";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl1.Size = new System.Drawing.Size(712, 608);
+            this.chartControl1.Size = new System.Drawing.Size(1120, 300);
             this.chartControl1.TabIndex = 114;
+            // 
+            // chartControl2
+            // 
+            this.chartControl2.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl2.CrosshairEnabled = DevExpress.Utils.DefaultBoolean.Default;
+            this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl2.Location = new System.Drawing.Point(1105, 304);
+            this.chartControl2.Name = "chartControl2";
+            series2.Name = "AlSat";
+            series2.View = pieSeriesView1;
+            this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series2};
+            this.chartControl2.Size = new System.Drawing.Size(425, 308);
+            this.chartControl2.TabIndex = 115;
             // 
             // FBasisStatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1530, 618);
+            this.Controls.Add(this.chartControl2);
             this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel9);
@@ -350,9 +362,11 @@
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(stackedBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -364,11 +378,12 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label LKadınPersonel;
+        private System.Windows.Forms.Label LSatisFiyat;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label LErkekPersonel;
+        private System.Windows.Forms.Label LAlisFiyat;
         private DevExpress.XtraCharts.ChartControl chartControl1;
+        private DevExpress.XtraCharts.ChartControl chartControl2;
     }
 }
