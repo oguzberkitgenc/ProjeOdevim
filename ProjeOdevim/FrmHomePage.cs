@@ -144,5 +144,15 @@ namespace ProjeOdevim
                 fBasis.Show();
             }
         }
+        Formlar.FHomeList homeList;
+        private void BHomeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (homeList==null || homeList.IsDisposed)
+            {
+                homeList = new Formlar.FHomeList();
+                homeList.MdiParent = this;
+                homeList.Show();
+            }
+        }
     }
 }

@@ -47,13 +47,11 @@
             this.LAlisFiyat = new System.Windows.Forms.Label();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LHesap = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -67,8 +65,6 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
@@ -347,22 +343,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(59)))), ((int)(((byte)(72)))));
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(398, 306);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(395, 150);
             this.panel1.TabIndex = 116;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(59)))), ((int)(((byte)(72)))));
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(399, 463);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(394, 143);
-            this.panel2.TabIndex = 117;
             // 
             // label1
             // 
@@ -371,10 +356,19 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(369, 57);
+            this.label1.Size = new System.Drawing.Size(337, 57);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sol taraftaki tabloda stoktaki mevcut ürünlerimize ait marka \r\nsıralaması  bulunm" +
-    "aktadır.\r\nYukarıda ise grafiği mevcuttur.\r\n";
+            this.label1.Text = "Sol taraftaki tabloda stoktaki mevcut ürünlerimiz kayıtlı\r\nolduğu markaların topl" +
+    "amı gözükmektedir.\r\nYukarıda ise grafiği mevcuttur.";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(59)))), ((int)(((byte)(72)))));
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(399, 463);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(394, 143);
+            this.panel2.TabIndex = 117;
             // 
             // label2
             // 
@@ -383,10 +377,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(370, 57);
+            this.label2.Size = new System.Drawing.Size(370, 76);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Sağ tarafta stoktaki mevcut ürünlerimizin \r\n\"Toplam Alış Fiyatı\" ve \"Toplam Satış" +
-    " Fiyatı\"  bulunmaktadır.\r\nSağında ise grafiği mevcuttur.\r\n";
+            this.label2.Text = resources.GetString("label2.Text");
             // 
             // panel3
             // 
@@ -407,26 +400,6 @@
             this.LHesap.Size = new System.Drawing.Size(76, 19);
             this.LHesap.TabIndex = 0;
             this.LHesap.Text = "Hesaplama";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(273, 74);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(272, 75);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // chartControl1
             // 
@@ -482,8 +455,6 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
@@ -511,8 +482,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label LHesap;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private DevExpress.XtraCharts.ChartControl chartControl1;
     }
 }

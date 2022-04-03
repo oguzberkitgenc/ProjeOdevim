@@ -258,9 +258,6 @@
             this.CmbGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbGender.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.CmbGender.FormattingEnabled = true;
-            this.CmbGender.Items.AddRange(new object[] {
-            "Kadın",
-            "Erkek"});
             this.CmbGender.Location = new System.Drawing.Point(1230, 106);
             this.CmbGender.Name = "CmbGender";
             this.CmbGender.Size = new System.Drawing.Size(281, 27);

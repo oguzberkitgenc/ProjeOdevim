@@ -48,10 +48,24 @@ namespace ProjeOdevim.Formlar
             CmbIl.DisplayMember = "SEHIR";
             CmbIl.DataSource = dt;
         }
+        void GenderList()
+        {
+            SqlCommand command = new SqlCommand("Select * From TBLCINSIYET",connection);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CmbGender.ValueMember = "ID";
+            CmbGender.DisplayMember = "CINSIYETAD";
+            CmbGender.DataSource = dt;
+        }
         void EmployeeList()
         {
             DataTable dataTable = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Execute Employee", connection);
+            SqlDataAdapter da = new SqlDataAdapter("Select TBLPERSONEL.ID,TC AS 'TC NO',DEPARTMAN,MAGAZA as 'MAĞAZA' ,AD AS " +
+                "'AD',SOYAD AS 'SOYAD',CINSIYETAD AS 'CİNSİYET' ,TEL AS 'TELEFON',DTARIH AS 'DOĞUM TARİHİ',TBLPERSONEL.IL AS " +
+                "'İL',TBLPERSONEL.ILCE AS 'İLÇE', TBLPERSONEL.ADRES,FOTO FROM TBLPERSONEL INNER JOIN TBLDEPARTMAN ON " +
+                "TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID " +
+                "INNER JOIN TBLCINSIYET ON TBLPERSONEL.CINSIYET=TBLCINSIYET.ID order by DEPARTMANID asc", connection);
             da.Fill(dataTable);
             gridControl1.DataSource = dataTable;
         }
@@ -80,6 +94,7 @@ namespace ProjeOdevim.Formlar
             DepartmanList();
             MagazaList();
             IlList();
+            GenderList();
             Clear();
             gridView1.Columns[0].Visible = false;
             gridView1.Columns[12].Visible = false;
@@ -109,7 +124,7 @@ namespace ProjeOdevim.Formlar
                 command.Parameters.AddWithValue("@p1", MskTc.Text);
                 command.Parameters.AddWithValue("@p2", TName.Text);
                 command.Parameters.AddWithValue("@p3", TSurname.Text);
-                command.Parameters.AddWithValue("@p4", CmbGender.Text);
+                command.Parameters.AddWithValue("@p4", CmbGender.SelectedValue);
                 command.Parameters.AddWithValue("@p5", MskBirth.Text);
                 command.Parameters.AddWithValue("@p6", CmbIl.Text);
                 command.Parameters.AddWithValue("@p7", CmbIlce.Text);
