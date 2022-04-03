@@ -49,6 +49,8 @@
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BProductSt = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.BTemelAnaliz = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BUrun = new DevExpress.XtraBars.BarButtonItem();
@@ -356,7 +358,8 @@
             this.ribbonPage4.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F);
             this.ribbonPage4.Appearance.Options.UseFont = true;
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup3});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "İSTATİSK";
             // 
@@ -367,7 +370,7 @@
             // 
             // BProductSt
             // 
-            this.BProductSt.Caption = "GENEL İSTATİSKLER";
+            this.BProductSt.Caption = "GENEL VERİLER";
             this.BProductSt.Id = 27;
             this.BProductSt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BProductSt.ImageOptions.Image")));
             this.BProductSt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BProductSt.ImageOptions.LargeImage")));
@@ -389,6 +392,36 @@
             this.BProductSt.ItemInMenuAppearance.Pressed.Options.UseFont = true;
             this.BProductSt.Name = "BProductSt";
             this.BProductSt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BProductSt_ItemClick);
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.BTemelAnaliz);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            // 
+            // BTemelAnaliz
+            // 
+            this.BTemelAnaliz.Caption = "TEMEL İSTATİSKLER";
+            this.BTemelAnaliz.Id = 30;
+            this.BTemelAnaliz.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BTemelAnaliz.ImageOptions.Image")));
+            this.BTemelAnaliz.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BTemelAnaliz.ImageOptions.LargeImage")));
+            this.BTemelAnaliz.ItemAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BTemelAnaliz.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BTemelAnaliz.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BTemelAnaliz.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BTemelAnaliz.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BTemelAnaliz.ItemAppearance.Normal.Options.UseFont = true;
+            this.BTemelAnaliz.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BTemelAnaliz.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BTemelAnaliz.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BTemelAnaliz.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BTemelAnaliz.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BTemelAnaliz.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BTemelAnaliz.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BTemelAnaliz.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BTemelAnaliz.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BTemelAnaliz.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BTemelAnaliz.Name = "BTemelAnaliz";
+            this.BTemelAnaliz.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BTemelAnaliz_ItemClick);
             // 
             // ribbonPage3
             // 
@@ -675,10 +708,11 @@
             this.BYoutube,
             this.BProductSt,
             this.BBuyutec,
-            this.BKlavye});
+            this.BKlavye,
+            this.BTemelAnaliz});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 30;
+            this.ribbonControl1.MaxItemId = 31;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -793,6 +827,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem BBuyutec;
         private DevExpress.XtraBars.BarButtonItem BKlavye;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem BTemelAnaliz;
     }
 }
 

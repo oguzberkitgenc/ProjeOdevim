@@ -132,5 +132,17 @@ namespace ProjeOdevim
         {
             System.Diagnostics.Process.Start("notepad");
         }
+
+        Formlar.FBasisStatis fBasis;
+        private void BTemelAnaliz_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            if (fBasis==null || fBasis.IsDisposed)
+            {
+                fBasis = new Formlar.FBasisStatis();
+                fBasis.MdiParent = this;
+                fBasis.Show();
+            }
+        }
     }
 }
