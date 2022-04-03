@@ -66,8 +66,6 @@
             this.MskBirth = new System.Windows.Forms.MaskedTextBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.LblTime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TPicture.Properties)).BeginInit();
@@ -589,34 +587,12 @@
             this.gridView1.OptionsView.ShowIndicator = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
-            // LblTime
-            // 
-            this.LblTime.AutoSize = true;
-            this.LblTime.ForeColor = System.Drawing.Color.White;
-            this.LblTime.Location = new System.Drawing.Point(1392, 590);
-            this.LblTime.Name = "LblTime";
-            this.LblTime.Size = new System.Drawing.Size(96, 19);
-            this.LblTime.TabIndex = 75;
-            this.LblTime.Text = "TARİH SAAT";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1249, 589);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 19);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "KULLANICI ADI";
-            // 
             // FEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
-            this.Controls.Add(this.LblTime);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.MskBirth);
             this.Controls.Add(this.pictureBox1);
@@ -708,7 +684,5 @@
         private System.Windows.Forms.MaskedTextBox MskBirth;
         private DevExpress.XtraGrid.GridControl gridControl1;
         protected DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.Label LblTime;
-        private System.Windows.Forms.Label label1;
     }
 }

@@ -51,8 +51,6 @@
             this.BUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.TId = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.LblTime = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TProductName.Properties)).BeginInit();
@@ -409,34 +407,12 @@
             this.labelControl1.Text = "ID :";
             this.labelControl1.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1201, 590);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 19);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "KULLANICI ADI";
-            // 
-            // LblTime
-            // 
-            this.LblTime.AutoSize = true;
-            this.LblTime.ForeColor = System.Drawing.Color.White;
-            this.LblTime.Location = new System.Drawing.Point(1344, 591);
-            this.LblTime.Name = "LblTime";
-            this.LblTime.Size = new System.Drawing.Size(96, 19);
-            this.LblTime.TabIndex = 41;
-            this.LblTime.Text = "TARİH SAAT";
-            // 
             // FProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
-            this.Controls.Add(this.LblTime);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.BUpdate);
             this.Controls.Add(this.TId);
             this.Controls.Add(this.labelControl1);
@@ -496,8 +472,6 @@
         private DevExpress.XtraEditors.SimpleButton BUpdate;
         private System.Windows.Forms.TextBox TId;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label LblTime;
         protected DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

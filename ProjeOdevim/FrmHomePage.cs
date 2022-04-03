@@ -19,7 +19,10 @@ namespace ProjeOdevim
 
         private void FrmAnaSayfa_Load(object sender, EventArgs e)
         {
-
+            DateTime date = DateTime.Now;
+            LDate.Text = date.ToString("MM/dd/yyyy");
+            LTime.Text = date.ToString("HH:MM:ss");
+            timer1.Start();
         }
         private void BKategori_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -137,7 +140,7 @@ namespace ProjeOdevim
         private void BTemelAnaliz_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            if (fBasis==null || fBasis.IsDisposed)
+            if (fBasis == null || fBasis.IsDisposed)
             {
                 fBasis = new Formlar.FBasisStatis();
                 fBasis.MdiParent = this;
@@ -147,12 +150,18 @@ namespace ProjeOdevim
         Formlar.FHomeList homeList;
         private void BHomeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (homeList==null || homeList.IsDisposed)
+            if (homeList == null || homeList.IsDisposed)
             {
                 homeList = new Formlar.FHomeList();
                 homeList.MdiParent = this;
                 homeList.Show();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.Now;
+            LTime.Text = dateTime.ToString("HH:MM:ss");
         }
     }
 }
