@@ -804,42 +804,42 @@
             this.LName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LName.Location = new System.Drawing.Point(1400, 51);
             this.LName.Name = "LName";
-            this.LName.Size = new System.Drawing.Size(118, 19);
+            this.LName.Size = new System.Drawing.Size(87, 19);
             this.LName.TabIndex = 2;
-            this.LName.Text = "Oğuz Berkit Genç";
+            this.LName.Text = "AD SOYAD";
             // 
             // LDepart
             // 
             this.LDepart.AutoSize = true;
             this.LDepart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.LDepart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LDepart.Location = new System.Drawing.Point(1415, 71);
+            this.LDepart.Location = new System.Drawing.Point(1400, 70);
             this.LDepart.Name = "LDepart";
-            this.LDepart.Size = new System.Drawing.Size(89, 19);
+            this.LDepart.Size = new System.Drawing.Size(103, 19);
             this.LDepart.TabIndex = 4;
-            this.LDepart.Text = "Genel Müdür";
+            this.LDepart.Text = "DEPARTMAN";
             // 
             // LDate
             // 
             this.LDate.AutoSize = true;
             this.LDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.LDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LDate.Location = new System.Drawing.Point(1411, 93);
+            this.LDate.Location = new System.Drawing.Point(1400, 89);
             this.LDate.Name = "LDate";
-            this.LDate.Size = new System.Drawing.Size(95, 19);
+            this.LDate.Size = new System.Drawing.Size(54, 19);
             this.LDate.TabIndex = 5;
-            this.LDate.Text = "MM/DD/yyyy";
+            this.LDate.Text = "TARİH";
             // 
             // LTime
             // 
             this.LTime.AutoSize = true;
             this.LTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.LTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LTime.Location = new System.Drawing.Point(1415, 112);
+            this.LTime.Location = new System.Drawing.Point(1400, 108);
             this.LTime.Name = "LTime";
-            this.LTime.Size = new System.Drawing.Size(95, 19);
+            this.LTime.Size = new System.Drawing.Size(47, 19);
             this.LTime.TabIndex = 6;
-            this.LTime.Text = "MM/DD/yyyy";
+            this.LTime.Text = "SAAT";
             // 
             // timer1
             // 
@@ -924,11 +924,11 @@
         private DevExpress.XtraBars.BarButtonItem BTemelAnaliz;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem BHomeList;
-        private System.Windows.Forms.Label LName;
         private System.Windows.Forms.Label LDate;
-        private System.Windows.Forms.Label LDepart;
         private System.Windows.Forms.Label LTime;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Label LName;
+        public System.Windows.Forms.Label LDepart;
     }
 }
 

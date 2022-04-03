@@ -109,6 +109,12 @@
     <Compile Include="Formlar\FHomeList.Designer.cs">
       <DependentUpon>FHomeList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FProductList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     <EmbeddedResource Include="Formlar\FHomeList.resx">
       <DependentUpon>FHomeList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FProductList.resx">
       <DependentUpon>FProductList.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,7 +214,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="image\icons\" />
+    <None Include="image\icons\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\giris.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

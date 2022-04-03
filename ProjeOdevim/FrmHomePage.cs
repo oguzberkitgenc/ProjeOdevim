@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace ProjeOdevim
 {
     public partial class FrmHomePage : DevExpress.XtraEditors.XtraForm
@@ -16,13 +16,40 @@ namespace ProjeOdevim
         {
             InitializeComponent();
         }
-
+        SqlConnection connection = new SqlConnection(@"Data Source=BERKIT;Initial Catalog=DbProjem;Integrated Security=True");
+        Formlar.FHomeList homeList;
+        private void BHomeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (homeList == null || homeList.IsDisposed)
+            {
+                homeList = new Formlar.FHomeList();
+                homeList.MdiParent = this;
+                homeList.Show();
+            }
+        }
+        public int departman;
         private void FrmAnaSayfa_Load(object sender, EventArgs e)
         {
             DateTime date = DateTime.Now;
             LDate.Text = date.ToString("MM/dd/yyyy");
             LTime.Text = date.ToString("HH:MM:ss");
             timer1.Start();
+            if (homeList == null || homeList.IsDisposed)
+            {
+                homeList = new Formlar.FHomeList();
+                homeList.MdiParent = this;
+                homeList.Show();
+            }
+
+            connection.Open();
+            SqlCommand sqlCommand = new SqlCommand("SELECT * FROM TBLDEPARTMAN WHERE ID=@P1", connection);
+            sqlCommand.Parameters.AddWithValue("@P1", departman);
+            SqlDataReader dr = sqlCommand.ExecuteReader();
+            while (dr.Read())
+            {
+                LDepart.Text = dr[1].ToString();
+            }
+            connection.Close();
         }
         private void BKategori_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -147,16 +174,7 @@ namespace ProjeOdevim
                 fBasis.Show();
             }
         }
-        Formlar.FHomeList homeList;
-        private void BHomeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (homeList == null || homeList.IsDisposed)
-            {
-                homeList = new Formlar.FHomeList();
-                homeList.MdiParent = this;
-                homeList.Show();
-            }
-        }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
