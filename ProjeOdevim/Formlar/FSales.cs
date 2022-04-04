@@ -19,8 +19,7 @@ namespace ProjeOdevim.Formlar
         }
         SqlConnection connection = new SqlConnection(@"Data Source=BERKIT;Initial Catalog=DbProjem;Integrated Security=True");
         DataTable dt1 = new DataTable();
-
-        void ProductList()
+        void Product2()
         {
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("Select TBLURUN.ID,KATEGORIADI AS 'KATEGORİ',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN',ALISFIYAT AS 'ALIŞ FİYATI'," +
@@ -30,6 +29,10 @@ namespace ProjeOdevim.Formlar
             da.Fill(dt);
             gridControl1.DataSource = dt;
             connection.Close();
+        }
+        void ProductList()
+        {
+            Product2();
             gridView1.Columns[4].Visible = false;
             gridView1.Columns[6].Visible = false;
             gridView1.Columns[0].Width = 1;
@@ -76,7 +79,6 @@ namespace ProjeOdevim.Formlar
 
             hesapla += fiyatal;
             Total.Text = hesapla.ToString("C2");
-
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -100,7 +102,8 @@ namespace ProjeOdevim.Formlar
             Total.Text = hesapla.ToString("C2");
             LIndirimTutari.Visible = true;
             LIndirimTutari.Text = Convert.ToString("");
-
+            Rch.Text = "";
+            Product2();
         }
 
         private void BDelete_Click(object sender, EventArgs e)
@@ -199,7 +202,27 @@ namespace ProjeOdevim.Formlar
 
                 throw;
             }
-
+        }
+        private void BSearch_Click(object sender, EventArgs e)
+        {
+            if (Rch.Text != "")
+            {
+                connection.Open();
+                SqlCommand sqlCommand = new SqlCommand("Select TBLURUN.ID,KATEGORIADI AS 'KATEGORİ',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN'," +
+                    "ALISFIYAT AS 'ALIŞ FİYATI', SATISFIYAT AS 'SATIŞ FİYATI', STOK AS 'STOK',ACIKLAMA AS 'AÇIKLAMA' FROM TBLURUN INNER JOIN TBLKATEGORI  " +
+                    "ON TBLURUN.KATEGORIID=TBLKATEGORI.ID INNER JOIN TBLMARKA ON TBLURUN.MARKAID=TBLMARKA.ID WHERE URUNADI like '%" + Rch.Text + "%' " +
+                    "OR ACIKLAMA like '%" + Rch.Text + " %' order by TBLURUN.ID DESC ", connection);
+                SqlDataAdapter da3 = new SqlDataAdapter(sqlCommand);
+                DataTable dt3 = new DataTable();
+                da3.Fill(dt3);
+                gridControl1.DataSource = dt3;
+                connection.Close();
+                Rch.Text = "";
+            }
+            else if (Rch.Text=="")
+            {
+                Product2();
+            }
 
         }
     }

@@ -641,10 +641,12 @@
             this.BSearch.Size = new System.Drawing.Size(222, 39);
             this.BSearch.TabIndex = 108;
             this.BSearch.Text = "Ara";
+            this.BSearch.Click += new System.EventHandler(this.BSearch_Click);
             // 
             // Rch
             // 
             this.Rch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Rch.ForeColor = System.Drawing.Color.White;
             this.Rch.Location = new System.Drawing.Point(702, 411);
             this.Rch.Name = "Rch";
             this.Rch.Size = new System.Drawing.Size(353, 39);
