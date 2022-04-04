@@ -1069,23 +1069,22 @@
         h/JwpfJwnbb7ARz8FpuZKltVAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="barButtonItem6.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BCiro.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAApdEVYdFRpdGxlAFNhbGVzUGVyaW9kTW9udGg7U2FsZXNQZXJpb2Q7U2FsZXM7jIma4AAAAGhJ
-        REFUOE9j8G3a8Z9UDAQMMEwdA2DgzJkzUBZuNm0MACkgFtPGBTBAtgEgBcRislyABZBmwI1kFxQMBKgG
-        gBTjwiCAzQAYm2wXQNnkhwGKAfgwCEAVY8MM8MAgB5NkAMhGdPaNZBcGAKtYJ18UWtPsAAAAAElFTkSu
-        QmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACl0RVh0VGl0
+        bGUAU2FsZXNQZXJpb2RNb250aDtTYWxlc1BlcmlvZDtTYWxlczuMiZrgAAAAaElEQVQ4T2Pwbdrxn1QM
+        BAwwTB0DYODMmTNQFm42bQwAKSAW08YFMEC2ASAFxGKyXIAFkGbAjWQXFAwEqAaAFOPCIIDNABibbBdA
+        2eSHAYoB+DAIQBVjwwzwwCAHk2QAyEZ09o1kFwYAq1gnXxRa0+wAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="barButtonItem6.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BCiro.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAApdEVYdFRpdGxlAFNhbGVzUGVyaW9kTW9udGg7U2FsZXNQZXJpb2Q7U2FsZXM7jIma4AAAANtJ
-        REFUWEftkcENwjAMRXtisl6Zgik4ITEAJ4ZhiAzABGzApQeCLdnFcV21aZU0QL70FCdOfn7Txnu/KeZi
-        Tvpif775HPB9TA0QBNByzlH10Zq1GqD8AHgoJeW/gFYNkD0AHkpJ+S+g9TUBIpUmwP3QTkL7GkkQAM2X
-        QMYmLK5hHA+gxeZS1hoKL5iC9m0eIOCvAwx/wRJYwngUtS8MsAY2m0mSAPLL5tABvxWA2YnaYtA3DWMh
-        syvwAi4015h90zAWMnsC+Lw49hcIzL5pGAuZnYAHcKS5xui3zRvjfmS3iWXiBgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACl0RVh0VGl0
+        bGUAU2FsZXNQZXJpb2RNb250aDtTYWxlc1BlcmlvZDtTYWxlczuMiZrgAAAA20lEQVRYR+2RwQ3CMAxF
+        e2KyXpmCKTghMQAnhmGIDMAEbMClB4It2cVxXbVplTRAvvQUJ05+ftPGe78p5mJO+mJ/vvkc8H1MDRAE
+        0HLOUfXRmrUaoPwAeCgl5b+AVg2QPQAeSkn5L6D1NQEilSbA/dBOQvsaSRAAzZdAxiYsrmEcD6DF5lLW
+        GgovmIL2bR4g4K8DDH/BEljCeBS1LwywBjabSZIA8svm0AG/FYDZidpi0DcNYyGzK/ACLjTXmH3TMBYy
+        ewL4vDj2FwjMvmkYC5mdgAdwpLnG6LfNG+N+ZLeJZeIGAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="barButtonItem3.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

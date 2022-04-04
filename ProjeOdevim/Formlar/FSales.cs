@@ -337,7 +337,7 @@ namespace ProjeOdevim.Formlar
                     }
                 }
             }
-            catch ()
+            catch (Exception)
             {
 
                 MessageBox.Show("Nokta işareti kullanmayaınız. Nokta yerine (,) virgün 'ü tercih ediniz.");

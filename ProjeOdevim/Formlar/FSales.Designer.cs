@@ -54,7 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BSatis = new DevExpress.XtraEditors.SimpleButton();
             this.BSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.Rch = new System.Windows.Forms.RichTextBox();
             this.LIndirimsiz = new System.Windows.Forms.Label();
             this.LUyari = new System.Windows.Forms.Label();
             this.LIslemNo = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.LTarih = new System.Windows.Forms.Label();
             this.B15 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Rch = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -710,11 +710,11 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(1180, 505);
+            this.label2.Location = new System.Drawing.Point(1169, 505);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 19);
+            this.label2.Size = new System.Drawing.Size(114, 19);
             this.label2.TabIndex = 105;
-            this.label2.Text = "Müşteri Seç";
+            this.label2.Text = "Müşteri Seç: ";
             // 
             // BSatis
             // 
@@ -754,16 +754,6 @@
             this.BSearch.TabIndex = 108;
             this.BSearch.Text = "Ara";
             this.BSearch.Click += new System.EventHandler(this.BSearch_Click);
-            // 
-            // Rch
-            // 
-            this.Rch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Rch.ForeColor = System.Drawing.Color.White;
-            this.Rch.Location = new System.Drawing.Point(702, 411);
-            this.Rch.Name = "Rch";
-            this.Rch.Size = new System.Drawing.Size(353, 39);
-            this.Rch.TabIndex = 109;
-            this.Rch.Text = "";
             // 
             // LIndirimsiz
             // 
@@ -808,7 +798,7 @@
             this.CmbEmploye.FormattingEnabled = true;
             this.CmbEmploye.Location = new System.Drawing.Point(1289, 530);
             this.CmbEmploye.Name = "CmbEmploye";
-            this.CmbEmploye.Size = new System.Drawing.Size(222, 27);
+            this.CmbEmploye.Size = new System.Drawing.Size(220, 27);
             this.CmbEmploye.TabIndex = 117;
             // 
             // label3
@@ -817,11 +807,11 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(1170, 538);
+            this.label3.Location = new System.Drawing.Point(1159, 536);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 19);
+            this.label3.Size = new System.Drawing.Size(124, 19);
             this.label3.TabIndex = 118;
-            this.label3.Text = "Personel Seç";
+            this.label3.Text = "Personel Seç: ";
             // 
             // LTarih
             // 
@@ -869,12 +859,25 @@
             this.panel1.Size = new System.Drawing.Size(491, 42);
             this.panel1.TabIndex = 121;
             // 
+            // Rch
+            // 
+            this.Rch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(100)))));
+            this.Rch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Rch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Rch.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Rch.Location = new System.Drawing.Point(703, 411);
+            this.Rch.Name = "Rch";
+            this.Rch.Size = new System.Drawing.Size(352, 39);
+            this.Rch.TabIndex = 123;
+            this.Rch.Text = "";
+            // 
             // FSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.Rch);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.B15);
             this.Controls.Add(this.LTarih);
@@ -883,7 +886,6 @@
             this.Controls.Add(this.LIslemNo);
             this.Controls.Add(this.LUyari);
             this.Controls.Add(this.LIndirimsiz);
-            this.Controls.Add(this.Rch);
             this.Controls.Add(this.BSearch);
             this.Controls.Add(this.BSatis);
             this.Controls.Add(this.label2);
@@ -945,7 +947,6 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton BSatis;
         private DevExpress.XtraEditors.SimpleButton BSearch;
-        private System.Windows.Forms.RichTextBox Rch;
         private System.Windows.Forms.Label LIndirimsiz;
         private System.Windows.Forms.Label LUyari;
         private System.Windows.Forms.Label LIslemNo;
@@ -954,5 +955,6 @@
         private System.Windows.Forms.Label LTarih;
         private DevExpress.XtraEditors.SimpleButton B15;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RichTextBox Rch;
     }
 }

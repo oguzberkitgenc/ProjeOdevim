@@ -68,14 +68,17 @@
             this.BMusteri = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BMagaza = new DevExpress.XtraBars.BarButtonItem();
-            this.BKategori = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.BKategori = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BDepartman = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BHomeList = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BSales = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.BCiro = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.BKategoriEkle = new DevExpress.XtraBars.BarButtonItem();
             this.BUrunEkle = new DevExpress.XtraBars.BarButtonItem();
@@ -85,11 +88,9 @@
             this.BMusteriEkle = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BCiro = new DevExpress.XtraBars.BarButtonItem();
+            this.LId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -656,6 +657,11 @@
             this.BMagaza.Name = "BMagaza";
             this.BMagaza.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BMagaza_ItemClick);
             // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.BKategori);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            // 
             // BKategori
             // 
             this.BKategori.ActAsDropDown = true;
@@ -683,10 +689,10 @@
             this.BKategori.Name = "BKategori";
             this.BKategori.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BKategori_ItemClick);
             // 
-            // ribbonPageGroup2
+            // ribbonPageGroup14
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.BKategori);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup14.ItemLinks.Add(this.BDepartman);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             // 
             // BDepartman
             // 
@@ -783,6 +789,36 @@
             this.BSales.ItemInMenuAppearance.Pressed.Options.UseFont = true;
             this.BSales.Name = "BSales";
             this.BSales.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BSales_ItemClick);
+            // 
+            // ribbonPageGroup12
+            // 
+            this.ribbonPageGroup12.ItemLinks.Add(this.BCiro);
+            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            // 
+            // BCiro
+            // 
+            this.BCiro.Caption = "CİRO RAPORLARI";
+            this.BCiro.Id = 35;
+            this.BCiro.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BCiro.ImageOptions.Image")));
+            this.BCiro.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BCiro.ImageOptions.LargeImage")));
+            this.BCiro.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BCiro.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BCiro.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BCiro.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BCiro.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BCiro.ItemAppearance.Normal.Options.UseFont = true;
+            this.BCiro.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BCiro.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BCiro.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BCiro.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BCiro.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BCiro.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BCiro.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BCiro.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BCiro.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BCiro.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BCiro.Name = "BCiro";
+            this.BCiro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BCiro_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -892,11 +928,6 @@
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
             this.ribbonControl1.Size = new System.Drawing.Size(1554, 147);
             // 
-            // ribbonPageGroup14
-            // 
-            this.ribbonPageGroup14.ItemLinks.Add(this.BDepartman);
-            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-            // 
             // barButtonItem4
             // 
             this.barButtonItem4.Caption = "barButtonItem4";
@@ -909,35 +940,17 @@
             this.barButtonItem5.Id = 34;
             this.barButtonItem5.Name = "barButtonItem5";
             // 
-            // ribbonPageGroup12
+            // LId
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.BCiro);
-            this.ribbonPageGroup12.Name = "ribbonPageGroup12";
-            // 
-            // BCiro
-            // 
-            this.BCiro.Caption = "CİRO RAPORLARI";
-            this.BCiro.Id = 35;
-            this.BCiro.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
-            this.BCiro.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
-            this.BCiro.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BCiro.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BCiro.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BCiro.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BCiro.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BCiro.ItemAppearance.Normal.Options.UseFont = true;
-            this.BCiro.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BCiro.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BCiro.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BCiro.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BCiro.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BCiro.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BCiro.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BCiro.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BCiro.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BCiro.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BCiro.Name = "BCiro";
-            this.BCiro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BCiro_ItemClick);
+            this.LId.AutoSize = true;
+            this.LId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LId.Location = new System.Drawing.Point(1296, 47);
+            this.LId.Name = "LId";
+            this.LId.Size = new System.Drawing.Size(25, 19);
+            this.LId.TabIndex = 10;
+            this.LId.Text = "00";
+            this.LId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmHomePage
             // 
@@ -945,6 +958,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1554, 768);
+            this.Controls.Add(this.LId);
             this.Controls.Add(this.BKullanici);
             this.Controls.Add(this.LTime);
             this.Controls.Add(this.LDate);
@@ -1030,6 +1044,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem BCiro;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        public System.Windows.Forms.Label LId;
     }
 }
 
