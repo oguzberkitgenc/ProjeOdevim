@@ -44,16 +44,22 @@
             this.Total = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.LblTest = new System.Windows.Forms.Label();
+            this.B3 = new DevExpress.XtraEditors.SimpleButton();
+            this.B5 = new DevExpress.XtraEditors.SimpleButton();
+            this.B15 = new DevExpress.XtraEditors.SimpleButton();
+            this.TYuzdeGir = new DevExpress.XtraEditors.TextEdit();
+            this.BSinirsiz = new DevExpress.XtraEditors.SimpleButton();
+            this.LIndirimTutari = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.BSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.Rch = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TYuzdeGir.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -61,7 +67,7 @@
             this.gridControl1.Location = new System.Drawing.Point(489, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1035, 350);
+            this.gridControl1.Size = new System.Drawing.Size(1035, 405);
             this.gridControl1.TabIndex = 83;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -219,6 +225,7 @@
             this.gridView1.GroupPanelText = "Ara     ";
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
             this.gridView1.RowHeight = 23;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
@@ -227,9 +234,9 @@
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(1385, 356);
+            this.simpleButton1.Location = new System.Drawing.Point(1289, 411);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(139, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(222, 39);
             this.simpleButton1.TabIndex = 84;
             this.simpleButton1.Text = "Sepete Ekle";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -311,7 +318,7 @@
             this.gridControl2.Location = new System.Drawing.Point(-1, 0);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(491, 582);
+            this.gridControl2.Size = new System.Drawing.Size(491, 580);
             this.gridControl2.TabIndex = 91;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -478,9 +485,9 @@
             // 
             this.BClear.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BClear.Appearance.Options.UseFont = true;
-            this.BClear.Location = new System.Drawing.Point(496, 385);
+            this.BClear.Location = new System.Drawing.Point(496, 440);
             this.BClear.Name = "BClear";
-            this.BClear.Size = new System.Drawing.Size(139, 23);
+            this.BClear.Size = new System.Drawing.Size(200, 23);
             this.BClear.TabIndex = 92;
             this.BClear.Text = "Temizle";
             this.BClear.Click += new System.EventHandler(this.BClear_Click);
@@ -489,9 +496,9 @@
             // 
             this.BDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BDelete.Appearance.Options.UseFont = true;
-            this.BDelete.Location = new System.Drawing.Point(496, 356);
+            this.BDelete.Location = new System.Drawing.Point(496, 411);
             this.BDelete.Name = "BDelete";
-            this.BDelete.Size = new System.Drawing.Size(139, 23);
+            this.BDelete.Size = new System.Drawing.Size(200, 23);
             this.BDelete.TabIndex = 93;
             this.BDelete.Text = "Çıkar";
             this.BDelete.Click += new System.EventHandler(this.BDelete_Click);
@@ -531,65 +538,136 @@
             this.LblTest.Text = "label";
             this.LblTest.Visible = false;
             // 
+            // B3
+            // 
+            this.B3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B3.Appearance.Options.UseFont = true;
+            this.B3.Location = new System.Drawing.Point(496, 559);
+            this.B3.Name = "B3";
+            this.B3.Size = new System.Drawing.Size(200, 23);
+            this.B3.TabIndex = 97;
+            this.B3.Text = "%3";
+            this.B3.Click += new System.EventHandler(this.B3_Click);
+            // 
+            // B5
+            // 
+            this.B5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B5.Appearance.Options.UseFont = true;
+            this.B5.Location = new System.Drawing.Point(496, 530);
+            this.B5.Name = "B5";
+            this.B5.Size = new System.Drawing.Size(200, 23);
+            this.B5.TabIndex = 98;
+            this.B5.Text = "%5";
+            this.B5.Click += new System.EventHandler(this.B5_Click);
+            // 
+            // B15
+            // 
+            this.B15.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B15.Appearance.Options.UseFont = true;
+            this.B15.Location = new System.Drawing.Point(496, 501);
+            this.B15.Name = "B15";
+            this.B15.Size = new System.Drawing.Size(200, 23);
+            this.B15.TabIndex = 99;
+            this.B15.Text = "%15";
+            this.B15.Click += new System.EventHandler(this.B15_Click);
+            // 
+            // TYuzdeGir
+            // 
+            this.TYuzdeGir.Location = new System.Drawing.Point(496, 469);
+            this.TYuzdeGir.Name = "TYuzdeGir";
+            this.TYuzdeGir.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TYuzdeGir.Properties.Appearance.Options.UseFont = true;
+            this.TYuzdeGir.Size = new System.Drawing.Size(36, 26);
+            this.TYuzdeGir.TabIndex = 100;
+            // 
+            // BSinirsiz
+            // 
+            this.BSinirsiz.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSinirsiz.Appearance.Options.UseFont = true;
+            this.BSinirsiz.Location = new System.Drawing.Point(538, 470);
+            this.BSinirsiz.Name = "BSinirsiz";
+            this.BSinirsiz.Size = new System.Drawing.Size(158, 23);
+            this.BSinirsiz.TabIndex = 101;
+            this.BSinirsiz.Text = "%";
+            this.BSinirsiz.Click += new System.EventHandler(this.BSinirsiz_Click);
+            // 
+            // LIndirimTutari
+            // 
+            this.LIndirimTutari.AutoSize = true;
+            this.LIndirimTutari.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LIndirimTutari.ForeColor = System.Drawing.Color.IndianRed;
+            this.LIndirimTutari.Location = new System.Drawing.Point(294, 583);
+            this.LIndirimTutari.Name = "LIndirimTutari";
+            this.LIndirimTutari.Size = new System.Drawing.Size(68, 33);
+            this.LIndirimTutari.TabIndex = 103;
+            this.LIndirimTutari.Text = "0,00";
+            this.LIndirimTutari.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1289, 530);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(222, 27);
+            this.comboBox1.TabIndex = 104;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(1422, 503);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 19);
+            this.label2.TabIndex = 105;
+            this.label2.Text = "Müşteri Seç";
+            // 
             // simpleButton2
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(496, 559);
+            this.simpleButton2.Location = new System.Drawing.Point(1289, 563);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(139, 23);
-            this.simpleButton2.TabIndex = 97;
-            this.simpleButton2.Text = "%3";
+            this.simpleButton2.Size = new System.Drawing.Size(222, 39);
+            this.simpleButton2.TabIndex = 106;
+            this.simpleButton2.Text = "Satış Yap";
             // 
-            // simpleButton3
+            // BSearch
             // 
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Location = new System.Drawing.Point(496, 530);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(139, 23);
-            this.simpleButton3.TabIndex = 98;
-            this.simpleButton3.Text = "%5";
+            this.BSearch.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSearch.Appearance.Options.UseFont = true;
+            this.BSearch.Location = new System.Drawing.Point(1061, 411);
+            this.BSearch.Name = "BSearch";
+            this.BSearch.Size = new System.Drawing.Size(222, 39);
+            this.BSearch.TabIndex = 108;
+            this.BSearch.Text = "Ara";
             // 
-            // simpleButton4
+            // Rch
             // 
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.Location = new System.Drawing.Point(496, 501);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(139, 23);
-            this.simpleButton4.TabIndex = 99;
-            this.simpleButton4.Text = "%15";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(496, 469);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(36, 26);
-            this.textEdit1.TabIndex = 100;
-            // 
-            // simpleButton5
-            // 
-            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton5.Appearance.Options.UseFont = true;
-            this.simpleButton5.Location = new System.Drawing.Point(538, 470);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(97, 23);
-            this.simpleButton5.TabIndex = 101;
-            this.simpleButton5.Text = "%";
+            this.Rch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Rch.Location = new System.Drawing.Point(702, 411);
+            this.Rch.Name = "Rch";
+            this.Rch.Size = new System.Drawing.Size(353, 39);
+            this.Rch.TabIndex = 109;
+            this.Rch.Text = "";
             // 
             // FSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
-            this.Controls.Add(this.simpleButton5);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.Rch);
+            this.Controls.Add(this.BSearch);
             this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.LIndirimTutari);
+            this.Controls.Add(this.BSinirsiz);
+            this.Controls.Add(this.TYuzdeGir);
+            this.Controls.Add(this.B15);
+            this.Controls.Add(this.B5);
+            this.Controls.Add(this.B3);
             this.Controls.Add(this.LblTest);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Total);
@@ -611,7 +689,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TYuzdeGir.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -634,10 +712,16 @@
         private System.Windows.Forms.Label Total;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LblTest;
+        private DevExpress.XtraEditors.SimpleButton B3;
+        private DevExpress.XtraEditors.SimpleButton B5;
+        private DevExpress.XtraEditors.SimpleButton B15;
+        private DevExpress.XtraEditors.TextEdit TYuzdeGir;
+        private DevExpress.XtraEditors.SimpleButton BSinirsiz;
+        private System.Windows.Forms.Label LIndirimTutari;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton BSearch;
+        private System.Windows.Forms.RichTextBox Rch;
     }
 }

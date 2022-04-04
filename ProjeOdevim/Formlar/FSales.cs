@@ -81,6 +81,7 @@ namespace ProjeOdevim.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
+
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
             LId.Text = dr["ID"].ToString();
             LKategori.Text = dr["KATEGORİ"].ToString();
@@ -88,6 +89,7 @@ namespace ProjeOdevim.Formlar
             LAlis.Text = dr["ALIŞ FİYATI"].ToString();
             LSatis.Text = dr["SATIŞ FİYATI"].ToString();
             LUrun.Text = dr["ÜRÜN"].ToString();
+
         }
 
         private void BClear_Click(object sender, EventArgs e)
@@ -96,6 +98,8 @@ namespace ProjeOdevim.Formlar
             hesapla = 0;
             LblTest.Text = "0";
             Total.Text = hesapla.ToString("C2");
+            LIndirimTutari.Visible = true;
+            LIndirimTutari.Text = Convert.ToString("");
 
         }
 
@@ -129,6 +133,73 @@ namespace ProjeOdevim.Formlar
                 grd2fiyatal = Convert.ToDouble(dr["SATIŞ FİYATI"]);
                 LblTest.Text = dr["SATIŞ FİYATI"].ToString();
             }
+
+        }
+
+        private void B3_Click(object sender, EventArgs e)
+        {
+
+            if (Total.Text != "0,00")
+            {
+                Total.Text = hesapla.ToString();
+                double indirim = (hesapla / 100) * 3;
+                LIndirimTutari.Visible = true;
+                LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
+                hesapla = hesapla - indirim;
+                Total.Text = hesapla.ToString("C2");
+            }
+        }
+
+        private void B5_Click(object sender, EventArgs e)
+        {
+            if (Total.Text != "0,00")
+            {
+                Total.Text = hesapla.ToString();
+                double indirim = (hesapla / 100) * 5;
+                LIndirimTutari.Visible = true;
+                LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
+                hesapla = hesapla - indirim;
+                Total.Text = hesapla.ToString("C2");
+            }
+        }
+
+        private void B15_Click(object sender, EventArgs e)
+        {
+            if (Total.Text != "0,00")
+            {
+                Total.Text = hesapla.ToString();
+                double indirim = (hesapla / 100) * 15;
+                LIndirimTutari.Visible = true;
+                LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
+                hesapla = hesapla - indirim;
+                Total.Text = hesapla.ToString("C2");
+            }
+        }
+
+        private void BSinirsiz_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TYuzdeGir.Text != "0" && TYuzdeGir.Text != "")
+                {
+                    int yuzde = int.Parse(TYuzdeGir.Text);
+                    if (Total.Text != "0,00")
+                    {
+                        Total.Text = hesapla.ToString();
+                        double indirim = (hesapla / 100) * yuzde;
+                        LIndirimTutari.Visible = true;
+                        LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
+                        hesapla = hesapla - indirim;
+                        Total.Text = hesapla.ToString("C2");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
 
         }
     }
