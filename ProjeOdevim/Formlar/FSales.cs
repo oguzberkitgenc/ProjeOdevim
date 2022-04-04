@@ -36,26 +36,10 @@ namespace ProjeOdevim.Formlar
             gridView1.Columns[3].Width = 100;
             gridView1.Columns[5].Width = 45;
             gridView1.Columns[7].Width = 150;
-
         }
         private void FSales_Load(object sender, EventArgs e)
         {
             ProductList();
-        }
-
-        private void BIdSearch_Click(object sender, EventArgs e)
-        {
-         
-
-        }
-
-        private void BProductSearch_Click(object sender, EventArgs e)
-        {
-          
-        }
-        private void BRchSearch_Click(object sender, EventArgs e)
-        {
-         
         }
     }
 }

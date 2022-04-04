@@ -30,19 +30,10 @@
         {
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.BIdSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.TId = new DevExpress.XtraEditors.TextEdit();
-            this.TProduct = new DevExpress.XtraEditors.TextEdit();
-            this.BProductSearch = new DevExpress.XtraEditors.SimpleButton();
-            this.TRch = new DevExpress.XtraEditors.TextEdit();
-            this.BRchSearch = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TProduct.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TRch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -212,66 +203,6 @@
             this.gridView2.OptionsMenu.EnableColumnMenu = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView2.OptionsView.ShowIndicator = false;
-            // 
-            // BIdSearch
-            // 
-            this.BIdSearch.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BIdSearch.Appearance.Options.UseFont = true;
-            this.BIdSearch.Location = new System.Drawing.Point(-1, 308);
-            this.BIdSearch.Name = "BIdSearch";
-            this.BIdSearch.Size = new System.Drawing.Size(100, 23);
-            this.BIdSearch.TabIndex = 77;
-            this.BIdSearch.Text = "ID ARA";
-            this.BIdSearch.Click += new System.EventHandler(this.BIdSearch_Click);
-            // 
-            // TId
-            // 
-            this.TId.Location = new System.Drawing.Point(-1, 276);
-            this.TId.Name = "TId";
-            this.TId.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TId.Properties.Appearance.Options.UseFont = true;
-            this.TId.Size = new System.Drawing.Size(100, 26);
-            this.TId.TabIndex = 78;
-            // 
-            // TProduct
-            // 
-            this.TProduct.Location = new System.Drawing.Point(105, 276);
-            this.TProduct.Name = "TProduct";
-            this.TProduct.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TProduct.Properties.Appearance.Options.UseFont = true;
-            this.TProduct.Size = new System.Drawing.Size(152, 26);
-            this.TProduct.TabIndex = 80;
-            // 
-            // BProductSearch
-            // 
-            this.BProductSearch.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BProductSearch.Appearance.Options.UseFont = true;
-            this.BProductSearch.Location = new System.Drawing.Point(105, 308);
-            this.BProductSearch.Name = "BProductSearch";
-            this.BProductSearch.Size = new System.Drawing.Size(152, 23);
-            this.BProductSearch.TabIndex = 79;
-            this.BProductSearch.Text = "ÜRÜN ARA";
-            this.BProductSearch.Click += new System.EventHandler(this.BProductSearch_Click);
-            // 
-            // TRch
-            // 
-            this.TRch.Location = new System.Drawing.Point(263, 276);
-            this.TRch.Name = "TRch";
-            this.TRch.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TRch.Properties.Appearance.Options.UseFont = true;
-            this.TRch.Size = new System.Drawing.Size(152, 26);
-            this.TRch.TabIndex = 82;
-            // 
-            // BRchSearch
-            // 
-            this.BRchSearch.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BRchSearch.Appearance.Options.UseFont = true;
-            this.BRchSearch.Location = new System.Drawing.Point(263, 308);
-            this.BRchSearch.Name = "BRchSearch";
-            this.BRchSearch.Size = new System.Drawing.Size(152, 23);
-            this.BRchSearch.TabIndex = 81;
-            this.BRchSearch.Text = "AÇIKLAMADA ARA";
-            this.BRchSearch.Click += new System.EventHandler(this.BRchSearch_Click);
             // 
             // gridControl1
             // 
@@ -445,21 +376,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1523, 618);
             this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.TRch);
-            this.Controls.Add(this.BRchSearch);
-            this.Controls.Add(this.TProduct);
-            this.Controls.Add(this.BProductSearch);
-            this.Controls.Add(this.TId);
-            this.Controls.Add(this.BIdSearch);
             this.Controls.Add(this.gridControl2);
             this.Name = "FSales";
             this.Text = "FSales";
             this.Load += new System.EventHandler(this.FSales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TProduct.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TRch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -469,12 +391,6 @@
         #endregion
         private DevExpress.XtraGrid.GridControl gridControl2;
         protected DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.SimpleButton BIdSearch;
-        private DevExpress.XtraEditors.TextEdit TId;
-        private DevExpress.XtraEditors.TextEdit TProduct;
-        private DevExpress.XtraEditors.SimpleButton BProductSearch;
-        private DevExpress.XtraEditors.TextEdit TRch;
-        private DevExpress.XtraEditors.SimpleButton BRchSearch;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
