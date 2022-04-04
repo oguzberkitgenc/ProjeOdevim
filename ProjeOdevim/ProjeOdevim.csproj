@@ -153,6 +153,12 @@
     <Compile Include="Formlar\FSales.Designer.cs">
       <DependentUpon>FSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FSalesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FSalesList.Designer.cs">
+      <DependentUpon>FSalesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FShopping.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FSales.resx">
       <DependentUpon>FSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FSalesList.resx">
+      <DependentUpon>FSalesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FShopping.resx">
       <DependentUpon>FShopping.cs</DependentUpon>

@@ -199,5 +199,16 @@ namespace ProjeOdevim
                 sales.Show();
             }
         }
+
+        Formlar.FSalesList FSales;
+        private void BCiro_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (FSales == null || FSales.IsDisposed)
+            {
+                FSales = new Formlar.FSalesList();
+                FSales.MdiParent= this;
+                FSales.Show();
+            }
+        }
     }
 }
