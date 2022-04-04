@@ -63,6 +63,7 @@
             this.LPErsonelId = new System.Windows.Forms.Label();
             this.CmbEmploye = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.LTarih = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -755,12 +756,24 @@
             this.label3.TabIndex = 118;
             this.label3.Text = "Personel Seç";
             // 
+            // LTarih
+            // 
+            this.LTarih.AutoSize = true;
+            this.LTarih.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LTarih.ForeColor = System.Drawing.Color.IndianRed;
+            this.LTarih.Location = new System.Drawing.Point(733, 538);
+            this.LTarih.Name = "LTarih";
+            this.LTarih.Size = new System.Drawing.Size(36, 19);
+            this.LTarih.TabIndex = 119;
+            this.LTarih.Text = "000";
+            // 
             // FSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.LTarih);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CmbEmploye);
             this.Controls.Add(this.LPersonelAd);
@@ -843,5 +856,6 @@
         private System.Windows.Forms.Label LPErsonelId;
         private System.Windows.Forms.ComboBox CmbEmploye;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LTarih;
     }
 }

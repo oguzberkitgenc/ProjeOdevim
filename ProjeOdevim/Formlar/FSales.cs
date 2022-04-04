@@ -20,7 +20,7 @@ namespace ProjeOdevim.Formlar
         SqlConnection connection = new SqlConnection(@"Data Source=BERKIT;Initial Catalog=DbProjem;Integrated Security=True");
         DataTable dt1 = new DataTable();
         public string id, kategori, marka, urunadi;
-        public double alisfiyati = 0, satisfiyatı = 0, indirimorani = 0;
+        public decimal alisfiyati = 0, satisfiyatı = 0, indirimorani = 0;
         void Product2()
         {
             connection.Open();
@@ -62,6 +62,8 @@ namespace ProjeOdevim.Formlar
                 LIslemNo.Text = dr[1].ToString();
             }
             connection.Close();
+            DateTime date = DateTime.Now;
+            LTarih.Text = date.ToString("MM/dd/yyyy HH:mm");
         }
         void CustomerList()
         {
@@ -78,13 +80,13 @@ namespace ProjeOdevim.Formlar
         void Employee()
         {
             connection.Open();
-            SqlCommand komut = new SqlCommand("SELECT * FROM TBLPERSONEL", connection);
-            SqlDataReader dr = komut.ExecuteReader();
-            while (dr.Read())
-            {
-                CmbEmploye.ValueMember = dr["ID"].ToString();
-                CmbEmploye.DisplayMember = dr["AD"].ToString() + " " + dr["SOYAD"].ToString());
-            }
+            SqlCommand komut = new SqlCommand("Select ID,AD From TBLPERSONEL", connection);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CmbEmploye.ValueMember = "ID";
+            CmbEmploye.DisplayMember = "AD";
+            CmbEmploye.DataSource = dt;
             connection.Close();
         }
         private void FSales_Load(object sender, EventArgs e)
@@ -94,8 +96,46 @@ namespace ProjeOdevim.Formlar
             ProductList();
             CustomerList();
             Total.Focus();
-
-
+        }
+        void IndirimsizsizSatis()
+        {
+            decimal toplam = satisfiyatı;
+            connection.Open();
+            SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
+                "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@A10,@A11)", connection);
+            sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
+            sql.Parameters.AddWithValue("@A2", id.ToString());
+            sql.Parameters.AddWithValue("@A3", kategori.ToString());
+            sql.Parameters.AddWithValue("@A4", marka.ToString());
+            sql.Parameters.AddWithValue("@A5", Convert.ToDecimal(alisfiyati));
+            sql.Parameters.AddWithValue("@A6", Convert.ToDecimal(satisfiyatı));
+            sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
+            sql.Parameters.AddWithValue("@A8", Convert.ToDecimal(toplam));
+            sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
+            sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
+            sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
+            sql.ExecuteNonQuery();
+            connection.Close();
+        }
+        void IndirimliSatis()
+        {
+            decimal toplam = satisfiyatı - (satisfiyatı / 100) * indirimorani;
+            connection.Open();
+            SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
+                "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@A10,@A11)", connection);
+            sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
+            sql.Parameters.AddWithValue("@A2", id.ToString());
+            sql.Parameters.AddWithValue("@A3", kategori.ToString());
+            sql.Parameters.AddWithValue("@A4", marka.ToString());
+            sql.Parameters.AddWithValue("@A5", Convert.ToDecimal(alisfiyati));
+            sql.Parameters.AddWithValue("@A6", Convert.ToDecimal(satisfiyatı));
+            sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
+            sql.Parameters.AddWithValue("@A8", Convert.ToDecimal(toplam));
+            sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
+            sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
+            sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
+            sql.ExecuteNonQuery();
+            connection.Close();
         }
         double hesapla = 0;
         double grd2fiyatal;
@@ -122,7 +162,24 @@ namespace ProjeOdevim.Formlar
             hesapla += fiyatal;
             Total.Text = hesapla.ToString("C2");
         }
-
+        void Clear()
+        {
+            dt1.Rows.Clear();
+            hesapla = 0;
+            LblTest.Text = "0";
+            Total.Text = hesapla.ToString("C2");
+            LIndirimTutari.Visible = true;
+            LIndirimTutari.Text = Convert.ToString("");
+            Rch.Text = "";
+            indirimorani = 0;
+            LUyari.Visible = false;
+            BAdd.Enabled = true;
+            BSinirsiz.Enabled = true;
+            B15.Enabled = true;
+            B5.Enabled = true;
+            B3.Enabled = true;
+            Product2();
+        }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
@@ -136,27 +193,11 @@ namespace ProjeOdevim.Formlar
                 LSatis.Text = dr["SATIŞ FİYATI"].ToString();
                 LUrun.Text = dr["ÜRÜN"].ToString();
             }
-
-
         }
 
         private void BClear_Click(object sender, EventArgs e)
         {
-            dt1.Rows.Clear();
-            hesapla = 0;
-            LblTest.Text = "0";
-            Total.Text = hesapla.ToString("C2");
-            LIndirimTutari.Visible = true;
-            LIndirimTutari.Text = Convert.ToString("");
-            Rch.Text = "";
-            LUyari.Visible = false;
-            BAdd.Enabled = true;
-            BSinirsiz.Enabled = true;
-            B15.Enabled = true;
-            B5.Enabled = true;
-            B3.Enabled = true;
-
-            Product2();
+            Clear();
         }
 
         private void BDelete_Click(object sender, EventArgs e)
@@ -194,8 +235,8 @@ namespace ProjeOdevim.Formlar
                 kategori = dr["KATEGORI"].ToString();
                 marka = dr["MARKA"].ToString();
                 urunadi = dr["ÜRÜN ADI"].ToString();
-                alisfiyati = Convert.ToDouble(dr["ALIŞ FİYATI"]);
-                satisfiyatı = Convert.ToDouble(dr["SATIŞ FİYATI"]);
+                alisfiyati = Convert.ToDecimal(dr["ALIŞ FİYATI"]);
+                satisfiyatı = Convert.ToDecimal(dr["SATIŞ FİYATI"]);
             }
 
         }
@@ -216,7 +257,6 @@ namespace ProjeOdevim.Formlar
                 B15.Enabled = false;
                 B5.Enabled = false;
                 B3.Enabled = false;
-                LIndirim.Text = "3";
                 indirimorani = 3;
             }
         }
@@ -237,7 +277,6 @@ namespace ProjeOdevim.Formlar
                 B15.Enabled = false;
                 B5.Enabled = false;
                 B3.Enabled = false;
-                LIndirim.Text = "5";
                 indirimorani = 5;
 
 
@@ -260,7 +299,6 @@ namespace ProjeOdevim.Formlar
                 B15.Enabled = false;
                 B5.Enabled = false;
                 B3.Enabled = false;
-                LIndirim.Text = "15";
                 indirimorani = 15;
 
 
@@ -288,8 +326,7 @@ namespace ProjeOdevim.Formlar
                         B15.Enabled = false;
                         B5.Enabled = false;
                         B3.Enabled = false;
-                        LIndirim.Text = Convert.ToString(TYuzdeGir.Text);
-                        indirimorani = Convert.ToDouble(TYuzdeGir.Text);
+                        indirimorani = Convert.ToDecimal(TYuzdeGir.Text);
 
                     }
                 }
@@ -322,57 +359,26 @@ namespace ProjeOdevim.Formlar
             }
 
         }
-        //  string id, kategori, marka, urunadi, alisfiyati, satisfiyatı;
         private void BSatis_Click(object sender, EventArgs e)
         {
-            DateTime dt = DateTime.Now;
-            dt = Convert.ToDateTime("MM/dd/yyyy HH:mm");
-            for (int i = 1; i < gridView2.DataRowCount; i++)
+            if (gridView2.DataRowCount >= 1)
             {
-                if (indirimorani > 0)
+                for (int i = 1; i <= gridView2.DataRowCount; i++)
                 {
-                    double toplam = satisfiyatı - (satisfiyatı / 100) * indirimorani;
-                    connection.Open();
-                    SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
-                        "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@10,@11)");
-                    sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
-                    sql.Parameters.AddWithValue("@A2", id.ToString());
-                    sql.Parameters.AddWithValue("@A3", kategori.ToString());
-                    sql.Parameters.AddWithValue("@A4", marka.ToString());
-                    sql.Parameters.AddWithValue("@A5", alisfiyati.ToString());
-                    sql.Parameters.AddWithValue("@A6", satisfiyatı.ToString());
-                    sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
-                    sql.Parameters.AddWithValue("@A8", Convert.ToString(toplam).ToString());
-                    sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
-                    sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
-                    sql.Parameters.AddWithValue("@A11",dt.ToString());
-                    sql.ExecuteNonQuery();
-                    connection.Close();
-                    MessageBox.Show("indirimli");
+                    if (indirimorani > 0)
+                    {
+                        gridView2.FocusedRowHandle = i;
+                        IndirimliSatis();
+                    }
+                    else
+                    {
+                        gridView2.FocusedRowHandle = i;
+                        IndirimsizsizSatis();
+                    }
                 }
-                else
-                {
-                    double toplam = satisfiyatı;
-                    connection.Open();
-                    SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
-                        "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@10,@11)");
-                    sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
-                    sql.Parameters.AddWithValue("@A2", id.ToString());
-                    sql.Parameters.AddWithValue("@A3", kategori.ToString());
-                    sql.Parameters.AddWithValue("@A4", marka.ToString());
-                    sql.Parameters.AddWithValue("@A5", alisfiyati.ToString());
-                    sql.Parameters.AddWithValue("@A6", satisfiyatı.ToString());
-                    sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
-                    sql.Parameters.AddWithValue("@A8", Convert.ToString(toplam).ToString());
-                    sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
-                    sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
-                    sql.Parameters.AddWithValue("@A11", dt.ToString());
-                    sql.ExecuteNonQuery();
-                    connection.Close();
-                    MessageBox.Show("indirimsiz");
-                }
-
             }
+            Console.Beep(800, 250);
+            Clear();
         }
     }
 }
