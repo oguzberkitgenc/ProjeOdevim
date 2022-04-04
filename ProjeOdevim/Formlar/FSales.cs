@@ -26,7 +26,7 @@ namespace ProjeOdevim.Formlar
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("Select TBLURUN.ID,KATEGORIADI AS 'KATEGORİ',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN',ALISFIYAT AS 'ALIŞ FİYATI'," +
                 "SATISFIYAT AS 'SATIŞ FİYATI', STOK AS 'STOK',ACIKLAMA AS 'AÇIKLAMA' FROM TBLURUN INNER JOIN TBLKATEGORI ON " +
-                "TBLURUN.KATEGORIID=TBLKATEGORI.ID INNER JOIN TBLMARKA ON TBLURUN.MARKAID=TBLMARKA.ID order by TBLURUN.ID DESC", connection);
+                "TBLURUN.KATEGORIID=TBLKATEGORI.ID INNER JOIN TBLMARKA ON TBLURUN.MARKAID=TBLMARKA.ID where STOK>=1 order by TBLURUN.ID DESC", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             gridControl1.DataSource = dt;
@@ -43,7 +43,6 @@ namespace ProjeOdevim.Formlar
             gridView1.Columns[3].Width = 100;
             gridView1.Columns[5].Width = 45;
             gridView1.Columns[7].Width = 150;
-
 
             dt1.Columns.Add(new DataColumn("ID", typeof(int)));
             dt1.Columns.Add(new DataColumn("KATEGORI", typeof(string)));
@@ -116,7 +115,6 @@ namespace ProjeOdevim.Formlar
             sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
             sql.ExecuteNonQuery();
             connection.Close();
-
         }
         void IndirimliSatis()
         {
@@ -209,6 +207,9 @@ namespace ProjeOdevim.Formlar
 
         private void BClear_Click(object sender, EventArgs e)
         {
+            Employee();
+            CustomerList();
+            Product2();
             Clear();
         }
 
@@ -259,7 +260,7 @@ namespace ProjeOdevim.Formlar
                 Total.Text = hesapla.ToString();
                 double indirim = (hesapla / 100) * 15;
                 LIndirimTutari.Visible = true;
-                LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
+                LIndirimTutari.Text = Convert.ToString("-" + "₺" + indirim);
                 hesapla = hesapla - indirim;
                 Total.Text = hesapla.ToString("C2");
                 BAdd.Enabled = false;
@@ -279,7 +280,7 @@ namespace ProjeOdevim.Formlar
                 Total.Text = hesapla.ToString();
                 double indirim = (hesapla / 100) * 3;
                 LIndirimTutari.Visible = true;
-                LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
+                LIndirimTutari.Text = Convert.ToString("- " + "₺" + indirim);
                 hesapla = hesapla - indirim;
                 Total.Text = hesapla.ToString("C2");
                 BAdd.Enabled = false;
@@ -291,7 +292,6 @@ namespace ProjeOdevim.Formlar
                 indirimorani = 3;
             }
         }
-
         private void B5_Click(object sender, EventArgs e)
         {
             if (Total.Text != "0,00")
@@ -299,7 +299,7 @@ namespace ProjeOdevim.Formlar
                 Total.Text = hesapla.ToString();
                 double indirim = (hesapla / 100) * 5;
                 LIndirimTutari.Visible = true;
-                LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
+                LIndirimTutari.Text = Convert.ToString("-" + "₺" + indirim);
                 hesapla = hesapla - indirim;
                 Total.Text = hesapla.ToString("C2");
                 BAdd.Enabled = false;
@@ -324,7 +324,7 @@ namespace ProjeOdevim.Formlar
                         Total.Text = hesapla.ToString();
                         double indirim = (hesapla / 100) * yuzde;
                         LIndirimTutari.Visible = true;
-                        LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
+                        LIndirimTutari.Text = Convert.ToString("-" + "₺" + indirim);
                         hesapla = hesapla - indirim;
                         Total.Text = hesapla.ToString("C2");
                         BAdd.Enabled = false;
@@ -382,6 +382,9 @@ namespace ProjeOdevim.Formlar
                         IndirimsizsizSatis();
                     }
                 }
+                Employee();
+                CustomerList();
+                Product2();
                 IslemNoArttir();
                 IslemNo();
                 Console.Beep(800, 250);

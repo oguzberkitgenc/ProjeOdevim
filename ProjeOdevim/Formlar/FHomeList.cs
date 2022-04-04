@@ -66,12 +66,25 @@ namespace ProjeOdevim.Formlar
             gridControl2.DataSource = dt;
             connection.Close();
         }
+        void NewSales()
+        {
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 10ISLEMNO,SUM(TOPLAMFIYAT) AS 'TOPLAM TUTAR',INDIRIMORANI AS 'İNDİRİM %',TBLMUSTERI.AD AS 'MÜŞTERİ'," +
+                "TBLPERSONEL.AD+' ' + TBLPERSONEL.SOYAD AS 'PERSONEL' FROM TBLSATIS INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID = TBLMUSTERI.ID " +
+                "INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID GROUP BY ISLEMNO,TOPLAMFIYAT,INDIRIMORANI,TBLMUSTERI.AD," +
+                "TBLPERSONEL.AD+' ' + TBLPERSONEL.SOYAD ORDER BY ISLEMNO DESC", connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gridControl4.DataSource = dt;
+            connection.Close();
+        }
         private void FHomeList_Load(object sender, EventArgs e)
         {
             DecliningStok();
             NewEmployee();
             NewStajer();
             NewLogin();
+            NewSales();
             timer1.Start();
             gridView2.Columns[0].Visible = false;
             gridView3.Columns[0].Visible = false;
@@ -84,6 +97,7 @@ namespace ProjeOdevim.Formlar
             NewEmployee();
             NewStajer();
             NewLogin();
+            NewSales();
             gridView2.Columns[0].Visible = false;
             gridView3.Columns[0].Visible = false;
             gridView5.Columns[0].Visible = false;
