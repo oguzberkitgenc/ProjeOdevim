@@ -808,7 +808,7 @@
             this.Controls.Add(this.BAdd);
             this.Controls.Add(this.gridControl1);
             this.Name = "FSales";
-            this.Text = "V";
+            this.Text = "FSales";
             this.Load += new System.EventHandler(this.FSales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

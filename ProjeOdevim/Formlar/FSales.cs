@@ -116,6 +116,7 @@ namespace ProjeOdevim.Formlar
             sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
             sql.ExecuteNonQuery();
             connection.Close();
+
         }
         void IndirimliSatis()
         {
@@ -136,6 +137,17 @@ namespace ProjeOdevim.Formlar
             sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
             sql.ExecuteNonQuery();
             connection.Close();
+
+        }
+        void IslemNoArttir()
+        {
+            int islem = int.Parse(LIslemNo.Text);
+            connection.Open();
+            SqlCommand sql = new SqlCommand("update TBLISLEM set IslemNo=@p1", connection);
+            sql.Parameters.AddWithValue("@P1", islem + 1);
+            sql.ExecuteNonQuery();
+            connection.Close();
+
         }
         double hesapla = 0;
         double grd2fiyatal;
@@ -377,6 +389,8 @@ namespace ProjeOdevim.Formlar
                     }
                 }
             }
+            IslemNoArttir();
+            IslemNo();
             Console.Beep(800, 250);
             Clear();
         }
