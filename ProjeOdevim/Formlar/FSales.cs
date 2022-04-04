@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DevExpress.XtraGrid.Views.Grid;
 namespace ProjeOdevim.Formlar
 {
     public partial class FSales : Form
@@ -17,6 +18,8 @@ namespace ProjeOdevim.Formlar
             InitializeComponent();
         }
         SqlConnection connection = new SqlConnection(@"Data Source=BERKIT;Initial Catalog=DbProjem;Integrated Security=True");
+        DataTable dt1 = new DataTable();
+
         void ProductList()
         {
             connection.Open();
@@ -29,17 +32,104 @@ namespace ProjeOdevim.Formlar
             connection.Close();
             gridView1.Columns[4].Visible = false;
             gridView1.Columns[6].Visible = false;
-
             gridView1.Columns[0].Width = 1;
             gridView1.Columns[1].Width = 70;
             gridView1.Columns[2].Width = 35;
             gridView1.Columns[3].Width = 100;
             gridView1.Columns[5].Width = 45;
             gridView1.Columns[7].Width = 150;
+
+
+            dt1.Columns.Add(new DataColumn("ID", typeof(int)));
+            dt1.Columns.Add(new DataColumn("KATEGORI", typeof(string)));
+            dt1.Columns.Add(new DataColumn("MARKA", typeof(string)));
+            dt1.Columns.Add(new DataColumn("ÜRÜN ADI", typeof(string)));
+            dt1.Columns.Add(new DataColumn("ALIŞ FİYATI", typeof(double)));
+            dt1.Columns.Add(new DataColumn("SATIŞ FİYATI", typeof(double)));
         }
         private void FSales_Load(object sender, EventArgs e)
         {
             ProductList();
+            Total.Focus();
+
+        }
+        double hesapla = 0;
+        double grd2fiyatal;
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            DataRow dr1 = dt1.NewRow();
+            dr1["ID"] = LId.Text;
+            dr1["KATEGORI"] = Convert.ToString(LKategori.Text);
+            dr1["MARKA"] = Convert.ToString(LMarka.Text);
+            dr1["ÜRÜN ADI"] = Convert.ToString(LUrun.Text);
+            dr1["ALIŞ FİYATI"] = double.Parse(LAlis.Text);
+            dr1["SATIŞ FİYATI"] = double.Parse(LSatis.Text);
+            dt1.Rows.Add(dr1);
+            gridControl2.DataSource = dt1;
+
+            gridView2.Columns[0].Width = 5;
+            gridView2.Columns[1].Visible = false;
+            gridView2.Columns[4].Visible = false;
+
+            double fiyatal = Convert.ToDouble(LSatis.Text);
+
+            hesapla += fiyatal;
+            Total.Text = hesapla.ToString("C2");
+
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            LId.Text = dr["ID"].ToString();
+            LKategori.Text = dr["KATEGORİ"].ToString();
+            LMarka.Text = dr["MARKA"].ToString();
+            LAlis.Text = dr["ALIŞ FİYATI"].ToString();
+            LSatis.Text = dr["SATIŞ FİYATI"].ToString();
+            LUrun.Text = dr["ÜRÜN"].ToString();
+        }
+
+        private void BClear_Click(object sender, EventArgs e)
+        {
+            dt1.Rows.Clear();
+            hesapla = 0;
+            LblTest.Text = "0";
+            Total.Text = hesapla.ToString("C2");
+
+        }
+
+        private void BDelete_Click(object sender, EventArgs e)
+        {
+            if (LblTest.Text != "0" || gridView2.RowCount == 1)
+            {
+                if (gridView2.RowCount >= 2)
+                {
+                    hesapla = hesapla - grd2fiyatal;
+                    Total.Text = hesapla.ToString("C2");
+                    gridView2.DeleteSelectedRows();
+                    grd2fiyatal = 0;
+                    LblTest.Text = "0";
+                    gridView2.GetDataRow(gridView2.FocusedRowHandle = 0);
+                }
+                else if (gridView2.RowCount == 1)
+                {
+                    dt1.Rows.Clear();
+                    hesapla = 0;
+                    Total.Text = hesapla.ToString("C2");
+                    gridView2.GetDataRow(gridView2.FocusedRowHandle = 0);
+                }
+            }
+        }
+        private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            if (gridView2.RowCount >= 1)
+            {
+                DataRow dr = gridView2.GetDataRow(gridView2.FocusedRowHandle);
+                grd2fiyatal = Convert.ToDouble(dr["SATIŞ FİYATI"]);
+                LblTest.Text = dr["SATIŞ FİYATI"].ToString();
+            }
+
         }
     }
 }
