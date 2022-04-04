@@ -318,7 +318,7 @@ namespace ProjeOdevim.Formlar
             {
                 if (TYuzdeGir.Text != "0" && TYuzdeGir.Text != "")
                 {
-                    int yuzde = int.Parse(TYuzdeGir.Text);
+                    double yuzde = double.Parse(TYuzdeGir.Text);
                     if (Total.Text != "0,00")
                     {
                         Total.Text = hesapla.ToString();
@@ -337,10 +337,10 @@ namespace ProjeOdevim.Formlar
                     }
                 }
             }
-            catch (Exception)
+            catch ()
             {
 
-                throw;
+                MessageBox.Show("Nokta işareti kullanmayaınız. Nokta yerine (,) virgün 'ü tercih ediniz.");
             }
         }
         private void BSearch_Click(object sender, EventArgs e)
