@@ -59,7 +59,7 @@ namespace ProjeOdevim.Formlar
             SqlDataReader dr = command.ExecuteReader();
             while (dr.Read())
             {
-                LIslemNo.Text = dr[1].ToString();
+                LIslemNo.Text = dr[0].ToString();
             }
             connection.Close();
             DateTime date = DateTime.Now;
@@ -250,7 +250,6 @@ namespace ProjeOdevim.Formlar
                 alisfiyati = Convert.ToDecimal(dr["ALIŞ FİYATI"]);
                 satisfiyatı = Convert.ToDecimal(dr["SATIŞ FİYATI"]);
             }
-
         }
 
         private void B3_Click(object sender, EventArgs e)
@@ -290,11 +289,8 @@ namespace ProjeOdevim.Formlar
                 B5.Enabled = false;
                 B3.Enabled = false;
                 indirimorani = 5;
-
-
             }
         }
-
         private void B15_Click(object sender, EventArgs e)
         {
             if (Total.Text != "0,00")
@@ -312,8 +308,6 @@ namespace ProjeOdevim.Formlar
                 B5.Enabled = false;
                 B3.Enabled = false;
                 indirimorani = 15;
-
-
             }
         }
 
@@ -339,7 +333,6 @@ namespace ProjeOdevim.Formlar
                         B5.Enabled = false;
                         B3.Enabled = false;
                         indirimorani = Convert.ToDecimal(TYuzdeGir.Text);
-
                     }
                 }
             }
@@ -375,7 +368,7 @@ namespace ProjeOdevim.Formlar
         {
             if (gridView2.DataRowCount >= 1)
             {
-                for (int i = 1; i <= gridView2.DataRowCount; i++)
+                for (int i = 0; i < gridView2.DataRowCount; i++)
                 {
                     if (indirimorani > 0)
                     {
@@ -388,11 +381,12 @@ namespace ProjeOdevim.Formlar
                         IndirimsizsizSatis();
                     }
                 }
+                IslemNoArttir();
+                IslemNo();
+                Console.Beep(800, 250);
+                Clear();
             }
-            IslemNoArttir();
-            IslemNo();
-            Console.Beep(800, 250);
-            Clear();
+
         }
     }
 }
