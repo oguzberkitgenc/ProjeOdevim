@@ -50,7 +50,7 @@
             this.TYuzdeGir = new DevExpress.XtraEditors.TextEdit();
             this.BSinirsiz = new DevExpress.XtraEditors.SimpleButton();
             this.LIndirimTutari = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CmbCustomer = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.BSearch = new DevExpress.XtraEditors.SimpleButton();
@@ -603,22 +603,24 @@
             this.LIndirimTutari.Text = "0,00";
             this.LIndirimTutari.Visible = false;
             // 
-            // comboBox1
+            // CmbCustomer
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1289, 530);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 27);
-            this.comboBox1.TabIndex = 104;
+            this.CmbCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CmbCustomer.FormattingEnabled = true;
+            this.CmbCustomer.Location = new System.Drawing.Point(1289, 530);
+            this.CmbCustomer.Name = "CmbCustomer";
+            this.CmbCustomer.Size = new System.Drawing.Size(222, 27);
+            this.CmbCustomer.TabIndex = 104;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(1422, 503);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(1294, 504);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 19);
+            this.label2.Size = new System.Drawing.Size(103, 19);
             this.label2.TabIndex = 105;
             this.label2.Text = "Müşteri Seç";
             // 
@@ -663,7 +665,7 @@
             this.Controls.Add(this.BSearch);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CmbCustomer);
             this.Controls.Add(this.LIndirimTutari);
             this.Controls.Add(this.BSinirsiz);
             this.Controls.Add(this.TYuzdeGir);
@@ -720,7 +722,7 @@
         private DevExpress.XtraEditors.TextEdit TYuzdeGir;
         private DevExpress.XtraEditors.SimpleButton BSinirsiz;
         private System.Windows.Forms.Label LIndirimTutari;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CmbCustomer;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton BSearch;

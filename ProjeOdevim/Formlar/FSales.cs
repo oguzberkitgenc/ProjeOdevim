@@ -50,9 +50,22 @@ namespace ProjeOdevim.Formlar
             dt1.Columns.Add(new DataColumn("ALIŞ FİYATI", typeof(double)));
             dt1.Columns.Add(new DataColumn("SATIŞ FİYATI", typeof(double)));
         }
+        void CustomerList()
+        {
+            connection.Open();
+            SqlCommand komut = new SqlCommand("Select ID,AD From TBLMUSTERI", connection);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CmbCustomer.ValueMember = "ID";
+            CmbCustomer.DisplayMember = "AD";
+            CmbCustomer.DataSource = dt;
+            connection.Close();
+        }
         private void FSales_Load(object sender, EventArgs e)
         {
             ProductList();
+            CustomerList();
             Total.Focus();
 
         }
@@ -219,7 +232,7 @@ namespace ProjeOdevim.Formlar
                 connection.Close();
                 Rch.Text = "";
             }
-            else if (Rch.Text=="")
+            else if (Rch.Text == "")
             {
                 Product2();
             }
