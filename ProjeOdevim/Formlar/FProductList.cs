@@ -45,7 +45,9 @@ namespace ProjeOdevim.Formlar
         void ProductList()
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Execute  PRODUCT", connection);
+            SqlDataAdapter da = new SqlDataAdapter("Select TBLURUN.ID,KATEGORIADI AS 'KATEGORİ',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN',ALISFIYAT AS 'ALIŞ FİYATI'," +
+                "SATISFIYAT AS 'SATIŞ FİYATI', STOK AS 'STOK',ACIKLAMA AS 'AÇIKLAMA' FROM TBLURUN INNER JOIN TBLKATEGORI ON T" +
+                "BLURUN.KATEGORIID=TBLKATEGORI.ID INNER JOIN TBLMARKA ON TBLURUN.MARKAID=TBLMARKA.ID order by KATEGORIID asc", connection);
             da.Fill(dt);
             gridControl1.DataSource = dt;
         }
