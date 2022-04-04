@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSales));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.BAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -46,7 +47,6 @@
             this.LblTest = new System.Windows.Forms.Label();
             this.B3 = new DevExpress.XtraEditors.SimpleButton();
             this.B5 = new DevExpress.XtraEditors.SimpleButton();
-            this.B15 = new DevExpress.XtraEditors.SimpleButton();
             this.TYuzdeGir = new DevExpress.XtraEditors.TextEdit();
             this.BSinirsiz = new DevExpress.XtraEditors.SimpleButton();
             this.LIndirimTutari = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.CmbEmploye = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.LTarih = new System.Windows.Forms.Label();
+            this.B15 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -238,8 +239,17 @@
             // 
             // BAdd
             // 
+            this.BAdd.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
             this.BAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BAdd.Appearance.Options.UseBackColor = true;
             this.BAdd.Appearance.Options.UseFont = true;
+            this.BAdd.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
+            this.BAdd.AppearanceDisabled.Options.UseBackColor = true;
+            this.BAdd.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
+            this.BAdd.AppearanceHovered.Options.UseBackColor = true;
+            this.BAdd.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(230)))), ((int)(((byte)(233)))));
+            this.BAdd.AppearancePressed.Options.UseBackColor = true;
+            this.BAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BAdd.ImageOptions.Image")));
             this.BAdd.Location = new System.Drawing.Point(1289, 411);
             this.BAdd.Name = "BAdd";
             this.BAdd.Size = new System.Drawing.Size(222, 39);
@@ -511,9 +521,9 @@
             this.BClear.AppearancePressed.ForeColor = System.Drawing.Color.Black;
             this.BClear.AppearancePressed.Options.UseBackColor = true;
             this.BClear.AppearancePressed.Options.UseForeColor = true;
-            this.BClear.Location = new System.Drawing.Point(496, 440);
+            this.BClear.Location = new System.Drawing.Point(496, 444);
             this.BClear.Name = "BClear";
-            this.BClear.Size = new System.Drawing.Size(200, 23);
+            this.BClear.Size = new System.Drawing.Size(200, 27);
             this.BClear.TabIndex = 92;
             this.BClear.Text = "Temizle";
             this.BClear.Click += new System.EventHandler(this.BClear_Click);
@@ -542,9 +552,10 @@
             this.BDelete.AppearancePressed.ForeColor = System.Drawing.Color.White;
             this.BDelete.AppearancePressed.Options.UseBackColor = true;
             this.BDelete.AppearancePressed.Options.UseForeColor = true;
+            this.BDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDelete.ImageOptions.Image")));
             this.BDelete.Location = new System.Drawing.Point(496, 411);
             this.BDelete.Name = "BDelete";
-            this.BDelete.Size = new System.Drawing.Size(200, 23);
+            this.BDelete.Size = new System.Drawing.Size(200, 27);
             this.BDelete.TabIndex = 93;
             this.BDelete.Text = "Çıkar";
             this.BDelete.Click += new System.EventHandler(this.BDelete_Click);
@@ -600,7 +611,7 @@
             this.B3.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.B3.AppearancePressed.BackColor2 = System.Drawing.Color.White;
             this.B3.AppearancePressed.Options.UseBackColor = true;
-            this.B3.Location = new System.Drawing.Point(496, 559);
+            this.B3.Location = new System.Drawing.Point(496, 563);
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(200, 23);
             this.B3.TabIndex = 97;
@@ -623,39 +634,16 @@
             this.B5.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.B5.AppearancePressed.BackColor2 = System.Drawing.Color.White;
             this.B5.AppearancePressed.Options.UseBackColor = true;
-            this.B5.Location = new System.Drawing.Point(496, 530);
+            this.B5.Location = new System.Drawing.Point(496, 534);
             this.B5.Name = "B5";
             this.B5.Size = new System.Drawing.Size(200, 23);
             this.B5.TabIndex = 98;
             this.B5.Text = "%5";
             this.B5.Click += new System.EventHandler(this.B5_Click);
             // 
-            // B15
-            // 
-            this.B15.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.B15.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.B15.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.B15.Appearance.Options.UseBackColor = true;
-            this.B15.Appearance.Options.UseFont = true;
-            this.B15.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.B15.AppearanceDisabled.BackColor2 = System.Drawing.Color.White;
-            this.B15.AppearanceDisabled.Options.UseBackColor = true;
-            this.B15.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.B15.AppearanceHovered.BackColor2 = System.Drawing.Color.White;
-            this.B15.AppearanceHovered.Options.UseBackColor = true;
-            this.B15.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.B15.AppearancePressed.BackColor2 = System.Drawing.Color.White;
-            this.B15.AppearancePressed.Options.UseBackColor = true;
-            this.B15.Location = new System.Drawing.Point(496, 501);
-            this.B15.Name = "B15";
-            this.B15.Size = new System.Drawing.Size(200, 23);
-            this.B15.TabIndex = 99;
-            this.B15.Text = "%15";
-            this.B15.Click += new System.EventHandler(this.B15_Click);
-            // 
             // TYuzdeGir
             // 
-            this.TYuzdeGir.Location = new System.Drawing.Point(496, 469);
+            this.TYuzdeGir.Location = new System.Drawing.Point(496, 473);
             this.TYuzdeGir.Name = "TYuzdeGir";
             this.TYuzdeGir.Properties.Appearance.BackColor = System.Drawing.Color.Cyan;
             this.TYuzdeGir.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -686,7 +674,7 @@
             this.BSinirsiz.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.BSinirsiz.AppearancePressed.BackColor2 = System.Drawing.Color.White;
             this.BSinirsiz.AppearancePressed.Options.UseBackColor = true;
-            this.BSinirsiz.Location = new System.Drawing.Point(538, 470);
+            this.BSinirsiz.Location = new System.Drawing.Point(538, 474);
             this.BSinirsiz.Name = "BSinirsiz";
             this.BSinirsiz.Size = new System.Drawing.Size(158, 23);
             this.BSinirsiz.TabIndex = 101;
@@ -728,8 +716,16 @@
             // 
             // BSatis
             // 
+            this.BSatis.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(107)))));
             this.BSatis.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSatis.Appearance.Options.UseBackColor = true;
             this.BSatis.Appearance.Options.UseFont = true;
+            this.BSatis.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(107)))));
+            this.BSatis.AppearanceDisabled.Options.UseBackColor = true;
+            this.BSatis.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(107)))));
+            this.BSatis.AppearanceHovered.Options.UseBackColor = true;
+            this.BSatis.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(107)))));
+            this.BSatis.AppearancePressed.Options.UseBackColor = true;
             this.BSatis.Location = new System.Drawing.Point(1289, 563);
             this.BSatis.Name = "BSatis";
             this.BSatis.Size = new System.Drawing.Size(222, 39);
@@ -739,8 +735,17 @@
             // 
             // BSearch
             // 
+            this.BSearch.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(92)))), ((int)(((byte)(231)))));
             this.BSearch.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSearch.Appearance.Options.UseBackColor = true;
             this.BSearch.Appearance.Options.UseFont = true;
+            this.BSearch.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(92)))), ((int)(((byte)(231)))));
+            this.BSearch.AppearanceDisabled.Options.UseBackColor = true;
+            this.BSearch.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(92)))), ((int)(((byte)(231)))));
+            this.BSearch.AppearanceHovered.Options.UseBackColor = true;
+            this.BSearch.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(92)))), ((int)(((byte)(231)))));
+            this.BSearch.AppearancePressed.Options.UseBackColor = true;
+            this.BSearch.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BSearch.ImageOptions.Image")));
             this.BSearch.Location = new System.Drawing.Point(1061, 411);
             this.BSearch.Name = "BSearch";
             this.BSearch.Size = new System.Drawing.Size(222, 39);
@@ -750,8 +755,8 @@
             // 
             // Rch
             // 
-            this.Rch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Rch.ForeColor = System.Drawing.Color.White;
+            this.Rch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Rch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.Rch.Location = new System.Drawing.Point(702, 411);
             this.Rch.Name = "Rch";
             this.Rch.Size = new System.Drawing.Size(353, 39);
@@ -828,12 +833,36 @@
             this.LTarih.Text = " ";
             this.LTarih.Visible = false;
             // 
+            // B15
+            // 
+            this.B15.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.B15.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.B15.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B15.Appearance.Options.UseBackColor = true;
+            this.B15.Appearance.Options.UseFont = true;
+            this.B15.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.B15.AppearanceDisabled.BackColor2 = System.Drawing.Color.White;
+            this.B15.AppearanceDisabled.Options.UseBackColor = true;
+            this.B15.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.B15.AppearanceHovered.BackColor2 = System.Drawing.Color.White;
+            this.B15.AppearanceHovered.Options.UseBackColor = true;
+            this.B15.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.B15.AppearancePressed.BackColor2 = System.Drawing.Color.White;
+            this.B15.AppearancePressed.Options.UseBackColor = true;
+            this.B15.Location = new System.Drawing.Point(496, 503);
+            this.B15.Name = "B15";
+            this.B15.Size = new System.Drawing.Size(200, 23);
+            this.B15.TabIndex = 120;
+            this.B15.Text = "%15";
+            this.B15.Click += new System.EventHandler(this.B15_Click);
+            // 
             // FSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.B15);
             this.Controls.Add(this.LTarih);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CmbEmploye);
@@ -848,7 +877,6 @@
             this.Controls.Add(this.LIndirimTutari);
             this.Controls.Add(this.BSinirsiz);
             this.Controls.Add(this.TYuzdeGir);
-            this.Controls.Add(this.B15);
             this.Controls.Add(this.B5);
             this.Controls.Add(this.B3);
             this.Controls.Add(this.LblTest);
@@ -897,7 +925,6 @@
         private System.Windows.Forms.Label LblTest;
         private DevExpress.XtraEditors.SimpleButton B3;
         private DevExpress.XtraEditors.SimpleButton B5;
-        private DevExpress.XtraEditors.SimpleButton B15;
         private DevExpress.XtraEditors.TextEdit TYuzdeGir;
         private DevExpress.XtraEditors.SimpleButton BSinirsiz;
         private System.Windows.Forms.Label LIndirimTutari;
@@ -912,5 +939,6 @@
         private System.Windows.Forms.ComboBox CmbEmploye;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LTarih;
+        private DevExpress.XtraEditors.SimpleButton B15;
     }
 }

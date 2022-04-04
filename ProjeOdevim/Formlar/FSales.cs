@@ -252,6 +252,26 @@ namespace ProjeOdevim.Formlar
             }
         }
 
+        private void B15_Click(object sender, EventArgs e)
+        {
+            if (Total.Text != "0,00")
+            {
+                Total.Text = hesapla.ToString();
+                double indirim = (hesapla / 100) * 15;
+                LIndirimTutari.Visible = true;
+                LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
+                hesapla = hesapla - indirim;
+                Total.Text = hesapla.ToString("C2");
+                BAdd.Enabled = false;
+                LUyari.Visible = true;
+                BSinirsiz.Enabled = false;
+                B15.Enabled = false;
+                B5.Enabled = false;
+                B3.Enabled = false;
+                indirimorani = 15;
+            }
+        }
+
         private void B3_Click(object sender, EventArgs e)
         {
             if (Total.Text != "0,00")
@@ -289,25 +309,6 @@ namespace ProjeOdevim.Formlar
                 B5.Enabled = false;
                 B3.Enabled = false;
                 indirimorani = 5;
-            }
-        }
-        private void B15_Click(object sender, EventArgs e)
-        {
-            if (Total.Text != "0,00")
-            {
-                Total.Text = hesapla.ToString();
-                double indirim = (hesapla / 100) * 15;
-                LIndirimTutari.Visible = true;
-                LIndirimTutari.Text = Convert.ToString("İndirim Tutarı: " + "₺" + indirim);
-                hesapla = hesapla - indirim;
-                Total.Text = hesapla.ToString("C2");
-                BAdd.Enabled = false;
-                LUyari.Visible = true;
-                BSinirsiz.Enabled = false;
-                B15.Enabled = false;
-                B5.Enabled = false;
-                B3.Enabled = false;
-                indirimorani = 15;
             }
         }
 
