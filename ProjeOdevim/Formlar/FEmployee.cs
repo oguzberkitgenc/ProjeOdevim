@@ -51,12 +51,12 @@ namespace ProjeOdevim.Formlar
         void GenderList()
         {
             SqlCommand command = new SqlCommand("Select * From TBLCINSIYET", connection);
-            SqlDataAdapter da = new SqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
             CmbGender.ValueMember = "ID";
             CmbGender.DisplayMember = "CINSIYETAD";
-            CmbGender.DataSource = dt;
+            CmbGender.DataSource = dataTable;
         }
         void EmployeeList()
         {

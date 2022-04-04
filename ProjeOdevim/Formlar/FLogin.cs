@@ -60,7 +60,7 @@ namespace ProjeOdevim.Formlar
                 frm.ShowDialog();
                 this.Hide();
             }
-            
+
         }
     }
 }

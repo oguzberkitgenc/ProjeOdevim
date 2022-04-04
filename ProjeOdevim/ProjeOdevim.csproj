@@ -127,6 +127,12 @@
     <Compile Include="Formlar\FProductStatis.Designer.cs">
       <DependentUpon>FProductStatis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FSales.Designer.cs">
+      <DependentUpon>FSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FShopping.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FProductStatis.resx">
       <DependentUpon>FProductStatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FSales.resx">
+      <DependentUpon>FSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FShopping.resx">
       <DependentUpon>FShopping.cs</DependentUpon>

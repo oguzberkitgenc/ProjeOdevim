@@ -73,6 +73,9 @@ namespace ProjeOdevim.Formlar
             NewStajer();
             NewLogin();
             timer1.Start();
+            gridView2.Columns[0].Visible = false;
+            gridView3.Columns[0].Visible = false;
+            gridView5.Columns[0].Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -81,6 +84,7 @@ namespace ProjeOdevim.Formlar
             NewEmployee();
             NewStajer();
             NewLogin();
+            gridView2.Columns[0].Visible = false;
             gridView3.Columns[0].Visible = false;
             gridView5.Columns[0].Visible = false;
         }

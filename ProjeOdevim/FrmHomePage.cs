@@ -184,9 +184,20 @@ namespace ProjeOdevim
 
         private void BKullanici_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Formlar.FLogin fLogin = new Formlar.FLogin();
             fLogin.Show();
-            this.Hide();
+        }
+
+        Formlar.FSales sales;
+        private void BSales_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (sales==null || sales.IsDisposed)
+            {
+                sales = new Formlar.FSales();
+                sales.MdiParent = this;
+                sales.Show();
+            }
         }
     }
 }
