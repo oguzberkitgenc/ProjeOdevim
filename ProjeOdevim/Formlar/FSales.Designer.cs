@@ -30,7 +30,7 @@
         {
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.BAdd = new DevExpress.XtraEditors.SimpleButton();
             this.LId = new System.Windows.Forms.Label();
             this.LKategori = new System.Windows.Forms.Label();
             this.LMarka = new System.Windows.Forms.Label();
@@ -52,9 +52,17 @@
             this.LIndirimTutari = new System.Windows.Forms.Label();
             this.CmbCustomer = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.BSatis = new DevExpress.XtraEditors.SimpleButton();
             this.BSearch = new DevExpress.XtraEditors.SimpleButton();
             this.Rch = new System.Windows.Forms.RichTextBox();
+            this.LIndirimsiz = new System.Windows.Forms.Label();
+            this.LUyari = new System.Windows.Forms.Label();
+            this.LIslemNo = new System.Windows.Forms.Label();
+            this.LIndirim = new System.Windows.Forms.Label();
+            this.LPersonelAd = new System.Windows.Forms.Label();
+            this.LPErsonelId = new System.Windows.Forms.Label();
+            this.CmbEmploye = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -230,16 +238,16 @@
             this.gridView1.RowHeight = 23;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
-            // simpleButton1
+            // BAdd
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(1289, 411);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(222, 39);
-            this.simpleButton1.TabIndex = 84;
-            this.simpleButton1.Text = "Sepete Ekle";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.BAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BAdd.Appearance.Options.UseFont = true;
+            this.BAdd.Location = new System.Drawing.Point(1289, 411);
+            this.BAdd.Name = "BAdd";
+            this.BAdd.Size = new System.Drawing.Size(222, 39);
+            this.BAdd.TabIndex = 84;
+            this.BAdd.Text = "Sepete Ekle";
+            this.BAdd.Click += new System.EventHandler(this.BAdd_Click);
             // 
             // LId
             // 
@@ -607,7 +615,7 @@
             // 
             this.CmbCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbCustomer.FormattingEnabled = true;
-            this.CmbCustomer.Location = new System.Drawing.Point(1289, 530);
+            this.CmbCustomer.Location = new System.Drawing.Point(1289, 499);
             this.CmbCustomer.Name = "CmbCustomer";
             this.CmbCustomer.Size = new System.Drawing.Size(222, 27);
             this.CmbCustomer.TabIndex = 104;
@@ -618,21 +626,22 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(1294, 504);
+            this.label2.Location = new System.Drawing.Point(1180, 505);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 19);
             this.label2.TabIndex = 105;
             this.label2.Text = "Müşteri Seç";
             // 
-            // simpleButton2
+            // BSatis
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(1289, 563);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(222, 39);
-            this.simpleButton2.TabIndex = 106;
-            this.simpleButton2.Text = "Satış Yap";
+            this.BSatis.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSatis.Appearance.Options.UseFont = true;
+            this.BSatis.Location = new System.Drawing.Point(1289, 563);
+            this.BSatis.Name = "BSatis";
+            this.BSatis.Size = new System.Drawing.Size(222, 39);
+            this.BSatis.TabIndex = 106;
+            this.BSatis.Text = "Satış Yap";
+            this.BSatis.Click += new System.EventHandler(this.BSatis_Click);
             // 
             // BSearch
             // 
@@ -655,15 +664,114 @@
             this.Rch.TabIndex = 109;
             this.Rch.Text = "";
             // 
+            // LIndirimsiz
+            // 
+            this.LIndirimsiz.AutoSize = true;
+            this.LIndirimsiz.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LIndirimsiz.ForeColor = System.Drawing.Color.Black;
+            this.LIndirimsiz.Location = new System.Drawing.Point(455, 583);
+            this.LIndirimsiz.Name = "LIndirimsiz";
+            this.LIndirimsiz.Size = new System.Drawing.Size(35, 13);
+            this.LIndirimsiz.TabIndex = 111;
+            this.LIndirimsiz.Text = "label1";
+            this.LIndirimsiz.Visible = false;
+            // 
+            // LUyari
+            // 
+            this.LUyari.AutoSize = true;
+            this.LUyari.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LUyari.ForeColor = System.Drawing.Color.Black;
+            this.LUyari.Location = new System.Drawing.Point(1295, 456);
+            this.LUyari.Name = "LUyari";
+            this.LUyari.Size = new System.Drawing.Size(214, 39);
+            this.LUyari.TabIndex = 112;
+            this.LUyari.Text = "İndirim yapıldıktan sonra ekleme yapılamaz.\r\nSatışı tamamlayınız veya \'Temizle\' b" +
+    "utonuna\r\ntıklayınız.";
+            this.LUyari.Visible = false;
+            // 
+            // LIslemNo
+            // 
+            this.LIslemNo.AutoSize = true;
+            this.LIslemNo.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LIslemNo.ForeColor = System.Drawing.Color.Red;
+            this.LIslemNo.Location = new System.Drawing.Point(725, 472);
+            this.LIslemNo.Name = "LIslemNo";
+            this.LIslemNo.Size = new System.Drawing.Size(59, 23);
+            this.LIslemNo.TabIndex = 113;
+            this.LIslemNo.Text = "label1";
+            // 
+            // LIndirim
+            // 
+            this.LIndirim.AutoSize = true;
+            this.LIndirim.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LIndirim.ForeColor = System.Drawing.Color.IndianRed;
+            this.LIndirim.Location = new System.Drawing.Point(725, 501);
+            this.LIndirim.Name = "LIndirim";
+            this.LIndirim.Size = new System.Drawing.Size(51, 19);
+            this.LIndirim.TabIndex = 114;
+            this.LIndirim.Text = "label1";
+            // 
+            // LPersonelAd
+            // 
+            this.LPersonelAd.AutoSize = true;
+            this.LPersonelAd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LPersonelAd.ForeColor = System.Drawing.Color.IndianRed;
+            this.LPersonelAd.Location = new System.Drawing.Point(812, 501);
+            this.LPersonelAd.Name = "LPersonelAd";
+            this.LPersonelAd.Size = new System.Drawing.Size(51, 19);
+            this.LPersonelAd.TabIndex = 116;
+            this.LPersonelAd.Text = "label1";
+            // 
+            // LPErsonelId
+            // 
+            this.LPErsonelId.AutoSize = true;
+            this.LPErsonelId.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LPErsonelId.ForeColor = System.Drawing.Color.Red;
+            this.LPErsonelId.Location = new System.Drawing.Point(812, 472);
+            this.LPErsonelId.Name = "LPErsonelId";
+            this.LPErsonelId.Size = new System.Drawing.Size(40, 23);
+            this.LPErsonelId.TabIndex = 115;
+            this.LPErsonelId.Text = "aaa";
+            this.LPErsonelId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CmbEmploye
+            // 
+            this.CmbEmploye.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CmbEmploye.FormattingEnabled = true;
+            this.CmbEmploye.Location = new System.Drawing.Point(1289, 530);
+            this.CmbEmploye.Name = "CmbEmploye";
+            this.CmbEmploye.Size = new System.Drawing.Size(222, 27);
+            this.CmbEmploye.TabIndex = 117;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(1170, 538);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 19);
+            this.label3.TabIndex = 118;
+            this.label3.Text = "Personel Seç";
+            // 
             // FSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.CmbEmploye);
+            this.Controls.Add(this.LPersonelAd);
+            this.Controls.Add(this.LPErsonelId);
+            this.Controls.Add(this.LIndirim);
+            this.Controls.Add(this.LIslemNo);
+            this.Controls.Add(this.LUyari);
+            this.Controls.Add(this.LIndirimsiz);
             this.Controls.Add(this.Rch);
             this.Controls.Add(this.BSearch);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.BSatis);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CmbCustomer);
             this.Controls.Add(this.LIndirimTutari);
@@ -684,10 +792,10 @@
             this.Controls.Add(this.LMarka);
             this.Controls.Add(this.LKategori);
             this.Controls.Add(this.LId);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.BAdd);
             this.Controls.Add(this.gridControl1);
             this.Name = "FSales";
-            this.Text = "FSales";
+            this.Text = "V";
             this.Load += new System.EventHandler(this.FSales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -702,7 +810,7 @@
         #endregion
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton BAdd;
         private System.Windows.Forms.Label LId;
         private System.Windows.Forms.Label LKategori;
         private System.Windows.Forms.Label LMarka;
@@ -724,8 +832,16 @@
         private System.Windows.Forms.Label LIndirimTutari;
         private System.Windows.Forms.ComboBox CmbCustomer;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton BSatis;
         private DevExpress.XtraEditors.SimpleButton BSearch;
         private System.Windows.Forms.RichTextBox Rch;
+        private System.Windows.Forms.Label LIndirimsiz;
+        private System.Windows.Forms.Label LUyari;
+        private System.Windows.Forms.Label LIslemNo;
+        private System.Windows.Forms.Label LIndirim;
+        private System.Windows.Forms.Label LPersonelAd;
+        private System.Windows.Forms.Label LPErsonelId;
+        private System.Windows.Forms.ComboBox CmbEmploye;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -66,10 +66,9 @@ namespace ProjeOdevim.Formlar
                 MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & MskPhone.Text != "")
             {
                 connection.Open();
-                SqlCommand sql = new SqlCommand("insert into TBLMUSTERI (TC,AD,SOYAD,IL,ILCE,ADRES,DOGUMT,TEL,CINSIYET,KREDILIMIT) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", connection);
+                SqlCommand sql = new SqlCommand("insert into TBLMUSTERI (TC,AD,IL,ILCE,ADRES,DOGUMT,TEL,CINSIYET,KREDILIMIT) values (@p1,@p2,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", connection);
                 sql.Parameters.AddWithValue("@P1", MskTc.Text);
                 sql.Parameters.AddWithValue("@P2", TName.Text);
-                sql.Parameters.AddWithValue("@P3", TSurname.Text);
                 sql.Parameters.AddWithValue("@P4", CmbIl.Text);
                 sql.Parameters.AddWithValue("@P5", CmbIlce.Text);
                 sql.Parameters.AddWithValue("@P6", RchAdres.Text);
@@ -100,7 +99,6 @@ namespace ProjeOdevim.Formlar
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
             TId.Text = dr["ID"].ToString();
             TName.Text = dr["AD"].ToString();
-            TSurname.Text = dr["SOYAD"].ToString();
             CmbGender.Text = dr["CINSIYET"].ToString();
             MskBirth.Text = dr["DOGUMT"].ToString();
             CmbIl.Text = dr["IL"].ToString();
@@ -130,10 +128,9 @@ namespace ProjeOdevim.Formlar
             if (TId.Text != "")
             {
                 connection.Open();
-                SqlCommand komut = new SqlCommand("update TBLMUSTERI set TC=@P1,AD=@P2,SOYAD=@P3,DOGUMT=@P4,IL=@P5,ILCE=@P6,ADRES=@P7,CINSIYET=@P8,TEL=@P9 WHERE ID=@P10", connection);
+                SqlCommand komut = new SqlCommand("update TBLMUSTERI set TC=@P1,AD=@P2,DOGUMT=@P4,IL=@P5,ILCE=@P6,ADRES=@P7,CINSIYET=@P8,TEL=@P9 WHERE ID=@P10", connection);
                 komut.Parameters.AddWithValue("@p1", MskTc.Text);
                 komut.Parameters.AddWithValue("@p2", TName.Text);
-                komut.Parameters.AddWithValue("@p3", TSurname.Text);
                 komut.Parameters.AddWithValue("@p4", MskBirth.Text);
                 komut.Parameters.AddWithValue("@p5", CmbIl.Text);
                 komut.Parameters.AddWithValue("@p6", CmbIlce.Text);
