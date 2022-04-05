@@ -57,68 +57,146 @@
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.ColumnFilterButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.ColumnFilterButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseBackColor = true;
             this.gridView1.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.gridView1.Appearance.ColumnFilterButtonActive.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.ColumnFilterButtonActive.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.ColumnFilterButtonActive.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.ColumnFilterButtonActive.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseFont = true;
-            this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.CustomizationFormHint.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.CustomizationFormHint.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.CustomizationFormHint.Options.UseBackColor = true;
             this.gridView1.Appearance.CustomizationFormHint.Options.UseFont = true;
-            this.gridView1.Appearance.DetailTip.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.DetailTip.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.DetailTip.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.DetailTip.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.DetailTip.Options.UseBackColor = true;
             this.gridView1.Appearance.DetailTip.Options.UseFont = true;
-            this.gridView1.Appearance.Empty.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.Empty.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.Empty.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.Empty.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.Empty.Options.UseBackColor = true;
             this.gridView1.Appearance.Empty.Options.UseFont = true;
-            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.EvenRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
             this.gridView1.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView1.Appearance.FilterCloseButton.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.FilterCloseButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.FilterCloseButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.FilterCloseButton.Options.UseBackColor = true;
             this.gridView1.Appearance.FilterCloseButton.Options.UseFont = true;
-            this.gridView1.Appearance.FilterPanel.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.FilterPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.FilterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.FilterPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.FilterPanel.Options.UseBackColor = true;
             this.gridView1.Appearance.FilterPanel.Options.UseFont = true;
-            this.gridView1.Appearance.FixedLine.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.FixedLine.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.FixedLine.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.FixedLine.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.FixedLine.Options.UseBackColor = true;
             this.gridView1.Appearance.FixedLine.Options.UseFont = true;
-            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(143)))), ((int)(((byte)(166)))));
-            this.gridView1.Appearance.FocusedCell.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.gridView1.Appearance.FocusedCell.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.FocusedCell.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.FocusedCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedCell.Options.UseFont = true;
-            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(143)))), ((int)(((byte)(166)))));
-            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
-            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.FooterPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.FooterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.FooterPanel.Options.UseBackColor = true;
             this.gridView1.Appearance.FooterPanel.Options.UseFont = true;
-            this.gridView1.Appearance.GroupButton.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.GroupButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.GroupButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.GroupButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.GroupButton.Options.UseBackColor = true;
             this.gridView1.Appearance.GroupButton.Options.UseFont = true;
-            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.GroupFooter.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.GroupFooter.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.GroupFooter.Options.UseBackColor = true;
             this.gridView1.Appearance.GroupFooter.Options.UseFont = true;
-            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.GroupPanel.Options.UseBackColor = true;
             this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
-            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.GroupRow.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.GroupRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.GroupRow.Options.UseBackColor = true;
             this.gridView1.Appearance.GroupRow.Options.UseFont = true;
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.HeaderPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.HeaderPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseBackColor = true;
             this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.HideSelectionRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.HideSelectionRow.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.HideSelectionRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.HideSelectionRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.HideSelectionRow.Options.UseBackColor = true;
             this.gridView1.Appearance.HideSelectionRow.Options.UseFont = true;
-            this.gridView1.Appearance.HorzLine.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.HorzLine.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.HorzLine.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.HorzLine.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.HorzLine.Options.UseBackColor = true;
             this.gridView1.Appearance.HorzLine.Options.UseFont = true;
-            this.gridView1.Appearance.HotTrackedRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.HotTrackedRow.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.HotTrackedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.HotTrackedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.HotTrackedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.HotTrackedRow.Options.UseFont = true;
-            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.OddRow.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.OddRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
             this.gridView1.Appearance.OddRow.Options.UseFont = true;
-            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.Preview.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.Preview.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.Preview.Options.UseBackColor = true;
             this.gridView1.Appearance.Preview.Options.UseFont = true;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.Row.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.Row.Options.UseBackColor = true;
             this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.Appearance.RowSeparator.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.RowSeparator.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.RowSeparator.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.RowSeparator.Options.UseBackColor = true;
             this.gridView1.Appearance.RowSeparator.Options.UseFont = true;
-            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.SelectedRow.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.SelectedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridView1.Appearance.SelectedRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.gridView1.Appearance.SelectedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.SelectedRow.Options.UseFont = true;
-            this.gridView1.Appearance.TopNewRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.TopNewRow.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.TopNewRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.TopNewRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.TopNewRow.Options.UseBackColor = true;
             this.gridView1.Appearance.TopNewRow.Options.UseFont = true;
-            this.gridView1.Appearance.VertLine.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.VertLine.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.VertLine.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.VertLine.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.VertLine.Options.UseBackColor = true;
             this.gridView1.Appearance.VertLine.Options.UseFont = true;
-            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.ViewCaption.BackColor = System.Drawing.SystemColors.Highlight;
+            this.gridView1.Appearance.ViewCaption.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.ViewCaption.Options.UseBackColor = true;
             this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
@@ -140,7 +218,7 @@
             // DtBaslangic
             // 
             this.DtBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.DtBaslangic.Location = new System.Drawing.Point(137, 8);
+            this.DtBaslangic.Location = new System.Drawing.Point(162, 7);
             this.DtBaslangic.Name = "DtBaslangic";
             this.DtBaslangic.Size = new System.Drawing.Size(236, 26);
             this.DtBaslangic.TabIndex = 113;
@@ -148,7 +226,7 @@
             // DtBitis
             // 
             this.DtBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.DtBitis.Location = new System.Drawing.Point(137, 40);
+            this.DtBitis.Location = new System.Drawing.Point(162, 39);
             this.DtBitis.Name = "DtBitis";
             this.DtBitis.Size = new System.Drawing.Size(236, 26);
             this.DtBitis.TabIndex = 114;
@@ -156,20 +234,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(9, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 20);
+            this.label1.Size = new System.Drawing.Size(146, 20);
             this.label1.TabIndex = 115;
             this.label1.Text = "Başlangıç Tarihi: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(41, 40);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(50, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 116;
             this.label2.Text = "Bitiş Tarihi: ";
             // 
@@ -177,7 +257,7 @@
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(284, 72);
+            this.simpleButton1.Location = new System.Drawing.Point(309, 71);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(89, 34);
             this.simpleButton1.TabIndex = 117;
@@ -186,7 +266,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
             this.panel1.Controls.Add(this.DtBaslangic);
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.DtBitis);
@@ -194,7 +274,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1510, 120);
+            this.panel1.Size = new System.Drawing.Size(1526, 120);
             this.panel1.TabIndex = 118;
             // 
             // FSalesList
