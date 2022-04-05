@@ -647,10 +647,12 @@
             // 
             this.TYuzdeGir.Location = new System.Drawing.Point(496, 473);
             this.TYuzdeGir.Name = "TYuzdeGir";
-            this.TYuzdeGir.Properties.Appearance.BackColor = System.Drawing.Color.Cyan;
+            this.TYuzdeGir.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.TYuzdeGir.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TYuzdeGir.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.TYuzdeGir.Properties.Appearance.Options.UseBackColor = true;
             this.TYuzdeGir.Properties.Appearance.Options.UseFont = true;
+            this.TYuzdeGir.Properties.Appearance.Options.UseForeColor = true;
             this.TYuzdeGir.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.Cyan;
             this.TYuzdeGir.Properties.AppearanceDisabled.Options.UseBackColor = true;
             this.TYuzdeGir.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Cyan;

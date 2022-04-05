@@ -21,9 +21,9 @@ namespace ProjeOdevim.Formlar
         void DecliningStok()
         {
             connection.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 10 TBLURUN.ID as 'No',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN ADI'," +
+            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLURUN.ID as 'No',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN ADI'," +
                 "SATISFIYAT AS 'SATIŞ FİYATI',STOK,ACIKLAMA AS 'AÇIKLAMA' From TBLURUN INNER JOIN TBLMARKA ON " +
-                "TBLURUN.MARKAID=TBLMARKA.ID ORDER BY STOK ASC ", connection);
+                "TBLURUN.MARKAID=TBLMARKA.ID  WHERE STOK>=1 ORDER BY STOK ASC ", connection);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             gridControl1.DataSource = dataTable;
@@ -32,7 +32,7 @@ namespace ProjeOdevim.Formlar
         void NewEmployee()
         {
             connection.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 10 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD +' '+ SOYAD AS 'AD SOYAD'" +
+            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD +' '+ SOYAD AS 'AD SOYAD'" +
                 "From TBLPERSONEL  INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
                 "INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID " +
                 "WHERE TBLPERSONEL.DEPARTMANID!=(SELECT ID FROM TBLDEPARTMAN WHERE DEPARTMAN='Stajer') " +
@@ -45,7 +45,7 @@ namespace ProjeOdevim.Formlar
         void NewStajer()
         {
             connection.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 10 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD +' '+ SOYAD AS 'AD SOYAD' " +
+            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD +' '+ SOYAD AS 'AD SOYAD' " +
                 "From TBLPERSONEL  INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
                 "INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID " +
                 "WHERE TBLPERSONEL.DEPARTMANID=(SELECT ID FROM TBLDEPARTMAN WHERE DEPARTMAN='Stajer') " +
@@ -58,7 +58,7 @@ namespace ProjeOdevim.Formlar
         void NewLogin()
         {
             connection.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 10 TBLKULLANICIHAREKET.ID,KULLANICI,ADSOYAD,DEPARTMAN,TARIH" +
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 12 TBLKULLANICIHAREKET.ID,KULLANICI,ADSOYAD,DEPARTMAN,TARIH" +
                 " FROM TBLKULLANICIHAREKET INNER JOIN TBLDEPARTMAN ON TBLKULLANICIHAREKET.DEPART=TBLDEPARTMAN.ID " +
                 "ORDER BY ID DESC", connection);
             DataTable dt = new DataTable();
@@ -69,7 +69,7 @@ namespace ProjeOdevim.Formlar
         void NewSales()
         {
             connection.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 10ISLEMNO,SUM(TOPLAMFIYAT) AS 'TOPLAM TUTAR',INDIRIMORANI AS 'İNDİRİM %',TBLMUSTERI.AD AS 'MÜŞTERİ'," +
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 20 ISLEMNO,SUM(TOPLAMFIYAT) AS 'TOPLAM TUTAR',INDIRIMORANI AS 'İNDİRİM %',TBLMUSTERI.AD AS 'MÜŞTERİ'," +
                 "TBLPERSONEL.AD+' ' + TBLPERSONEL.SOYAD AS 'PERSONEL' FROM TBLSATIS INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID = TBLMUSTERI.ID " +
                 "INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID GROUP BY ISLEMNO,TOPLAMFIYAT,INDIRIMORANI,TBLMUSTERI.AD," +
                 "TBLPERSONEL.AD+' ' + TBLPERSONEL.SOYAD ORDER BY ISLEMNO DESC", connection);
