@@ -20,7 +20,6 @@ namespace ProjeOdevim.Formlar
 
         void Listele()
         {
-            connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("SELECT ISLEMNO,TARIH,SUM(TOPLAMFIYAT) AS 'SATIŞ TUTARI',INDIRIMORANI," +
                 "TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD AS 'PERSONEL',TBLMUSTERI.AD AS 'MÜŞTERİ',SUM(ALISFIYAT) " +
                 "AS 'MALİYET'FROM TBLSATIS  INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID " +
@@ -29,7 +28,6 @@ namespace ProjeOdevim.Formlar
             DataTable dt = new DataTable();
             da.Fill(dt);
             gridControl1.DataSource = dt;
-            connection.Close();
         }
         private void FSalesList_Load(object sender, EventArgs e)
         {
@@ -41,6 +39,21 @@ namespace ProjeOdevim.Formlar
         {
             Listele();
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT ISLEMNO,TARIH,SUM(TOPLAMFIYAT) AS 'SATIŞ TUTARI',INDIRIMORANI, " +
+                "TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD AS 'PERSONEL',TBLMUSTERI.AD AS 'MÜŞTERİ',SUM(ALISFIYAT) AS 'MALİYET' " +
+                "FROM TBLSATIS INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID=TBLMUSTERI.ID " +
+                "WHERE TARIH BETWEEN @P1 AND @P2 GROUP BY TARIH,ISLEMNO,INDIRIMORANI,TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD,TBLMUSTERI.AD  " +
+                "ORDER BY ISLEMNO DESC", connection);
+            da.SelectCommand.Parameters.Add("@p1", SqlDbType.SmallDateTime).Value = DtBaslangic.Value;
+            da.SelectCommand.Parameters.Add("@p2", SqlDbType.SmallDateTime).Value = DtBitis.Value;
+            da.Fill(dt);
+            gridControl1.DataSource = dt;
         }
     }
 }
