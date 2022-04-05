@@ -48,26 +48,29 @@ namespace ProjeOdevim.Formlar
             CmbIl.DisplayMember = "SEHIR";
             CmbIl.DataSource = dt;
         }
-        void GenderList()
-        {
-            SqlCommand command = new SqlCommand("Select * From TBLCINSIYET", connection);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-            CmbGender.ValueMember = "ID";
-            CmbGender.DisplayMember = "CINSIYETAD";
-            CmbGender.DataSource = dataTable;
-        }
         void EmployeeList()
         {
+            connection.Open();
             DataTable dataTable = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select TBLPERSONEL.ID,TC AS 'TC NO',DEPARTMAN,MAGAZA as 'MAĞAZA' ,AD AS " +
-                "'AD',SOYAD AS 'SOYAD',CINSIYETAD AS 'CİNSİYET' ,TEL AS 'TELEFON',DTARIH AS 'DOĞUM TARİHİ',TBLPERSONEL.IL AS " +
-                "'İL',TBLPERSONEL.ILCE AS 'İLÇE', TBLPERSONEL.ADRES,FOTO FROM TBLPERSONEL INNER JOIN TBLDEPARTMAN ON " +
-                "TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID " +
-                "INNER JOIN TBLCINSIYET ON TBLPERSONEL.CINSIYET=TBLCINSIYET.ID order by DEPARTMANID asc", connection);
+            SqlDataAdapter da = new SqlDataAdapter("Select TBLPERSONEL.ID,TC AS 'TC NO',DEPARTMAN,MAGAZA as 'MAĞAZA' ," +
+                "AD AS 'AD',SOYAD AS 'SOYAD',TEL AS 'TELEFON',CINSIYETAD AS 'CİNSİYET',DTARIH AS 'DOĞUM TARİHİ',TBLPERSONEL.IL AS 'İL'," +
+                "TBLPERSONEL.ILCE AS 'İLÇE', TBLPERSONEL.ADRES,FOTO FROM TBLPERSONEL INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
+                "INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID INNER JOIN TBLCINSIYET ON TBLPERSONEL.CINSIYET=TBLCINSIYET.ID " +
+                "order by DEPARTMANID asc", connection);
             da.Fill(dataTable);
             gridControl1.DataSource = dataTable;
+            connection.Close();
+
+        }
+        void CinsiyetGetir()
+        {
+            SqlCommand command = new SqlCommand("Select * From TBLCINSIYET", connection);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CmbGender.ValueMember = "ID";
+            CmbGender.DisplayMember = "CINSIYETAD";
+            CmbGender.DataSource = dt;
         }
         void Clear()
         {
@@ -93,8 +96,8 @@ namespace ProjeOdevim.Formlar
             EmployeeList();
             DepartmanList();
             MagazaList();
+            CinsiyetGetir();
             IlList();
-            GenderList();
             Clear();
             gridView1.Columns[0].Visible = false;
             gridView1.Columns[12].Visible = false;
@@ -155,7 +158,7 @@ namespace ProjeOdevim.Formlar
                     command.Parameters.AddWithValue("@p12", TPicture.Text);
                     command.Parameters.AddWithValue("@p13", TUser.Text);
                     command.Parameters.AddWithValue("@p14", TPass.Text);
-                    command.Parameters.AddWithValue("@p15",0);
+                    command.Parameters.AddWithValue("@p15", 0);
                     command.ExecuteNonQuery();
                     connection.Close();
                     EmployeeList();
@@ -196,34 +199,44 @@ namespace ProjeOdevim.Formlar
 
         private void BUpdate_Click(object sender, EventArgs e)
         {
-            if (TId.Text != "")
+            CinsiyetGetir();
+            try
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand("Update TBLPERSONEL set TC=@T1,DEPARTMANID=@T2,MAGAZAID=@T3,AD=@T4,SOYAD=@T5," +
-                    "CINSIYET=@T6,TEL=@T7,DTARIH=@T8,IL=@T9,ILCE=@T10,ADRES=@T11,FOTO=@T12 WHERE ID=@T13", connection);
-                cmd.Parameters.AddWithValue("@T1", MskTc.Text);
-                cmd.Parameters.AddWithValue("@T2", CmbDep.SelectedValue);
-                cmd.Parameters.AddWithValue("@T3", CmbMagaza.SelectedValue);
-                cmd.Parameters.AddWithValue("@T4", TName.Text);
-                cmd.Parameters.AddWithValue("@T5", TSurname.Text);
-                cmd.Parameters.AddWithValue("@T6", CmbGender.Text);
-                cmd.Parameters.AddWithValue("@T7", MskPhone.Text);
-                cmd.Parameters.AddWithValue("@T8", MskBirth.Text);
-                cmd.Parameters.AddWithValue("@T9", CmbIl.Text);
-                cmd.Parameters.AddWithValue("@T10", CmbIlce.Text);
-                cmd.Parameters.AddWithValue("@T11", RchAdres.Text);
-                cmd.Parameters.AddWithValue("@T12", TPicture.Text);
-                cmd.Parameters.AddWithValue("@T13", TId.Text);
-                cmd.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("  Personel Başarıyla Güncellendi!", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                EmployeeList();
-                Clear();
+                if (TId.Text != "")
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("Update TBLPERSONEL set TC=@T1,DEPARTMANID=@T2,MAGAZAID=@T3,AD=@T4,SOYAD=@T5," +
+                        "CINSIYET=@T6,TEL=@T7,DTARIH=@T8,IL=@T9,ILCE=@T10,ADRES=@T11,FOTO=@T12 WHERE ID=@T13", connection);
+                    cmd.Parameters.AddWithValue("@T1", MskTc.Text);
+                    cmd.Parameters.AddWithValue("@T2", CmbDep.SelectedValue);
+                    cmd.Parameters.AddWithValue("@T3", CmbMagaza.SelectedValue);
+                    cmd.Parameters.AddWithValue("@T4", TName.Text);
+                    cmd.Parameters.AddWithValue("@T5", TSurname.Text);
+                    cmd.Parameters.AddWithValue("@T6", CmbGender.SelectedValue);
+                    cmd.Parameters.AddWithValue("@T7", MskPhone.Text);
+                    cmd.Parameters.AddWithValue("@T8", MskBirth.Text);
+                    cmd.Parameters.AddWithValue("@T9", CmbIl.Text);
+                    cmd.Parameters.AddWithValue("@T10", CmbIlce.Text);
+                    cmd.Parameters.AddWithValue("@T11", RchAdres.Text);
+                    cmd.Parameters.AddWithValue("@T12", TPicture.Text);
+                    cmd.Parameters.AddWithValue("@T13", TId.Text);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("  Personel Başarıyla Güncellendi!", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    EmployeeList();
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show(" Lütfen Güncellemek İstediğiniz Personeli Seçin ", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show(" Lütfen Güncellemek İstediğiniz Personeli Seçin ", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                throw;
             }
+
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

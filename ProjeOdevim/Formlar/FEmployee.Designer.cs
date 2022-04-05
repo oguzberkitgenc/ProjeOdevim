@@ -66,6 +66,7 @@
             this.MskBirth = new System.Windows.Forms.MaskedTextBox();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.LCinsiyet = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.TSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TPicture.Properties)).BeginInit();
@@ -587,12 +588,25 @@
             this.gridView1.OptionsView.ShowIndicator = false;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
+            // LCinsiyet
+            // 
+            this.LCinsiyet.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LCinsiyet.Appearance.ForeColor = System.Drawing.Color.White;
+            this.LCinsiyet.Appearance.Options.UseFont = true;
+            this.LCinsiyet.Appearance.Options.UseForeColor = true;
+            this.LCinsiyet.Location = new System.Drawing.Point(1126, 269);
+            this.LCinsiyet.Name = "LCinsiyet";
+            this.LCinsiyet.Size = new System.Drawing.Size(35, 19);
+            this.LCinsiyet.TabIndex = 74;
+            this.LCinsiyet.Text = "Şifre :";
+            // 
             // FEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.LCinsiyet);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.MskBirth);
             this.Controls.Add(this.pictureBox1);
@@ -684,5 +698,6 @@
         private System.Windows.Forms.MaskedTextBox MskBirth;
         private DevExpress.XtraGrid.GridControl gridControl1;
         protected DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.LabelControl LCinsiyet;
     }
 }

@@ -135,7 +135,7 @@ namespace ProjeOdevim.Formlar
                 komut.Parameters.AddWithValue("@p5", CmbIl.Text);
                 komut.Parameters.AddWithValue("@p6", CmbIlce.Text);
                 komut.Parameters.AddWithValue("@p7", RchAdres.Text);
-                komut.Parameters.AddWithValue("@p8", CmbGender.Text);
+                komut.Parameters.AddWithValue("@p8", CmbGender.ValueMember);
                 komut.Parameters.AddWithValue("@p9", MskPhone.Text);
                 komut.Parameters.AddWithValue("@p10", TId.Text);
                 komut.ExecuteNonQuery();

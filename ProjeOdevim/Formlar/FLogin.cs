@@ -58,7 +58,7 @@ namespace ProjeOdevim.Formlar
                 komut.Parameters.AddWithValue("@A4", dt.ToString());
                 komut.ExecuteNonQuery();
                 connection.Close();
-                frm.ShowDialog();
+                frm.Show();
                 this.Hide();
             }
 
