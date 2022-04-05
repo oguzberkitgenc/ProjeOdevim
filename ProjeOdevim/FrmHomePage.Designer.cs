@@ -951,6 +951,7 @@
             this.LId.TabIndex = 10;
             this.LId.Text = "00";
             this.LId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LId.Visible = false;
             // 
             // FrmHomePage
             // 

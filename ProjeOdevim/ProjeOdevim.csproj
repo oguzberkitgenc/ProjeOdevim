@@ -269,5 +269,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\giden.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\gelen.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -357,7 +357,12 @@ namespace ProjeOdevim.Formlar
                 da3.Fill(dt3);
                 gridControl1.DataSource = dt3;
                 connection.Close();
-                Rch.Text = "";
+                if (gridView1.DataRowCount == 0)
+                {
+                    MessageBox.Show(" " + Rch.Text + "\n\n Oh hayır...\n Bu ürünü tanımıyorum...", "HABERİN OLSUN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Product2();
+                    Rch.Text = "";
+                }
             }
             else if (Rch.Text == "")
             {
