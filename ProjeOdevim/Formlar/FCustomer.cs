@@ -22,7 +22,9 @@ namespace ProjeOdevim.Formlar
         {
             connection.Open();
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From TBLMUSTERI", connection);
+            SqlDataAdapter da = new SqlDataAdapter("Select TBLMUSTERI.ID,TC,AD AS 'AD SOYAD',IL,ILCE,ADRES,CINSIYETAD " +
+                "AS 'CİNSİYET',DOGUMT AS 'D. TARİHİ',TEL,KREDILIMIT From TBLMUSTERI INNER JOIN TBLCINSIYET ON " +
+                "TBLMUSTERI.CINSIYET=TBLCINSIYET.ID", connection);
             da.Fill(dt);
             gridControl1.DataSource = dt;
             connection.Close();
@@ -36,6 +38,18 @@ namespace ProjeOdevim.Formlar
             CmbIl.ValueMember = "ID";
             CmbIl.DisplayMember = "SEHIR";
             CmbIl.DataSource = dataTable;
+        }
+        void GenderList()
+        {
+            connection.Open();
+            SqlCommand komut = new SqlCommand("Select * From TBLCINSIYET",connection);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CmbGender.ValueMember="ID";
+            CmbGender.DisplayMember = "CINSIYETAD";
+            CmbGender.DataSource = dt;
+            connection.Close();
         }
 
         void Clear()
@@ -55,8 +69,10 @@ namespace ProjeOdevim.Formlar
         {
             CustomerList();
             IlList();
-            gridView1.Columns[0].Visible = false;
+            GenderList();
             Clear();
+            gridView1.Columns[0].Visible = false;
+
         }
 
         private void BSave_Click(object sender, EventArgs e)
@@ -68,13 +84,13 @@ namespace ProjeOdevim.Formlar
                 connection.Open();
                 SqlCommand sql = new SqlCommand("insert into TBLMUSTERI (TC,AD,IL,ILCE,ADRES,DOGUMT,TEL,CINSIYET,KREDILIMIT) values (@p1,@p2,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", connection);
                 sql.Parameters.AddWithValue("@P1", MskTc.Text);
-                sql.Parameters.AddWithValue("@P2", TName.Text);
+                sql.Parameters.AddWithValue("@P2", TName.Text + " " + TSurname.Text);
                 sql.Parameters.AddWithValue("@P4", CmbIl.Text);
                 sql.Parameters.AddWithValue("@P5", CmbIlce.Text);
                 sql.Parameters.AddWithValue("@P6", RchAdres.Text);
                 sql.Parameters.AddWithValue("@P7", MskBirth.Text);
                 sql.Parameters.AddWithValue("@P8", MskPhone.Text);
-                sql.Parameters.AddWithValue("@P9", CmbGender.Text);
+                sql.Parameters.AddWithValue("@P9", CmbGender.SelectedValue);
                 sql.Parameters.AddWithValue("@P10", kredi.ToString());
                 sql.ExecuteNonQuery();
                 connection.Close();
@@ -98,9 +114,9 @@ namespace ProjeOdevim.Formlar
         {
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
             TId.Text = dr["ID"].ToString();
-            TName.Text = dr["AD"].ToString();
-            CmbGender.Text = dr["CINSIYET"].ToString();
-            MskBirth.Text = dr["DOGUMT"].ToString();
+            TName.Text = dr["AD SOYAD"].ToString();
+            CmbGender.Text = dr["CİNSİYET"].ToString();
+            MskBirth.Text = dr["D. TARİHİ"].ToString();
             CmbIl.Text = dr["IL"].ToString();
             CmbIlce.Text = dr["ILCE"].ToString();
             RchAdres.Text = dr["ADRES"].ToString();
@@ -130,12 +146,12 @@ namespace ProjeOdevim.Formlar
                 connection.Open();
                 SqlCommand komut = new SqlCommand("update TBLMUSTERI set TC=@P1,AD=@P2,DOGUMT=@P4,IL=@P5,ILCE=@P6,ADRES=@P7,CINSIYET=@P8,TEL=@P9 WHERE ID=@P10", connection);
                 komut.Parameters.AddWithValue("@p1", MskTc.Text);
-                komut.Parameters.AddWithValue("@p2", TName.Text);
+                komut.Parameters.AddWithValue("@p2", TName.Text + " " + TSurname.Text);
                 komut.Parameters.AddWithValue("@p4", MskBirth.Text);
                 komut.Parameters.AddWithValue("@p5", CmbIl.Text);
                 komut.Parameters.AddWithValue("@p6", CmbIlce.Text);
                 komut.Parameters.AddWithValue("@p7", RchAdres.Text);
-                komut.Parameters.AddWithValue("@p8", CmbGender.ValueMember);
+                komut.Parameters.AddWithValue("@p8", CmbGender.SelectedValue);
                 komut.Parameters.AddWithValue("@p9", MskPhone.Text);
                 komut.Parameters.AddWithValue("@p10", TId.Text);
                 komut.ExecuteNonQuery();

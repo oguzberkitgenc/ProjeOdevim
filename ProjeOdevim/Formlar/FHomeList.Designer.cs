@@ -70,7 +70,6 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(500, 285);
             this.gridControl1.TabIndex = 74;
-            this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -225,6 +224,7 @@
             this.gridView1.OptionsCustomization.AllowFilter = false;
             this.gridView1.OptionsFilter.AllowMRUFilterList = false;
             this.gridView1.OptionsMenu.EnableColumnMenu = false;
+            this.gridView1.OptionsView.ShowColumnHeaders = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
             // 
@@ -236,7 +236,6 @@
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.Size = new System.Drawing.Size(500, 285);
             this.gridControl2.TabIndex = 75;
-            this.gridControl2.UseEmbeddedNavigator = true;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -391,6 +390,7 @@
             this.gridView2.OptionsCustomization.AllowFilter = false;
             this.gridView2.OptionsFilter.AllowMRUFilterList = false;
             this.gridView2.OptionsMenu.EnableColumnMenu = false;
+            this.gridView2.OptionsView.ShowColumnHeaders = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView2.OptionsView.ShowIndicator = false;
             // 
@@ -402,7 +402,6 @@
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.Size = new System.Drawing.Size(500, 285);
             this.gridControl3.TabIndex = 77;
-            this.gridControl3.UseEmbeddedNavigator = true;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
@@ -557,6 +556,7 @@
             this.gridView3.OptionsCustomization.AllowFilter = false;
             this.gridView3.OptionsFilter.AllowMRUFilterList = false;
             this.gridView3.OptionsMenu.EnableColumnMenu = false;
+            this.gridView3.OptionsView.ShowColumnHeaders = false;
             this.gridView3.OptionsView.ShowGroupPanel = false;
             this.gridView3.OptionsView.ShowIndicator = false;
             // 
@@ -568,7 +568,6 @@
             this.gridControl4.Name = "gridControl4";
             this.gridControl4.Size = new System.Drawing.Size(500, 285);
             this.gridControl4.TabIndex = 76;
-            this.gridControl4.UseEmbeddedNavigator = true;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
             // 
@@ -723,6 +722,7 @@
             this.gridView4.OptionsCustomization.AllowFilter = false;
             this.gridView4.OptionsFilter.AllowMRUFilterList = false;
             this.gridView4.OptionsMenu.EnableColumnMenu = false;
+            this.gridView4.OptionsView.ShowColumnHeaders = false;
             this.gridView4.OptionsView.ShowGroupPanel = false;
             this.gridView4.OptionsView.ShowIndicator = false;
             // 
@@ -734,7 +734,6 @@
             this.gridControl5.Name = "gridControl5";
             this.gridControl5.Size = new System.Drawing.Size(500, 285);
             this.gridControl5.TabIndex = 79;
-            this.gridControl5.UseEmbeddedNavigator = true;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
             // 
@@ -889,6 +888,7 @@
             this.gridView5.OptionsCustomization.AllowFilter = false;
             this.gridView5.OptionsFilter.AllowMRUFilterList = false;
             this.gridView5.OptionsMenu.EnableColumnMenu = false;
+            this.gridView5.OptionsView.ShowColumnHeaders = false;
             this.gridView5.OptionsView.ShowGroupPanel = false;
             this.gridView5.OptionsView.ShowIndicator = false;
             // 
@@ -900,7 +900,6 @@
             this.gridControl6.Name = "gridControl6";
             this.gridControl6.Size = new System.Drawing.Size(500, 285);
             this.gridControl6.TabIndex = 78;
-            this.gridControl6.UseEmbeddedNavigator = true;
             this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
             // 
@@ -1055,6 +1054,7 @@
             this.gridView6.OptionsCustomization.AllowFilter = false;
             this.gridView6.OptionsFilter.AllowMRUFilterList = false;
             this.gridView6.OptionsMenu.EnableColumnMenu = false;
+            this.gridView6.OptionsView.ShowColumnHeaders = false;
             this.gridView6.OptionsView.ShowGroupPanel = false;
             this.gridView6.OptionsView.ShowIndicator = false;
             // 

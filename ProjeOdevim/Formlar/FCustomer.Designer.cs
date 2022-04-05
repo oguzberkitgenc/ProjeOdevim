@@ -48,16 +48,16 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.RchAdres = new System.Windows.Forms.RichTextBox();
-            this.TSurname = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.TName = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.TSurname = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TSurname.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // MskBirth
@@ -69,7 +69,7 @@
             this.MskBirth.Mask = "0000";
             this.MskBirth.Name = "MskBirth";
             this.MskBirth.Size = new System.Drawing.Size(281, 26);
-            this.MskBirth.TabIndex = 109;
+            this.MskBirth.TabIndex = 4;
             // 
             // gridView1
             // 
@@ -170,7 +170,7 @@
             this.CmbIl.Location = new System.Drawing.Point(1235, 142);
             this.CmbIl.Name = "CmbIl";
             this.CmbIl.Size = new System.Drawing.Size(281, 27);
-            this.CmbIl.TabIndex = 81;
+            this.CmbIl.TabIndex = 5;
             this.CmbIl.SelectedIndexChanged += new System.EventHandler(this.CmbIl_SelectedIndexChanged);
             // 
             // CmbIlce
@@ -183,7 +183,7 @@
             this.CmbIlce.Location = new System.Drawing.Point(1235, 174);
             this.CmbIlce.Name = "CmbIlce";
             this.CmbIlce.Size = new System.Drawing.Size(281, 27);
-            this.CmbIlce.TabIndex = 82;
+            this.CmbIlce.TabIndex = 6;
             // 
             // MskPhone
             // 
@@ -194,7 +194,7 @@
             this.MskPhone.Mask = "(999) 000-0000";
             this.MskPhone.Name = "MskPhone";
             this.MskPhone.Size = new System.Drawing.Size(281, 26);
-            this.MskPhone.TabIndex = 86;
+            this.MskPhone.TabIndex = 9;
             // 
             // MskTc
             // 
@@ -205,7 +205,7 @@
             this.MskTc.Mask = "00000000000";
             this.MskTc.Name = "MskTc";
             this.MskTc.Size = new System.Drawing.Size(281, 26);
-            this.MskTc.TabIndex = 77;
+            this.MskTc.TabIndex = 1;
             this.MskTc.ValidatingType = typeof(int);
             // 
             // BUpdate
@@ -218,7 +218,7 @@
             this.BUpdate.Location = new System.Drawing.Point(1381, 344);
             this.BUpdate.Name = "BUpdate";
             this.BUpdate.Size = new System.Drawing.Size(135, 30);
-            this.BUpdate.TabIndex = 91;
+            this.BUpdate.TabIndex = 11;
             this.BUpdate.Text = "Güncelle";
             this.BUpdate.Click += new System.EventHandler(this.BUpdate_Click);
             // 
@@ -232,7 +232,7 @@
             this.BClear.Location = new System.Drawing.Point(1240, 380);
             this.BClear.Name = "BClear";
             this.BClear.Size = new System.Drawing.Size(276, 30);
-            this.BClear.TabIndex = 92;
+            this.BClear.TabIndex = 12;
             this.BClear.Text = "Temizle";
             this.BClear.Click += new System.EventHandler(this.BClear_Click);
             // 
@@ -246,7 +246,7 @@
             this.BSave.Location = new System.Drawing.Point(1240, 344);
             this.BSave.Name = "BSave";
             this.BSave.Size = new System.Drawing.Size(135, 30);
-            this.BSave.TabIndex = 90;
+            this.BSave.TabIndex = 10;
             this.BSave.Text = "Kaydet";
             this.BSave.Click += new System.EventHandler(this.BSave_Click);
             // 
@@ -311,7 +311,7 @@
             this.CmbGender.Location = new System.Drawing.Point(1235, 278);
             this.CmbGender.Name = "CmbGender";
             this.CmbGender.Size = new System.Drawing.Size(281, 27);
-            this.CmbGender.TabIndex = 80;
+            this.CmbGender.TabIndex = 8;
             // 
             // TId
             // 
@@ -359,22 +359,8 @@
             this.RchAdres.Location = new System.Drawing.Point(1235, 206);
             this.RchAdres.Name = "RchAdres";
             this.RchAdres.Size = new System.Drawing.Size(281, 62);
-            this.RchAdres.TabIndex = 83;
+            this.RchAdres.TabIndex = 7;
             this.RchAdres.Text = "";
-            // 
-            // TSurname
-            // 
-            this.TSurname.Location = new System.Drawing.Point(1235, 78);
-            this.TSurname.Name = "TSurname";
-            this.TSurname.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.TSurname.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TSurname.Properties.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TSurname.Properties.Appearance.Options.UseBackColor = true;
-            this.TSurname.Properties.Appearance.Options.UseFont = true;
-            this.TSurname.Properties.Appearance.Options.UseForeColor = true;
-            this.TSurname.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.TSurname.Size = new System.Drawing.Size(281, 26);
-            this.TSurname.TabIndex = 79;
             // 
             // labelControl6
             // 
@@ -387,18 +373,6 @@
             this.labelControl6.Size = new System.Drawing.Size(75, 19);
             this.labelControl6.TabIndex = 97;
             this.labelControl6.Text = "Doğum Yılı: ";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(1176, 85);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(46, 19);
-            this.labelControl5.TabIndex = 96;
-            this.labelControl5.Text = "Soyad :";
             // 
             // labelControl4
             // 
@@ -436,7 +410,33 @@
             this.TName.Properties.Appearance.Options.UseForeColor = true;
             this.TName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TName.Size = new System.Drawing.Size(281, 26);
-            this.TName.TabIndex = 78;
+            this.TName.TabIndex = 2;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Appearance.Options.UseForeColor = true;
+            this.labelControl5.Location = new System.Drawing.Point(1176, 85);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(46, 19);
+            this.labelControl5.TabIndex = 96;
+            this.labelControl5.Text = "Soyad :";
+            // 
+            // TSurname
+            // 
+            this.TSurname.Location = new System.Drawing.Point(1235, 78);
+            this.TSurname.Name = "TSurname";
+            this.TSurname.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.TSurname.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TSurname.Properties.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TSurname.Properties.Appearance.Options.UseBackColor = true;
+            this.TSurname.Properties.Appearance.Options.UseFont = true;
+            this.TSurname.Properties.Appearance.Options.UseForeColor = true;
+            this.TSurname.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.TSurname.Size = new System.Drawing.Size(281, 26);
+            this.TSurname.TabIndex = 3;
             // 
             // FCustomer
             // 
@@ -473,8 +473,8 @@
             this.Load += new System.EventHandler(this.FCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TSurname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TSurname.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,11 +500,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.RichTextBox RchAdres;
-        private DevExpress.XtraEditors.TextEdit TSurname;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit TName;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.TextEdit TSurname;
     }
 }
