@@ -38,7 +38,6 @@ namespace ProjeOdevim.Formlar
         private void timer1_Tick(object sender, EventArgs e)
         {
             Listele();
-
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
