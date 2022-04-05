@@ -51,7 +51,7 @@
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Lucida Console", 11.25F);
+            this.gridView1.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridView1.Appearance.ColumnFilterButton.Options.UseFont = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Font = new System.Drawing.Font("Lucida Console", 11.25F);
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseFont = true;
@@ -119,9 +119,9 @@
             this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.SmartVertScrollBar = false;
-            this.gridView1.OptionsCustomization.AllowFilter = false;
             this.gridView1.OptionsFilter.AllowMRUFilterList = false;
             this.gridView1.OptionsMenu.EnableColumnMenu = false;
+            this.gridView1.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.SmartTag;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
             // 

@@ -58,21 +58,19 @@ namespace ProjeOdevim.Formlar
         void NewLogin()
         {
             connection.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 12 TBLKULLANICIHAREKET.ID,KULLANICI,ADSOYAD,DEPARTMAN,TARIH" +
-                " FROM TBLKULLANICIHAREKET INNER JOIN TBLDEPARTMAN ON TBLKULLANICIHAREKET.DEPART=TBLDEPARTMAN.ID " +
-                "ORDER BY ID DESC", connection);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 12 ISLEMNO,TARIH,SUM(TOPLAMFIYAT) AS 'SATIŞ TUTARI',INDIRIMORANI, TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD AS 'PERSONEL',TBLMUSTERI.AD AS 'MÜŞTERİ',SUM(ALISFIYAT) AS 'MALİYET'FROM TBLSATIS  INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID=TBLMUSTERI.ID GROUP BY TARIH,ISLEMNO,INDIRIMORANI, TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD,TBLMUSTERI.AD ORDER BY ISLEMNO DESC", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             gridControl2.DataSource = dt;
             connection.Close();
+            gridView2.Columns[0].Visible = false;
         }
         void NewSales()
         {
             connection.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 20 ISLEMNO,SUM(TOPLAMFIYAT) AS 'TOPLAM TUTAR',INDIRIMORANI AS 'İNDİRİM %',TBLMUSTERI.AD AS 'MÜŞTERİ'," +
-                "TBLPERSONEL.AD+' ' + TBLPERSONEL.SOYAD AS 'PERSONEL' FROM TBLSATIS INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID = TBLMUSTERI.ID " +
-                "INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID GROUP BY ISLEMNO,TOPLAMFIYAT,INDIRIMORANI,TBLMUSTERI.AD," +
-                "TBLPERSONEL.AD+' ' + TBLPERSONEL.SOYAD ORDER BY ISLEMNO DESC", connection);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 12 ISLEMNO,TARIH,SUM(TOPLAMFIYAT) AS 'SATIŞ TUTARI', TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD " +
+                "AS 'PERSONEL' FROM TBLSATIS INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID GROUP BY TARIH,ISLEMNO," +
+                "TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD ORDER BY ISLEMNO DESC", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             gridControl4.DataSource = dt;
