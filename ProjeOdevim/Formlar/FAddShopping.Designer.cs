@@ -52,7 +52,6 @@
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -466,6 +465,7 @@
             this.TId.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TId.Size = new System.Drawing.Size(44, 26);
             this.TId.TabIndex = 69;
+            this.TId.Visible = false;
             // 
             // CmbIl
             // 
@@ -514,22 +514,12 @@
             this.simpleButton4.Text = "Güncelle";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 266);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 73;
-            this.label1.Text = "label1";
-            // 
             // FAddShopping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1199, 583);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.CmbIlce);
             this.Controls.Add(this.CmbIl);
@@ -593,6 +583,5 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.OpenFileDialog openFileDialog3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private System.Windows.Forms.Label label1;
     }
 }
