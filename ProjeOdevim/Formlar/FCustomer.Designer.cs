@@ -52,12 +52,9 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.TName = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.TSurname = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TSurname.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // MskBirth
@@ -65,7 +62,7 @@
             this.MskBirth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.MskBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.MskBirth.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.MskBirth.Location = new System.Drawing.Point(1235, 110);
+            this.MskBirth.Location = new System.Drawing.Point(1235, 79);
             this.MskBirth.Mask = "0000";
             this.MskBirth.Name = "MskBirth";
             this.MskBirth.Size = new System.Drawing.Size(281, 26);
@@ -167,7 +164,7 @@
             this.CmbIl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbIl.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.CmbIl.FormattingEnabled = true;
-            this.CmbIl.Location = new System.Drawing.Point(1235, 142);
+            this.CmbIl.Location = new System.Drawing.Point(1235, 111);
             this.CmbIl.Name = "CmbIl";
             this.CmbIl.Size = new System.Drawing.Size(281, 27);
             this.CmbIl.TabIndex = 5;
@@ -180,7 +177,7 @@
             this.CmbIlce.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbIlce.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.CmbIlce.FormattingEnabled = true;
-            this.CmbIlce.Location = new System.Drawing.Point(1235, 174);
+            this.CmbIlce.Location = new System.Drawing.Point(1235, 143);
             this.CmbIlce.Name = "CmbIlce";
             this.CmbIlce.Size = new System.Drawing.Size(281, 27);
             this.CmbIlce.TabIndex = 6;
@@ -190,7 +187,7 @@
             this.MskPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.MskPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.MskPhone.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.MskPhone.Location = new System.Drawing.Point(1235, 311);
+            this.MskPhone.Location = new System.Drawing.Point(1235, 280);
             this.MskPhone.Mask = "(999) 000-0000";
             this.MskPhone.Name = "MskPhone";
             this.MskPhone.Size = new System.Drawing.Size(281, 26);
@@ -215,7 +212,7 @@
             this.BUpdate.Appearance.Options.UseBackColor = true;
             this.BUpdate.Appearance.Options.UseFont = true;
             this.BUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BUpdate.ImageOptions.Image")));
-            this.BUpdate.Location = new System.Drawing.Point(1381, 344);
+            this.BUpdate.Location = new System.Drawing.Point(1381, 313);
             this.BUpdate.Name = "BUpdate";
             this.BUpdate.Size = new System.Drawing.Size(135, 30);
             this.BUpdate.TabIndex = 11;
@@ -229,7 +226,7 @@
             this.BClear.Appearance.Options.UseBackColor = true;
             this.BClear.Appearance.Options.UseFont = true;
             this.BClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BClear.ImageOptions.Image")));
-            this.BClear.Location = new System.Drawing.Point(1240, 380);
+            this.BClear.Location = new System.Drawing.Point(1240, 349);
             this.BClear.Name = "BClear";
             this.BClear.Size = new System.Drawing.Size(276, 30);
             this.BClear.TabIndex = 12;
@@ -243,7 +240,7 @@
             this.BSave.Appearance.Options.UseBackColor = true;
             this.BSave.Appearance.Options.UseFont = true;
             this.BSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BSave.ImageOptions.Image")));
-            this.BSave.Location = new System.Drawing.Point(1240, 344);
+            this.BSave.Location = new System.Drawing.Point(1240, 313);
             this.BSave.Name = "BSave";
             this.BSave.Size = new System.Drawing.Size(135, 30);
             this.BSave.TabIndex = 10;
@@ -256,7 +253,7 @@
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl12.Appearance.Options.UseFont = true;
             this.labelControl12.Appearance.Options.UseForeColor = true;
-            this.labelControl12.Location = new System.Drawing.Point(1174, 317);
+            this.labelControl12.Location = new System.Drawing.Point(1174, 286);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(52, 19);
             this.labelControl12.TabIndex = 104;
@@ -268,7 +265,7 @@
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl11.Appearance.Options.UseFont = true;
             this.labelControl11.Appearance.Options.UseForeColor = true;
-            this.labelControl11.Location = new System.Drawing.Point(1182, 208);
+            this.labelControl11.Location = new System.Drawing.Point(1182, 177);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(44, 19);
             this.labelControl11.TabIndex = 103;
@@ -280,7 +277,7 @@
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl10.Appearance.Options.UseFont = true;
             this.labelControl10.Appearance.Options.UseForeColor = true;
-            this.labelControl10.Location = new System.Drawing.Point(1201, 147);
+            this.labelControl10.Location = new System.Drawing.Point(1201, 116);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(21, 19);
             this.labelControl10.TabIndex = 102;
@@ -292,7 +289,7 @@
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Location = new System.Drawing.Point(1168, 286);
+            this.labelControl9.Location = new System.Drawing.Point(1168, 255);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(55, 19);
             this.labelControl9.TabIndex = 101;
@@ -308,7 +305,7 @@
             this.CmbGender.Items.AddRange(new object[] {
             "Kadın",
             "Erkek"});
-            this.CmbGender.Location = new System.Drawing.Point(1235, 278);
+            this.CmbGender.Location = new System.Drawing.Point(1235, 247);
             this.CmbGender.Name = "CmbGender";
             this.CmbGender.Size = new System.Drawing.Size(281, 27);
             this.CmbGender.TabIndex = 8;
@@ -344,7 +341,7 @@
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(1182, 181);
+            this.labelControl8.Location = new System.Drawing.Point(1182, 150);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(41, 19);
             this.labelControl8.TabIndex = 99;
@@ -356,7 +353,7 @@
             this.RchAdres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RchAdres.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.RchAdres.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.RchAdres.Location = new System.Drawing.Point(1235, 206);
+            this.RchAdres.Location = new System.Drawing.Point(1235, 175);
             this.RchAdres.Name = "RchAdres";
             this.RchAdres.Size = new System.Drawing.Size(281, 62);
             this.RchAdres.TabIndex = 7;
@@ -368,7 +365,7 @@
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(1147, 113);
+            this.labelControl6.Location = new System.Drawing.Point(1147, 82);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(75, 19);
             this.labelControl6.TabIndex = 97;
@@ -380,11 +377,11 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(1197, 53);
+            this.labelControl4.Location = new System.Drawing.Point(1157, 48);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(26, 19);
+            this.labelControl4.Size = new System.Drawing.Size(69, 19);
             this.labelControl4.TabIndex = 95;
-            this.labelControl4.Text = "Ad :";
+            this.labelControl4.Text = "Ad Soyad: ";
             // 
             // labelControl2
             // 
@@ -412,32 +409,6 @@
             this.TName.Size = new System.Drawing.Size(281, 26);
             this.TName.TabIndex = 2;
             // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(1176, 85);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(46, 19);
-            this.labelControl5.TabIndex = 96;
-            this.labelControl5.Text = "Soyad :";
-            // 
-            // TSurname
-            // 
-            this.TSurname.Location = new System.Drawing.Point(1235, 78);
-            this.TSurname.Name = "TSurname";
-            this.TSurname.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.TSurname.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TSurname.Properties.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TSurname.Properties.Appearance.Options.UseBackColor = true;
-            this.TSurname.Properties.Appearance.Options.UseFont = true;
-            this.TSurname.Properties.Appearance.Options.UseForeColor = true;
-            this.TSurname.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.TSurname.Size = new System.Drawing.Size(281, 26);
-            this.TSurname.TabIndex = 3;
-            // 
             // FCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,9 +433,7 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.RchAdres);
-            this.Controls.Add(this.TSurname);
             this.Controls.Add(this.labelControl6);
-            this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.TName);
@@ -474,7 +443,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TSurname.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,7 +472,5 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit TName;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit TSurname;
     }
 }

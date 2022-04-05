@@ -30,6 +30,7 @@ namespace ProjeOdevim.Formlar
         private void FShopping_Load(object sender, EventArgs e)
         {
             ShoppingList();
+            gridView1.FocusedRowHandle = gridView1.DataRowCount;
             gridView1.Columns[0].Visible = false;
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

@@ -20,35 +20,46 @@ namespace ProjeOdevim.Formlar
 
         void CustomerList()
         {
-            connection.Open();
-            DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select TBLMUSTERI.ID,TC,AD AS 'AD SOYAD',IL,ILCE,ADRES,CINSIYETAD " +
                 "AS 'CİNSİYET',DOGUMT AS 'D. TARİHİ',TEL,KREDILIMIT From TBLMUSTERI INNER JOIN TBLCINSIYET ON " +
                 "TBLMUSTERI.CINSIYET=TBLCINSIYET.ID", connection);
+            DataTable dt = new DataTable();
             da.Fill(dt);
             gridControl1.DataSource = dt;
-            connection.Close();
         }
         void IlList()
         {
             SqlCommand command = new SqlCommand("Select * From ILLER", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            da.Fill(dataTable);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
             CmbIl.ValueMember = "ID";
             CmbIl.DisplayMember = "SEHIR";
-            CmbIl.DataSource = dataTable;
+            CmbIl.DataSource = dt;
+
         }
         void GenderList()
         {
-            connection.Open();
-            SqlCommand komut = new SqlCommand("Select * From TBLCINSIYET",connection);
-            SqlDataAdapter da = new SqlDataAdapter(komut);
+            SqlCommand command = new SqlCommand("Select * From TBLCINSIYET", connection);
+            SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            CmbGender.ValueMember="ID";
+            CmbGender.ValueMember = "ID";
             CmbGender.DisplayMember = "CINSIYETAD";
             CmbGender.DataSource = dt;
+        }
+
+        private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            CmbIlce.Items.Clear();
+            SqlCommand sqlCommand = new SqlCommand("Select ILCE From ILCELER where SEHIR=@p1", connection);
+            sqlCommand.Parameters.AddWithValue("@p1", CmbIl.SelectedIndex + 1);
+            SqlDataReader dr = sqlCommand.ExecuteReader();
+            while (dr.Read())
+            {
+                CmbIlce.Items.Add(dr[0]);
+            }
             connection.Close();
         }
 
@@ -57,7 +68,6 @@ namespace ProjeOdevim.Formlar
             MskTc.Text = "";
             TId.Text = "";
             TName.Text = "";
-            TSurname.Text = "";
             MskBirth.Text = "";
             CmbIl.Text = "";
             CmbIlce.Text = "";
@@ -72,19 +82,18 @@ namespace ProjeOdevim.Formlar
             GenderList();
             Clear();
             gridView1.Columns[0].Visible = false;
-
         }
 
         private void BSave_Click(object sender, EventArgs e)
         {
             double kredi = 0;
-            if (TId.Text == "" & MskTc.Text != "" & TName.Text != "" & TSurname.Text != "" & CmbGender.Text != "" &
+            if (TId.Text == "" & MskTc.Text != "" & TName.Text != "" & CmbGender.Text != "" &
                 MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & MskPhone.Text != "")
             {
                 connection.Open();
                 SqlCommand sql = new SqlCommand("insert into TBLMUSTERI (TC,AD,IL,ILCE,ADRES,DOGUMT,TEL,CINSIYET,KREDILIMIT) values (@p1,@p2,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", connection);
                 sql.Parameters.AddWithValue("@P1", MskTc.Text);
-                sql.Parameters.AddWithValue("@P2", TName.Text + " " + TSurname.Text);
+                sql.Parameters.AddWithValue("@P2", TName.Text);
                 sql.Parameters.AddWithValue("@P4", CmbIl.Text);
                 sql.Parameters.AddWithValue("@P5", CmbIlce.Text);
                 sql.Parameters.AddWithValue("@P6", RchAdres.Text);
@@ -94,7 +103,7 @@ namespace ProjeOdevim.Formlar
                 sql.Parameters.AddWithValue("@P10", kredi.ToString());
                 sql.ExecuteNonQuery();
                 connection.Close();
-                MessageBox.Show(" Yeni Müşterimiz Sisteme Başarıyla Kayıt Edildi \n\n Adı Soyadı: " + TName.Text + " " + TSurname.Text + "\n\n TC No: " + MskTc.Text +
+                MessageBox.Show(" Yeni Müşterimiz Sisteme Başarıyla Kayıt Edildi \n\n Adı Soyadı: " + TName.Text + " " + "\n\n TC No: " + MskTc.Text +
                     "\n\n İletişim Numarası: " + MskPhone.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CustomerList();
                 Clear();
@@ -123,22 +132,6 @@ namespace ProjeOdevim.Formlar
             MskPhone.Text = dr["TEL"].ToString();
             MskTc.Text = dr["TC"].ToString();
         }
-
-        private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            connection.Open();
-            CmbIlce.Text = "";
-            SqlCommand komut = new SqlCommand("Select ILCE From ILCELER where SEHIR=@p1", connection);
-            komut.Parameters.AddWithValue("@p1", CmbIl.SelectedIndex + 1);
-            SqlDataReader dr = komut.ExecuteReader();
-            while (dr.Read())
-            {
-                CmbIlce.Items.Add(dr[0]);
-            }
-            connection.Close();
-        }
-
         private void BUpdate_Click(object sender, EventArgs e)
         {
             if (TId.Text != "")
@@ -146,7 +139,7 @@ namespace ProjeOdevim.Formlar
                 connection.Open();
                 SqlCommand komut = new SqlCommand("update TBLMUSTERI set TC=@P1,AD=@P2,DOGUMT=@P4,IL=@P5,ILCE=@P6,ADRES=@P7,CINSIYET=@P8,TEL=@P9 WHERE ID=@P10", connection);
                 komut.Parameters.AddWithValue("@p1", MskTc.Text);
-                komut.Parameters.AddWithValue("@p2", TName.Text + " " + TSurname.Text);
+                komut.Parameters.AddWithValue("@p2", TName.Text);
                 komut.Parameters.AddWithValue("@p4", MskBirth.Text);
                 komut.Parameters.AddWithValue("@p5", CmbIl.Text);
                 komut.Parameters.AddWithValue("@p6", CmbIlce.Text);

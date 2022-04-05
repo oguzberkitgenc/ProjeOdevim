@@ -117,7 +117,7 @@ namespace ProjeOdevim.Formlar
             connection.Close();
         }
         bool durum;
-        void UserReplayNo()
+        void UserMukkerrerNo()
         {
             connection.Open();
             SqlCommand command = new SqlCommand("SELECT KADI FROM TBLPERSONEL WHERE KADI=@P1", connection);
@@ -135,7 +135,7 @@ namespace ProjeOdevim.Formlar
         }
         private void BSave_Click(object sender, EventArgs e)
         {
-            UserReplayNo();
+            UserMukkerrerNo();
             if (durum == true)
             {
                 if (TId.Text == "" & MskTc.Text != "" & TName.Text != "" & TSurname.Text != "" & CmbGender.Text != "" &
@@ -179,15 +179,10 @@ namespace ProjeOdevim.Formlar
             }
 
         }
-
-
         private void BClear_Click(object sender, EventArgs e)
         {
             Clear();
         }
-
-
-
         string picture;
         private void TPicture_Properties_DoubleClick(object sender, EventArgs e)
         {
@@ -199,7 +194,6 @@ namespace ProjeOdevim.Formlar
 
         private void BUpdate_Click(object sender, EventArgs e)
         {
-            CinsiyetGetir();
             try
             {
                 if (TId.Text != "")
