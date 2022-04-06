@@ -157,9 +157,7 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(" Lütfen Güncellemek İstediğiniz Ürünü Seçin ", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
             }
-
         }
-
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
             GridView view = sender as GridView;
@@ -176,7 +174,6 @@ namespace ProjeOdevim.Formlar
                 e.Appearance.ForeColor = Color.Black;
             }
         }
-
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);

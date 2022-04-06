@@ -35,8 +35,8 @@ namespace ProjeOdevim.Formlar
         void ProductList()
         {
             Product2();
-            gridView1.Columns[4].Visible = false;
-            gridView1.Columns[6].Visible = false;
+            //    gridView1.Columns[4].Visible = false;
+            //      gridView1.Columns[6].Visible = false;
             gridView1.Columns[0].Width = 1;
             gridView1.Columns[1].Width = 70;
             gridView1.Columns[2].Width = 35;
@@ -137,6 +137,20 @@ namespace ProjeOdevim.Formlar
             connection.Close();
 
         }
+        void UrunEksilt()
+        {
+            connection.Open();
+            SqlCommand komut = new SqlCommand("UPDATE TBLURUN SET STOK=STOK-1 WHERE ID=" + LId.Text, connection);
+            komut.ExecuteNonQuery();
+            connection.Close();
+        }
+        void UrunArttir()
+        {
+            connection.Open();
+            SqlCommand komut2 = new SqlCommand("UPDATE TBLURUN SET STOK=STOK+1 WHERE ID=" + id, connection);
+            komut2.ExecuteNonQuery();
+            connection.Close();
+        }
         void IslemNoArttir()
         {
             int islem = int.Parse(LIslemNo.Text);
@@ -171,6 +185,9 @@ namespace ProjeOdevim.Formlar
 
             hesapla += fiyatal;
             Total.Text = hesapla.ToString("C2");
+            UrunEksilt();
+            Product2();
+
         }
         void Clear()
         {
@@ -217,6 +234,8 @@ namespace ProjeOdevim.Formlar
         {
             if (LblTest.Text != "0" || gridView2.RowCount == 1)
             {
+                UrunArttir();
+                Product2();
                 if (gridView2.RowCount >= 2)
                 {
                     hesapla = hesapla - grd2fiyatal;
@@ -234,6 +253,7 @@ namespace ProjeOdevim.Formlar
                     gridView2.GetDataRow(gridView2.FocusedRowHandle = 0);
                 }
             }
+
         }
 
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -272,7 +292,6 @@ namespace ProjeOdevim.Formlar
                 indirimorani = 15;
             }
         }
-
         private void B3_Click(object sender, EventArgs e)
         {
             if (Total.Text != "0,00")
@@ -368,7 +387,6 @@ namespace ProjeOdevim.Formlar
             {
                 Product2();
             }
-
         }
         private void BSatis_Click(object sender, EventArgs e)
         {
