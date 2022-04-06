@@ -29,15 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSalesList));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.DtBaslangic = new System.Windows.Forms.DateTimePicker();
             this.DtBitis = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TCiro = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.BSifirla = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -46,12 +50,11 @@
             // gridControl1
             // 
             this.gridControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridControl1.Location = new System.Drawing.Point(-1, 127);
+            this.gridControl1.Location = new System.Drawing.Point(-1, 52);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1528, 491);
+            this.gridControl1.Size = new System.Drawing.Size(1528, 566);
             this.gridControl1.TabIndex = 111;
-            this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -138,7 +141,7 @@
             this.gridView1.Appearance.GroupRow.Options.UseBackColor = true;
             this.gridView1.Appearance.GroupRow.Options.UseFont = true;
             this.gridView1.Appearance.HeaderPanel.BackColor = System.Drawing.SystemColors.Highlight;
-            this.gridView1.Appearance.HeaderPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.gridView1.Appearance.HeaderPanel.BackColor2 = System.Drawing.Color.White;
             this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridView1.Appearance.HeaderPanel.Options.UseBackColor = true;
             this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
@@ -200,20 +203,20 @@
             this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AlignGroupSummaryInGroupRow = DevExpress.Utils.DefaultBoolean.False;
             this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.SmartVertScrollBar = false;
             this.gridView1.OptionsCustomization.AllowFilter = false;
             this.gridView1.OptionsFilter.AllowMRUFilterList = false;
+            this.gridView1.OptionsHint.ShowFooterHints = false;
             this.gridView1.OptionsMenu.EnableColumnMenu = false;
+            this.gridView1.OptionsMenu.EnableFooterMenu = false;
+            this.gridView1.OptionsMenu.ShowAddNewSummaryItem = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsMenu.ShowSummaryItemMode = DevExpress.Utils.DefaultBoolean.True;
             this.gridView1.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.SmartTag;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // DtBaslangic
             // 
@@ -222,11 +225,12 @@
             this.DtBaslangic.Name = "DtBaslangic";
             this.DtBaslangic.Size = new System.Drawing.Size(236, 26);
             this.DtBaslangic.TabIndex = 113;
+            this.DtBaslangic.ValueChanged += new System.EventHandler(this.DtBaslangic_ValueChanged);
             // 
             // DtBitis
             // 
             this.DtBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.DtBitis.Location = new System.Drawing.Point(162, 39);
+            this.DtBitis.Location = new System.Drawing.Point(563, 9);
             this.DtBitis.Name = "DtBitis";
             this.DtBitis.Size = new System.Drawing.Size(236, 26);
             this.DtBitis.TabIndex = 114;
@@ -247,7 +251,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(50, 39);
+            this.label2.Location = new System.Drawing.Point(451, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 116;
@@ -255,18 +259,40 @@
             // 
             // simpleButton1
             // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.White;
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(309, 71);
+            this.simpleButton1.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.simpleButton1.AppearanceDisabled.BackColor2 = System.Drawing.Color.White;
+            this.simpleButton1.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.AppearanceDisabled.Options.UseBackColor = true;
+            this.simpleButton1.AppearanceDisabled.Options.UseFont = true;
+            this.simpleButton1.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.simpleButton1.AppearanceHovered.BackColor2 = System.Drawing.Color.White;
+            this.simpleButton1.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton1.AppearanceHovered.Options.UseFont = true;
+            this.simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.simpleButton1.AppearancePressed.BackColor2 = System.Drawing.Color.White;
+            this.simpleButton1.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.AppearancePressed.Options.UseBackColor = true;
+            this.simpleButton1.AppearancePressed.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(805, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(89, 34);
+            this.simpleButton1.Size = new System.Drawing.Size(126, 37);
             this.simpleButton1.TabIndex = 117;
             this.simpleButton1.Text = "Getir";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(36)))), ((int)(((byte)(57)))));
+            this.panel1.Controls.Add(this.BSifirla);
+            this.panel1.Controls.Add(this.TCiro);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.DtBaslangic);
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.DtBitis);
@@ -274,13 +300,70 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1526, 120);
+            this.panel1.Size = new System.Drawing.Size(1526, 45);
             this.panel1.TabIndex = 118;
+            // 
+            // TCiro
+            // 
+            this.TCiro.AutoSize = true;
+            this.TCiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TCiro.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TCiro.Location = new System.Drawing.Point(990, 8);
+            this.TCiro.Name = "TCiro";
+            this.TCiro.Size = new System.Drawing.Size(69, 25);
+            this.TCiro.TabIndex = 120;
+            this.TCiro.Text = "Ciro: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(944, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.TabIndex = 119;
+            this.label3.Text = "Ciro: ";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // BSifirla
+            // 
+            this.BSifirla.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.BSifirla.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.BSifirla.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSifirla.Appearance.Options.UseBackColor = true;
+            this.BSifirla.Appearance.Options.UseFont = true;
+            this.BSifirla.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.BSifirla.AppearanceDisabled.BackColor2 = System.Drawing.Color.White;
+            this.BSifirla.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSifirla.AppearanceDisabled.Options.UseBackColor = true;
+            this.BSifirla.AppearanceDisabled.Options.UseFont = true;
+            this.BSifirla.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.BSifirla.AppearanceHovered.BackColor2 = System.Drawing.Color.White;
+            this.BSifirla.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSifirla.AppearanceHovered.Options.UseBackColor = true;
+            this.BSifirla.AppearanceHovered.Options.UseFont = true;
+            this.BSifirla.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.BSifirla.AppearancePressed.BackColor2 = System.Drawing.Color.White;
+            this.BSifirla.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSifirla.AppearancePressed.Options.UseBackColor = true;
+            this.BSifirla.AppearancePressed.Options.UseFont = true;
+            this.BSifirla.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.BSifirla.Location = new System.Drawing.Point(404, 6);
+            this.BSifirla.Name = "BSifirla";
+            this.BSifirla.Size = new System.Drawing.Size(41, 28);
+            this.BSifirla.TabIndex = 121;
+            this.BSifirla.Click += new System.EventHandler(this.BSifirla_Click);
             // 
             // FSalesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridControl1);
@@ -299,12 +382,15 @@
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         protected DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DateTimePicker DtBaslangic;
         private System.Windows.Forms.DateTimePicker DtBitis;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label TCiro;
+        private System.Windows.Forms.Timer timer1;
+        private DevExpress.XtraEditors.SimpleButton BSifirla;
     }
 }
