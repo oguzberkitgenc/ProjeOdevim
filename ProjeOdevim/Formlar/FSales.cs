@@ -35,8 +35,8 @@ namespace ProjeOdevim.Formlar
         void ProductList()
         {
             Product2();
-            //    gridView1.Columns[4].Visible = false;
-            //      gridView1.Columns[6].Visible = false;
+            gridView1.Columns[4].Visible = false;
+            gridView1.Columns[6].Visible = false;
             gridView1.Columns[0].Width = 1;
             gridView1.Columns[1].Width = 70;
             gridView1.Columns[2].Width = 35;
@@ -191,6 +191,11 @@ namespace ProjeOdevim.Formlar
         }
         void Clear()
         {
+            for (int i = 0; i < gridView2.DataRowCount; i++)
+            {
+                gridView2.FocusedRowHandle = i;
+                UrunArttir();
+            }
             dt1.Rows.Clear();
             hesapla = 0;
             LblTest.Text = "0";
@@ -205,6 +210,8 @@ namespace ProjeOdevim.Formlar
             B15.Enabled = true;
             B5.Enabled = true;
             B3.Enabled = true;
+            BDelete.Enabled = true;
+
             Product2();
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -289,6 +296,7 @@ namespace ProjeOdevim.Formlar
                 B15.Enabled = false;
                 B5.Enabled = false;
                 B3.Enabled = false;
+                BDelete.Enabled = false;
                 indirimorani = 15;
             }
         }
@@ -308,6 +316,7 @@ namespace ProjeOdevim.Formlar
                 B15.Enabled = false;
                 B5.Enabled = false;
                 B3.Enabled = false;
+                BDelete.Enabled = false;
                 indirimorani = 3;
             }
         }
@@ -327,6 +336,7 @@ namespace ProjeOdevim.Formlar
                 B15.Enabled = false;
                 B5.Enabled = false;
                 B3.Enabled = false;
+                BDelete.Enabled = false;
                 indirimorani = 5;
             }
         }
@@ -352,6 +362,7 @@ namespace ProjeOdevim.Formlar
                         B15.Enabled = false;
                         B5.Enabled = false;
                         B3.Enabled = false;
+                        BDelete.Enabled = false;
                         indirimorani = Convert.ToDecimal(TYuzdeGir.Text);
                     }
                 }

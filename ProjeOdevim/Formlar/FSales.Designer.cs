@@ -133,8 +133,8 @@
             this.gridView1.Appearance.FocusedCell.Font = new System.Drawing.Font("Lucida Console", 11.25F);
             this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedCell.Options.UseFont = true;
-            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(36)))), ((int)(((byte)(97)))));
-            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
+            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Teal;
+            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.DarkCyan;
             this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
             this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
@@ -393,8 +393,8 @@
             this.gridView2.Appearance.FocusedCell.Font = new System.Drawing.Font("Lucida Console", 11.25F);
             this.gridView2.Appearance.FocusedCell.Options.UseBackColor = true;
             this.gridView2.Appearance.FocusedCell.Options.UseFont = true;
-            this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(36)))), ((int)(((byte)(97)))));
-            this.gridView2.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
+            this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.Teal;
+            this.gridView2.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.DarkCyan;
             this.gridView2.Appearance.FocusedRow.Font = new System.Drawing.Font("Lucida Console", 11.25F);
             this.gridView2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView2.Appearance.FocusedRow.Options.UseFont = true;
