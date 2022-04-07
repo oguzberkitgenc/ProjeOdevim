@@ -290,13 +290,11 @@ namespace ProjeOdevim
                 frm.Show();
             }
         }
-
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             Formlar.FDuzenle f = new Formlar.FDuzenle();
             f.ShowDialog();
         }
-
         Formlar.FSettings settings;
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

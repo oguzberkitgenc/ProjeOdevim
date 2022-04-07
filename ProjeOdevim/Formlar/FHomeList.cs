@@ -59,7 +59,7 @@ namespace ProjeOdevim.Formlar
         {
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("Select TOP 12 KULLANICI,ADSOYAD,DEPARTMAN,TARIH From TBLKULLANICIHAREKET " +
-                "INNER JOIN TBLDEPARTMAN ON TBLKULLANICIHAREKET.DEPART=TBLDEPARTMAN.ID ORDER BY TARIH ASC", connection);
+                "INNER JOIN TBLDEPARTMAN ON TBLKULLANICIHAREKET.DEPART=TBLDEPARTMAN.ID ORDER BY TARIH DESC", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             gridControl2.DataSource = dt;
