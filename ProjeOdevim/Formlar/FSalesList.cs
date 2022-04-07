@@ -34,8 +34,9 @@ namespace ProjeOdevim.Formlar
             da.Fill(dt);
             gridControl1.DataSource = dt;
             double ciro = 0;
+
             connection.Open();
-            SqlCommand da2 = new SqlCommand("SELECT SUM(TOPLAMFIYAT) FROM TBLSATIS WHERE TARIH BETWEEN @T1 AND @T2 ", connection);
+            SqlCommand da2 = new SqlCommand("SELECT SUM(SATISFIYAT) FROM TBLSATIS WHERE TARIH BETWEEN @T1 AND @T2", connection);
             da2.Parameters.AddWithValue("@T1", baslangic);
             da2.Parameters.AddWithValue("@T2", bitis);
             SqlDataReader dr2 = da2.ExecuteReader();
@@ -49,7 +50,6 @@ namespace ProjeOdevim.Formlar
         private void FSalesList_Load(object sender, EventArgs e)
         {
 
-            
             Listele();
             timer1.Start();
         }

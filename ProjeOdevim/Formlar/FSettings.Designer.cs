@@ -50,6 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.TKod = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelControl4
@@ -325,7 +326,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(226, 124);
+            this.label2.Location = new System.Drawing.Point(226, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 13);
             this.label2.TabIndex = 118;
@@ -345,7 +346,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(226, 90);
+            this.label4.Location = new System.Drawing.Point(226, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 13);
             this.label4.TabIndex = 120;
@@ -361,12 +362,22 @@
             this.label5.TabIndex = 121;
             this.label5.Text = "cat_dashboard_mark";
             // 
+            // TKod
+            // 
+            this.TKod.Location = new System.Drawing.Point(12, 586);
+            this.TKod.Name = "TKod";
+            this.TKod.Size = new System.Drawing.Size(1499, 20);
+            this.TKod.TabIndex = 122;
+            this.TKod.Enter += new System.EventHandler(this.TKod_Enter);
+            this.TKod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TKod_KeyPress);
+            // 
             // FSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.TKod);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -420,5 +431,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TKod;
     }
 }

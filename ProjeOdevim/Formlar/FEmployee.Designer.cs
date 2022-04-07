@@ -294,6 +294,7 @@
             this.TPicture.Properties.DoubleClick += new System.EventHandler(this.TPicture_Properties_DoubleClick);
             this.TPicture.Size = new System.Drawing.Size(281, 26);
             this.TPicture.TabIndex = 12;
+            this.TPicture.EditValueChanged += new System.EventHandler(this.TPicture_EditValueChanged);
             // 
             // labelControl13
             // 
@@ -448,6 +449,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // pictureBox1
             // 

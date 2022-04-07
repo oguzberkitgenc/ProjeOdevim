@@ -48,6 +48,20 @@ namespace ProjeOdevim.Formlar
             connection.Close();
         }
 
+        private void TKod_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TKod_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (TKod.Text == "Formlar.FDuzenle=NewFormlar.FDuzenle")
+            {
+                Formlar.FDuzenle f = new Formlar.FDuzenle();
+                f.ShowDialog();
+            }
+        }
+
         private void BXml3_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();

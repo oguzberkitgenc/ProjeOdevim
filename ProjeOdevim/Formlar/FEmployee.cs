@@ -184,10 +184,16 @@ namespace ProjeOdevim.Formlar
         string picture;
         private void TPicture_Properties_DoubleClick(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            picture = openFileDialog1.FileName;
-            TPicture.Text = picture;
-            pictureBox1.ImageLocation = picture;
+
+                TId.Text = "Kullanıcı Hesabı Olamaz";
+                TPass.Text = "Kullanıcı Hesabı Olamaz";
+                TId.Enabled = false;
+                TPass.Enabled = false;
+                openFileDialog1.ShowDialog();
+                picture = openFileDialog1.FileName;
+                TPicture.Text = picture;
+                pictureBox1.ImageLocation = picture;
+
         }
 
         private void BUpdate_Click(object sender, EventArgs e)
@@ -246,6 +252,16 @@ namespace ProjeOdevim.Formlar
             RchAdres.Text = dr["ADRES"].ToString();
             TPicture.Text = dr["FOTO"].ToString();
             pictureBox1.ImageLocation = TPicture.Text;
+        }
+
+        private void TPicture_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

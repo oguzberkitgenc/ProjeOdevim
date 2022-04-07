@@ -37,10 +37,12 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="Günlük Satış Grafiği" DataSource="dashboardSqlDataSource1" DataMember="Query">
+    <Chart ComponentName="chartDashboardItem1" Name="Aylık Satış Çizelgesi" DataSource="dashboardSqlDataSource1" DataMember="Query">
       <DataItems>
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
-        <Measure DataMember="SATISFIYAT" DefaultId="DataItem1" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="Month" DefaultId="DataItem0" />
+        <Measure DataMember="SATISFIYAT" DefaultId="DataItem1">
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
+        </Measure>
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem0" />
@@ -48,7 +50,7 @@
       <Panes>
         <Pane Name="Pane 1">
           <Series>
-            <Simple Name="Toplam" PlotOnSecondaryAxis="true">
+            <Simple Name="Toplam">
               <Value DefaultId="DataItem1" />
             </Simple>
           </Series>
