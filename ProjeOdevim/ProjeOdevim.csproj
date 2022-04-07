@@ -231,6 +231,12 @@
     <Compile Include="Formlar\FGooglee.Designer.cs">
       <DependentUpon>FGooglee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FWhoAmi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FWhoAmi.Designer.cs">
+      <DependentUpon>FWhoAmi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FGooglee.resx">
       <DependentUpon>FGooglee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FWhoAmi.resx">
+      <DependentUpon>FWhoAmi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHomePage.resx">
       <DependentUpon>FrmHomePage.cs</DependentUpon>

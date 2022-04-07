@@ -277,6 +277,13 @@ namespace ProjeOdevim
                 FSales.Show();
             }
         }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.FWhoAmi fWhoAmi = new Formlar.FWhoAmi();
+            fWhoAmi.Show();
+        }
+
         Formlar.frmViewer frm;
         private void BMoneyList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

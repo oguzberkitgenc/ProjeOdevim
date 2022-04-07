@@ -88,6 +88,16 @@ namespace ProjeOdevim.Formlar
             CmbEmploye.DataSource = dt;
             connection.Close();
         }
+        void PuanAddEmploye()
+        {
+            hesapla = (hesapla / 1000) * 1;
+            connection.Open();
+            SqlCommand komut = new SqlCommand("UPDATE TBLPERSONEL SET PUAN=PUAN+@P1 WHERE ID=@P2 ", connection);
+            komut.Parameters.AddWithValue("@P1",hesapla);
+            komut.Parameters.AddWithValue("@P2",CmbEmploye.SelectedValue);
+            komut.ExecuteNonQuery();
+            connection.Close();
+        }
         private void FSales_Load(object sender, EventArgs e)
         {
             Employee();
@@ -260,9 +270,7 @@ namespace ProjeOdevim.Formlar
                     gridView2.GetDataRow(gridView2.FocusedRowHandle = 0);
                 }
             }
-
         }
-
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             if (gridView2.RowCount >= 1)
@@ -416,6 +424,7 @@ namespace ProjeOdevim.Formlar
                         IndirimsizsizSatis();
                     }
                 }
+                PuanAddEmploye();
                 Employee();
                 CustomerList();
                 Product2();
