@@ -399,6 +399,7 @@ namespace ProjeOdevim.Formlar
                     Product2();
                     Rch.Text = "";
                 }
+                Rch.Text = "";
             }
             else if (Rch.Text == "")
             {

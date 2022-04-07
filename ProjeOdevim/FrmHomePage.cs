@@ -284,6 +284,12 @@ namespace ProjeOdevim
             fWhoAmi.Show();
         }
 
+        private void BKredi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.FKredi kredi = new Formlar.FKredi();
+            kredi.Show();
+        }
+
         Formlar.frmViewer frm;
         private void BMoneyList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

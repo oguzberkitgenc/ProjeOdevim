@@ -57,7 +57,6 @@ namespace ProjeOdevim.Formlar
         {
             Listele();
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (durum==false)
@@ -70,7 +69,6 @@ namespace ProjeOdevim.Formlar
         {
             durum = true;
         }
-
         private void BSifirla_Click(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;

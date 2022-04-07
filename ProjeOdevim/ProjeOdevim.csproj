@@ -165,6 +165,12 @@
     <Compile Include="Formlar\FHomeList.Designer.cs">
       <DependentUpon>FHomeList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FKredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FKredi.Designer.cs">
+      <DependentUpon>FKredi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FHomeList.resx">
       <DependentUpon>FHomeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FKredi.resx">
+      <DependentUpon>FKredi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
