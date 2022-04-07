@@ -167,14 +167,14 @@ namespace ProjeOdevim.Formlar
             Clear();
             connection.Open();
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select DEPARTMAN as 'Görevi',AD + ' ' + SOYAD as 'Ad Soyad',PUAN,FOTO,MAGAZAID From TBLPERSONEL" +
+            SqlDataAdapter da = new SqlDataAdapter("Select DEPARTMAN as 'Görevi',AD as 'Ad Soyad',PUAN,FOTO,MAGAZAID From TBLPERSONEL" +
                 " inner join TBLDEPARTMAN on TBLPERSONEL.DEPARTMANID = TBLDEPARTMAN.ID where MAGAZAID=" + TId.Text + "order by DEPARTMANID asc", connection);
             da.Fill(dt);
             gridControl2.DataSource = dt;
             connection.Close();
             gridView2.Columns[3].Visible = false;
             gridView2.Columns[4].Visible = false;
-            //////////////////////////////////////
+
             connection.Open();
             SqlCommand command = new SqlCommand("Select ID,MAGAZA,ADRES,IL,ILCE,FOTO1,FOTO2,FOTO3 From TBLMAGAZA where ID=" + TId.Text, connection);
             SqlDataReader reader = command.ExecuteReader();

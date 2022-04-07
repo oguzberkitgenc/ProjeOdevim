@@ -237,7 +237,7 @@ namespace ProjeOdevim.Formlar
             MskTc.Text = dr["TC NO"].ToString();
             CmbDep.Text = dr["DEPARTMAN"].ToString();
             CmbMagaza.Text = dr["MAĞAZA"].ToString();
-            TName.Text = dr["AD"].ToString();
+            TName.Text = dr["AD SOYAD"].ToString();
             CmbGender.Text = dr["CİNSİYET"].ToString();
             MskPhone.Text = dr["TELEFON"].ToString();
             MskBirth.Text = dr["DOĞUM TARİHİ"].ToString();

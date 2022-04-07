@@ -209,7 +209,7 @@ namespace ProjeOdevim.Formlar
         void PersonelPuan()
         {
             connection.Open();
-            SqlCommand komut = new SqlCommand("Select TOP 1 AD+ ' ' + SOYAD,PUAN From TBLPERSONEL ORDER BY PUAN DESC",connection);
+            SqlCommand komut = new SqlCommand("Select TOP 1 AD,PUAN From TBLPERSONEL ORDER BY PUAN DESC",connection);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
             {

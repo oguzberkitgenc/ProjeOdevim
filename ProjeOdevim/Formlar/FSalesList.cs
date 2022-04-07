@@ -25,9 +25,9 @@ namespace ProjeOdevim.Formlar
             bitis = bitis.AddDays(1);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("SELECT ISLEMNO,TARIH,SUM(TOPLAMFIYAT) AS 'SATIŞ TUTARI',INDIRIMORANI, " +
-                "TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD AS 'PERSONEL',TBLMUSTERI.AD AS 'MÜŞTERİ',SUM(ALISFIYAT) AS 'MALİYET' " +
+                "TBLPERSONEL.AD AS 'PERSONEL',TBLMUSTERI.AD AS 'MÜŞTERİ',SUM(ALISFIYAT) AS 'MALİYET' " +
                 "FROM TBLSATIS INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID=TBLMUSTERI.ID " +
-                "WHERE TARIH BETWEEN @P1 AND @P2 GROUP BY TARIH,ISLEMNO,INDIRIMORANI,TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD,TBLMUSTERI.AD  " +
+                "WHERE TARIH BETWEEN @P1 AND @P2 GROUP BY TARIH,ISLEMNO,INDIRIMORANI,TBLPERSONEL.AD,TBLMUSTERI.AD  " +
                 "ORDER BY ISLEMNO DESC", connection);
             da.SelectCommand.Parameters.Add("@p1", SqlDbType.SmallDateTime).Value = baslangic;
             da.SelectCommand.Parameters.Add("@p2", SqlDbType.SmallDateTime).Value = bitis;
