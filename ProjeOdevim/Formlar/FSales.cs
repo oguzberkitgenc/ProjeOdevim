@@ -249,7 +249,6 @@ namespace ProjeOdevim.Formlar
                 LUrun.Text = dr["ÜRÜN"].ToString();
             }
         }
-
         private void BClear_Click(object sender, EventArgs e)
         {
             Employee();
@@ -455,8 +454,6 @@ namespace ProjeOdevim.Formlar
 
 
 
-                Employee();
-                CustomerList();
                 Product2();
                 IslemNoArttir();
                 IslemNo();

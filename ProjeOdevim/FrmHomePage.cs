@@ -289,6 +289,16 @@ namespace ProjeOdevim
             Formlar.FKredi kredi = new Formlar.FKredi();
             kredi.Show();
         }
+        Formlar.FNotlar FNotlar;
+        private void BNot_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (FNotlar==null ||FNotlar.IsDisposed)
+            {
+                FNotlar = new Formlar.FNotlar();
+                FNotlar.MdiParent = this;
+                FNotlar.Show();
+            }
+        }
 
         Formlar.frmViewer frm;
         private void BMoneyList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

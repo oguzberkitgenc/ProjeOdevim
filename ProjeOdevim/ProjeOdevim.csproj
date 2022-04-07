@@ -189,6 +189,12 @@
     <Compile Include="Formlar\FMonthSales.Designer.cs">
       <DependentUpon>FMonthSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FNotlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FNotlar.Designer.cs">
+      <DependentUpon>FNotlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FProductList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FMonthSales.resx">
       <DependentUpon>FMonthSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FNotlar.resx">
+      <DependentUpon>FNotlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FProductList.resx">
       <DependentUpon>FProductList.cs</DependentUpon>

@@ -88,6 +88,8 @@
             this.BSales = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BKredi = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.BNot = new DevExpress.XtraBars.BarButtonItem();
             this.BCiro = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.BKategoriEkle = new DevExpress.XtraBars.BarButtonItem();
@@ -979,7 +981,8 @@
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup8,
             this.ribbonPageGroup13,
-            this.ribbonPageGroup12});
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup16});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "ANA SAYFA";
             // 
@@ -1072,6 +1075,36 @@
             this.BKredi.ItemInMenuAppearance.Pressed.Options.UseFont = true;
             this.BKredi.Name = "BKredi";
             this.BKredi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BKredi_ItemClick);
+            // 
+            // ribbonPageGroup16
+            // 
+            this.ribbonPageGroup16.ItemLinks.Add(this.BNot, true);
+            this.ribbonPageGroup16.Name = "ribbonPageGroup16";
+            // 
+            // BNot
+            // 
+            this.BNot.Caption = "NOTLAR";
+            this.BNot.Id = 57;
+            this.BNot.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BNot.ImageOptions.Image")));
+            this.BNot.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BNot.ImageOptions.LargeImage")));
+            this.BNot.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BNot.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BNot.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BNot.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BNot.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BNot.ItemAppearance.Normal.Options.UseFont = true;
+            this.BNot.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BNot.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BNot.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BNot.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BNot.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BNot.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BNot.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BNot.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BNot.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BNot.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BNot.Name = "BNot";
+            this.BNot.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BNot_ItemClick);
             // 
             // BCiro
             // 
@@ -1212,10 +1245,11 @@
             this.barButtonItem17,
             this.barButtonItem18,
             this.BSaless,
-            this.BKredi});
+            this.BKredi,
+            this.BNot});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 57;
+            this.ribbonControl1.MaxItemId = 58;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -1436,6 +1470,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
         private DevExpress.XtraBars.BarButtonItem BKredi;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.BarButtonItem BNot;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
     }
 }
 
