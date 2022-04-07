@@ -102,6 +102,7 @@ namespace ProjeOdevim.Formlar
             IslemNo();
             ProductList();
             CustomerList();
+            OranGetir();
             Total.Focus();
         }
         void IndirimsizsizSatis()
@@ -219,8 +220,20 @@ namespace ProjeOdevim.Formlar
             B5.Enabled = true;
             B3.Enabled = true;
             BDelete.Enabled = true;
-
             Product2();
+        }
+        public double musterikredi = 0, personelkredi = 0;
+        void OranGetir()
+        {
+            connection.Open();
+            SqlCommand komut = new SqlCommand("Select KMUSTERI,KPERSONEL From TBLKREDI",connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                musterikredi = Convert.ToDouble(dr["KMUSTERI"]);
+                personelkredi = Convert.ToDouble(dr["KPERSONEL"]);
+            }
+            connection.Close();
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
@@ -425,18 +438,17 @@ namespace ProjeOdevim.Formlar
                 }
 
 
-                double oran = 1;
 
                 connection.Open();
                 SqlCommand komut = new SqlCommand("UPDATE TBLPERSONEL SET PUAN=PUAN+@P1 WHERE ID=@P2 ", connection);
-                komut.Parameters.AddWithValue("@P1", hesapla / 1000 * oran);
+                komut.Parameters.AddWithValue("@P1", hesapla / 1000 * personelkredi);
                 komut.Parameters.AddWithValue("@P2", CmbEmploye.SelectedValue);
                 komut.ExecuteNonQuery();
                 connection.Close();
 
                 connection.Open();
                 SqlCommand komut2 = new SqlCommand("UPDATE TBLMUSTERI SET KREDILIMIT=KREDILIMIT+@K1 WHERE ID=@K2", connection);
-                komut2.Parameters.AddWithValue("@K1", hesapla * 1.5);
+                komut2.Parameters.AddWithValue("@K1", hesapla * musterikredi);
                 komut2.Parameters.AddWithValue("@K2", CmbCustomer.SelectedValue);
                 komut2.ExecuteNonQuery();
                 connection.Close();
