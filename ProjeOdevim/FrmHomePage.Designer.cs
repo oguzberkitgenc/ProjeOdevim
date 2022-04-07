@@ -1373,6 +1373,7 @@
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1556, 894);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1400, 800);
             this.Name = "FrmHomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

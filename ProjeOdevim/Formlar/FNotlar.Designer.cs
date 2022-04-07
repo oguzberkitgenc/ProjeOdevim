@@ -125,6 +125,7 @@
             this.gridView1.OptionsMenu.EnableColumnMenu = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // gridControl1
             // 
@@ -149,6 +150,7 @@
             this.BUpdate.Size = new System.Drawing.Size(135, 30);
             this.BUpdate.TabIndex = 89;
             this.BUpdate.Text = "Güncelle";
+            this.BUpdate.Click += new System.EventHandler(this.BUpdate_Click);
             // 
             // BClear
             // 
@@ -162,6 +164,7 @@
             this.BClear.Size = new System.Drawing.Size(276, 30);
             this.BClear.TabIndex = 90;
             this.BClear.Text = "Temizle";
+            this.BClear.Click += new System.EventHandler(this.BClear_Click);
             // 
             // BSave
             // 
