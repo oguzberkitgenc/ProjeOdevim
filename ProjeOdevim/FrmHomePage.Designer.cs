@@ -1110,7 +1110,7 @@
             // 
             // BNot
             // 
-            this.BNot.Caption = "NOTLAR";
+            this.BNot.Caption = "DUYURULAR";
             this.BNot.Id = 57;
             this.BNot.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BNot.ImageOptions.Image")));
             this.BNot.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BNot.ImageOptions.LargeImage")));

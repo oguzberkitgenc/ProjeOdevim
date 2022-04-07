@@ -1087,9 +1087,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(1029, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 19);
+            this.label3.Size = new System.Drawing.Size(96, 19);
             this.label3.TabIndex = 82;
-            this.label3.Text = "Son Haberler";
+            this.label3.Text = "Son Duyurular";
             // 
             // label4
             // 

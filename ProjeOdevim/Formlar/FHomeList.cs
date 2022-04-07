@@ -76,6 +76,17 @@ namespace ProjeOdevim.Formlar
             gridControl4.DataSource = dt;
             connection.Close();
         }
+        void NewNote()
+        {
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 12 TBLNOTLAR.ID,BASLIK AS 'BAŞLIK',AD AS 'OLUŞTURAN'," +
+                "DEPARTMAN AS 'HİTAP' FROM TBLNOTLAR INNER JOIN TBLPERSONEL ON TBLNOTLAR.OLUSTURAN=TBLPERSONEL.ID " +
+                "INNER JOIN TBLDEPARTMAN ON TBLNOTLAR.HITAP=TBLDEPARTMAN.ID", connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gridControl6.DataSource = dt;
+            connection.Close();
+        }
         private void FHomeList_Load(object sender, EventArgs e)
         {
             DecliningStok();
@@ -83,10 +94,12 @@ namespace ProjeOdevim.Formlar
             NewStajer();
             NewLogin();
             NewSales();
+            NewNote();
             timer1.Start();
             gridView2.Columns[0].Visible = false;
             gridView3.Columns[0].Visible = false;
             gridView5.Columns[0].Visible = false;
+            gridView6.Columns[0].Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
