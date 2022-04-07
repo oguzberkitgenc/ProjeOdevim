@@ -53,7 +53,7 @@ namespace ProjeOdevim.Formlar
             connection.Open();
             DataTable dataTable = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select TBLPERSONEL.ID,TC AS 'TC NO',DEPARTMAN,MAGAZA as 'MAĞAZA' ," +
-                "AD AS 'AD',SOYAD AS 'SOYAD',TEL AS 'TELEFON',CINSIYETAD AS 'CİNSİYET',DTARIH AS 'DOĞUM TARİHİ',TBLPERSONEL.IL AS 'İL'," +
+                "AD AS 'AD SOYAD',TEL AS 'TELEFON',CINSIYETAD AS 'CİNSİYET',DTARIH AS 'DOĞUM TARİHİ',TBLPERSONEL.IL AS 'İL'," +
                 "TBLPERSONEL.ILCE AS 'İLÇE', TBLPERSONEL.ADRES,FOTO FROM TBLPERSONEL INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
                 "INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID INNER JOIN TBLCINSIYET ON TBLPERSONEL.CINSIYET=TBLCINSIYET.ID " +
                 "order by DEPARTMANID asc", connection);
@@ -79,7 +79,6 @@ namespace ProjeOdevim.Formlar
             CmbDep.Text = "";
             CmbMagaza.Text = "";
             TName.Text = "";
-            TSurname.Text = "";
             CmbGender.Text = "";
             MskPhone.Text = "";
             MskBirth.Text = "";
@@ -100,7 +99,7 @@ namespace ProjeOdevim.Formlar
             IlList();
             Clear();
             gridView1.Columns[0].Visible = false;
-            gridView1.Columns[12].Visible = false;
+            gridView1.Columns[11].Visible = false;
         }
 
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
@@ -138,15 +137,14 @@ namespace ProjeOdevim.Formlar
             UserMukkerrerNo();
             if (durum == true)
             {
-                if (TId.Text == "" & MskTc.Text != "" & TName.Text != "" & TSurname.Text != "" & CmbGender.Text != "" &
+                if (TId.Text == "" & MskTc.Text != "" & TName.Text != ""  & CmbGender.Text != "" &
                MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & CmbDep.Text != "" & CmbMagaza.Text != "" &
                MskPhone.Text != "" & TPicture.Text != "" & TUser.Text != "" & TPass.Text != "")
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("insert into TBLPERSONEL (TC,AD,SOYAD,CINSIYET,DTARIH,IL,ILCE,ADRES,DEPARTMANID,MAGAZAID,TEL,FOTO,KADI,SIFRE,PUAN) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15)", connection);
+                    SqlCommand command = new SqlCommand("insert into TBLPERSONEL (TC,AD,CINSIYET,DTARIH,IL,ILCE,ADRES,DEPARTMANID,MAGAZAID,TEL,FOTO,KADI,SIFRE,PUAN) values (@p1,@p2,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15)", connection);
                     command.Parameters.AddWithValue("@p1", MskTc.Text);
                     command.Parameters.AddWithValue("@p2", TName.Text);
-                    command.Parameters.AddWithValue("@p3", TSurname.Text);
                     command.Parameters.AddWithValue("@p4", CmbGender.SelectedValue);
                     command.Parameters.AddWithValue("@p5", MskBirth.Text);
                     command.Parameters.AddWithValue("@p6", CmbIl.Text);
@@ -199,13 +197,12 @@ namespace ProjeOdevim.Formlar
                 if (TId.Text != "")
                 {
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand("Update TBLPERSONEL set TC=@T1,DEPARTMANID=@T2,MAGAZAID=@T3,AD=@T4,SOYAD=@T5," +
+                    SqlCommand cmd = new SqlCommand("Update TBLPERSONEL set TC=@T1,DEPARTMANID=@T2,MAGAZAID=@T3,AD=@T4," +
                         "CINSIYET=@T6,TEL=@T7,DTARIH=@T8,IL=@T9,ILCE=@T10,ADRES=@T11,FOTO=@T12 WHERE ID=@T13", connection);
                     cmd.Parameters.AddWithValue("@T1", MskTc.Text);
                     cmd.Parameters.AddWithValue("@T2", CmbDep.SelectedValue);
                     cmd.Parameters.AddWithValue("@T3", CmbMagaza.SelectedValue);
                     cmd.Parameters.AddWithValue("@T4", TName.Text);
-                    cmd.Parameters.AddWithValue("@T5", TSurname.Text);
                     cmd.Parameters.AddWithValue("@T6", CmbGender.SelectedValue);
                     cmd.Parameters.AddWithValue("@T7", MskPhone.Text);
                     cmd.Parameters.AddWithValue("@T8", MskBirth.Text);
@@ -241,7 +238,6 @@ namespace ProjeOdevim.Formlar
             CmbDep.Text = dr["DEPARTMAN"].ToString();
             CmbMagaza.Text = dr["MAĞAZA"].ToString();
             TName.Text = dr["AD"].ToString();
-            TSurname.Text = dr["SOYAD"].ToString();
             CmbGender.Text = dr["CİNSİYET"].ToString();
             MskPhone.Text = dr["TELEFON"].ToString();
             MskBirth.Text = dr["DOĞUM TARİHİ"].ToString();

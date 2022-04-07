@@ -32,7 +32,7 @@ namespace ProjeOdevim.Formlar
         void NewEmployee()
         {
             connection.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD +' '+ SOYAD AS 'AD SOYAD'" +
+            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD AS 'AD SOYAD'" +
                 "From TBLPERSONEL  INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
                 "INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID " +
                 "WHERE TBLPERSONEL.DEPARTMANID!=(SELECT ID FROM TBLDEPARTMAN WHERE DEPARTMAN='Stajer') " +
@@ -45,7 +45,7 @@ namespace ProjeOdevim.Formlar
         void NewStajer()
         {
             connection.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD +' '+ SOYAD AS 'AD SOYAD' " +
+            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD AS 'AD SOYAD' " +
                 "From TBLPERSONEL  INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
                 "INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID " +
                 "WHERE TBLPERSONEL.DEPARTMANID=(SELECT ID FROM TBLDEPARTMAN WHERE DEPARTMAN='Stajer') " +
@@ -69,9 +69,8 @@ namespace ProjeOdevim.Formlar
         void NewSales()
         {
             connection.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 12 ISLEMNO,TARIH,SUM(TOPLAMFIYAT) AS 'SATIŞ TUTARI', TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD " +
-                "AS 'PERSONEL' FROM TBLSATIS INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID GROUP BY TARIH,ISLEMNO," +
-                "TBLPERSONEL.AD +' '+ TBLPERSONEL.SOYAD ORDER BY ISLEMNO DESC", connection);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 12 ISLEMNO,TARIH,SUM(TOPLAMFIYAT) AS 'SATIŞ TUTARI', TBLPERSONEL.AD AS 'PERSONEL' FROM TBLSATIS INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID GROUP BY TARIH,ISLEMNO," +
+                "TBLPERSONEL.AD ORDER BY ISLEMNO DESC", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             gridControl4.DataSource = dt;

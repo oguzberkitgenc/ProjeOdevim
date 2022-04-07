@@ -28,16 +28,16 @@ namespace ProjeOdevim.Formlar
         {
             FrmHomePage frm = new FrmHomePage();
             connection.Open();
-            SqlCommand command = new SqlCommand("Select ID,KADI,SIFRE,AD,SOYAD,DEPARTMANID FROM TBLPERSONEL WHERE KADI=@P1 AND SIFRE=@P2", connection);
+            SqlCommand command = new SqlCommand("Select ID,KADI,SIFRE,AD,DEPARTMANID FROM TBLPERSONEL WHERE KADI=@P1 AND SIFRE=@P2", connection);
             command.Parameters.AddWithValue("@P1", TUser.Text);
             command.Parameters.AddWithValue("@P2", TPass.Text);
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
-                frm.LName.Text = reader["AD"].ToString() + " " + reader["SOYAD"].ToString();
+                frm.LName.Text = reader["AD"].ToString();
                 frm.departman = int.Parse(reader["DEPARTMANID"].ToString());
                 depart = Convert.ToString(reader["DEPARTMANID"].ToString());
-                adsoy = reader["AD"].ToString() + " " + reader["SOYAD"].ToString();
+                adsoy = reader["AD"].ToString();
                 frm.LId.Text= reader["ID"].ToString();
                 durum = true;
             }
