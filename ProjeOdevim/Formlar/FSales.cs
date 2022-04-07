@@ -425,9 +425,11 @@ namespace ProjeOdevim.Formlar
                 }
 
 
+                double oran = 1;
+
                 connection.Open();
                 SqlCommand komut = new SqlCommand("UPDATE TBLPERSONEL SET PUAN=PUAN+@P1 WHERE ID=@P2 ", connection);
-                komut.Parameters.AddWithValue("@P1", hesapla / 1000 * 3);
+                komut.Parameters.AddWithValue("@P1", hesapla / 1000 * oran);
                 komut.Parameters.AddWithValue("@P2", CmbEmploye.SelectedValue);
                 komut.ExecuteNonQuery();
                 connection.Close();

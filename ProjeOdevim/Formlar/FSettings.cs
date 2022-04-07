@@ -50,7 +50,7 @@ namespace ProjeOdevim.Formlar
 
         private void TKod_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void TKod_KeyPress(object sender, KeyPressEventArgs e)
@@ -60,6 +60,55 @@ namespace ProjeOdevim.Formlar
                 Formlar.FDuzenle f = new Formlar.FDuzenle();
                 f.ShowDialog();
             }
+        }
+
+        private void BMusteri_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TMusteri.Text != "")
+                {
+                    connection.Open();
+                    SqlCommand komut = new SqlCommand("UPDATE TBLKREDI SET KMUSTERI=" + TMusteri.Text, connection);
+                    komut.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show(" " + TMusteri.Text + "\n Yeni Oran Sisteme Başarıyla Kayıt Edildi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show(" Hatalı Giriş. \n\n Lütfen Sadece SAYI VE NOKTA işareti kullanınız. \n\n Lütfen Sayfayı Yenileyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+            }
+
+
+
+        }
+
+        private void BPersonel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TPersonel.Text != "")
+                {
+                    connection.Open();
+                    SqlCommand komut = new SqlCommand("UPDATE TBLKREDI SET KPERSONEL=" + TPersonel.Text, connection);
+                    komut.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show(" " + TPersonel.Text + "\n Yeni Oran Sisteme Başarıyla Kayıt Edildi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(" Hatalı Giriş. \n\n Lütfen Sadece SAYI VE NOKTA işareti kullanınız. \n\n Lütfen Sayfayı Yenileyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+
+        }
+
+        private void BPersonel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
 
         private void BXml3_Click(object sender, EventArgs e)

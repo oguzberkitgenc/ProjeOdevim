@@ -57,7 +57,7 @@
             this.BSave2.Location = new System.Drawing.Point(42, 41);
             this.BSave2.Name = "BSave2";
             this.BSave2.Size = new System.Drawing.Size(281, 30);
-            this.BSave2.TabIndex = 52;
+            this.BSave2.TabIndex = 2;
             this.BSave2.Text = "Sorgula";
             this.BSave2.Click += new System.EventHandler(this.BSave2_Click);
             // 
@@ -88,11 +88,12 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton1.Appearance.Options.UseBackColor = true;
             this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(42, 77);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(281, 30);
-            this.simpleButton1.TabIndex = 54;
+            this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "Çık";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -277,7 +278,7 @@
             this.TTc.Location = new System.Drawing.Point(42, 12);
             this.TTc.Name = "TTc";
             this.TTc.Size = new System.Drawing.Size(281, 26);
-            this.TTc.TabIndex = 55;
+            this.TTc.TabIndex = 1;
             this.TTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TTc_KeyPress);
             // 
             // simpleButton2
@@ -290,7 +291,7 @@
             this.simpleButton2.Location = new System.Drawing.Point(8, 127);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(229, 30);
-            this.simpleButton2.TabIndex = 57;
+            this.simpleButton2.TabIndex = 5;
             this.simpleButton2.Text = "Çık";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
@@ -304,7 +305,7 @@
             this.simpleButton3.Location = new System.Drawing.Point(264, 127);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(281, 30);
-            this.simpleButton3.TabIndex = 56;
+            this.simpleButton3.TabIndex = 4;
             this.simpleButton3.Text = "Yeni Sorgu";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
@@ -320,9 +321,11 @@
             // 
             // FKredi
             // 
+            this.AcceptButton = this.BSave2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CancelButton = this.simpleButton1;
             this.ClientSize = new System.Drawing.Size(555, 183);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
