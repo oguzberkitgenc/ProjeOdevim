@@ -90,13 +90,11 @@ namespace ProjeOdevim.Formlar
         }
         void PuanAddEmploye()
         {
-            hesapla = (hesapla / 1000) * 1;
-            connection.Open();
-            SqlCommand komut = new SqlCommand("UPDATE TBLPERSONEL SET PUAN=PUAN+@P1 WHERE ID=@P2 ", connection);
-            komut.Parameters.AddWithValue("@P1",hesapla);
-            komut.Parameters.AddWithValue("@P2",CmbEmploye.SelectedValue);
-            komut.ExecuteNonQuery();
-            connection.Close();
+
+        }
+        void KrediAddCustomer()
+        {
+
         }
         private void FSales_Load(object sender, EventArgs e)
         {
@@ -424,7 +422,24 @@ namespace ProjeOdevim.Formlar
                         IndirimsizsizSatis();
                     }
                 }
-                PuanAddEmploye();
+
+
+                connection.Open();
+                SqlCommand komut = new SqlCommand("UPDATE TBLPERSONEL SET PUAN=PUAN+@P1 WHERE ID=@P2 ", connection);
+                komut.Parameters.AddWithValue("@P1", hesapla / 1000 * 3);
+                komut.Parameters.AddWithValue("@P2", CmbEmploye.SelectedValue);
+                komut.ExecuteNonQuery();
+                connection.Close();
+
+                connection.Open();
+                SqlCommand komut2 = new SqlCommand("UPDATE TBLMUSTERI SET KREDILIMIT=KREDILIMIT+@K1 WHERE ID=@K2", connection);
+                komut2.Parameters.AddWithValue("@K1", hesapla * 1.5);
+                komut2.Parameters.AddWithValue("@K2", CmbCustomer.SelectedValue);
+                komut2.ExecuteNonQuery();
+                connection.Close();
+
+
+
                 Employee();
                 CustomerList();
                 Product2();
