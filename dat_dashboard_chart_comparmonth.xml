@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="tr-TR">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
+      <Connection Name="localhost_DbProjem_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="localhost" />
+          <Parameter Name="database" Value="DbProjem" />
+          <Parameter Name="useIntegratedSecurity" Value="True" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+        </Parameters>
+      </Connection>
+      <Query Type="CustomSqlQuery" Name="Query">
+        <Sql>SELECT * FROM [DbProjem].[dbo].[TBLSATIS]</Sql>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Query">
+            <Field Name="ID" Type="Int32" />
+            <Field Name="ISLEMNO" Type="Int32" />
+            <Field Name="URUNID" Type="Int32" />
+            <Field Name="KATEGORIADI" Type="String" />
+            <Field Name="MARKAADI" Type="String" />
+            <Field Name="ALISFIYAT" Type="Decimal" />
+            <Field Name="SATISFIYAT" Type="Decimal" />
+            <Field Name="INDIRIMORANI" Type="String" />
+            <Field Name="TOPLAMFIYAT" Type="Decimal" />
+            <Field Name="PERSONEL" Type="Int32" />
+            <Field Name="MUSTERIID" Type="Int32" />
+            <Field Name="TARIH" Type="DateTime" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Günlük Alış Satış Karşılaştırması" DataSource="dashboardSqlDataSource1" DataMember="Query">
+      <DataItems>
+        <Measure DataMember="SATISFIYAT" DefaultId="DataItem0" />
+        <Measure DataMember="ALISFIYAT" DefaultId="DataItem1" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="WeekYear" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="Toplam" PlotOnSecondaryAxis="true">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+            <Simple Name="Toplam">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

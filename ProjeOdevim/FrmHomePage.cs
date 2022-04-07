@@ -192,7 +192,7 @@ namespace ProjeOdevim
         Formlar.FSales sales;
         private void BSales_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (sales==null || sales.IsDisposed)
+            if (sales == null || sales.IsDisposed)
             {
                 sales = new Formlar.FSales();
                 sales.MdiParent = this;
@@ -206,8 +206,37 @@ namespace ProjeOdevim
             if (FSales == null || FSales.IsDisposed)
             {
                 FSales = new Formlar.FSalesList();
-                FSales.MdiParent= this;
+                FSales.MdiParent = this;
                 FSales.Show();
+            }
+        }
+        Formlar.frmViewer frm;
+        private void BMoneyList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm == null || frm.IsDisposed)
+            {
+                string filname = @"C:\Users\24f4c\Desktop\Proje\finishdash.xml";
+                frm = new Formlar.frmViewer();
+                frm.frmViewer_Load(filname);
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Formlar.FDuzenle f = new Formlar.FDuzenle();
+            f.ShowDialog();
+        }
+
+        Formlar.FSettings settings;
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (settings == null || settings.IsDisposed)
+            {
+                settings = new Formlar.FSettings();
+                settings.MdiParent = this;
+                settings.Show();
             }
         }
     }
