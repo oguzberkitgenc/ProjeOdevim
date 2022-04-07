@@ -218,17 +218,6 @@ namespace ProjeOdevim
             }
         }
 
-        Formlar.FSalesList FSales;
-        private void BCiro_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (FSales == null || FSales.IsDisposed)
-            {
-                FSales = new Formlar.FSalesList();
-                FSales.MdiParent = this;
-                FSales.Show();
-            }
-        }
-
         Formlar.FDaySales DaySales;
         private void BDaySales_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -277,8 +266,18 @@ namespace ProjeOdevim
                 monthComp.Show();
             }
         }
-        Formlar.frmViewer frm;
 
+        Formlar.FSalesList FSales;
+        private void BSaless_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (FSales == null || FSales.IsDisposed)
+            {
+                FSales = new Formlar.FSalesList();
+                FSales.MdiParent = this;
+                FSales.Show();
+            }
+        }
+        Formlar.frmViewer frm;
         private void BMoneyList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (frm == null || frm.IsDisposed)
@@ -289,11 +288,6 @@ namespace ProjeOdevim
                 frm.MdiParent = this;
                 frm.Show();
             }
-        }
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            Formlar.FDuzenle f = new Formlar.FDuzenle();
-            f.ShowDialog();
         }
         Formlar.FSettings settings;
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
