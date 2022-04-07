@@ -17,6 +17,23 @@ namespace ProjeOdevim
             InitializeComponent();
         }
         SqlConnection connection = new SqlConnection(@"Data Source=BERKIT;Initial Catalog=DbProjem;Integrated Security=True");
+        public string xml1, xml2, xml3, xml4, xml5;
+        public void XmlGetir()
+        {
+            connection.Open();
+            SqlCommand komut = new SqlCommand("Select * From TBLXML", connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            DataTable dt = new DataTable();
+            while (dr.Read())
+            {
+                xml1 = dr["XML1"].ToString();
+                xml2 = dr["XML2"].ToString();
+                xml3 = dr["XML3"].ToString();
+                xml4 = dr["XML4"].ToString();
+                xml5 = dr["XML5"].ToString();
+            }
+            connection.Close();
+        }
         Formlar.FHomeList homeList;
         private void BHomeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -30,6 +47,7 @@ namespace ProjeOdevim
         public int departman;
         private void FrmAnaSayfa_Load(object sender, EventArgs e)
         {
+            XmlGetir();
             DateTime date = DateTime.Now;
             LDate.Text = date.ToString("MM/dd/yyyy");
             LTime.Text = date.ToString("HH:MM:ss");
@@ -210,12 +228,62 @@ namespace ProjeOdevim
                 FSales.Show();
             }
         }
+
+        Formlar.FDaySales DaySales;
+        private void BDaySales_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (DaySales == null || DaySales.IsDisposed)
+            {
+                string filename2 = xml2;
+                DaySales = new Formlar.FDaySales();
+                DaySales.FDaySales_Load(filename2);
+                DaySales.MdiParent = this;
+                DaySales.Show();
+            }
+        }
+        Formlar.FMonthSales monthSales;
+        private void BMonthSales_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (monthSales == null || monthSales.IsDisposed)
+            {
+                string filename3 = xml3;
+                monthSales = new Formlar.FMonthSales();
+                monthSales.FMonthSales_Load(filename3);
+                monthSales.MdiParent = this;
+                monthSales.Show();
+            }
+        }
+        FDayComp fday;
+        private void BDayComp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (fday == null || fday.IsDisposed)
+            {
+                string filename4 = xml4;
+                fday = new FDayComp();
+                fday.FDayComp_Load(filename4);
+                fday.MdiParent = this;
+                fday.Show();
+            }
+        }
+        Formlar.FMonthComp monthComp;
+        private void BMonthComp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (monthComp == null || monthComp.IsDisposed)
+            {
+                string filename5 = xml5;
+                monthComp = new Formlar.FMonthComp();
+                monthComp.FMonthComp_Load(filename5);
+                monthComp.MdiParent = this;
+                monthComp.Show();
+            }
+        }
         Formlar.frmViewer frm;
+
         private void BMoneyList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (frm == null || frm.IsDisposed)
             {
-                string filname = @"C:\Users\24f4c\Desktop\Proje\finishdash.xml";
+                string filname = xml1;
                 frm = new Formlar.frmViewer();
                 frm.frmViewer_Load(filname);
                 frm.MdiParent = this;

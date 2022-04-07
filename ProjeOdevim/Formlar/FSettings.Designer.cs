@@ -44,6 +44,12 @@
             this.BXml3 = new DevExpress.XtraEditors.SimpleButton();
             this.BXml4 = new DevExpress.XtraEditors.SimpleButton();
             this.BXml5 = new DevExpress.XtraEditors.SimpleButton();
+            this.BSave = new DevExpress.XtraEditors.SimpleButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelControl4
@@ -203,6 +209,7 @@
             this.BXml2.Size = new System.Drawing.Size(126, 23);
             this.BXml2.TabIndex = 112;
             this.BXml2.Text = "Seç";
+            this.BXml2.Click += new System.EventHandler(this.BXml2_Click);
             // 
             // BXml3
             // 
@@ -227,6 +234,7 @@
             this.BXml3.Size = new System.Drawing.Size(126, 23);
             this.BXml3.TabIndex = 113;
             this.BXml3.Text = "Seç";
+            this.BXml3.Click += new System.EventHandler(this.BXml3_Click);
             // 
             // BXml4
             // 
@@ -251,6 +259,7 @@
             this.BXml4.Size = new System.Drawing.Size(126, 23);
             this.BXml4.TabIndex = 114;
             this.BXml4.Text = "Seç";
+            this.BXml4.Click += new System.EventHandler(this.BXml4_Click);
             // 
             // BXml5
             // 
@@ -275,6 +284,82 @@
             this.BXml5.Size = new System.Drawing.Size(126, 23);
             this.BXml5.TabIndex = 115;
             this.BXml5.Text = "Seç";
+            this.BXml5.Click += new System.EventHandler(this.BXml5_Click);
+            // 
+            // BSave
+            // 
+            this.BSave.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BSave.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BSave.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSave.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BSave.Appearance.Options.UseBackColor = true;
+            this.BSave.Appearance.Options.UseFont = true;
+            this.BSave.Appearance.Options.UseForeColor = true;
+            this.BSave.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BSave.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BSave.AppearanceDisabled.Options.UseBackColor = true;
+            this.BSave.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BSave.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BSave.AppearanceHovered.Options.UseBackColor = true;
+            this.BSave.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BSave.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BSave.AppearancePressed.Options.UseBackColor = true;
+            this.BSave.Location = new System.Drawing.Point(18, 172);
+            this.BSave.Name = "BSave";
+            this.BSave.Size = new System.Drawing.Size(202, 23);
+            this.BSave.TabIndex = 116;
+            this.BSave.Text = "Kaydet";
+            this.BSave.Click += new System.EventHandler(this.BSave_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(226, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 13);
+            this.label1.TabIndex = 117;
+            this.label1.Text = "dat_dashboard_chartday";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(226, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 13);
+            this.label2.TabIndex = 118;
+            this.label2.Text = "dat_dashboard_chartmonth";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(226, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 13);
+            this.label3.TabIndex = 119;
+            this.label3.Text = "dat_dashboard_chart_comparday";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(226, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(178, 13);
+            this.label4.TabIndex = 120;
+            this.label4.Text = "dat_dashboard_chart_comparmonth";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(226, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 13);
+            this.label5.TabIndex = 121;
+            this.label5.Text = "cat_dashboard_mark";
             // 
             // FSettings
             // 
@@ -282,6 +367,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BSave);
             this.Controls.Add(this.BXml5);
             this.Controls.Add(this.BXml4);
             this.Controls.Add(this.BXml3);
@@ -299,6 +390,7 @@
             this.Controls.Add(this.labelControl4);
             this.Name = "FSettings";
             this.Text = "FSettings";
+            this.Load += new System.EventHandler(this.FSettings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,5 +414,11 @@
         private DevExpress.XtraEditors.SimpleButton BXml3;
         private DevExpress.XtraEditors.SimpleButton BXml4;
         private DevExpress.XtraEditors.SimpleButton BXml5;
+        private DevExpress.XtraEditors.SimpleButton BSave;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
