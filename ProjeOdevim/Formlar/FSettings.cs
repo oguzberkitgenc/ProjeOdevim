@@ -18,7 +18,7 @@ namespace ProjeOdevim.Formlar
         }
         SqlConnection connection = new SqlConnection(@"Data Source=BERKIT;Initial Catalog=DbProjem;Integrated Security=True");
 
-        string xml1, xml2, xml3, xml4, xml5;
+        string xml1, xml2, xml3, xml4, xml5,xml6;
 
         private void BXml4_Click(object sender, EventArgs e)
         {
@@ -37,12 +37,13 @@ namespace ProjeOdevim.Formlar
         private void BSave_Click(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand cmd = new SqlCommand("UPDATE TBLXML SET XML1=@P1,XML2=@P2,XML3=@P3,XML4=@P4,XML5=@P5", connection);
+            SqlCommand cmd = new SqlCommand("UPDATE TBLXML SET XML1=@P1,XML2=@P2,XML3=@P3,XML4=@P4,XML5=@P5,XML=@6", connection);
             cmd.Parameters.AddWithValue("@p1", xml1.ToString());
             cmd.Parameters.AddWithValue("@p2", xml2.ToString());
             cmd.Parameters.AddWithValue("@p3", xml3.ToString());
             cmd.Parameters.AddWithValue("@p4", xml4.ToString());
             cmd.Parameters.AddWithValue("@p5", xml5.ToString());
+            cmd.Parameters.AddWithValue("@p6", xml6.ToString());
             cmd.ExecuteNonQuery();
             MessageBox.Show("XML Dosyaları Başarıyla Kayıt Edildi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             connection.Close();
@@ -109,6 +110,13 @@ namespace ProjeOdevim.Formlar
         private void BPersonel_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            xml6 = openFileDialog1.FileName;
+            checkBox2.Checked = true;
         }
 
         private void BXml3_Click(object sender, EventArgs e)

@@ -17,7 +17,7 @@ namespace ProjeOdevim
             InitializeComponent();
         }
         SqlConnection connection = new SqlConnection(@"Data Source=BERKIT;Initial Catalog=DbProjem;Integrated Security=True");
-        public string xml1, xml2, xml3, xml4, xml5;
+        public string xml1, xml2, xml3, xml4, xml5,xml6;
         public void XmlGetir()
         {
             connection.Open();
@@ -31,6 +31,7 @@ namespace ProjeOdevim
                 xml3 = dr["XML3"].ToString();
                 xml4 = dr["XML4"].ToString();
                 xml5 = dr["XML5"].ToString();
+                xml6 = dr["XML6"].ToString();
             }
             connection.Close();
         }
@@ -297,6 +298,18 @@ namespace ProjeOdevim
                 FNotlar = new Formlar.FNotlar();
                 FNotlar.MdiParent = this;
                 FNotlar.Show();
+            }
+        }
+        Formlar.FBusyHour fBusy;
+        private void BBusy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (fBusy==null ||fBusy.IsDisposed)
+            {
+                string filename6 = xml6;
+                fBusy = new Formlar.FBusyHour();
+                fBusy.FBusyHour_Load(filename6);
+                fBusy.MdiParent = this;
+                fBusy.Show();
             }
         }
 

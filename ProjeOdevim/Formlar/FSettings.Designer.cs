@@ -58,10 +58,14 @@
             this.TPersonel = new System.Windows.Forms.TextBox();
             this.BPersonel = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -318,7 +322,7 @@
             this.BSave.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BSave.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BSave.AppearancePressed.Options.UseBackColor = true;
-            this.BSave.Location = new System.Drawing.Point(13, 161);
+            this.BSave.Location = new System.Drawing.Point(13, 212);
             this.BSave.Name = "BSave";
             this.BSave.Size = new System.Drawing.Size(202, 23);
             this.BSave.TabIndex = 116;
@@ -488,20 +492,10 @@
             this.panel1.Controls.Add(this.labelControl6);
             this.panel1.Controls.Add(this.TPersonel);
             this.panel1.Controls.Add(this.BMusteri);
-            this.panel1.Location = new System.Drawing.Point(12, 256);
+            this.panel1.Location = new System.Drawing.Point(12, 300);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(403, 159);
             this.panel1.TabIndex = 130;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(9, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(311, 13);
-            this.label6.TabIndex = 130;
-            this.label6.Text = "Müşteri ve Personel Kredi/Paun  Ayarlarınız Bu Kısımdan Yapınız.";
             // 
             // label7
             // 
@@ -514,8 +508,22 @@
             this.label7.TabIndex = 131;
             this.label7.Text = "Önemli NOT: \r\nLütfen Virgül \",\" yerine \".\" Nokta Tercih Ediniz.";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(9, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(311, 13);
+            this.label6.TabIndex = 130;
+            this.label6.Text = "Müşteri ve Personel Kredi/Paun  Ayarlarınız Bu Kısımdan Yapınız.";
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.labelControl8);
+            this.panel2.Controls.Add(this.simpleButton1);
+            this.panel2.Controls.Add(this.checkBox6);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.BSave);
             this.panel2.Controls.Add(this.labelControl4);
@@ -540,19 +548,75 @@
             this.panel2.Controls.Add(this.BXml2);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(403, 238);
+            this.panel2.Size = new System.Drawing.Size(403, 282);
             this.panel2.TabIndex = 131;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(3, 197);
+            this.label8.Location = new System.Drawing.Point(3, 248);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(302, 26);
             this.label8.TabIndex = 131;
             this.label8.Text = "Bu kısım yazılımın ilk kurulumunda yapılması gereken ayarlardır. \r\nLütfen İhtiyaç" +
     " Halinde Dağıtıcı Kişi İle İletişime Geçiniz. ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(221, 170);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(142, 13);
+            this.label9.TabIndex = 135;
+            this.label9.Text = "busy_dashboard_chart_hour";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Appearance.Options.UseForeColor = true;
+            this.labelControl8.Location = new System.Drawing.Point(13, 161);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(57, 19);
+            this.labelControl8.TabIndex = 132;
+            this.labelControl8.Text = "XML 6 : ";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.AppearanceDisabled.Options.UseBackColor = true;
+            this.simpleButton1.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.AppearancePressed.Options.UseBackColor = true;
+            this.simpleButton1.Location = new System.Drawing.Point(68, 161);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(126, 23);
+            this.simpleButton1.TabIndex = 134;
+            this.simpleButton1.Text = "Seç";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(200, 170);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(15, 14);
+            this.checkBox6.TabIndex = 133;
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // FSettings
             // 
@@ -611,5 +675,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.CheckBox checkBox6;
     }
 }

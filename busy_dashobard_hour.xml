@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="tr-TR">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
+      <Connection Name="localhost_DbProjem_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="localhost" />
+          <Parameter Name="database" Value="DbProjem" />
+          <Parameter Name="useIntegratedSecurity" Value="True" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+        </Parameters>
+      </Connection>
+      <Query Type="CustomSqlQuery" Name="Query">
+        <Sql>SELECT * FROM [DbProjem].[dbo].[TBLSATIS]</Sql>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="Query">
+            <Field Name="ID" Type="Int32" />
+            <Field Name="ISLEMNO" Type="Int32" />
+            <Field Name="URUNID" Type="Int32" />
+            <Field Name="KATEGORIADI" Type="String" />
+            <Field Name="MARKAADI" Type="String" />
+            <Field Name="ALISFIYAT" Type="Decimal" />
+            <Field Name="SATISFIYAT" Type="Decimal" />
+            <Field Name="INDIRIMORANI" Type="String" />
+            <Field Name="TOPLAMFIYAT" Type="Decimal" />
+            <Field Name="PERSONEL" Type="Int32" />
+            <Field Name="MUSTERIID" Type="Int32" />
+            <Field Name="TARIH" Type="DateTime" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Gauge ComponentName="gaugeDashboardItem1" Name="Yoğunluk Saatleri" DataSource="dashboardSqlDataSource1" DataMember="Query">
+      <DataItems>
+        <Measure DataMember="ISLEMNO" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="Hour" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <GaugeElement>
+        <ActualValue DefaultId="DataItem0" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+      </GaugeElement>
+    </Gauge>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gaugeDashboardItem1" Weight="0.5" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

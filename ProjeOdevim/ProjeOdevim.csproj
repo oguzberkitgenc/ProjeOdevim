@@ -99,6 +99,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formlar\FBusyHour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FBusyHour.Designer.cs">
+      <DependentUpon>FBusyHour.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FDayComp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formlar\FBusyHour.resx">
+      <DependentUpon>FBusyHour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FDayComp.resx">
       <DependentUpon>FDayComp.cs</DependentUpon>
     </EmbeddedResource>

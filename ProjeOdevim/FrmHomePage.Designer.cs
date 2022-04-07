@@ -60,6 +60,7 @@
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BSaless = new DevExpress.XtraBars.BarButtonItem();
+            this.BBusy = new DevExpress.XtraBars.BarButtonItem();
             this.BMoneyVeri = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BProductSt = new DevExpress.XtraBars.BarButtonItem();
             this.BTemelAnaliz = new DevExpress.XtraBars.BarButtonItem();
@@ -548,6 +549,7 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.BSaless);
+            this.ribbonPageGroup5.ItemLinks.Add(this.BBusy);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // BSaless
@@ -574,6 +576,31 @@
             this.BSaless.ItemInMenuAppearance.Pressed.Options.UseFont = true;
             this.BSaless.Name = "BSaless";
             this.BSaless.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BSaless_ItemClick);
+            // 
+            // BBusy
+            // 
+            this.BBusy.Caption = "Yoğunluk Saatleri";
+            this.BBusy.Id = 58;
+            this.BBusy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BBusy.ImageOptions.Image")));
+            this.BBusy.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BBusy.ImageOptions.LargeImage")));
+            this.BBusy.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBusy.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BBusy.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBusy.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BBusy.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBusy.ItemAppearance.Normal.Options.UseFont = true;
+            this.BBusy.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBusy.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BBusy.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBusy.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BBusy.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBusy.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BBusy.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBusy.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BBusy.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBusy.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BBusy.Name = "BBusy";
+            this.BBusy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BBusy_ItemClick);
             // 
             // BMoneyVeri
             // 
@@ -1246,10 +1273,11 @@
             this.barButtonItem18,
             this.BSaless,
             this.BKredi,
-            this.BNot});
+            this.BNot,
+            this.BBusy});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 58;
+            this.ribbonControl1.MaxItemId = 59;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -1473,6 +1501,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.BarButtonItem BNot;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
+        private DevExpress.XtraBars.BarButtonItem BBusy;
     }
 }
 
