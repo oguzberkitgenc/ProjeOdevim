@@ -18,6 +18,7 @@ namespace ProjeOdevim
         }
         SqlConnection connection = new SqlConnection(@"Data Source=BERKIT;Initial Catalog=DbProjem;Integrated Security=True");
         public string xml1, xml2, xml3, xml4, xml5,xml6;
+
         public void XmlGetir()
         {
             connection.Open();
@@ -48,6 +49,7 @@ namespace ProjeOdevim
         public int departman;
         private void FrmAnaSayfa_Load(object sender, EventArgs e)
         {
+            
             XmlGetir();
             DateTime date = DateTime.Now;
             LDate.Text = date.ToString("MM/dd/yyyy");
@@ -303,6 +305,7 @@ namespace ProjeOdevim
         Formlar.FBusyHour fBusy;
         private void BBusy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
             if (fBusy==null ||fBusy.IsDisposed)
             {
                 string filename6 = xml6;

@@ -38,7 +38,7 @@ namespace ProjeOdevim.Formlar
                 frm.departman = int.Parse(reader["DEPARTMANID"].ToString());
                 depart = Convert.ToString(reader["DEPARTMANID"].ToString());
                 adsoy = reader["AD"].ToString();
-                frm.LId.Text= reader["ID"].ToString();
+                frm.LId.Text = reader["ID"].ToString();
                 durum = true;
             }
             else
@@ -46,6 +46,35 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(" Kullanıcı Adı Veya Şifre Yanlış. \n Lütfen Tekrar Deneyiniz", "HATALI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             connection.Close();
+
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("Select * FROM TBLDEPARTMAN WHERE ID=" + depart, connection);
+            SqlDataReader dr2 = cmd.ExecuteReader();
+            while (dr2.Read())
+            {
+                frm.BHomeList.Enabled = Convert.ToBoolean(dr2[2]);
+                frm.BSales.Enabled = Convert.ToBoolean(dr2[3]);
+                frm.BKredi.Enabled = Convert.ToBoolean(dr2[4]);
+                frm.BNot.Enabled = Convert.ToBoolean(dr2[5]);
+                frm.BPersonel.Enabled = Convert.ToBoolean(dr2[6]);
+                frm.BMusteri.Enabled = Convert.ToBoolean(dr2[7]);
+                frm.BUrun.Enabled = Convert.ToBoolean(dr2[8]);
+                frm.BMagaza.Enabled = Convert.ToBoolean(dr2[9]);
+                frm.BKategori.Enabled = Convert.ToBoolean(dr2[10]);
+                frm.BDepartman.Enabled = Convert.ToBoolean(dr2[11]);
+                frm.BSaless.Enabled= Convert.ToBoolean(dr2[12]);
+                frm.BBusy.Enabled= Convert.ToBoolean(dr2[13]);
+                frm.BProductSt.Enabled= Convert.ToBoolean(dr2[14]);
+                frm.BCatMark.Enabled= Convert.ToBoolean(dr2[15]);
+                frm.BDaySales.Enabled= Convert.ToBoolean(dr2[16]);
+                frm.BMonthSales.Enabled=Convert.ToBoolean(dr2[17]);
+                frm.BDayComp.Enabled= Convert.ToBoolean(dr2[18]);
+                frm.BMonthComp.Enabled=Convert.ToBoolean(dr2[19]);
+                frm.barButtonItem8.Enabled= Convert.ToBoolean(dr2[20]);
+                frm.BTemelAnaliz.Enabled= Convert.ToBoolean(dr2[21]);
+            }
+            connection.Close();
+
             if (durum == true)
             {
                 DateTime dateTime = DateTime.Now;

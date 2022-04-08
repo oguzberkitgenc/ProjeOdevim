@@ -61,11 +61,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -551,17 +551,6 @@
             this.panel2.Size = new System.Drawing.Size(403, 282);
             this.panel2.TabIndex = 131;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(3, 248);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(302, 26);
-            this.label8.TabIndex = 131;
-            this.label8.Text = "Bu kısım yazılımın ilk kurulumunda yapılması gereken ayarlardır. \r\nLütfen İhtiyaç" +
-    " Halinde Dağıtıcı Kişi İle İletişime Geçiniz. ";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -617,6 +606,17 @@
             this.checkBox6.Size = new System.Drawing.Size(15, 14);
             this.checkBox6.TabIndex = 133;
             this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(3, 248);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(302, 26);
+            this.label8.TabIndex = 131;
+            this.label8.Text = "Bu kısım yazılımın ilk kurulumunda yapılması gereken ayarlardır. \r\nLütfen İhtiyaç" +
+    " Halinde Dağıtıcı Kişi İle İletişime Geçiniz. ";
             // 
             // FSettings
             // 
