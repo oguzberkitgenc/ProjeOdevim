@@ -104,8 +104,10 @@ namespace ProjeOdevim.Formlar
         string foto1, foto2, foto3;
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            openFileDialog3.ShowDialog();
-            foto3 = openFileDialog3.FileName;
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "Fotoğraf Dosyası |*.jpeg| Fotoğraf Dosyası|*.jpg| Fotoğraf Dosyası|*.png";
+            of.ShowDialog();
+            foto3 = of.FileName;
             pictureBox3.ImageLocation = foto3;
         }
 
@@ -154,15 +156,19 @@ namespace ProjeOdevim.Formlar
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            openFileDialog2.ShowDialog();
-            foto2 = openFileDialog2.FileName;
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "Fotoğraf Dosyası |*.jpeg| Fotoğraf Dosyası|*.jpg| Fotoğraf Dosyası|*.png";
+            of.ShowDialog();
+            foto2 = of.FileName;
             pictureBox2.ImageLocation = foto2;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            foto1 = openFileDialog1.FileName;
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "Fotoğraf Dosyası |*.jpeg| Fotoğraf Dosyası|*.jpg| Fotoğraf Dosyası|*.png";
+            of.ShowDialog();
+            foto1 = of.FileName;
             pictureBox1.ImageLocation = foto1;
         }
     }

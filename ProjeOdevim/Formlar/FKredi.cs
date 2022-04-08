@@ -33,7 +33,7 @@ namespace ProjeOdevim.Formlar
                 Size = new Size(555, 183);
                 if (gridView1.DataRowCount == 0)
                 {
-                    MessageBox.Show(" " + TTc.Text + "\n\n Oh hayır...\n Bu kişiyi tanımıyorum...", "HABERİN OLSUN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(" " + TTc.Text + "\n\n Bu kişiyi tanımıyorum...", "HABERİN OLSUN", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     TTc.Text = "";
                 }
             }

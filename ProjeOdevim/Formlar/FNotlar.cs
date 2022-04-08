@@ -67,6 +67,7 @@ namespace ProjeOdevim.Formlar
             Listele();
             OlusturanList();
             HitapList();
+            Clear();
         }
 
         private void BSave_Click(object sender, EventArgs e)

@@ -68,30 +68,14 @@
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.CMusteriler = new System.Windows.Forms.CheckBox();
-            this.CAnaSayfa = new System.Windows.Forms.CheckBox();
-            this.CUrunSatis = new System.Windows.Forms.CheckBox();
-            this.CKrediSorgula = new System.Windows.Forms.CheckBox();
-            this.CDuyrular = new System.Windows.Forms.CheckBox();
-            this.CPersoneller = new System.Windows.Forms.CheckBox();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.CYogunluk = new System.Windows.Forms.CheckBox();
-            this.CUrunler = new System.Windows.Forms.CheckBox();
-            this.CMagazalar = new System.Windows.Forms.CheckBox();
-            this.CKategoriMarkaEkle = new System.Windows.Forms.CheckBox();
-            this.CDepartmanEkle = new System.Windows.Forms.CheckBox();
-            this.CCiroVerileri = new System.Windows.Forms.CheckBox();
+            this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
+            this.CmbList = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.BYetkiKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
+            this.CTemelIstatisk = new System.Windows.Forms.CheckBox();
+            this.CAyarlar = new System.Windows.Forms.CheckBox();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
@@ -104,14 +88,32 @@
             this.CGunlukCiro = new System.Windows.Forms.CheckBox();
             this.CAylikCiro = new System.Windows.Forms.CheckBox();
             this.CGunlukKarsilastir = new System.Windows.Forms.CheckBox();
-            this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
-            this.CTemelIstatisk = new System.Windows.Forms.CheckBox();
-            this.CAyarlar = new System.Windows.Forms.CheckBox();
-            this.BYetkiKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.CmbList = new System.Windows.Forms.ComboBox();
-            this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.CYogunluk = new System.Windows.Forms.CheckBox();
+            this.CUrunler = new System.Windows.Forms.CheckBox();
+            this.CMagazalar = new System.Windows.Forms.CheckBox();
+            this.CKategoriMarkaEkle = new System.Windows.Forms.CheckBox();
+            this.CDepartmanEkle = new System.Windows.Forms.CheckBox();
+            this.CCiroVerileri = new System.Windows.Forms.CheckBox();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.CMusteriler = new System.Windows.Forms.CheckBox();
+            this.CAnaSayfa = new System.Windows.Forms.CheckBox();
+            this.CUrunSatis = new System.Windows.Forms.CheckBox();
+            this.CKrediSorgula = new System.Windows.Forms.CheckBox();
+            this.CDuyrular = new System.Windows.Forms.CheckBox();
+            this.CPersoneller = new System.Windows.Forms.CheckBox();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -668,6 +670,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.simpleButton3);
+            this.panel3.Controls.Add(this.simpleButton2);
             this.panel3.Controls.Add(this.labelControl29);
             this.panel3.Controls.Add(this.CmbList);
             this.panel3.Controls.Add(this.label10);
@@ -717,257 +721,104 @@
             this.panel3.Size = new System.Drawing.Size(434, 594);
             this.panel3.TabIndex = 132;
             // 
-            // CMusteriler
+            // labelControl29
             // 
-            this.CMusteriler.AutoSize = true;
-            this.CMusteriler.Location = new System.Drawing.Point(12, 206);
-            this.CMusteriler.Name = "CMusteriler";
-            this.CMusteriler.Size = new System.Drawing.Size(15, 14);
-            this.CMusteriler.TabIndex = 139;
-            this.CMusteriler.UseVisualStyleBackColor = true;
+            this.labelControl29.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl29.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl29.Appearance.Options.UseFont = true;
+            this.labelControl29.Appearance.Options.UseForeColor = true;
+            this.labelControl29.Location = new System.Drawing.Point(12, 372);
+            this.labelControl29.Name = "labelControl29";
+            this.labelControl29.Size = new System.Drawing.Size(97, 19);
+            this.labelControl29.TabIndex = 178;
+            this.labelControl29.Text = "Departman Seç:";
             // 
-            // CAnaSayfa
+            // CmbList
             // 
-            this.CAnaSayfa.AutoSize = true;
-            this.CAnaSayfa.Location = new System.Drawing.Point(12, 56);
-            this.CAnaSayfa.Name = "CAnaSayfa";
-            this.CAnaSayfa.Size = new System.Drawing.Size(15, 14);
-            this.CAnaSayfa.TabIndex = 134;
-            this.CAnaSayfa.UseVisualStyleBackColor = true;
+            this.CmbList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CmbList.FormattingEnabled = true;
+            this.CmbList.Location = new System.Drawing.Point(8, 397);
+            this.CmbList.Name = "CmbList";
+            this.CmbList.Size = new System.Drawing.Size(264, 27);
+            this.CmbList.TabIndex = 177;
+            this.CmbList.SelectedIndexChanged += new System.EventHandler(this.CmbList_SelectedIndexChanged);
             // 
-            // CUrunSatis
+            // label10
             // 
-            this.CUrunSatis.AutoSize = true;
-            this.CUrunSatis.Location = new System.Drawing.Point(12, 86);
-            this.CUrunSatis.Name = "CUrunSatis";
-            this.CUrunSatis.Size = new System.Drawing.Size(15, 14);
-            this.CUrunSatis.TabIndex = 135;
-            this.CUrunSatis.UseVisualStyleBackColor = true;
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(3, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(419, 39);
+            this.label10.TabIndex = 176;
+            this.label10.Text = resources.GetString("label10.Text");
             // 
-            // CKrediSorgula
+            // BYetkiKaydet
             // 
-            this.CKrediSorgula.AutoSize = true;
-            this.CKrediSorgula.Location = new System.Drawing.Point(12, 116);
-            this.CKrediSorgula.Name = "CKrediSorgula";
-            this.CKrediSorgula.Size = new System.Drawing.Size(15, 14);
-            this.CKrediSorgula.TabIndex = 136;
-            this.CKrediSorgula.UseVisualStyleBackColor = true;
+            this.BYetkiKaydet.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BYetkiKaydet.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BYetkiKaydet.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BYetkiKaydet.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BYetkiKaydet.Appearance.Options.UseBackColor = true;
+            this.BYetkiKaydet.Appearance.Options.UseFont = true;
+            this.BYetkiKaydet.Appearance.Options.UseForeColor = true;
+            this.BYetkiKaydet.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BYetkiKaydet.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BYetkiKaydet.AppearanceDisabled.Options.UseBackColor = true;
+            this.BYetkiKaydet.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BYetkiKaydet.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BYetkiKaydet.AppearanceHovered.Options.UseBackColor = true;
+            this.BYetkiKaydet.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BYetkiKaydet.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BYetkiKaydet.AppearancePressed.Options.UseBackColor = true;
+            this.BYetkiKaydet.Location = new System.Drawing.Point(281, 430);
+            this.BYetkiKaydet.Name = "BYetkiKaydet";
+            this.BYetkiKaydet.Size = new System.Drawing.Size(141, 34);
+            this.BYetkiKaydet.TabIndex = 174;
+            this.BYetkiKaydet.Text = "Onayla";
+            this.BYetkiKaydet.Click += new System.EventHandler(this.BYetkiKaydet_Click);
             // 
-            // CDuyrular
+            // labelControl27
             // 
-            this.CDuyrular.AutoSize = true;
-            this.CDuyrular.Location = new System.Drawing.Point(12, 146);
-            this.CDuyrular.Name = "CDuyrular";
-            this.CDuyrular.Size = new System.Drawing.Size(15, 14);
-            this.CDuyrular.TabIndex = 137;
-            this.CDuyrular.UseVisualStyleBackColor = true;
+            this.labelControl27.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl27.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl27.Appearance.Options.UseFont = true;
+            this.labelControl27.Appearance.Options.UseForeColor = true;
+            this.labelControl27.Location = new System.Drawing.Point(227, 145);
+            this.labelControl27.Name = "labelControl27";
+            this.labelControl27.Size = new System.Drawing.Size(85, 19);
+            this.labelControl27.TabIndex = 173;
+            this.labelControl27.Text = "Temel İstatisk";
             // 
-            // CPersoneller
+            // labelControl28
             // 
-            this.CPersoneller.AutoSize = true;
-            this.CPersoneller.Location = new System.Drawing.Point(12, 176);
-            this.CPersoneller.Name = "CPersoneller";
-            this.CPersoneller.Size = new System.Drawing.Size(15, 14);
-            this.CPersoneller.TabIndex = 138;
-            this.CPersoneller.UseVisualStyleBackColor = true;
+            this.labelControl28.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl28.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl28.Appearance.Options.UseFont = true;
+            this.labelControl28.Appearance.Options.UseForeColor = true;
+            this.labelControl28.Location = new System.Drawing.Point(227, 325);
+            this.labelControl28.Name = "labelControl28";
+            this.labelControl28.Size = new System.Drawing.Size(45, 19);
+            this.labelControl28.TabIndex = 172;
+            this.labelControl28.Text = "Ayarlar";
             // 
-            // labelControl9
+            // CTemelIstatisk
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Location = new System.Drawing.Point(33, 55);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(64, 19);
-            this.labelControl9.TabIndex = 140;
-            this.labelControl9.Text = "Ana Sayfa";
+            this.CTemelIstatisk.AutoSize = true;
+            this.CTemelIstatisk.Location = new System.Drawing.Point(206, 146);
+            this.CTemelIstatisk.Name = "CTemelIstatisk";
+            this.CTemelIstatisk.Size = new System.Drawing.Size(15, 14);
+            this.CTemelIstatisk.TabIndex = 171;
+            this.CTemelIstatisk.UseVisualStyleBackColor = true;
             // 
-            // labelControl10
+            // CAyarlar
             // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Appearance.Options.UseForeColor = true;
-            this.labelControl10.Location = new System.Drawing.Point(33, 85);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(63, 19);
-            this.labelControl10.TabIndex = 141;
-            this.labelControl10.Text = "Ürün Satış";
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Appearance.Options.UseForeColor = true;
-            this.labelControl11.Location = new System.Drawing.Point(33, 115);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(86, 19);
-            this.labelControl11.TabIndex = 142;
-            this.labelControl11.Text = "Kredi Sorgula";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Appearance.Options.UseForeColor = true;
-            this.labelControl12.Location = new System.Drawing.Point(33, 145);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(59, 19);
-            this.labelControl12.TabIndex = 143;
-            this.labelControl12.Text = "Duyurular";
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Appearance.Options.UseForeColor = true;
-            this.labelControl13.Location = new System.Drawing.Point(33, 175);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(67, 19);
-            this.labelControl13.TabIndex = 144;
-            this.labelControl13.Text = "Personeller";
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl14.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Appearance.Options.UseForeColor = true;
-            this.labelControl14.Location = new System.Drawing.Point(33, 205);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(61, 19);
-            this.labelControl14.TabIndex = 145;
-            this.labelControl14.Text = "Müşteriler";
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Appearance.Options.UseForeColor = true;
-            this.labelControl15.Location = new System.Drawing.Point(227, 85);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(108, 19);
-            this.labelControl15.TabIndex = 157;
-            this.labelControl15.Text = "Yoğunluk Saatleri";
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl16.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Appearance.Options.UseForeColor = true;
-            this.labelControl16.Location = new System.Drawing.Point(227, 55);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(76, 19);
-            this.labelControl16.TabIndex = 156;
-            this.labelControl16.Text = "Ciro Verileri";
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl17.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl17.Appearance.Options.UseFont = true;
-            this.labelControl17.Appearance.Options.UseForeColor = true;
-            this.labelControl17.Location = new System.Drawing.Point(33, 325);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(98, 19);
-            this.labelControl17.TabIndex = 155;
-            this.labelControl17.Text = "Departman Ekle";
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl18.Appearance.Options.UseFont = true;
-            this.labelControl18.Appearance.Options.UseForeColor = true;
-            this.labelControl18.Location = new System.Drawing.Point(33, 295);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(129, 19);
-            this.labelControl18.TabIndex = 154;
-            this.labelControl18.Text = "Kategori Marka Ekle";
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl19.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Appearance.Options.UseForeColor = true;
-            this.labelControl19.Location = new System.Drawing.Point(33, 265);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(63, 19);
-            this.labelControl19.TabIndex = 153;
-            this.labelControl19.Text = "Mağazalar";
-            // 
-            // labelControl20
-            // 
-            this.labelControl20.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl20.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl20.Appearance.Options.UseFont = true;
-            this.labelControl20.Appearance.Options.UseForeColor = true;
-            this.labelControl20.Location = new System.Drawing.Point(33, 235);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(45, 19);
-            this.labelControl20.TabIndex = 152;
-            this.labelControl20.Text = "Ürünler";
-            // 
-            // CYogunluk
-            // 
-            this.CYogunluk.AutoSize = true;
-            this.CYogunluk.Location = new System.Drawing.Point(206, 86);
-            this.CYogunluk.Name = "CYogunluk";
-            this.CYogunluk.Size = new System.Drawing.Size(15, 14);
-            this.CYogunluk.TabIndex = 151;
-            this.CYogunluk.UseVisualStyleBackColor = true;
-            // 
-            // CUrunler
-            // 
-            this.CUrunler.AutoSize = true;
-            this.CUrunler.Location = new System.Drawing.Point(12, 236);
-            this.CUrunler.Name = "CUrunler";
-            this.CUrunler.Size = new System.Drawing.Size(15, 14);
-            this.CUrunler.TabIndex = 146;
-            this.CUrunler.UseVisualStyleBackColor = true;
-            // 
-            // CMagazalar
-            // 
-            this.CMagazalar.AutoSize = true;
-            this.CMagazalar.Location = new System.Drawing.Point(12, 266);
-            this.CMagazalar.Name = "CMagazalar";
-            this.CMagazalar.Size = new System.Drawing.Size(15, 14);
-            this.CMagazalar.TabIndex = 147;
-            this.CMagazalar.UseVisualStyleBackColor = true;
-            // 
-            // CKategoriMarkaEkle
-            // 
-            this.CKategoriMarkaEkle.AutoSize = true;
-            this.CKategoriMarkaEkle.Location = new System.Drawing.Point(12, 296);
-            this.CKategoriMarkaEkle.Name = "CKategoriMarkaEkle";
-            this.CKategoriMarkaEkle.Size = new System.Drawing.Size(15, 14);
-            this.CKategoriMarkaEkle.TabIndex = 148;
-            this.CKategoriMarkaEkle.UseVisualStyleBackColor = true;
-            // 
-            // CDepartmanEkle
-            // 
-            this.CDepartmanEkle.AutoSize = true;
-            this.CDepartmanEkle.Location = new System.Drawing.Point(12, 326);
-            this.CDepartmanEkle.Name = "CDepartmanEkle";
-            this.CDepartmanEkle.Size = new System.Drawing.Size(15, 14);
-            this.CDepartmanEkle.TabIndex = 149;
-            this.CDepartmanEkle.UseVisualStyleBackColor = true;
-            // 
-            // CCiroVerileri
-            // 
-            this.CCiroVerileri.AutoSize = true;
-            this.CCiroVerileri.Location = new System.Drawing.Point(206, 56);
-            this.CCiroVerileri.Name = "CCiroVerileri";
-            this.CCiroVerileri.Size = new System.Drawing.Size(15, 14);
-            this.CCiroVerileri.TabIndex = 150;
-            this.CCiroVerileri.UseVisualStyleBackColor = true;
+            this.CAyarlar.AutoSize = true;
+            this.CAyarlar.Location = new System.Drawing.Point(206, 326);
+            this.CAyarlar.Name = "CAyarlar";
+            this.CAyarlar.Size = new System.Drawing.Size(15, 14);
+            this.CAyarlar.TabIndex = 170;
+            this.CAyarlar.UseVisualStyleBackColor = true;
             // 
             // labelControl21
             // 
@@ -1095,104 +946,307 @@
             this.CGunlukKarsilastir.TabIndex = 162;
             this.CGunlukKarsilastir.UseVisualStyleBackColor = true;
             // 
-            // labelControl27
+            // labelControl15
             // 
-            this.labelControl27.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl27.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl27.Appearance.Options.UseFont = true;
-            this.labelControl27.Appearance.Options.UseForeColor = true;
-            this.labelControl27.Location = new System.Drawing.Point(227, 145);
-            this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(85, 19);
-            this.labelControl27.TabIndex = 173;
-            this.labelControl27.Text = "Temel İstatisk";
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl15.Appearance.Options.UseFont = true;
+            this.labelControl15.Appearance.Options.UseForeColor = true;
+            this.labelControl15.Location = new System.Drawing.Point(227, 85);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(108, 19);
+            this.labelControl15.TabIndex = 157;
+            this.labelControl15.Text = "Yoğunluk Saatleri";
             // 
-            // labelControl28
+            // labelControl16
             // 
-            this.labelControl28.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl28.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl28.Appearance.Options.UseFont = true;
-            this.labelControl28.Appearance.Options.UseForeColor = true;
-            this.labelControl28.Location = new System.Drawing.Point(227, 325);
-            this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(45, 19);
-            this.labelControl28.TabIndex = 172;
-            this.labelControl28.Text = "Ayarlar";
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl16.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl16.Appearance.Options.UseFont = true;
+            this.labelControl16.Appearance.Options.UseForeColor = true;
+            this.labelControl16.Location = new System.Drawing.Point(227, 55);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(76, 19);
+            this.labelControl16.TabIndex = 156;
+            this.labelControl16.Text = "Ciro Verileri";
             // 
-            // CTemelIstatisk
+            // labelControl17
             // 
-            this.CTemelIstatisk.AutoSize = true;
-            this.CTemelIstatisk.Location = new System.Drawing.Point(206, 146);
-            this.CTemelIstatisk.Name = "CTemelIstatisk";
-            this.CTemelIstatisk.Size = new System.Drawing.Size(15, 14);
-            this.CTemelIstatisk.TabIndex = 171;
-            this.CTemelIstatisk.UseVisualStyleBackColor = true;
+            this.labelControl17.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl17.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl17.Appearance.Options.UseFont = true;
+            this.labelControl17.Appearance.Options.UseForeColor = true;
+            this.labelControl17.Location = new System.Drawing.Point(33, 325);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(98, 19);
+            this.labelControl17.TabIndex = 155;
+            this.labelControl17.Text = "Departman Ekle";
             // 
-            // CAyarlar
+            // labelControl18
             // 
-            this.CAyarlar.AutoSize = true;
-            this.CAyarlar.Location = new System.Drawing.Point(206, 326);
-            this.CAyarlar.Name = "CAyarlar";
-            this.CAyarlar.Size = new System.Drawing.Size(15, 14);
-            this.CAyarlar.TabIndex = 170;
-            this.CAyarlar.UseVisualStyleBackColor = true;
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl18.Appearance.Options.UseFont = true;
+            this.labelControl18.Appearance.Options.UseForeColor = true;
+            this.labelControl18.Location = new System.Drawing.Point(33, 295);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(129, 19);
+            this.labelControl18.TabIndex = 154;
+            this.labelControl18.Text = "Kategori Marka Ekle";
             // 
-            // BYetkiKaydet
+            // labelControl19
             // 
-            this.BYetkiKaydet.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BYetkiKaydet.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BYetkiKaydet.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BYetkiKaydet.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.BYetkiKaydet.Appearance.Options.UseBackColor = true;
-            this.BYetkiKaydet.Appearance.Options.UseFont = true;
-            this.BYetkiKaydet.Appearance.Options.UseForeColor = true;
-            this.BYetkiKaydet.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BYetkiKaydet.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BYetkiKaydet.AppearanceDisabled.Options.UseBackColor = true;
-            this.BYetkiKaydet.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BYetkiKaydet.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BYetkiKaydet.AppearanceHovered.Options.UseBackColor = true;
-            this.BYetkiKaydet.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BYetkiKaydet.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BYetkiKaydet.AppearancePressed.Options.UseBackColor = true;
-            this.BYetkiKaydet.Location = new System.Drawing.Point(350, 464);
-            this.BYetkiKaydet.Name = "BYetkiKaydet";
-            this.BYetkiKaydet.Size = new System.Drawing.Size(66, 62);
-            this.BYetkiKaydet.TabIndex = 174;
-            this.BYetkiKaydet.Text = "Kaydet";
-            this.BYetkiKaydet.Click += new System.EventHandler(this.BYetkiKaydet_Click);
+            this.labelControl19.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl19.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl19.Appearance.Options.UseFont = true;
+            this.labelControl19.Appearance.Options.UseForeColor = true;
+            this.labelControl19.Location = new System.Drawing.Point(33, 265);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(63, 19);
+            this.labelControl19.TabIndex = 153;
+            this.labelControl19.Text = "Mağazalar";
             // 
-            // label10
+            // labelControl20
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(3, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(426, 39);
-            this.label10.TabIndex = 176;
-            this.label10.Text = resources.GetString("label10.Text");
+            this.labelControl20.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl20.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl20.Appearance.Options.UseFont = true;
+            this.labelControl20.Appearance.Options.UseForeColor = true;
+            this.labelControl20.Location = new System.Drawing.Point(33, 235);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(45, 19);
+            this.labelControl20.TabIndex = 152;
+            this.labelControl20.Text = "Ürünler";
             // 
-            // CmbList
+            // CYogunluk
             // 
-            this.CmbList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CmbList.FormattingEnabled = true;
-            this.CmbList.Location = new System.Drawing.Point(67, 421);
-            this.CmbList.Name = "CmbList";
-            this.CmbList.Size = new System.Drawing.Size(349, 27);
-            this.CmbList.TabIndex = 177;
-            this.CmbList.Text = "Seçiniz: ";
+            this.CYogunluk.AutoSize = true;
+            this.CYogunluk.Location = new System.Drawing.Point(206, 86);
+            this.CYogunluk.Name = "CYogunluk";
+            this.CYogunluk.Size = new System.Drawing.Size(15, 14);
+            this.CYogunluk.TabIndex = 151;
+            this.CYogunluk.UseVisualStyleBackColor = true;
             // 
-            // labelControl29
+            // CUrunler
             // 
-            this.labelControl29.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl29.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl29.Appearance.Options.UseFont = true;
-            this.labelControl29.Appearance.Options.UseForeColor = true;
-            this.labelControl29.Location = new System.Drawing.Point(12, 424);
-            this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(49, 19);
-            this.labelControl29.TabIndex = 178;
-            this.labelControl29.Text = "Seçiniz: ";
+            this.CUrunler.AutoSize = true;
+            this.CUrunler.Location = new System.Drawing.Point(12, 236);
+            this.CUrunler.Name = "CUrunler";
+            this.CUrunler.Size = new System.Drawing.Size(15, 14);
+            this.CUrunler.TabIndex = 146;
+            this.CUrunler.UseVisualStyleBackColor = true;
+            // 
+            // CMagazalar
+            // 
+            this.CMagazalar.AutoSize = true;
+            this.CMagazalar.Location = new System.Drawing.Point(12, 266);
+            this.CMagazalar.Name = "CMagazalar";
+            this.CMagazalar.Size = new System.Drawing.Size(15, 14);
+            this.CMagazalar.TabIndex = 147;
+            this.CMagazalar.UseVisualStyleBackColor = true;
+            // 
+            // CKategoriMarkaEkle
+            // 
+            this.CKategoriMarkaEkle.AutoSize = true;
+            this.CKategoriMarkaEkle.Location = new System.Drawing.Point(12, 296);
+            this.CKategoriMarkaEkle.Name = "CKategoriMarkaEkle";
+            this.CKategoriMarkaEkle.Size = new System.Drawing.Size(15, 14);
+            this.CKategoriMarkaEkle.TabIndex = 148;
+            this.CKategoriMarkaEkle.UseVisualStyleBackColor = true;
+            // 
+            // CDepartmanEkle
+            // 
+            this.CDepartmanEkle.AutoSize = true;
+            this.CDepartmanEkle.Location = new System.Drawing.Point(12, 326);
+            this.CDepartmanEkle.Name = "CDepartmanEkle";
+            this.CDepartmanEkle.Size = new System.Drawing.Size(15, 14);
+            this.CDepartmanEkle.TabIndex = 149;
+            this.CDepartmanEkle.UseVisualStyleBackColor = true;
+            // 
+            // CCiroVerileri
+            // 
+            this.CCiroVerileri.AutoSize = true;
+            this.CCiroVerileri.Location = new System.Drawing.Point(206, 56);
+            this.CCiroVerileri.Name = "CCiroVerileri";
+            this.CCiroVerileri.Size = new System.Drawing.Size(15, 14);
+            this.CCiroVerileri.TabIndex = 150;
+            this.CCiroVerileri.UseVisualStyleBackColor = true;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl14.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl14.Appearance.Options.UseFont = true;
+            this.labelControl14.Appearance.Options.UseForeColor = true;
+            this.labelControl14.Location = new System.Drawing.Point(33, 205);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(61, 19);
+            this.labelControl14.TabIndex = 145;
+            this.labelControl14.Text = "Müşteriler";
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl13.Appearance.Options.UseFont = true;
+            this.labelControl13.Appearance.Options.UseForeColor = true;
+            this.labelControl13.Location = new System.Drawing.Point(33, 175);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(67, 19);
+            this.labelControl13.TabIndex = 144;
+            this.labelControl13.Text = "Personeller";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Appearance.Options.UseForeColor = true;
+            this.labelControl12.Location = new System.Drawing.Point(33, 145);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(59, 19);
+            this.labelControl12.TabIndex = 143;
+            this.labelControl12.Text = "Duyurular";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Appearance.Options.UseForeColor = true;
+            this.labelControl11.Location = new System.Drawing.Point(33, 115);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(86, 19);
+            this.labelControl11.TabIndex = 142;
+            this.labelControl11.Text = "Kredi Sorgula";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Appearance.Options.UseForeColor = true;
+            this.labelControl10.Location = new System.Drawing.Point(33, 85);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(63, 19);
+            this.labelControl10.TabIndex = 141;
+            this.labelControl10.Text = "Ürün Satış";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Appearance.Options.UseForeColor = true;
+            this.labelControl9.Location = new System.Drawing.Point(33, 55);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(64, 19);
+            this.labelControl9.TabIndex = 140;
+            this.labelControl9.Text = "Ana Sayfa";
+            // 
+            // CMusteriler
+            // 
+            this.CMusteriler.AutoSize = true;
+            this.CMusteriler.Location = new System.Drawing.Point(12, 206);
+            this.CMusteriler.Name = "CMusteriler";
+            this.CMusteriler.Size = new System.Drawing.Size(15, 14);
+            this.CMusteriler.TabIndex = 139;
+            this.CMusteriler.UseVisualStyleBackColor = true;
+            // 
+            // CAnaSayfa
+            // 
+            this.CAnaSayfa.AutoSize = true;
+            this.CAnaSayfa.Location = new System.Drawing.Point(12, 56);
+            this.CAnaSayfa.Name = "CAnaSayfa";
+            this.CAnaSayfa.Size = new System.Drawing.Size(15, 14);
+            this.CAnaSayfa.TabIndex = 134;
+            this.CAnaSayfa.UseVisualStyleBackColor = true;
+            // 
+            // CUrunSatis
+            // 
+            this.CUrunSatis.AutoSize = true;
+            this.CUrunSatis.Location = new System.Drawing.Point(12, 86);
+            this.CUrunSatis.Name = "CUrunSatis";
+            this.CUrunSatis.Size = new System.Drawing.Size(15, 14);
+            this.CUrunSatis.TabIndex = 135;
+            this.CUrunSatis.UseVisualStyleBackColor = true;
+            // 
+            // CKrediSorgula
+            // 
+            this.CKrediSorgula.AutoSize = true;
+            this.CKrediSorgula.Location = new System.Drawing.Point(12, 116);
+            this.CKrediSorgula.Name = "CKrediSorgula";
+            this.CKrediSorgula.Size = new System.Drawing.Size(15, 14);
+            this.CKrediSorgula.TabIndex = 136;
+            this.CKrediSorgula.UseVisualStyleBackColor = true;
+            // 
+            // CDuyrular
+            // 
+            this.CDuyrular.AutoSize = true;
+            this.CDuyrular.Location = new System.Drawing.Point(12, 146);
+            this.CDuyrular.Name = "CDuyrular";
+            this.CDuyrular.Size = new System.Drawing.Size(15, 14);
+            this.CDuyrular.TabIndex = 137;
+            this.CDuyrular.UseVisualStyleBackColor = true;
+            // 
+            // CPersoneller
+            // 
+            this.CPersoneller.AutoSize = true;
+            this.CPersoneller.Location = new System.Drawing.Point(12, 176);
+            this.CPersoneller.Name = "CPersoneller";
+            this.CPersoneller.Size = new System.Drawing.Size(15, 14);
+            this.CPersoneller.TabIndex = 138;
+            this.CPersoneller.UseVisualStyleBackColor = true;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton2.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.simpleButton2.Appearance.Options.UseBackColor = true;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseForeColor = true;
+            this.simpleButton2.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton2.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton2.AppearanceDisabled.Options.UseBackColor = true;
+            this.simpleButton2.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton2.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton2.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton2.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton2.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton2.AppearancePressed.Options.UseBackColor = true;
+            this.simpleButton2.Location = new System.Drawing.Point(281, 357);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(141, 34);
+            this.simpleButton2.TabIndex = 179;
+            this.simpleButton2.Text = "Temizle";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton3.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton3.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.simpleButton3.Appearance.Options.UseBackColor = true;
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Appearance.Options.UseForeColor = true;
+            this.simpleButton3.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton3.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton3.AppearanceDisabled.Options.UseBackColor = true;
+            this.simpleButton3.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton3.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton3.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton3.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton3.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton3.AppearancePressed.Options.UseBackColor = true;
+            this.simpleButton3.Location = new System.Drawing.Point(281, 397);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(141, 27);
+            this.simpleButton3.TabIndex = 180;
+            this.simpleButton3.Text = "Mevcut Yetkileri Getir";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // FSettings
             // 
@@ -1303,5 +1357,7 @@
         private System.Windows.Forms.ComboBox CmbList;
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.SimpleButton BYetkiKaydet;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
     }
 }

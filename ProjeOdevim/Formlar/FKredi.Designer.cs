@@ -32,11 +32,11 @@
             this.BSave2 = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TTc = new System.Windows.Forms.TextBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.TTc = new System.Windows.Forms.TextBox();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -81,6 +81,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(334, 125);
             this.panel1.TabIndex = 54;
+            // 
+            // TTc
+            // 
+            this.TTc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TTc.Location = new System.Drawing.Point(42, 12);
+            this.TTc.MaxLength = 11;
+            this.TTc.Name = "TTc";
+            this.TTc.Size = new System.Drawing.Size(281, 26);
+            this.TTc.TabIndex = 1;
+            this.TTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TTc_KeyPress);
             // 
             // simpleButton1
             // 
@@ -271,15 +281,6 @@
             this.gridView1.OptionsView.ShowColumnHeaders = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
-            // 
-            // TTc
-            // 
-            this.TTc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TTc.Location = new System.Drawing.Point(42, 12);
-            this.TTc.Name = "TTc";
-            this.TTc.Size = new System.Drawing.Size(281, 26);
-            this.TTc.TabIndex = 1;
-            this.TTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TTc_KeyPress);
             // 
             // simpleButton2
             // 

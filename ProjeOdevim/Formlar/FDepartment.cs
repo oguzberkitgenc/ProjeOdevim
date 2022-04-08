@@ -22,7 +22,7 @@ namespace ProjeOdevim.Formlar
         {
             connection.Open();
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From TBLDEPARTMAN", connection);
+            SqlDataAdapter da = new SqlDataAdapter("Select ID,DEPARTMAN From TBLDEPARTMAN", connection);
             da.Fill(dt);
             gridControl1.DataSource = dt;
             connection.Close();

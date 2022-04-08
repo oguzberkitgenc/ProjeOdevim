@@ -137,7 +137,7 @@ namespace ProjeOdevim.Formlar
             UserMukkerrerNo();
             if (durum == true)
             {
-                if (TId.Text == "" & MskTc.Text != "" & TName.Text != ""  & CmbGender.Text != "" &
+                if (TId.Text == "" & MskTc.Text != "" & TName.Text != "" & CmbGender.Text != "" &
                MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & CmbDep.Text != "" & CmbMagaza.Text != "" &
                MskPhone.Text != "" & TPicture.Text != "" & TUser.Text != "" & TPass.Text != "")
                 {
@@ -184,16 +184,12 @@ namespace ProjeOdevim.Formlar
         string picture;
         private void TPicture_Properties_DoubleClick(object sender, EventArgs e)
         {
-
-                TId.Text = "Kullanıcı Hesabı Olamaz";
-                TPass.Text = "Kullanıcı Hesabı Olamaz";
-                TId.Enabled = false;
-                TPass.Enabled = false;
-                openFileDialog1.ShowDialog();
-                picture = openFileDialog1.FileName;
-                TPicture.Text = picture;
-                pictureBox1.ImageLocation = picture;
-
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "Fotoğraf Dosyası |*.jpeg| Fotoğraf Dosyası|*.jpg| Fotoğraf Dosyası|*.png";
+            of.ShowDialog();
+            picture = openFileDialog1.FileName;
+            TPicture.Text = picture;
+            pictureBox1.ImageLocation = picture;
         }
 
         private void BUpdate_Click(object sender, EventArgs e)
