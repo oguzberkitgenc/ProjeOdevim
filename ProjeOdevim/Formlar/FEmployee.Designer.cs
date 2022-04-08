@@ -294,7 +294,6 @@
             this.TPicture.Properties.DoubleClick += new System.EventHandler(this.TPicture_Properties_DoubleClick);
             this.TPicture.Size = new System.Drawing.Size(281, 26);
             this.TPicture.TabIndex = 12;
-            this.TPicture.EditValueChanged += new System.EventHandler(this.TPicture_EditValueChanged);
             // 
             // labelControl13
             // 
@@ -362,10 +361,16 @@
             // 
             // BUpdate
             // 
-            this.BUpdate.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BUpdate.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
             this.BUpdate.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BUpdate.Appearance.Options.UseBackColor = true;
             this.BUpdate.Appearance.Options.UseFont = true;
+            this.BUpdate.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.BUpdate.AppearanceDisabled.Options.UseBackColor = true;
+            this.BUpdate.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.BUpdate.AppearanceHovered.Options.UseBackColor = true;
+            this.BUpdate.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.BUpdate.AppearancePressed.Options.UseBackColor = true;
             this.BUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BUpdate.ImageOptions.Image")));
             this.BUpdate.Location = new System.Drawing.Point(1376, 472);
             this.BUpdate.Name = "BUpdate";
@@ -376,10 +381,16 @@
             // 
             // BClear
             // 
-            this.BClear.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BClear.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BClear.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BClear.Appearance.Options.UseBackColor = true;
             this.BClear.Appearance.Options.UseFont = true;
+            this.BClear.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BClear.AppearanceDisabled.Options.UseBackColor = true;
+            this.BClear.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BClear.AppearanceHovered.Options.UseBackColor = true;
+            this.BClear.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BClear.AppearancePressed.Options.UseBackColor = true;
             this.BClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BClear.ImageOptions.Image")));
             this.BClear.Location = new System.Drawing.Point(1235, 508);
             this.BClear.Name = "BClear";
@@ -390,10 +401,16 @@
             // 
             // BSave
             // 
-            this.BSave.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BSave.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
             this.BSave.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BSave.Appearance.Options.UseBackColor = true;
             this.BSave.Appearance.Options.UseFont = true;
+            this.BSave.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
+            this.BSave.AppearanceDisabled.Options.UseBackColor = true;
+            this.BSave.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
+            this.BSave.AppearanceHovered.Options.UseBackColor = true;
+            this.BSave.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
+            this.BSave.AppearancePressed.Options.UseBackColor = true;
             this.BSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BSave.ImageOptions.Image")));
             this.BSave.Location = new System.Drawing.Point(1235, 472);
             this.BSave.Name = "BSave";
@@ -449,7 +466,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // pictureBox1
             // 

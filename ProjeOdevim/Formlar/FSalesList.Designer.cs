@@ -38,10 +38,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BSifirla = new DevExpress.XtraEditors.SimpleButton();
             this.TCiro = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.BSifirla = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -303,6 +303,35 @@
             this.panel1.Size = new System.Drawing.Size(1526, 45);
             this.panel1.TabIndex = 118;
             // 
+            // BSifirla
+            // 
+            this.BSifirla.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.BSifirla.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.BSifirla.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSifirla.Appearance.Options.UseBackColor = true;
+            this.BSifirla.Appearance.Options.UseFont = true;
+            this.BSifirla.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.BSifirla.AppearanceDisabled.BackColor2 = System.Drawing.Color.White;
+            this.BSifirla.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSifirla.AppearanceDisabled.Options.UseBackColor = true;
+            this.BSifirla.AppearanceDisabled.Options.UseFont = true;
+            this.BSifirla.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.BSifirla.AppearanceHovered.BackColor2 = System.Drawing.Color.White;
+            this.BSifirla.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSifirla.AppearanceHovered.Options.UseBackColor = true;
+            this.BSifirla.AppearanceHovered.Options.UseFont = true;
+            this.BSifirla.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.BSifirla.AppearancePressed.BackColor2 = System.Drawing.Color.White;
+            this.BSifirla.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSifirla.AppearancePressed.Options.UseBackColor = true;
+            this.BSifirla.AppearancePressed.Options.UseFont = true;
+            this.BSifirla.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BSifirla.ImageOptions.Image")));
+            this.BSifirla.Location = new System.Drawing.Point(404, 6);
+            this.BSifirla.Name = "BSifirla";
+            this.BSifirla.Size = new System.Drawing.Size(41, 28);
+            this.BSifirla.TabIndex = 121;
+            this.BSifirla.Click += new System.EventHandler(this.BSifirla_Click);
+            // 
             // TCiro
             // 
             this.TCiro.AutoSize = true;
@@ -329,35 +358,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // BSifirla
-            // 
-            this.BSifirla.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
-            this.BSifirla.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.BSifirla.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BSifirla.Appearance.Options.UseBackColor = true;
-            this.BSifirla.Appearance.Options.UseFont = true;
-            this.BSifirla.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
-            this.BSifirla.AppearanceDisabled.BackColor2 = System.Drawing.Color.White;
-            this.BSifirla.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BSifirla.AppearanceDisabled.Options.UseBackColor = true;
-            this.BSifirla.AppearanceDisabled.Options.UseFont = true;
-            this.BSifirla.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
-            this.BSifirla.AppearanceHovered.BackColor2 = System.Drawing.Color.White;
-            this.BSifirla.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BSifirla.AppearanceHovered.Options.UseBackColor = true;
-            this.BSifirla.AppearanceHovered.Options.UseFont = true;
-            this.BSifirla.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
-            this.BSifirla.AppearancePressed.BackColor2 = System.Drawing.Color.White;
-            this.BSifirla.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BSifirla.AppearancePressed.Options.UseBackColor = true;
-            this.BSifirla.AppearancePressed.Options.UseFont = true;
-            this.BSifirla.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.BSifirla.Location = new System.Drawing.Point(404, 6);
-            this.BSifirla.Name = "BSifirla";
-            this.BSifirla.Size = new System.Drawing.Size(41, 28);
-            this.BSifirla.TabIndex = 121;
-            this.BSifirla.Click += new System.EventHandler(this.BSifirla_Click);
             // 
             // FSalesList
             // 

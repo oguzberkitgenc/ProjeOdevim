@@ -37,9 +37,6 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.CmbMarka = new System.Windows.Forms.ComboBox();
             this.CmbCategory = new System.Windows.Forms.ComboBox();
-            this.BClear = new DevExpress.XtraEditors.SimpleButton();
-            this.BDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.BSave = new DevExpress.XtraEditors.SimpleButton();
             this.NStock = new System.Windows.Forms.NumericUpDown();
             this.TSales = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -48,9 +45,11 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.TBuying = new DevExpress.XtraEditors.TextEdit();
-            this.BUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.TId = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.BUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.BClear = new DevExpress.XtraEditors.SimpleButton();
+            this.BSave = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TProductName.Properties)).BeginInit();
@@ -223,48 +222,6 @@
             this.CmbCategory.Size = new System.Drawing.Size(281, 27);
             this.CmbCategory.TabIndex = 2;
             // 
-            // BClear
-            // 
-            this.BClear.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BClear.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BClear.Appearance.Options.UseBackColor = true;
-            this.BClear.Appearance.Options.UseFont = true;
-            this.BClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BClear.ImageOptions.Image")));
-            this.BClear.Location = new System.Drawing.Point(1230, 382);
-            this.BClear.Name = "BClear";
-            this.BClear.Size = new System.Drawing.Size(281, 30);
-            this.BClear.TabIndex = 11;
-            this.BClear.Text = "Temizle";
-            this.BClear.Click += new System.EventHandler(this.BClear_Click);
-            // 
-            // BDelete
-            // 
-            this.BDelete.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.BDelete.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BDelete.Appearance.Options.UseBackColor = true;
-            this.BDelete.Appearance.Options.UseFont = true;
-            this.BDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BDelete.ImageOptions.Image")));
-            this.BDelete.Location = new System.Drawing.Point(1230, 310);
-            this.BDelete.Name = "BDelete";
-            this.BDelete.Size = new System.Drawing.Size(281, 30);
-            this.BDelete.TabIndex = 10;
-            this.BDelete.Text = "Sil";
-            this.BDelete.Click += new System.EventHandler(this.BDelete_Click);
-            // 
-            // BSave
-            // 
-            this.BSave.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BSave.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BSave.Appearance.Options.UseBackColor = true;
-            this.BSave.Appearance.Options.UseFont = true;
-            this.BSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BSave.ImageOptions.Image")));
-            this.BSave.Location = new System.Drawing.Point(1230, 274);
-            this.BSave.Name = "BSave";
-            this.BSave.Size = new System.Drawing.Size(281, 30);
-            this.BSave.TabIndex = 9;
-            this.BSave.Text = "Kaydet";
-            this.BSave.Click += new System.EventHandler(this.BSave_Click);
-            // 
             // NStock
             // 
             this.NStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
@@ -368,20 +325,6 @@
             this.TBuying.Size = new System.Drawing.Size(281, 26);
             this.TBuying.TabIndex = 5;
             // 
-            // BUpdate
-            // 
-            this.BUpdate.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BUpdate.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BUpdate.Appearance.Options.UseBackColor = true;
-            this.BUpdate.Appearance.Options.UseFont = true;
-            this.BUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BUpdate.ImageOptions.Image")));
-            this.BUpdate.Location = new System.Drawing.Point(1230, 346);
-            this.BUpdate.Name = "BUpdate";
-            this.BUpdate.Size = new System.Drawing.Size(281, 30);
-            this.BUpdate.TabIndex = 12;
-            this.BUpdate.Text = "Güncelle";
-            this.BUpdate.Click += new System.EventHandler(this.BUpdate_Click);
-            // 
             // TId
             // 
             this.TId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
@@ -407,6 +350,63 @@
             this.labelControl1.Text = "ID :";
             this.labelControl1.Visible = false;
             // 
+            // BUpdate
+            // 
+            this.BUpdate.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.BUpdate.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BUpdate.Appearance.Options.UseBackColor = true;
+            this.BUpdate.Appearance.Options.UseFont = true;
+            this.BUpdate.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.BUpdate.AppearanceDisabled.Options.UseBackColor = true;
+            this.BUpdate.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.BUpdate.AppearanceHovered.Options.UseBackColor = true;
+            this.BUpdate.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.BUpdate.AppearancePressed.Options.UseBackColor = true;
+            this.BUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BUpdate.ImageOptions.Image")));
+            this.BUpdate.Location = new System.Drawing.Point(1376, 273);
+            this.BUpdate.Name = "BUpdate";
+            this.BUpdate.Size = new System.Drawing.Size(135, 30);
+            this.BUpdate.TabIndex = 41;
+            this.BUpdate.Text = "Güncelle";
+            // 
+            // BClear
+            // 
+            this.BClear.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BClear.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BClear.Appearance.Options.UseBackColor = true;
+            this.BClear.Appearance.Options.UseFont = true;
+            this.BClear.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BClear.AppearanceDisabled.Options.UseBackColor = true;
+            this.BClear.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BClear.AppearanceHovered.Options.UseBackColor = true;
+            this.BClear.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BClear.AppearancePressed.Options.UseBackColor = true;
+            this.BClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BClear.ImageOptions.Image")));
+            this.BClear.Location = new System.Drawing.Point(1235, 309);
+            this.BClear.Name = "BClear";
+            this.BClear.Size = new System.Drawing.Size(276, 30);
+            this.BClear.TabIndex = 42;
+            this.BClear.Text = "Temizle";
+            // 
+            // BSave
+            // 
+            this.BSave.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
+            this.BSave.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BSave.Appearance.Options.UseBackColor = true;
+            this.BSave.Appearance.Options.UseFont = true;
+            this.BSave.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
+            this.BSave.AppearanceDisabled.Options.UseBackColor = true;
+            this.BSave.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
+            this.BSave.AppearanceHovered.Options.UseBackColor = true;
+            this.BSave.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
+            this.BSave.AppearancePressed.Options.UseBackColor = true;
+            this.BSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BSave.ImageOptions.Image")));
+            this.BSave.Location = new System.Drawing.Point(1235, 273);
+            this.BSave.Name = "BSave";
+            this.BSave.Size = new System.Drawing.Size(135, 30);
+            this.BSave.TabIndex = 40;
+            this.BSave.Text = "Kaydet";
+            // 
             // FProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -414,6 +414,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
             this.Controls.Add(this.BUpdate);
+            this.Controls.Add(this.BClear);
+            this.Controls.Add(this.BSave);
             this.Controls.Add(this.TId);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.labelControl8);
@@ -422,9 +424,6 @@
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.CmbMarka);
             this.Controls.Add(this.CmbCategory);
-            this.Controls.Add(this.BClear);
-            this.Controls.Add(this.BDelete);
-            this.Controls.Add(this.BSave);
             this.Controls.Add(this.NStock);
             this.Controls.Add(this.TSales);
             this.Controls.Add(this.labelControl6);
@@ -458,9 +457,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.ComboBox CmbMarka;
         private System.Windows.Forms.ComboBox CmbCategory;
-        private DevExpress.XtraEditors.SimpleButton BClear;
-        private DevExpress.XtraEditors.SimpleButton BDelete;
-        private DevExpress.XtraEditors.SimpleButton BSave;
         private System.Windows.Forms.NumericUpDown NStock;
         private DevExpress.XtraEditors.TextEdit TSales;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -469,9 +465,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit TBuying;
-        private DevExpress.XtraEditors.SimpleButton BUpdate;
         private System.Windows.Forms.TextBox TId;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         protected DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton BUpdate;
+        private DevExpress.XtraEditors.SimpleButton BClear;
+        private DevExpress.XtraEditors.SimpleButton BSave;
     }
 }

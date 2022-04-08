@@ -101,36 +101,6 @@ namespace ProjeOdevim.Formlar
         {
             Clear();
         }
-        private void BDelete_Click(object sender, EventArgs e)
-        {
-            if (TId.Text != "")
-            {
-                DialogResult secenek = MessageBox.Show(" Ürün Adı: " + TProductName.Text + "\n Stok Adedi: " + NStock.Value.ToString() +
-                    "\n Ürün  Sistemden Komple Silinecek. \n Devam Edilmesini Onaylıyor musun?", "BİLGİ", MessageBoxButtons.YesNo, MessageBoxIcon.Stop); ;
-                if (secenek == DialogResult.Yes)
-                {
-                    connection.Open();
-                    SqlCommand commands = new SqlCommand("Delete From TBLURUN where ID=@P1", connection);
-                    commands.Parameters.AddWithValue("@P1", TId.Text);
-                    commands.ExecuteNonQuery();
-                    connection.Close();
-                    MessageBox.Show("  Ürün Başarıyla Silindi!", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                    ProductList();
-                }
-                else
-                {
-                    MessageBox.Show("  Ürün Silme İşlemi İptal Edildi!", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                Clear();
-            }
-            else
-            {
-                MessageBox.Show("  Eksik Bilgi Girişi. \n Lütfen Bilgileri Kontrol Edip Tekrar Deneyiniz.!", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-            }
-
-        }
-
         private void BUpdate_Click(object sender, EventArgs e)
         {
             if (TId.Text != "")

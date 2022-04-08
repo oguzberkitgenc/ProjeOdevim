@@ -60,7 +60,6 @@ namespace ProjeOdevim.Formlar
             da.Fill(dataTable);
             gridControl1.DataSource = dataTable;
             connection.Close();
-
         }
         void CinsiyetGetir()
         {
@@ -101,7 +100,6 @@ namespace ProjeOdevim.Formlar
             gridView1.Columns[0].Visible = false;
             gridView1.Columns[11].Visible = false;
         }
-
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
         {
             connection.Open();
@@ -175,7 +173,6 @@ namespace ProjeOdevim.Formlar
             {
                 MessageBox.Show(" Bu Kullanıcı Veri Tabanında Kayıtlı. \n Lütfen Farklı Kullanıcı Adı İle Tekrar Deneyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-
         }
         private void BClear_Click(object sender, EventArgs e)
         {
@@ -191,7 +188,6 @@ namespace ProjeOdevim.Formlar
             TPicture.Text = picture;
             pictureBox1.ImageLocation = picture;
         }
-
         private void BUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -229,9 +225,7 @@ namespace ProjeOdevim.Formlar
 
                 throw;
             }
-
         }
-
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
@@ -248,16 +242,6 @@ namespace ProjeOdevim.Formlar
             RchAdres.Text = dr["ADRES"].ToString();
             TPicture.Text = dr["FOTO"].ToString();
             pictureBox1.ImageLocation = TPicture.Text;
-        }
-
-        private void TPicture_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
         }
     }
 }

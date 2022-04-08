@@ -22,7 +22,7 @@ namespace ProjeOdevim.Formlar
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("SELECT TBLNOTLAR.ID,BASLIK AS 'BAŞLIK',AD AS 'OLUŞTURAN'," +
                 "DEPARTMAN AS 'HİTAP',MESAJ,TARIH FROM TBLNOTLAR INNER JOIN TBLPERSONEL ON TBLNOTLAR.OLUSTURAN=TBLPERSONEL.ID " +
-                "INNER JOIN TBLDEPARTMAN ON TBLNOTLAR.HITAP=TBLDEPARTMAN.ID", connection);
+                "INNER JOIN TBLDEPARTMAN ON TBLNOTLAR.HITAP=TBLDEPARTMAN.ID ORDER BY TBLNOTLAR.ID DESC", connection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             gridControl1.DataSource = dt;
@@ -73,7 +73,7 @@ namespace ProjeOdevim.Formlar
         private void BSave_Click(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
-            if (TBaslik.Text != "" && CmbOlusturan.Text != "" && CmbHitap.Text!="" && TId.Text=="")
+            if (TBaslik.Text != "" && CmbOlusturan.Text != "" && CmbHitap.Text != "" && TId.Text == "")
             {
                 connection.Open();
                 SqlCommand komut = new SqlCommand("insert into TBLNOTLAR (BASLIK,OLUSTURAN,HITAP,MESAJ,TARIH) values (@P1,@P2,@P3,@P4,@P5)", connection);
@@ -128,7 +128,7 @@ namespace ProjeOdevim.Formlar
         {
             DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
             TId.Text = dr["ID"].ToString();
-            TBaslik.Text=dr["BAŞLIK"].ToString();
+            TBaslik.Text = dr["BAŞLIK"].ToString();
             CmbOlusturan.Text = dr["OLUŞTURAN"].ToString();
             CmbHitap.Text = dr["HİTAP"].ToString();
             RchDetay.Text = dr["MESAJ"].ToString();
