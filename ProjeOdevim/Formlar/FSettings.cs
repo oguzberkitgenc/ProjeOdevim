@@ -112,6 +112,11 @@ namespace ProjeOdevim.Formlar
 
         }
 
+        private void BYetkiKaydet_Click(object sender, EventArgs e)
+        {
+            // en son burada kaldın 
+        }
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
