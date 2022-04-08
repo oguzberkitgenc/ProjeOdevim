@@ -392,5 +392,8 @@
   <ItemGroup>
     <None Include="image\icons\gelen.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\setting.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

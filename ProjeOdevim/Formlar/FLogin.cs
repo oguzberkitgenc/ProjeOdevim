@@ -65,13 +65,13 @@ namespace ProjeOdevim.Formlar
                 frm.BSaless.Enabled= Convert.ToBoolean(dr2[12]);
                 frm.BBusy.Enabled= Convert.ToBoolean(dr2[13]);
                 frm.BProductSt.Enabled= Convert.ToBoolean(dr2[14]);
-                frm.BCatMark.Enabled= Convert.ToBoolean(dr2[15]);
-                frm.BDaySales.Enabled= Convert.ToBoolean(dr2[16]);
-                frm.BMonthSales.Enabled=Convert.ToBoolean(dr2[17]);
-                frm.BDayComp.Enabled= Convert.ToBoolean(dr2[18]);
-                frm.BMonthComp.Enabled=Convert.ToBoolean(dr2[19]);
-                frm.barButtonItem8.Enabled= Convert.ToBoolean(dr2[20]);
-                frm.BTemelAnaliz.Enabled= Convert.ToBoolean(dr2[21]);
+                frm.BTemelAnaliz.Enabled = Convert.ToBoolean(dr2[15]);
+                frm.BCatMark.Enabled= Convert.ToBoolean(dr2[16]);
+                frm.BDaySales.Enabled= Convert.ToBoolean(dr2[17]);
+                frm.BMonthSales.Enabled= Convert.ToBoolean(dr2[18]);
+                frm.BDayComp.Enabled= Convert.ToBoolean(dr2[19]);
+                frm.BMonthComp.Enabled= Convert.ToBoolean(dr2[20]);
+                frm.barButtonItem8.Enabled= Convert.ToBoolean(dr2[21]);
             }
             connection.Close();
 
