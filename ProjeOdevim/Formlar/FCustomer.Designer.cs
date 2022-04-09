@@ -385,6 +385,7 @@
             this.BUpdate.Size = new System.Drawing.Size(135, 30);
             this.BUpdate.TabIndex = 112;
             this.BUpdate.Text = "Güncelle";
+            this.BUpdate.Click += new System.EventHandler(this.BUpdate_Click);
             // 
             // BClear
             // 
@@ -404,6 +405,7 @@
             this.BClear.Size = new System.Drawing.Size(276, 30);
             this.BClear.TabIndex = 113;
             this.BClear.Text = "Temizle";
+            this.BClear.Click += new System.EventHandler(this.BClear_Click);
             // 
             // BSave
             // 
@@ -423,6 +425,7 @@
             this.BSave.Size = new System.Drawing.Size(135, 30);
             this.BSave.TabIndex = 111;
             this.BSave.Text = "Kaydet";
+            this.BSave.Click += new System.EventHandler(this.BSave_Click);
             // 
             // FCustomer
             // 
@@ -452,8 +455,9 @@
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.TName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FCustomer";
-            this.Text = "FCustomer";
+            this.Text = "MÜŞTERİLER";
             this.Load += new System.EventHandler(this.FCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

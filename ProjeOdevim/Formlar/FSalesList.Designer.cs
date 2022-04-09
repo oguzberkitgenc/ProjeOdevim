@@ -367,8 +367,9 @@
             this.ClientSize = new System.Drawing.Size(1523, 618);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FSalesList";
-            this.Text = "FSalesList";
+            this.Text = "SATIŞ VERİLERİ";
             this.Load += new System.EventHandler(this.FSalesList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

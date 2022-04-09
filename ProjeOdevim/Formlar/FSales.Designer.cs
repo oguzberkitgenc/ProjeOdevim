@@ -908,8 +908,9 @@
             this.Controls.Add(this.LId);
             this.Controls.Add(this.BAdd);
             this.Controls.Add(this.gridControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FSales";
-            this.Text = "FSales";
+            this.Text = "SATIŞ PANELİ";
             this.Load += new System.EventHandler(this.FSales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

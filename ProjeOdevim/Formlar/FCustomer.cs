@@ -83,6 +83,19 @@ namespace ProjeOdevim.Formlar
             Clear();
             gridView1.Columns[0].Visible = false;
         }
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            TId.Text = dr["ID"].ToString();
+            TName.Text = dr["AD SOYAD"].ToString();
+            CmbGender.Text = dr["CİNSİYET"].ToString();
+            MskBirth.Text = dr["D. TARİHİ"].ToString();
+            CmbIl.Text = dr["IL"].ToString();
+            CmbIlce.Text = dr["ILCE"].ToString();
+            RchAdres.Text = dr["ADRES"].ToString();
+            MskPhone.Text = dr["TEL"].ToString();
+            MskTc.Text = dr["TC"].ToString();
+        }
 
         private void BSave_Click(object sender, EventArgs e)
         {
@@ -114,24 +127,6 @@ namespace ProjeOdevim.Formlar
             }
         }
 
-        private void BClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-            TId.Text = dr["ID"].ToString();
-            TName.Text = dr["AD SOYAD"].ToString();
-            CmbGender.Text = dr["CİNSİYET"].ToString();
-            MskBirth.Text = dr["D. TARİHİ"].ToString();
-            CmbIl.Text = dr["IL"].ToString();
-            CmbIlce.Text = dr["ILCE"].ToString();
-            RchAdres.Text = dr["ADRES"].ToString();
-            MskPhone.Text = dr["TEL"].ToString();
-            MskTc.Text = dr["TC"].ToString();
-        }
         private void BUpdate_Click(object sender, EventArgs e)
         {
             if (TId.Text != "")
@@ -159,5 +154,9 @@ namespace ProjeOdevim.Formlar
             }
         }
 
+        private void BClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
     }
 }

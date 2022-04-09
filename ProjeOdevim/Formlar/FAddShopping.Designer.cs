@@ -539,13 +539,14 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.TName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1215, 622);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1215, 622);
             this.Name = "FAddShopping";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FAddShopping";
+            this.Text = "MAĞAZA EKLE";
             this.Load += new System.EventHandler(this.FAddShopping_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TUser = new DevExpress.XtraEditors.TextEdit();
             this.TPass = new DevExpress.XtraEditors.TextEdit();
@@ -190,9 +191,10 @@
             this.Controls.Add(this.TUser);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FLogin";
+            this.Text = "GİRİŞ PANELİ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TPass.Properties)).EndInit();

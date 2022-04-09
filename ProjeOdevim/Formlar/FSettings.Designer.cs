@@ -115,26 +115,26 @@
             this.CDuyrular = new System.Windows.Forms.CheckBox();
             this.CPersoneller = new System.Windows.Forms.CheckBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
-            this.TBackUp = new System.Windows.Forms.TextBox();
-            this.BBrows = new DevExpress.XtraEditors.SimpleButton();
-            this.BBackUp = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.BRestore = new DevExpress.XtraEditors.SimpleButton();
             this.BBrowse2 = new DevExpress.XtraEditors.SimpleButton();
             this.TRestore = new System.Windows.Forms.TextBox();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.BBackUp = new DevExpress.XtraEditors.SimpleButton();
+            this.BBrows = new DevExpress.XtraEditors.SimpleButton();
+            this.TBackUp = new System.Windows.Forms.TextBox();
+            this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelControl4
@@ -399,7 +399,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(221, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 13);
@@ -409,7 +409,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
             this.label2.Location = new System.Drawing.Point(221, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 13);
@@ -419,7 +419,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
             this.label3.Location = new System.Drawing.Point(221, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 13);
@@ -429,7 +429,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.ForeColor = System.Drawing.Color.DarkRed;
             this.label4.Location = new System.Drawing.Point(221, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 13);
@@ -439,7 +439,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.ForeColor = System.Drawing.Color.DarkRed;
             this.label5.Location = new System.Drawing.Point(221, 17);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 13);
@@ -448,6 +448,7 @@
             // 
             // TKod
             // 
+            this.TKod.BackColor = System.Drawing.Color.LightSlateGray;
             this.TKod.Location = new System.Drawing.Point(12, 586);
             this.TKod.Name = "TKod";
             this.TKod.Size = new System.Drawing.Size(1499, 20);
@@ -551,6 +552,8 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.BPersonel);
@@ -568,7 +571,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
             this.label7.Location = new System.Drawing.Point(3, 118);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(277, 26);
@@ -578,7 +581,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.ForeColor = System.Drawing.Color.DarkRed;
             this.label6.Location = new System.Drawing.Point(9, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(310, 13);
@@ -587,6 +590,8 @@
             // 
             // panel2
             // 
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.labelControl8);
             this.panel2.Controls.Add(this.simpleButton1);
@@ -621,7 +626,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.ForeColor = System.Drawing.Color.DarkRed;
             this.label9.Location = new System.Drawing.Point(221, 170);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(142, 13);
@@ -678,7 +683,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.ForeColor = System.Drawing.Color.DarkRed;
             this.label8.Location = new System.Drawing.Point(3, 248);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(367, 26);
@@ -688,6 +693,8 @@
             // 
             // panel3
             // 
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.simpleButton3);
             this.panel3.Controls.Add(this.simpleButton2);
             this.panel3.Controls.Add(this.labelControl29);
@@ -736,7 +743,7 @@
             this.panel3.Controls.Add(this.CPersoneller);
             this.panel3.Location = new System.Drawing.Point(12, 11);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(434, 594);
+            this.panel3.Size = new System.Drawing.Size(434, 569);
             this.panel3.TabIndex = 132;
             // 
             // simpleButton3
@@ -814,7 +821,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.ForeColor = System.Drawing.Color.DarkRed;
             this.label10.Location = new System.Drawing.Point(3, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(419, 39);
@@ -1268,6 +1275,8 @@
             // 
             // panel4
             // 
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label11);
@@ -1278,19 +1287,42 @@
             this.panel4.Size = new System.Drawing.Size(650, 569);
             this.panel4.TabIndex = 133;
             // 
-            // panel5
+            // label13
             // 
-            this.panel5.Controls.Add(this.BBackUp);
-            this.panel5.Controls.Add(this.BBrows);
-            this.panel5.Controls.Add(this.TBackUp);
-            this.panel5.Controls.Add(this.labelControl30);
-            this.panel5.Location = new System.Drawing.Point(15, 109);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(632, 153);
-            this.panel5.TabIndex = 0;
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.DarkRed;
+            this.label13.Location = new System.Drawing.Point(15, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(340, 78);
+            this.label13.TabIndex = 133;
+            this.label13.Text = resources.GetString("label13.Text");
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(363, 293);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(281, 25);
+            this.label12.TabIndex = 132;
+            this.label12.Text = "Veri Tabanı Yedekten Yükle";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(456, 82);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(188, 24);
+            this.label11.TabIndex = 131;
+            this.label11.Text = "Veri Tabanı Yedek Al";
             // 
             // panel6
             // 
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.labelControl32);
             this.panel6.Controls.Add(this.BRestore);
             this.panel6.Controls.Add(this.BBrowse2);
@@ -1301,75 +1333,17 @@
             this.panel6.Size = new System.Drawing.Size(632, 167);
             this.panel6.TabIndex = 1;
             // 
-            // labelControl30
+            // labelControl32
             // 
-            this.labelControl30.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl30.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl30.Appearance.Options.UseFont = true;
-            this.labelControl30.Appearance.Options.UseForeColor = true;
-            this.labelControl30.Location = new System.Drawing.Point(13, 7);
-            this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(191, 19);
-            this.labelControl30.TabIndex = 98;
-            this.labelControl30.Text = "Kayıt Edilecek Konumu Seçiniz";
-            // 
-            // TBackUp
-            // 
-            this.TBackUp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TBackUp.Location = new System.Drawing.Point(13, 27);
-            this.TBackUp.Name = "TBackUp";
-            this.TBackUp.Size = new System.Drawing.Size(507, 26);
-            this.TBackUp.TabIndex = 124;
-            // 
-            // BBrows
-            // 
-            this.BBrows.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BBrows.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.BBrows.Appearance.Options.UseBackColor = true;
-            this.BBrows.Appearance.Options.UseFont = true;
-            this.BBrows.Appearance.Options.UseForeColor = true;
-            this.BBrows.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearanceDisabled.Options.UseBackColor = true;
-            this.BBrows.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearanceHovered.Options.UseBackColor = true;
-            this.BBrows.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearancePressed.Options.UseBackColor = true;
-            this.BBrows.Location = new System.Drawing.Point(523, 23);
-            this.BBrows.Name = "BBrows";
-            this.BBrows.Size = new System.Drawing.Size(106, 29);
-            this.BBrows.TabIndex = 127;
-            this.BBrows.Text = "Konum Seç";
-            this.BBrows.Click += new System.EventHandler(this.BBrows_Click);
-            // 
-            // BBackUp
-            // 
-            this.BBackUp.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BBackUp.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.BBackUp.Appearance.Options.UseBackColor = true;
-            this.BBackUp.Appearance.Options.UseFont = true;
-            this.BBackUp.Appearance.Options.UseForeColor = true;
-            this.BBackUp.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearanceDisabled.Options.UseBackColor = true;
-            this.BBackUp.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearanceHovered.Options.UseBackColor = true;
-            this.BBackUp.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearancePressed.Options.UseBackColor = true;
-            this.BBackUp.Location = new System.Drawing.Point(523, 57);
-            this.BBackUp.Name = "BBackUp";
-            this.BBackUp.Size = new System.Drawing.Size(106, 54);
-            this.BBackUp.TabIndex = 128;
-            this.BBackUp.Text = "Yedek Al";
-            this.BBackUp.Click += new System.EventHandler(this.BBackUp_Click);
+            this.labelControl32.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl32.Appearance.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelControl32.Appearance.Options.UseFont = true;
+            this.labelControl32.Appearance.Options.UseForeColor = true;
+            this.labelControl32.Location = new System.Drawing.Point(10, 72);
+            this.labelControl32.Name = "labelControl32";
+            this.labelControl32.Size = new System.Drawing.Size(333, 19);
+            this.labelControl32.TabIndex = 133;
+            this.labelControl32.Text = "Yükleme tamamlandıktan sonra program kapatılacaktır.";
             // 
             // BRestore
             // 
@@ -1441,63 +1415,103 @@
             this.labelControl31.TabIndex = 129;
             this.labelControl31.Text = "Konumdaki Dosyayı Seçiniz";
             // 
-            // label11
+            // panel5
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(456, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(188, 24);
-            this.label11.TabIndex = 131;
-            this.label11.Text = "Veri Tabanı Yedek Al";
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.BBackUp);
+            this.panel5.Controls.Add(this.BBrows);
+            this.panel5.Controls.Add(this.TBackUp);
+            this.panel5.Controls.Add(this.labelControl30);
+            this.panel5.Location = new System.Drawing.Point(15, 109);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(632, 153);
+            this.panel5.TabIndex = 0;
             // 
-            // label12
+            // BBackUp
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(363, 293);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(281, 25);
-            this.label12.TabIndex = 132;
-            this.label12.Text = "Veri Tabanı Yedekten Yükle";
+            this.BBackUp.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBackUp.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BBackUp.Appearance.Options.UseBackColor = true;
+            this.BBackUp.Appearance.Options.UseFont = true;
+            this.BBackUp.Appearance.Options.UseForeColor = true;
+            this.BBackUp.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearanceDisabled.Options.UseBackColor = true;
+            this.BBackUp.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearanceHovered.Options.UseBackColor = true;
+            this.BBackUp.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearancePressed.Options.UseBackColor = true;
+            this.BBackUp.Location = new System.Drawing.Point(523, 57);
+            this.BBackUp.Name = "BBackUp";
+            this.BBackUp.Size = new System.Drawing.Size(106, 54);
+            this.BBackUp.TabIndex = 128;
+            this.BBackUp.Text = "Yedek Al";
+            this.BBackUp.Click += new System.EventHandler(this.BBackUp_Click);
             // 
-            // label13
+            // BBrows
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(15, 7);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(340, 78);
-            this.label13.TabIndex = 133;
-            this.label13.Text = resources.GetString("label13.Text");
+            this.BBrows.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBrows.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BBrows.Appearance.Options.UseBackColor = true;
+            this.BBrows.Appearance.Options.UseFont = true;
+            this.BBrows.Appearance.Options.UseForeColor = true;
+            this.BBrows.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearanceDisabled.Options.UseBackColor = true;
+            this.BBrows.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearanceHovered.Options.UseBackColor = true;
+            this.BBrows.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearancePressed.Options.UseBackColor = true;
+            this.BBrows.Location = new System.Drawing.Point(523, 23);
+            this.BBrows.Name = "BBrows";
+            this.BBrows.Size = new System.Drawing.Size(106, 29);
+            this.BBrows.TabIndex = 127;
+            this.BBrows.Text = "Konum Seç";
+            this.BBrows.Click += new System.EventHandler(this.BBrows_Click);
             // 
-            // labelControl32
+            // TBackUp
             // 
-            this.labelControl32.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl32.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl32.Appearance.Options.UseFont = true;
-            this.labelControl32.Appearance.Options.UseForeColor = true;
-            this.labelControl32.Location = new System.Drawing.Point(10, 72);
-            this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(333, 19);
-            this.labelControl32.TabIndex = 133;
-            this.labelControl32.Text = "Yükleme tamamlandıktan sonra program kapatılacaktır.";
+            this.TBackUp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TBackUp.Location = new System.Drawing.Point(13, 27);
+            this.TBackUp.Name = "TBackUp";
+            this.TBackUp.Size = new System.Drawing.Size(507, 26);
+            this.TBackUp.TabIndex = 124;
+            // 
+            // labelControl30
+            // 
+            this.labelControl30.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl30.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl30.Appearance.Options.UseFont = true;
+            this.labelControl30.Appearance.Options.UseForeColor = true;
+            this.labelControl30.Location = new System.Drawing.Point(13, 7);
+            this.labelControl30.Name = "labelControl30";
+            this.labelControl30.Size = new System.Drawing.Size(191, 19);
+            this.labelControl30.TabIndex = 98;
+            this.labelControl30.Text = "Kayıt Edilecek Konumu Seçiniz";
             // 
             // FSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(1523, 618);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TKod);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FSettings";
-            this.Text = "FSettings";
+            this.Text = "AYARLAR";
             this.Load += new System.EventHandler(this.FSettings_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1507,10 +1521,10 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

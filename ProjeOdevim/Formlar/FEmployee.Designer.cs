@@ -616,9 +616,10 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.TName);
             this.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FEmployee";
-            this.Text = "FEmployee";
+            this.Text = "MÜŞTERİLER";
             this.Load += new System.EventHandler(this.FEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TPicture.Properties)).EndInit();

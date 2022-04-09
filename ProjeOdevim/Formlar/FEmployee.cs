@@ -174,10 +174,6 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(" Bu Kullanıcı Veri Tabanında Kayıtlı. \n Lütfen Farklı Kullanıcı Adı İle Tekrar Deneyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
-        private void BClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
         string picture;
         private void TPicture_Properties_DoubleClick(object sender, EventArgs e)
         {
@@ -242,6 +238,11 @@ namespace ProjeOdevim.Formlar
             RchAdres.Text = dr["ADRES"].ToString();
             TPicture.Text = dr["FOTO"].ToString();
             pictureBox1.ImageLocation = TPicture.Text;
+        }
+
+        private void BClear_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }

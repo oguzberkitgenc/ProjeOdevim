@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FGooglee));
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
@@ -41,14 +42,15 @@
             this.webBrowser1.Size = new System.Drawing.Size(1523, 618);
             this.webBrowser1.TabIndex = 0;
             // 
-            // FYoutube
+            // FGooglee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1523, 618);
             this.Controls.Add(this.webBrowser1);
-            this.Name = "FYoutube";
-            this.Text = "FYoutube";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FGooglee";
+            this.Text = "GOOGLE";
             this.Load += new System.EventHandler(this.FYoutube_Load);
             this.ResumeLayout(false);
 

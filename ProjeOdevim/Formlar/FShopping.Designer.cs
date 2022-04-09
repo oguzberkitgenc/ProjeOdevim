@@ -773,8 +773,9 @@
             this.Controls.Add(this.BClear);
             this.Controls.Add(this.BSave);
             this.Controls.Add(this.gridControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FShopping";
-            this.Text = "FShopping";
+            this.Text = "MAĞAZALAR";
             this.Load += new System.EventHandler(this.FShopping_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

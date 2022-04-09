@@ -331,11 +331,12 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FKredi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FKredi";
+            this.Text = "KREDİ SORGULA";
             this.Load += new System.EventHandler(this.FKredi_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

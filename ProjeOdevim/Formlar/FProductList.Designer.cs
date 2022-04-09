@@ -368,6 +368,7 @@
             this.BUpdate.Size = new System.Drawing.Size(135, 30);
             this.BUpdate.TabIndex = 41;
             this.BUpdate.Text = "Güncelle";
+            this.BUpdate.Click += new System.EventHandler(this.BUpdate_Click);
             // 
             // BClear
             // 
@@ -387,6 +388,7 @@
             this.BClear.Size = new System.Drawing.Size(276, 30);
             this.BClear.TabIndex = 42;
             this.BClear.Text = "Temizle";
+            this.BClear.Click += new System.EventHandler(this.BClear_Click);
             // 
             // BSave
             // 
@@ -406,6 +408,7 @@
             this.BSave.Size = new System.Drawing.Size(135, 30);
             this.BSave.TabIndex = 40;
             this.BSave.Text = "Kaydet";
+            this.BSave.Click += new System.EventHandler(this.BSave_Click);
             // 
             // FProductList
             // 
@@ -434,9 +437,10 @@
             this.Controls.Add(this.TBuying);
             this.Controls.Add(this.gridControl1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FProductList";
-            this.Text = "FProductList";
+            this.Text = "ÜRÜNLER";
             this.Load += new System.EventHandler(this.FProductList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
