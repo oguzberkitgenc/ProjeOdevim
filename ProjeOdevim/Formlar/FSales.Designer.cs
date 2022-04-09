@@ -909,11 +909,11 @@
             this.LTaksit.AutoSize = true;
             this.LTaksit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LTaksit.ForeColor = System.Drawing.Color.Black;
-            this.LTaksit.Location = new System.Drawing.Point(859, 578);
+            this.LTaksit.Location = new System.Drawing.Point(817, 575);
             this.LTaksit.Name = "LTaksit";
-            this.LTaksit.Size = new System.Drawing.Size(96, 19);
+            this.LTaksit.Size = new System.Drawing.Size(138, 19);
             this.LTaksit.TabIndex = 127;
-            this.LTaksit.Text = "Taksit Sayısı";
+            this.LTaksit.Text = "Vade Sayısı (AY) :";
             this.LTaksit.Visible = false;
             // 
             // CmbTaksit

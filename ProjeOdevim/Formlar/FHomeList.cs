@@ -42,14 +42,12 @@ namespace ProjeOdevim.Formlar
             gridControl3.DataSource = dataTable;
             connection.Close();
         }
-        void NewStajer()
+        void Taksitler()
         {
+            DateTime dt = DateTime.Now;
+            dt = dt.AddDays(-6);
             connection.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD AS 'AD SOYAD' " +
-                "From TBLPERSONEL  INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
-                "INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID " +
-                "WHERE TBLPERSONEL.DEPARTMANID=(SELECT ID FROM TBLDEPARTMAN WHERE DEPARTMAN='Stajer') " +
-                "ORDER BY TBLPERSONEL.ID DESC", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT AD,TARIH,KACINCITAKSIT,TAKSITTUTARI FROM TBLTAKSITLER INNER JOIN TBLMUSTERI ON TBLTAKSITLER.MUSTERIT=TBLMUSTERI.ID WHERE TARIH>= '" + dt + "' order by TARIH ASC", connection);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             gridControl5.DataSource = dataTable;
@@ -89,16 +87,18 @@ namespace ProjeOdevim.Formlar
         }
         private void FHomeList_Load(object sender, EventArgs e)
         {
+            DateTime tarih1 = DateTime.Now;
+            DateTime tarih2;
+            tarih2 = tarih1.AddMonths(1);
             DecliningStok();
             NewEmployee();
-            NewStajer();
+            Taksitler();
             NewLogin();
             NewSales();
             NewNote();
             timer1.Start();
             gridView2.Columns[0].Visible = false;
             gridView3.Columns[0].Visible = false;
-            gridView5.Columns[0].Visible = false;
             gridView6.Columns[0].Visible = false;
         }
 
@@ -106,7 +106,7 @@ namespace ProjeOdevim.Formlar
         {
             DecliningStok();
             NewEmployee();
-            NewStajer();
+            Taksitler();
             NewLogin();
             NewSales();
             gridView2.Columns[0].Visible = false;

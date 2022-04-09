@@ -1121,9 +1121,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(1029, 310);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 19);
+            this.label6.Size = new System.Drawing.Size(161, 19);
             this.label6.TabIndex = 85;
-            this.label6.Text = "Yeni Stajerler";
+            this.label6.Text = "Vadesi Yaklaşan Taksitler\r\n";
             // 
             // timer1
             // 

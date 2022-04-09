@@ -56,9 +56,11 @@
             this.TUser.Name = "TUser";
             this.TUser.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(132)))), ((int)(((byte)(227)))));
             this.TUser.Properties.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.TUser.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TUser.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TUser.Properties.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TUser.Properties.Appearance.Options.UseBackColor = true;
             this.TUser.Properties.Appearance.Options.UseFont = true;
+            this.TUser.Properties.Appearance.Options.UseForeColor = true;
             this.TUser.Properties.Appearance.Options.UseTextOptions = true;
             this.TUser.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.TUser.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(132)))), ((int)(((byte)(227)))));
@@ -91,9 +93,11 @@
             this.TPass.Name = "TPass";
             this.TPass.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(132)))), ((int)(((byte)(227)))));
             this.TPass.Properties.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
-            this.TPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TPass.Properties.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.TPass.Properties.Appearance.Options.UseBackColor = true;
             this.TPass.Properties.Appearance.Options.UseFont = true;
+            this.TPass.Properties.Appearance.Options.UseForeColor = true;
             this.TPass.Properties.Appearance.Options.UseTextOptions = true;
             this.TPass.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.TPass.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(132)))), ((int)(((byte)(227)))));
@@ -172,6 +176,7 @@
             this.BExit.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BExit.AppearancePressed.Options.UseBackColor = true;
             this.BExit.AppearancePressed.Options.UseFont = true;
+            this.BExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BExit.Location = new System.Drawing.Point(610, 368);
             this.BExit.Name = "BExit";
             this.BExit.Size = new System.Drawing.Size(194, 26);
@@ -184,6 +189,7 @@
             this.AcceptButton = this.simpleButton1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BExit;
             this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.BExit);
             this.Controls.Add(this.simpleButton1);
