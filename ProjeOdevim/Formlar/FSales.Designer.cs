@@ -67,6 +67,7 @@
             this.ChTaksit = new System.Windows.Forms.CheckBox();
             this.LTaksit = new System.Windows.Forms.Label();
             this.CmbTaksit = new System.Windows.Forms.ComboBox();
+            this.LTaksitliSatis = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -936,12 +937,23 @@
             this.CmbTaksit.TabIndex = 128;
             this.CmbTaksit.Visible = false;
             // 
+            // LTaksitliSatis
+            // 
+            this.LTaksitliSatis.AutoSize = true;
+            this.LTaksitliSatis.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LTaksitliSatis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(47)))));
+            this.LTaksitliSatis.Location = new System.Drawing.Point(718, 453);
+            this.LTaksitliSatis.Name = "LTaksitliSatis";
+            this.LTaksitliSatis.Size = new System.Drawing.Size(0, 25);
+            this.LTaksitliSatis.TabIndex = 129;
+            // 
             // FSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.LTaksitliSatis);
             this.Controls.Add(this.CmbTaksit);
             this.Controls.Add(this.LTaksit);
             this.Controls.Add(this.ChTaksit);
@@ -1030,5 +1042,6 @@
         private System.Windows.Forms.CheckBox ChTaksit;
         private System.Windows.Forms.Label LTaksit;
         private System.Windows.Forms.ComboBox CmbTaksit;
+        private System.Windows.Forms.Label LTaksitliSatis;
     }
 }

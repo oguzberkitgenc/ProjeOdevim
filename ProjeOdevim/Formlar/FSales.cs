@@ -112,45 +112,100 @@ namespace ProjeOdevim.Formlar
             VadeGetir();
             Total.Focus();
         }
+
+        /*Kaç Ay Taksit ? 3
+         *Faiz Oranı? 3
+         *Normal Tutar? 6000
+         */
         void IndirimsizsizSatis()
         {
-            decimal toplam = satisfiyatı;
-            connection.Open();
-            SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
-                "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@A10,@A11)", connection);
-            sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
-            sql.Parameters.AddWithValue("@A2", id.ToString());
-            sql.Parameters.AddWithValue("@A3", kategori.ToString());
-            sql.Parameters.AddWithValue("@A4", marka.ToString());
-            sql.Parameters.AddWithValue("@A5", Convert.ToDecimal(alisfiyati));
-            sql.Parameters.AddWithValue("@A6", Convert.ToDecimal(satisfiyatı));
-            sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
-            sql.Parameters.AddWithValue("@A8", Convert.ToDecimal(toplam));
-            sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
-            sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
-            sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
-            sql.ExecuteNonQuery();
-            connection.Close();
+            decimal faizorani = Convert.ToDecimal(CmbTaksit.SelectedValue); // Faiz Oranı
+            decimal toplam = satisfiyatı; // Normal Tutar
+            decimal netice = toplam + (toplam / 100 * faizorani); // Taksitli Tutar
+            if (ChTaksit.Checked == true)
+            {
+                connection.Open();
+                SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
+                    "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@A10,@A11)", connection);
+                sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
+                sql.Parameters.AddWithValue("@A2", id.ToString());
+                sql.Parameters.AddWithValue("@A3", kategori.ToString());
+                sql.Parameters.AddWithValue("@A4", marka.ToString());
+                sql.Parameters.AddWithValue("@A5", Convert.ToDecimal(alisfiyati));
+                sql.Parameters.AddWithValue("@A6", Convert.ToDecimal(satisfiyatı));
+                sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
+                sql.Parameters.AddWithValue("@A8", Convert.ToDecimal(netice));
+                sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
+                sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
+                sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
+                sql.ExecuteNonQuery();
+                connection.Close();
+            }
+            else
+            {
+                connection.Open();
+                SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
+                    "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@A10,@A11)", connection);
+                sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
+                sql.Parameters.AddWithValue("@A2", id.ToString());
+                sql.Parameters.AddWithValue("@A3", kategori.ToString());
+                sql.Parameters.AddWithValue("@A4", marka.ToString());
+                sql.Parameters.AddWithValue("@A5", Convert.ToDecimal(alisfiyati));
+                sql.Parameters.AddWithValue("@A6", Convert.ToDecimal(satisfiyatı));
+                sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
+                sql.Parameters.AddWithValue("@A8", Convert.ToDecimal(toplam));
+                sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
+                sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
+                sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
+                sql.ExecuteNonQuery();
+                connection.Close();
+            }
         }
         void IndirimliSatis()
         {
-            decimal toplam = satisfiyatı - (satisfiyatı / 100) * indirimorani;
-            connection.Open();
-            SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
-                "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@A10,@A11)", connection);
-            sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
-            sql.Parameters.AddWithValue("@A2", id.ToString());
-            sql.Parameters.AddWithValue("@A3", kategori.ToString());
-            sql.Parameters.AddWithValue("@A4", marka.ToString());
-            sql.Parameters.AddWithValue("@A5", Convert.ToDecimal(alisfiyati));
-            sql.Parameters.AddWithValue("@A6", Convert.ToDecimal(satisfiyatı));
-            sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
-            sql.Parameters.AddWithValue("@A8", Convert.ToDecimal(toplam));
-            sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
-            sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
-            sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
-            sql.ExecuteNonQuery();
-            connection.Close();
+            decimal faizorani = Convert.ToDecimal(CmbTaksit.SelectedValue); // Faiz Oranı
+            decimal toplam = satisfiyatı - (satisfiyatı / 100) * indirimorani; // Normal Tutar
+            decimal netice = toplam + (toplam / 100 * faizorani); // Taksitli Tutar
+            if (ChTaksit.Checked == true)
+            {
+                connection.Open();
+                SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
+                    "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@A10,@A11)", connection);
+                sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
+                sql.Parameters.AddWithValue("@A2", id.ToString());
+                sql.Parameters.AddWithValue("@A3", kategori.ToString());
+                sql.Parameters.AddWithValue("@A4", marka.ToString());
+                sql.Parameters.AddWithValue("@A5", Convert.ToDecimal(alisfiyati));
+                sql.Parameters.AddWithValue("@A6", Convert.ToDecimal(satisfiyatı));
+                sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
+                sql.Parameters.AddWithValue("@A8", Convert.ToDecimal(netice));
+                sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
+                sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
+                sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
+                sql.ExecuteNonQuery();
+                connection.Close();
+            }
+            else
+            {
+                connection.Open();
+                SqlCommand sql = new SqlCommand("insert into TBLSATIS (ISLEMNO,URUNID,KATEGORIADI,MARKAADI,ALISFIYAT,SATISFIYAT,INDIRIMORANI,TOPLAMFIYAT,PERSONEL,MUSTERIID,TARIH) " +
+                    "values (@A1,@A2,@A3,@A4,@A5,@A6,@A7,@A8,@A9,@A10,@A11)", connection);
+                sql.Parameters.AddWithValue("@A1", LIslemNo.Text);
+                sql.Parameters.AddWithValue("@A2", id.ToString());
+                sql.Parameters.AddWithValue("@A3", kategori.ToString());
+                sql.Parameters.AddWithValue("@A4", marka.ToString());
+                sql.Parameters.AddWithValue("@A5", Convert.ToDecimal(alisfiyati));
+                sql.Parameters.AddWithValue("@A6", Convert.ToDecimal(satisfiyatı));
+                sql.Parameters.AddWithValue("@A7", Convert.ToString(indirimorani).ToString());
+                sql.Parameters.AddWithValue("@A8", Convert.ToDecimal(toplam));
+                sql.Parameters.AddWithValue("@A9", CmbEmploye.SelectedValue);
+                sql.Parameters.AddWithValue("@A10", CmbCustomer.SelectedValue);
+                sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
+                sql.ExecuteNonQuery();
+                connection.Close();
+
+            }
+
         }
         void UrunEksilt()
         {
@@ -227,6 +282,7 @@ namespace ProjeOdevim.Formlar
             B5.Enabled = true;
             B3.Enabled = true;
             BDelete.Enabled = true;
+            ChTaksit.Checked = false;
             Product2();
         }
         public double musterikredi = 0, personelkredi = 0;
@@ -309,11 +365,14 @@ namespace ProjeOdevim.Formlar
             {
                 LTaksit.Visible = true;
                 CmbTaksit.Visible = true;
+                LTaksitliSatis.Text = "Taksitli Satış Yapılıyor...";
             }
             else
             {
                 LTaksit.Visible = false;
                 CmbTaksit.Visible = false;
+                LTaksitliSatis.Text = "";
+
             }
         }
         private void B15_Click(object sender, EventArgs e)
@@ -441,7 +500,7 @@ namespace ProjeOdevim.Formlar
             decimal vadeal = Convert.ToDecimal(CmbTaksit.SelectedValue);
             int taksitsayisi = int.Parse(CmbTaksit.Text);
             decimal hesaplabakalim = (satisfiyatı / taksitsayisi) / 100 * vadeal;
-            decimal toplam = (satisfiyatı / taksitsayisi) + hesaplabakalim;
+            decimal toplamvadelisatis = (satisfiyatı / taksitsayisi) + hesaplabakalim;
             for (int i = 1; i <= taksitsayisi; i++)
             {
                 connection.Open();
@@ -449,16 +508,17 @@ namespace ProjeOdevim.Formlar
                 sql.Parameters.AddWithValue("P1", CmbCustomer.SelectedValue);
                 sql.Parameters.AddWithValue("P2", Convert.ToDateTime(tarih1));
                 sql.Parameters.AddWithValue("P3", i);
-                sql.Parameters.AddWithValue("P4", toplam);
+                sql.Parameters.AddWithValue("P4", toplamvadelisatis);
                 sql.Parameters.AddWithValue("P5", CmbEmploye.SelectedValue);
                 sql.ExecuteNonQuery();
                 connection.Close();
-                tarih1=tarih1.AddMonths(1);
+                tarih1 = tarih1.AddMonths(1);
             }
-            tarih1=DateTime.Now;
+            tarih1 = DateTime.Now;
         }
         private void BSatis_Click(object sender, EventArgs e)
         {
+
             if (gridView2.DataRowCount >= 1)
             {
                 for (int i = 0; i < gridView2.DataRowCount; i++)
