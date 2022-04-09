@@ -129,6 +129,9 @@
             this.BBrows = new DevExpress.XtraEditors.SimpleButton();
             this.TBackUp = new System.Windows.Forms.TextBox();
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
+            this.TKritik = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -459,7 +462,7 @@
             // TMusteri
             // 
             this.TMusteri.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TMusteri.Location = new System.Drawing.Point(175, 34);
+            this.TMusteri.Location = new System.Drawing.Point(176, 68);
             this.TMusteri.Name = "TMusteri";
             this.TMusteri.Size = new System.Drawing.Size(58, 26);
             this.TMusteri.TabIndex = 123;
@@ -471,7 +474,7 @@
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(12, 41);
+            this.labelControl6.Location = new System.Drawing.Point(18, 75);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(147, 19);
             this.labelControl6.TabIndex = 125;
@@ -495,7 +498,7 @@
             this.BMusteri.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BMusteri.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BMusteri.AppearancePressed.Options.UseBackColor = true;
-            this.BMusteri.Location = new System.Drawing.Point(239, 31);
+            this.BMusteri.Location = new System.Drawing.Point(240, 65);
             this.BMusteri.Name = "BMusteri";
             this.BMusteri.Size = new System.Drawing.Size(106, 29);
             this.BMusteri.TabIndex = 126;
@@ -508,7 +511,7 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(6, 85);
+            this.labelControl7.Location = new System.Drawing.Point(12, 107);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(153, 19);
             this.labelControl7.TabIndex = 128;
@@ -517,7 +520,7 @@
             // TPersonel
             // 
             this.TPersonel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TPersonel.Location = new System.Drawing.Point(175, 78);
+            this.TPersonel.Location = new System.Drawing.Point(176, 104);
             this.TPersonel.Name = "TPersonel";
             this.TPersonel.Size = new System.Drawing.Size(58, 26);
             this.TPersonel.TabIndex = 127;
@@ -542,7 +545,7 @@
             this.BPersonel.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BPersonel.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BPersonel.AppearancePressed.Options.UseBackColor = true;
-            this.BPersonel.Location = new System.Drawing.Point(239, 75);
+            this.BPersonel.Location = new System.Drawing.Point(240, 101);
             this.BPersonel.Name = "BPersonel";
             this.BPersonel.Size = new System.Drawing.Size(106, 29);
             this.BPersonel.TabIndex = 129;
@@ -554,6 +557,9 @@
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.simpleButton4);
+            this.panel1.Controls.Add(this.labelControl33);
+            this.panel1.Controls.Add(this.TKritik);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.BPersonel);
@@ -564,7 +570,7 @@
             this.panel1.Controls.Add(this.BMusteri);
             this.panel1.Location = new System.Drawing.Point(452, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 159);
+            this.panel1.Size = new System.Drawing.Size(403, 222);
             this.panel1.TabIndex = 130;
             // 
             // label7
@@ -572,7 +578,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(3, 118);
+            this.label7.Location = new System.Drawing.Point(10, 33);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(277, 26);
             this.label7.TabIndex = 131;
@@ -618,7 +624,7 @@
             this.panel2.Controls.Add(this.BXml3);
             this.panel2.Controls.Add(this.checkBox5);
             this.panel2.Controls.Add(this.BXml2);
-            this.panel2.Location = new System.Drawing.Point(452, 176);
+            this.panel2.Location = new System.Drawing.Point(452, 298);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(403, 282);
             this.panel2.TabIndex = 131;
@@ -1498,6 +1504,52 @@
             this.labelControl30.TabIndex = 98;
             this.labelControl30.Text = "Kayıt Edilecek Konumu Seçiniz";
             // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton4.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton4.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.simpleButton4.Appearance.Options.UseBackColor = true;
+            this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.Appearance.Options.UseForeColor = true;
+            this.simpleButton4.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton4.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton4.AppearanceDisabled.Options.UseBackColor = true;
+            this.simpleButton4.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton4.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton4.AppearanceHovered.Options.UseBackColor = true;
+            this.simpleButton4.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton4.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton4.AppearancePressed.Options.UseBackColor = true;
+            this.simpleButton4.Location = new System.Drawing.Point(240, 135);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(106, 29);
+            this.simpleButton4.TabIndex = 134;
+            this.simpleButton4.Text = "Kaydet";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
+            // labelControl33
+            // 
+            this.labelControl33.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl33.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl33.Appearance.Options.UseFont = true;
+            this.labelControl33.Appearance.Options.UseForeColor = true;
+            this.labelControl33.Location = new System.Drawing.Point(79, 142);
+            this.labelControl33.Name = "labelControl33";
+            this.labelControl33.Size = new System.Drawing.Size(86, 19);
+            this.labelControl33.TabIndex = 133;
+            this.labelControl33.Text = "Kritik Seviye: ";
+            // 
+            // TKritik
+            // 
+            this.TKritik.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TKritik.Location = new System.Drawing.Point(176, 138);
+            this.TKritik.Name = "TKritik";
+            this.TKritik.Size = new System.Drawing.Size(58, 26);
+            this.TKritik.TabIndex = 132;
+            this.TKritik.Text = "5";
+            // 
             // FSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1632,5 +1684,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private DevExpress.XtraEditors.LabelControl labelControl32;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.LabelControl labelControl33;
+        private System.Windows.Forms.TextBox TKritik;
     }
 }

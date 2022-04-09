@@ -306,6 +306,17 @@ namespace ProjeOdevim.Formlar
             
         }
 
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlCommand kritik = new SqlCommand("UPDATE TBLXML SET KRITIK=@X1", connection);
+            kritik.Parameters.AddWithValue("@X1",int.Parse(TKritik.Text));
+            kritik.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show(" Kritik Seviye Kayıt Edildi \n\n ", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();

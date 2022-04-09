@@ -62,6 +62,8 @@ namespace ProjeOdevim.Formlar
             NStock.Text = "";
             richTextBox1.Text = "";
         }
+        int kritik = 0;
+
         private void FProductList_Load(object sender, EventArgs e)
         {
             ProductList();
@@ -69,12 +71,21 @@ namespace ProjeOdevim.Formlar
             MarkaName();
             Clear();
             gridView1.Columns[0].Visible = false;
+
+            connection.Open();
+            SqlCommand komut = new SqlCommand("Select ID,KRITIK From TBLXML",connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                kritik = Convert.ToInt32(dr[1]);
+            }
+            connection.Close();
         }
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
             GridView view = sender as GridView;
             int miktar = Convert.ToInt32(view.GetRowCellValue(e.RowHandle, "STOK"));
-            if (miktar >= 1 & miktar <= 5)
+            if (miktar >= 1 & miktar <= kritik)
             {
                 e.Appearance.BackColor = Color.FromArgb(255, 118, 117);
                 e.Appearance.BackColor2 = Color.FromArgb(45, 52, 54);
