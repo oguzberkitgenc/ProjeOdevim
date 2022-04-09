@@ -212,11 +212,6 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(CmbList.Text + " Departmanına seçili olan değerler başarıyla güncellendi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void CmbList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             Clear();

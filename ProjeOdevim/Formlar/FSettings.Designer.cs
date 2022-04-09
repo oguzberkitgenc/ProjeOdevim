@@ -869,7 +869,6 @@
             this.CmbList.Name = "CmbList";
             this.CmbList.Size = new System.Drawing.Size(270, 27);
             this.CmbList.TabIndex = 177;
-            this.CmbList.SelectedIndexChanged += new System.EventHandler(this.CmbList_SelectedIndexChanged);
             // 
             // label10
             // 

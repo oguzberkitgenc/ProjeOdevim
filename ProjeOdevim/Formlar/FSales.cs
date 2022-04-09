@@ -67,7 +67,7 @@ namespace ProjeOdevim.Formlar
         void CustomerList()
         {
             connection.Open();
-            SqlCommand komut = new SqlCommand("Select ID,AD From TBLMUSTERI", connection);
+            SqlCommand komut = new SqlCommand("Select ID,AD From TBLMUSTERI ORDER BY AD ASC", connection);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -79,7 +79,7 @@ namespace ProjeOdevim.Formlar
         void Employee()
         {
             connection.Open();
-            SqlCommand komut = new SqlCommand("Select ID,AD From TBLPERSONEL", connection);
+            SqlCommand komut = new SqlCommand("Select ID,AD From TBLPERSONEL ORDER BY AD ASC", connection);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
