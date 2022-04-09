@@ -63,7 +63,6 @@ namespace ProjeOdevim.Formlar
             richTextBox1.Text = "";
         }
         int kritik = 0;
-
         private void FProductList_Load(object sender, EventArgs e)
         {
             ProductList();

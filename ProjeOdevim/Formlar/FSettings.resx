@@ -121,9 +121,10 @@
     <value>17, 17</value>
   </metadata>
   <data name="label10.Text" xml:space="preserve">
-    <value>Departman Yetki Sınırlandırılması; İstenilen yetkileri ilgili departmana yetkilendirmek veya 
-yetkisyi almak için işaretleyiniz / işaretleri kaldırınız. Daha sonra güncellenecek
-departmanı aşağıdaki listeden seçiniz ve 'Kaydet'e basınız. </value>
+    <value>Departman Yetki Sınırlandırılması; İstenilen yetkileri ilgili departmana 
+yetkilendirmek veya  yetkisyi almak için işaretleyiniz / işaretleri kaldırınız. 
+Daha sonra güncellenecek departmanı aşağıdaki listeden seçiniz ve
+'Kaydet'e basınız. </value>
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>Veritabanı yedekleme işlemi yapılırken dikkat edilmesi gerekenler;
