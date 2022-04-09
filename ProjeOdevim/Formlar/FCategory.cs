@@ -22,7 +22,7 @@ namespace ProjeOdevim.Formlar
         {
             connection.Open();
             DataTable dataTable = new DataTable();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("Select * From TBLKATEGORI", connection);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("Select * From TBLKATEGORI ORDER BY KATEGORIADI ASC ", connection);
             sqlDataAdapter.Fill(dataTable);
             gridControl1.DataSource = dataTable;
             connection.Close();
@@ -31,7 +31,7 @@ namespace ProjeOdevim.Formlar
         {
             connection.Open ();
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * From TBLMARKA",connection);
+            SqlDataAdapter da = new SqlDataAdapter("Select * From TBLMARKA ORDER BY MARKAADI ASC ", connection);
             da.Fill (dt);
             gridControl2.DataSource = dt;
             connection.Close();

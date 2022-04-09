@@ -22,7 +22,7 @@ namespace ProjeOdevim.Formlar
         void CategoryName()
         {
             // Combobax Kategori Getir
-            SqlCommand command = new SqlCommand("Select * From TBLKATEGORI", connection);
+            SqlCommand command = new SqlCommand("Select * From TBLKATEGORI ORDER BY KATEGORIADI DESC ", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -34,7 +34,7 @@ namespace ProjeOdevim.Formlar
         void MarkaName()
         {
             // Combobax Marka Getir
-            SqlCommand command = new SqlCommand("Select * From TBLMARKA", connection);
+            SqlCommand command = new SqlCommand("Select * From TBLMARKA ORDER BY MARKAADI DESC ", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -101,29 +101,38 @@ namespace ProjeOdevim.Formlar
 
         private void BSave_Click(object sender, EventArgs e)
         {
-            if (CmbCategory.Text != "" & CmbMarka.Text != "" & TProductName.Text != "" & TBuying.Text != "" & TSales.Text != "" & NStock.Value >= 0 & TId.Text == "")
+            try
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand("insert into TBLURUN (KATEGORIID,MARKAID,URUNADI,ALISFIYAT,SATISFIYAT,STOK,ACIKLAMA)" +
-                    "  values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", connection);
-                command.Parameters.AddWithValue("@p1", CmbCategory.SelectedValue);
-                command.Parameters.AddWithValue("@p2", CmbMarka.SelectedValue);
-                command.Parameters.AddWithValue("@p3", TProductName.Text);
-                command.Parameters.AddWithValue("@p4", Decimal.Parse(TBuying.Text));
-                command.Parameters.AddWithValue("@p5", Decimal.Parse(TSales.Text));
-                command.Parameters.AddWithValue("@p6", int.Parse(NStock.Value.ToString()));
-                command.Parameters.AddWithValue("@p7", richTextBox1.Text);
-                command.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Ürün Sisteme Başarıyla Kayıt Edildi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ProductList();
-                Clear();
+                if (CmbCategory.Text != "" & CmbMarka.Text != "" & TProductName.Text != "" & TBuying.Text != "" & TSales.Text != "" & NStock.Value >= 0 & TId.Text == "")
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("insert into TBLURUN (KATEGORIID,MARKAID,URUNADI,ALISFIYAT,SATISFIYAT,STOK,ACIKLAMA)" +
+                        "  values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", connection);
+                    command.Parameters.AddWithValue("@p1", CmbCategory.SelectedValue);
+                    command.Parameters.AddWithValue("@p2", CmbMarka.SelectedValue);
+                    command.Parameters.AddWithValue("@p3", TProductName.Text);
+                    command.Parameters.AddWithValue("@p4", Decimal.Parse(TBuying.Text));
+                    command.Parameters.AddWithValue("@p5", Decimal.Parse(TSales.Text));
+                    command.Parameters.AddWithValue("@p6", int.Parse(NStock.Value.ToString()));
+                    command.Parameters.AddWithValue("@p7", richTextBox1.Text);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Ürün Sisteme Başarıyla Kayıt Edildi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ProductList();
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show(" Boş Bırakılan Alanlar Var Ya da 'ID' Alanı Dolu. \n Bu Şekilde İşlemlere Devam Edemezsiniz. \n " +
+                        " Lütfen Bilgileri Kontrol Edip Tekrar Deneyiniz.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(" Boş Bırakılan Alanlar Var Ya da 'ID' Alanı Dolu. \n Bu Şekilde İşlemlere Devam Edemezsiniz. \n " +
-                    " Lütfen Bilgileri Kontrol Edip Tekrar Deneyiniz.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBox.Show(ex.ToString());
             }
+           
         }
 
         private void BUpdate_Click(object sender, EventArgs e)

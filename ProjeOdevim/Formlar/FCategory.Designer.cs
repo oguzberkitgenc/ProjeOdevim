@@ -405,9 +405,9 @@
             this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.Location = new System.Drawing.Point(388, 397);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(63, 19);
+            this.labelControl4.Size = new System.Drawing.Size(78, 19);
             this.labelControl4.TabIndex = 49;
-            this.labelControl4.Text = "Ürün Adı :";
+            this.labelControl4.Text = "Marka  Adı :";
             // 
             // gridControl2
             // 

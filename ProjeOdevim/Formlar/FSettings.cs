@@ -251,7 +251,7 @@ namespace ProjeOdevim.Formlar
                 connection.Open();
                 SqlCommand command = new SqlCommand(cmd, connection);
                 command.ExecuteNonQuery();
-                MessageBox.Show("Yedekleme işlemi başarıyla tamamlandı", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Yedekleme işlemi başarıyla tamamlandı", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 connection.Close();
                 BBackUp.Enabled = false;
 

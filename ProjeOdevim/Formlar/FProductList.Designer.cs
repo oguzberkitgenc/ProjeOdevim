@@ -201,6 +201,7 @@
             // CmbMarka
             // 
             this.CmbMarka.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.CmbMarka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbMarka.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CmbMarka.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbMarka.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -213,6 +214,7 @@
             // CmbCategory
             // 
             this.CmbCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.CmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CmbCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbCategory.ForeColor = System.Drawing.Color.WhiteSmoke;
