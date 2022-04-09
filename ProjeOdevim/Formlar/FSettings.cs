@@ -253,12 +253,12 @@ namespace ProjeOdevim.Formlar
                     BBackUp.Enabled = false;
                 }
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
             }
-            
+
         }
 
         private void BBrowse2_Click(object sender, EventArgs e)
@@ -277,7 +277,7 @@ namespace ProjeOdevim.Formlar
         {
 
             DialogResult secenek = MessageBox.Show("Bütün veriler silinip seçtiğiniz veri yedeği yüklenecektir.\n\n Onaylıyor musunuz?", "BİLGİ", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
-            if (secenek==DialogResult.Yes)
+            if (secenek == DialogResult.Yes)
             {
                 string database = connection.Database.ToString();
                 Cursor.Current = Cursors.WaitCursor;
@@ -306,18 +306,162 @@ namespace ProjeOdevim.Formlar
 
                 }
             }
-            
+
         }
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             connection.Open();
             SqlCommand kritik = new SqlCommand("UPDATE TBLXML SET KRITIK=@X1", connection);
-            kritik.Parameters.AddWithValue("@X1",int.Parse(TKritik.Text));
+            kritik.Parameters.AddWithValue("@X1", int.Parse(TKritik.Text));
             kritik.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show(" Kritik Seviye Kayıt Edildi \n\n ", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void B3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET UC=" + T3.Text, connection);
+                faiz.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show(" Vade 3 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T3.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void B6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ALTI=" + T6.Text, connection);
+                faiz.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show(" Vade 6 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T6.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void B9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET DOKUZ=" + T9.Text, connection);
+                faiz.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show(" Vade 9 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T9.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void B12_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ONIKI=" + T12.Text, connection);
+                faiz.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show(" Vade 12 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T12.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void B15_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ONBES=" + T15.Text, connection);
+                faiz.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show(" Vade 15 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T15.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void B18_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ONSEKIZ=" + T18.Text, connection);
+                faiz.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show(" Vade 18 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T18.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void B24_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET YIRMIDORT=" + T24.Text, connection);
+                faiz.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show(" Vade 24 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T24.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void B36_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET OTUZALTI=" + T36.Text, connection);
+                faiz.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show(" Vade 36 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T36.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

@@ -59,6 +59,32 @@
             this.TPersonel = new System.Windows.Forms.TextBox();
             this.BPersonel = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
+            this.B36 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl42 = new DevExpress.XtraEditors.LabelControl();
+            this.T36 = new System.Windows.Forms.TextBox();
+            this.B24 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl41 = new DevExpress.XtraEditors.LabelControl();
+            this.T24 = new System.Windows.Forms.TextBox();
+            this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
+            this.B18 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.T18 = new System.Windows.Forms.TextBox();
+            this.B15 = new DevExpress.XtraEditors.SimpleButton();
+            this.T12 = new System.Windows.Forms.TextBox();
+            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
+            this.T15 = new System.Windows.Forms.TextBox();
+            this.B12 = new DevExpress.XtraEditors.SimpleButton();
+            this.B9 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
+            this.T9 = new System.Windows.Forms.TextBox();
+            this.B6 = new DevExpress.XtraEditors.SimpleButton();
+            this.T3 = new System.Windows.Forms.TextBox();
+            this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
+            this.T6 = new System.Windows.Forms.TextBox();
+            this.B3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
             this.TKritik = new System.Windows.Forms.TextBox();
@@ -68,8 +94,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -119,24 +145,22 @@
             this.CPersoneller = new System.Windows.Forms.CheckBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
+            this.BBackUp = new DevExpress.XtraEditors.SimpleButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.BBrows = new DevExpress.XtraEditors.SimpleButton();
             this.BRestore = new DevExpress.XtraEditors.SimpleButton();
             this.BBrowse2 = new DevExpress.XtraEditors.SimpleButton();
-            this.TRestore = new System.Windows.Forms.TextBox();
-            this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.BBackUp = new DevExpress.XtraEditors.SimpleButton();
-            this.BBrows = new DevExpress.XtraEditors.SimpleButton();
             this.TBackUp = new System.Windows.Forms.TextBox();
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
+            this.TRestore = new System.Windows.Forms.TextBox();
+            this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,7 +170,7 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(7, 14);
+            this.labelControl4.Location = new System.Drawing.Point(1, 8);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(49, 19);
             this.labelControl4.TabIndex = 97;
@@ -158,7 +182,7 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(7, 46);
+            this.labelControl1.Location = new System.Drawing.Point(1, 40);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(53, 19);
             this.labelControl1.TabIndex = 99;
@@ -170,7 +194,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(7, 78);
+            this.labelControl2.Location = new System.Drawing.Point(1, 72);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(57, 19);
             this.labelControl2.TabIndex = 101;
@@ -182,7 +206,7 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(7, 106);
+            this.labelControl3.Location = new System.Drawing.Point(1, 100);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(53, 19);
             this.labelControl3.TabIndex = 103;
@@ -194,7 +218,7 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(7, 132);
+            this.labelControl5.Location = new System.Drawing.Point(1, 126);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(57, 19);
             this.labelControl5.TabIndex = 105;
@@ -222,7 +246,7 @@
             this.BXml1.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml1.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml1.AppearancePressed.Options.UseBackColor = true;
-            this.BXml1.Location = new System.Drawing.Point(68, 14);
+            this.BXml1.Location = new System.Drawing.Point(62, 8);
             this.BXml1.Name = "BXml1";
             this.BXml1.Size = new System.Drawing.Size(126, 23);
             this.BXml1.TabIndex = 106;
@@ -232,7 +256,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(201, 17);
+            this.checkBox1.Location = new System.Drawing.Point(195, 11);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 107;
@@ -241,7 +265,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(201, 49);
+            this.checkBox2.Location = new System.Drawing.Point(195, 43);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(15, 14);
             this.checkBox2.TabIndex = 108;
@@ -250,7 +274,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(201, 77);
+            this.checkBox3.Location = new System.Drawing.Point(195, 71);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(15, 14);
             this.checkBox3.TabIndex = 109;
@@ -259,7 +283,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(201, 109);
+            this.checkBox4.Location = new System.Drawing.Point(195, 103);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(15, 14);
             this.checkBox4.TabIndex = 110;
@@ -268,7 +292,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(201, 141);
+            this.checkBox5.Location = new System.Drawing.Point(195, 135);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(15, 14);
             this.checkBox5.TabIndex = 111;
@@ -292,7 +316,7 @@
             this.BXml2.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml2.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml2.AppearancePressed.Options.UseBackColor = true;
-            this.BXml2.Location = new System.Drawing.Point(68, 43);
+            this.BXml2.Location = new System.Drawing.Point(62, 37);
             this.BXml2.Name = "BXml2";
             this.BXml2.Size = new System.Drawing.Size(126, 23);
             this.BXml2.TabIndex = 112;
@@ -317,7 +341,7 @@
             this.BXml3.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml3.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml3.AppearancePressed.Options.UseBackColor = true;
-            this.BXml3.Location = new System.Drawing.Point(68, 72);
+            this.BXml3.Location = new System.Drawing.Point(62, 66);
             this.BXml3.Name = "BXml3";
             this.BXml3.Size = new System.Drawing.Size(126, 23);
             this.BXml3.TabIndex = 113;
@@ -342,7 +366,7 @@
             this.BXml4.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml4.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml4.AppearancePressed.Options.UseBackColor = true;
-            this.BXml4.Location = new System.Drawing.Point(68, 103);
+            this.BXml4.Location = new System.Drawing.Point(62, 97);
             this.BXml4.Name = "BXml4";
             this.BXml4.Size = new System.Drawing.Size(126, 23);
             this.BXml4.TabIndex = 114;
@@ -367,7 +391,7 @@
             this.BXml5.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml5.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml5.AppearancePressed.Options.UseBackColor = true;
-            this.BXml5.Location = new System.Drawing.Point(68, 132);
+            this.BXml5.Location = new System.Drawing.Point(62, 126);
             this.BXml5.Name = "BXml5";
             this.BXml5.Size = new System.Drawing.Size(126, 23);
             this.BXml5.TabIndex = 115;
@@ -392,9 +416,9 @@
             this.BSave.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BSave.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BSave.AppearancePressed.Options.UseBackColor = true;
-            this.BSave.Location = new System.Drawing.Point(13, 212);
+            this.BSave.Location = new System.Drawing.Point(58, 183);
             this.BSave.Name = "BSave";
-            this.BSave.Size = new System.Drawing.Size(202, 23);
+            this.BSave.Size = new System.Drawing.Size(130, 29);
             this.BSave.TabIndex = 116;
             this.BSave.Text = "Kaydet";
             this.BSave.Click += new System.EventHandler(this.BSave_Click);
@@ -403,7 +427,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(222, 53);
+            this.label1.Location = new System.Drawing.Point(216, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 13);
             this.label1.TabIndex = 117;
@@ -413,7 +437,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(222, 77);
+            this.label2.Location = new System.Drawing.Point(216, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 13);
             this.label2.TabIndex = 118;
@@ -423,7 +447,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(222, 141);
+            this.label3.Location = new System.Drawing.Point(216, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 13);
             this.label3.TabIndex = 119;
@@ -433,7 +457,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(222, 109);
+            this.label4.Location = new System.Drawing.Point(216, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 13);
             this.label4.TabIndex = 120;
@@ -443,7 +467,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(222, 17);
+            this.label5.Location = new System.Drawing.Point(216, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 13);
             this.label5.TabIndex = 121;
@@ -466,7 +490,6 @@
             this.TMusteri.Name = "TMusteri";
             this.TMusteri.Size = new System.Drawing.Size(58, 26);
             this.TMusteri.TabIndex = 123;
-            this.TMusteri.Text = "1.5";
             // 
             // labelControl6
             // 
@@ -524,7 +547,6 @@
             this.TPersonel.Name = "TPersonel";
             this.TPersonel.Size = new System.Drawing.Size(58, 26);
             this.TPersonel.TabIndex = 127;
-            this.TPersonel.Text = "0.1";
             this.TPersonel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TKod_KeyPress);
             // 
             // BPersonel
@@ -557,6 +579,32 @@
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.labelControl43);
+            this.panel1.Controls.Add(this.B36);
+            this.panel1.Controls.Add(this.labelControl42);
+            this.panel1.Controls.Add(this.T36);
+            this.panel1.Controls.Add(this.B24);
+            this.panel1.Controls.Add(this.labelControl41);
+            this.panel1.Controls.Add(this.T24);
+            this.panel1.Controls.Add(this.labelControl40);
+            this.panel1.Controls.Add(this.B18);
+            this.panel1.Controls.Add(this.labelControl37);
+            this.panel1.Controls.Add(this.T18);
+            this.panel1.Controls.Add(this.B15);
+            this.panel1.Controls.Add(this.T12);
+            this.panel1.Controls.Add(this.labelControl38);
+            this.panel1.Controls.Add(this.labelControl39);
+            this.panel1.Controls.Add(this.T15);
+            this.panel1.Controls.Add(this.B12);
+            this.panel1.Controls.Add(this.B9);
+            this.panel1.Controls.Add(this.labelControl34);
+            this.panel1.Controls.Add(this.T9);
+            this.panel1.Controls.Add(this.B6);
+            this.panel1.Controls.Add(this.T3);
+            this.panel1.Controls.Add(this.labelControl35);
+            this.panel1.Controls.Add(this.labelControl36);
+            this.panel1.Controls.Add(this.T6);
+            this.panel1.Controls.Add(this.B3);
             this.panel1.Controls.Add(this.simpleButton4);
             this.panel1.Controls.Add(this.labelControl33);
             this.panel1.Controls.Add(this.TKritik);
@@ -570,8 +618,392 @@
             this.panel1.Controls.Add(this.BMusteri);
             this.panel1.Location = new System.Drawing.Point(452, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 261);
+            this.panel1.Size = new System.Drawing.Size(403, 549);
             this.panel1.TabIndex = 130;
+            // 
+            // labelControl43
+            // 
+            this.labelControl43.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl43.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl43.Appearance.Options.UseFont = true;
+            this.labelControl43.Appearance.Options.UseForeColor = true;
+            this.labelControl43.Location = new System.Drawing.Point(159, 196);
+            this.labelControl43.Name = "labelControl43";
+            this.labelControl43.Size = new System.Drawing.Size(174, 19);
+            this.labelControl43.TabIndex = 160;
+            this.labelControl43.Text = " AYLIK FAİZ ORANLARI";
+            // 
+            // B36
+            // 
+            this.B36.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B36.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B36.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B36.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.B36.Appearance.Options.UseBackColor = true;
+            this.B36.Appearance.Options.UseFont = true;
+            this.B36.Appearance.Options.UseForeColor = true;
+            this.B36.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B36.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B36.AppearanceDisabled.Options.UseBackColor = true;
+            this.B36.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B36.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B36.AppearanceHovered.Options.UseBackColor = true;
+            this.B36.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B36.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B36.AppearancePressed.Options.UseBackColor = true;
+            this.B36.Location = new System.Drawing.Point(228, 469);
+            this.B36.Name = "B36";
+            this.B36.Size = new System.Drawing.Size(130, 29);
+            this.B36.TabIndex = 159;
+            this.B36.Text = "Kaydet";
+            this.B36.Click += new System.EventHandler(this.B36_Click);
+            // 
+            // labelControl42
+            // 
+            this.labelControl42.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl42.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl42.Appearance.Options.UseFont = true;
+            this.labelControl42.Appearance.Options.UseForeColor = true;
+            this.labelControl42.Location = new System.Drawing.Point(62, 475);
+            this.labelControl42.Name = "labelControl42";
+            this.labelControl42.Size = new System.Drawing.Size(91, 19);
+            this.labelControl42.TabIndex = 158;
+            this.labelControl42.Text = "36 (Otuz Altı) :";
+            // 
+            // T36
+            // 
+            this.T36.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.T36.Location = new System.Drawing.Point(164, 472);
+            this.T36.Name = "T36";
+            this.T36.Size = new System.Drawing.Size(58, 26);
+            this.T36.TabIndex = 157;
+            // 
+            // B24
+            // 
+            this.B24.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B24.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B24.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B24.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.B24.Appearance.Options.UseBackColor = true;
+            this.B24.Appearance.Options.UseFont = true;
+            this.B24.Appearance.Options.UseForeColor = true;
+            this.B24.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B24.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B24.AppearanceDisabled.Options.UseBackColor = true;
+            this.B24.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B24.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B24.AppearanceHovered.Options.UseBackColor = true;
+            this.B24.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B24.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B24.AppearancePressed.Options.UseBackColor = true;
+            this.B24.Location = new System.Drawing.Point(228, 434);
+            this.B24.Name = "B24";
+            this.B24.Size = new System.Drawing.Size(130, 29);
+            this.B24.TabIndex = 156;
+            this.B24.Text = "Kaydet";
+            this.B24.Click += new System.EventHandler(this.B24_Click);
+            // 
+            // labelControl41
+            // 
+            this.labelControl41.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl41.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl41.Appearance.Options.UseFont = true;
+            this.labelControl41.Appearance.Options.UseForeColor = true;
+            this.labelControl41.Location = new System.Drawing.Point(51, 440);
+            this.labelControl41.Name = "labelControl41";
+            this.labelControl41.Size = new System.Drawing.Size(102, 19);
+            this.labelControl41.TabIndex = 155;
+            this.labelControl41.Text = "24 (Yirmi Dört) :";
+            // 
+            // T24
+            // 
+            this.T24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.T24.Location = new System.Drawing.Point(164, 437);
+            this.T24.Name = "T24";
+            this.T24.Size = new System.Drawing.Size(58, 26);
+            this.T24.TabIndex = 154;
+            // 
+            // labelControl40
+            // 
+            this.labelControl40.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl40.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl40.Appearance.Options.UseFont = true;
+            this.labelControl40.Appearance.Options.UseForeColor = true;
+            this.labelControl40.Location = new System.Drawing.Point(19, 196);
+            this.labelControl40.Name = "labelControl40";
+            this.labelControl40.Size = new System.Drawing.Size(134, 19);
+            this.labelControl40.TabIndex = 153;
+            this.labelControl40.Text = "TAKSİT VADELERİ";
+            // 
+            // B18
+            // 
+            this.B18.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B18.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B18.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B18.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.B18.Appearance.Options.UseBackColor = true;
+            this.B18.Appearance.Options.UseFont = true;
+            this.B18.Appearance.Options.UseForeColor = true;
+            this.B18.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B18.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B18.AppearanceDisabled.Options.UseBackColor = true;
+            this.B18.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B18.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B18.AppearanceHovered.Options.UseBackColor = true;
+            this.B18.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B18.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B18.AppearancePressed.Options.UseBackColor = true;
+            this.B18.Location = new System.Drawing.Point(228, 399);
+            this.B18.Name = "B18";
+            this.B18.Size = new System.Drawing.Size(130, 29);
+            this.B18.TabIndex = 152;
+            this.B18.Text = "Kaydet";
+            this.B18.Click += new System.EventHandler(this.B18_Click);
+            // 
+            // labelControl37
+            // 
+            this.labelControl37.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl37.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl37.Appearance.Options.UseFont = true;
+            this.labelControl37.Appearance.Options.UseForeColor = true;
+            this.labelControl37.Location = new System.Drawing.Point(67, 407);
+            this.labelControl37.Name = "labelControl37";
+            this.labelControl37.Size = new System.Drawing.Size(86, 19);
+            this.labelControl37.TabIndex = 151;
+            this.labelControl37.Text = "18 (Onsekiz) :";
+            // 
+            // T18
+            // 
+            this.T18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.T18.Location = new System.Drawing.Point(164, 402);
+            this.T18.Name = "T18";
+            this.T18.Size = new System.Drawing.Size(58, 26);
+            this.T18.TabIndex = 150;
+            // 
+            // B15
+            // 
+            this.B15.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B15.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B15.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B15.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.B15.Appearance.Options.UseBackColor = true;
+            this.B15.Appearance.Options.UseFont = true;
+            this.B15.Appearance.Options.UseForeColor = true;
+            this.B15.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B15.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B15.AppearanceDisabled.Options.UseBackColor = true;
+            this.B15.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B15.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B15.AppearanceHovered.Options.UseBackColor = true;
+            this.B15.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B15.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B15.AppearancePressed.Options.UseBackColor = true;
+            this.B15.Location = new System.Drawing.Point(228, 365);
+            this.B15.Name = "B15";
+            this.B15.Size = new System.Drawing.Size(130, 29);
+            this.B15.TabIndex = 149;
+            this.B15.Text = "Kaydet";
+            this.B15.Click += new System.EventHandler(this.B15_Click);
+            // 
+            // T12
+            // 
+            this.T12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.T12.Location = new System.Drawing.Point(164, 332);
+            this.T12.Name = "T12";
+            this.T12.Size = new System.Drawing.Size(58, 26);
+            this.T12.TabIndex = 144;
+            // 
+            // labelControl38
+            // 
+            this.labelControl38.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl38.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl38.Appearance.Options.UseFont = true;
+            this.labelControl38.Appearance.Options.UseForeColor = true;
+            this.labelControl38.Location = new System.Drawing.Point(76, 372);
+            this.labelControl38.Name = "labelControl38";
+            this.labelControl38.Size = new System.Drawing.Size(77, 19);
+            this.labelControl38.TabIndex = 148;
+            this.labelControl38.Text = "15 (Onbeş) :";
+            // 
+            // labelControl39
+            // 
+            this.labelControl39.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl39.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl39.Appearance.Options.UseFont = true;
+            this.labelControl39.Appearance.Options.UseForeColor = true;
+            this.labelControl39.Location = new System.Drawing.Point(83, 334);
+            this.labelControl39.Name = "labelControl39";
+            this.labelControl39.Size = new System.Drawing.Size(70, 19);
+            this.labelControl39.TabIndex = 145;
+            this.labelControl39.Text = "12 (Oniki) :";
+            // 
+            // T15
+            // 
+            this.T15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.T15.Location = new System.Drawing.Point(164, 368);
+            this.T15.Name = "T15";
+            this.T15.Size = new System.Drawing.Size(58, 26);
+            this.T15.TabIndex = 147;
+            // 
+            // B12
+            // 
+            this.B12.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B12.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B12.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B12.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.B12.Appearance.Options.UseBackColor = true;
+            this.B12.Appearance.Options.UseFont = true;
+            this.B12.Appearance.Options.UseForeColor = true;
+            this.B12.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B12.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B12.AppearanceDisabled.Options.UseBackColor = true;
+            this.B12.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B12.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B12.AppearanceHovered.Options.UseBackColor = true;
+            this.B12.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B12.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B12.AppearancePressed.Options.UseBackColor = true;
+            this.B12.Location = new System.Drawing.Point(228, 329);
+            this.B12.Name = "B12";
+            this.B12.Size = new System.Drawing.Size(130, 29);
+            this.B12.TabIndex = 146;
+            this.B12.Text = "Kaydet";
+            this.B12.Click += new System.EventHandler(this.B12_Click);
+            // 
+            // B9
+            // 
+            this.B9.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B9.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B9.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B9.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.B9.Appearance.Options.UseBackColor = true;
+            this.B9.Appearance.Options.UseFont = true;
+            this.B9.Appearance.Options.UseForeColor = true;
+            this.B9.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B9.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B9.AppearanceDisabled.Options.UseBackColor = true;
+            this.B9.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B9.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B9.AppearanceHovered.Options.UseBackColor = true;
+            this.B9.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B9.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B9.AppearancePressed.Options.UseBackColor = true;
+            this.B9.Location = new System.Drawing.Point(228, 294);
+            this.B9.Name = "B9";
+            this.B9.Size = new System.Drawing.Size(130, 29);
+            this.B9.TabIndex = 143;
+            this.B9.Text = "Kaydet";
+            this.B9.Click += new System.EventHandler(this.B9_Click);
+            // 
+            // labelControl34
+            // 
+            this.labelControl34.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl34.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl34.Appearance.Options.UseFont = true;
+            this.labelControl34.Appearance.Options.UseForeColor = true;
+            this.labelControl34.Location = new System.Drawing.Point(84, 299);
+            this.labelControl34.Name = "labelControl34";
+            this.labelControl34.Size = new System.Drawing.Size(69, 19);
+            this.labelControl34.TabIndex = 142;
+            this.labelControl34.Text = "9 (Dokuz) :";
+            // 
+            // T9
+            // 
+            this.T9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.T9.Location = new System.Drawing.Point(164, 297);
+            this.T9.Name = "T9";
+            this.T9.Size = new System.Drawing.Size(58, 26);
+            this.T9.TabIndex = 141;
+            // 
+            // B6
+            // 
+            this.B6.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B6.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B6.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B6.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.B6.Appearance.Options.UseBackColor = true;
+            this.B6.Appearance.Options.UseFont = true;
+            this.B6.Appearance.Options.UseForeColor = true;
+            this.B6.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B6.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B6.AppearanceDisabled.Options.UseBackColor = true;
+            this.B6.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B6.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B6.AppearanceHovered.Options.UseBackColor = true;
+            this.B6.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B6.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B6.AppearancePressed.Options.UseBackColor = true;
+            this.B6.Location = new System.Drawing.Point(228, 260);
+            this.B6.Name = "B6";
+            this.B6.Size = new System.Drawing.Size(130, 29);
+            this.B6.TabIndex = 140;
+            this.B6.Text = "Kaydet";
+            this.B6.Click += new System.EventHandler(this.B6_Click);
+            // 
+            // T3
+            // 
+            this.T3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.T3.Location = new System.Drawing.Point(164, 227);
+            this.T3.Name = "T3";
+            this.T3.Size = new System.Drawing.Size(58, 26);
+            this.T3.TabIndex = 135;
+            // 
+            // labelControl35
+            // 
+            this.labelControl35.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl35.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl35.Appearance.Options.UseFont = true;
+            this.labelControl35.Appearance.Options.UseForeColor = true;
+            this.labelControl35.Location = new System.Drawing.Point(103, 267);
+            this.labelControl35.Name = "labelControl35";
+            this.labelControl35.Size = new System.Drawing.Size(50, 19);
+            this.labelControl35.TabIndex = 139;
+            this.labelControl35.Text = "6 (Altı) :";
+            // 
+            // labelControl36
+            // 
+            this.labelControl36.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl36.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl36.Appearance.Options.UseFont = true;
+            this.labelControl36.Appearance.Options.UseForeColor = true;
+            this.labelControl36.Location = new System.Drawing.Point(106, 230);
+            this.labelControl36.Name = "labelControl36";
+            this.labelControl36.Size = new System.Drawing.Size(47, 19);
+            this.labelControl36.TabIndex = 136;
+            this.labelControl36.Text = "3 (Üç) :";
+            // 
+            // T6
+            // 
+            this.T6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.T6.Location = new System.Drawing.Point(164, 263);
+            this.T6.Name = "T6";
+            this.T6.Size = new System.Drawing.Size(58, 26);
+            this.T6.TabIndex = 138;
+            // 
+            // B3
+            // 
+            this.B3.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B3.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B3.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.B3.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.B3.Appearance.Options.UseBackColor = true;
+            this.B3.Appearance.Options.UseFont = true;
+            this.B3.Appearance.Options.UseForeColor = true;
+            this.B3.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B3.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B3.AppearanceDisabled.Options.UseBackColor = true;
+            this.B3.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B3.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B3.AppearanceHovered.Options.UseBackColor = true;
+            this.B3.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.B3.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.B3.AppearancePressed.Options.UseBackColor = true;
+            this.B3.Location = new System.Drawing.Point(228, 224);
+            this.B3.Name = "B3";
+            this.B3.Size = new System.Drawing.Size(130, 29);
+            this.B3.TabIndex = 137;
+            this.B3.Text = "Kaydet";
+            this.B3.Click += new System.EventHandler(this.B3_Click);
             // 
             // simpleButton4
             // 
@@ -617,7 +1049,6 @@
             this.TKritik.Name = "TKritik";
             this.TKritik.Size = new System.Drawing.Size(58, 26);
             this.TKritik.TabIndex = 132;
-            this.TKritik.Text = "5";
             // 
             // label7
             // 
@@ -648,8 +1079,8 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.labelControl8);
             this.panel2.Controls.Add(this.simpleButton1);
-            this.panel2.Controls.Add(this.checkBox6);
             this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.checkBox6);
             this.panel2.Controls.Add(this.BSave);
             this.panel2.Controls.Add(this.labelControl4);
             this.panel2.Controls.Add(this.labelControl1);
@@ -671,16 +1102,16 @@
             this.panel2.Controls.Add(this.BXml3);
             this.panel2.Controls.Add(this.checkBox5);
             this.panel2.Controls.Add(this.BXml2);
-            this.panel2.Location = new System.Drawing.Point(452, 278);
+            this.panel2.Location = new System.Drawing.Point(18, 364);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(403, 282);
+            this.panel2.Size = new System.Drawing.Size(625, 219);
             this.panel2.TabIndex = 131;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.DarkRed;
-            this.label9.Location = new System.Drawing.Point(222, 170);
+            this.label9.Location = new System.Drawing.Point(216, 164);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(142, 13);
             this.label9.TabIndex = 135;
@@ -692,7 +1123,7 @@
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(7, 161);
+            this.labelControl8.Location = new System.Drawing.Point(1, 155);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(57, 19);
             this.labelControl8.TabIndex = 132;
@@ -716,33 +1147,33 @@
             this.simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.simpleButton1.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.simpleButton1.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton1.Location = new System.Drawing.Point(68, 161);
+            this.simpleButton1.Location = new System.Drawing.Point(62, 155);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(126, 23);
             this.simpleButton1.TabIndex = 134;
             this.simpleButton1.Text = "Seç";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(201, 170);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 133;
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.DarkRed;
-            this.label8.Location = new System.Drawing.Point(9, 239);
+            this.label8.Location = new System.Drawing.Point(420, 152);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(367, 26);
+            this.label8.Size = new System.Drawing.Size(198, 52);
             this.label8.TabIndex = 131;
-            this.label8.Text = "Bu kısım yazılımın ilk kurulumunda yapılması gereken ayarlardır. \r\nLütfen İhtiyaç" +
-    " Halinde Dağıtıcı Kişi İle İletişime Geçiniz. ";
+            this.label8.Text = "Bu kısım yazılımın ilk kurulumunda\r\n yapılması gereken ayarlardır. \r\nLütfen İhtiy" +
+    "aç Halinde Dağıtıcı\r\nİle İletişime Geçiniz. ";
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(195, 164);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(15, 14);
+            this.checkBox6.TabIndex = 133;
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -1331,13 +1762,11 @@
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.panel2);
             this.panel4.Location = new System.Drawing.Point(861, 11);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(650, 549);
+            this.panel4.Size = new System.Drawing.Size(650, 595);
             this.panel4.TabIndex = 133;
             // 
             // label13
@@ -1351,41 +1780,25 @@
             this.label13.TabIndex = 133;
             this.label13.Text = resources.GetString("label13.Text");
             // 
-            // label12
+            // panel5
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(363, 293);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(281, 25);
-            this.label12.TabIndex = 132;
-            this.label12.Text = "Veri Tabanı Yedekten Yükle";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(456, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(188, 24);
-            this.label11.TabIndex = 131;
-            this.label11.Text = "Veri Tabanı Yedek Al";
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.labelControl32);
-            this.panel6.Controls.Add(this.BRestore);
-            this.panel6.Controls.Add(this.BBrowse2);
-            this.panel6.Controls.Add(this.TRestore);
-            this.panel6.Controls.Add(this.labelControl31);
-            this.panel6.Location = new System.Drawing.Point(18, 325);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(632, 167);
-            this.panel6.TabIndex = 1;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.labelControl32);
+            this.panel5.Controls.Add(this.BBackUp);
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.BBrows);
+            this.panel5.Controls.Add(this.BRestore);
+            this.panel5.Controls.Add(this.BBrowse2);
+            this.panel5.Controls.Add(this.TBackUp);
+            this.panel5.Controls.Add(this.labelControl30);
+            this.panel5.Controls.Add(this.TRestore);
+            this.panel5.Controls.Add(this.labelControl31);
+            this.panel5.Location = new System.Drawing.Point(15, 109);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(632, 249);
+            this.panel5.TabIndex = 0;
             // 
             // labelControl32
             // 
@@ -1393,11 +1806,83 @@
             this.labelControl32.Appearance.ForeColor = System.Drawing.Color.DarkRed;
             this.labelControl32.Appearance.Options.UseFont = true;
             this.labelControl32.Appearance.Options.UseForeColor = true;
-            this.labelControl32.Location = new System.Drawing.Point(10, 72);
+            this.labelControl32.Location = new System.Drawing.Point(186, 218);
             this.labelControl32.Name = "labelControl32";
             this.labelControl32.Size = new System.Drawing.Size(333, 19);
             this.labelControl32.TabIndex = 133;
             this.labelControl32.Text = "Yükleme tamamlandıktan sonra program kapatılacaktır.";
+            // 
+            // BBackUp
+            // 
+            this.BBackUp.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBackUp.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BBackUp.Appearance.Options.UseBackColor = true;
+            this.BBackUp.Appearance.Options.UseFont = true;
+            this.BBackUp.Appearance.Options.UseForeColor = true;
+            this.BBackUp.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearanceDisabled.Options.UseBackColor = true;
+            this.BBackUp.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearanceHovered.Options.UseBackColor = true;
+            this.BBackUp.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBackUp.AppearancePressed.Options.UseBackColor = true;
+            this.BBackUp.Location = new System.Drawing.Point(524, 67);
+            this.BBackUp.Name = "BBackUp";
+            this.BBackUp.Size = new System.Drawing.Size(106, 54);
+            this.BBackUp.TabIndex = 128;
+            this.BBackUp.Text = "Yedek Al";
+            this.BBackUp.Click += new System.EventHandler(this.BBackUp_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(440, 6);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(188, 24);
+            this.label11.TabIndex = 131;
+            this.label11.Text = "Veri Tabanı Yedek Al";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(346, 125);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(281, 25);
+            this.label12.TabIndex = 132;
+            this.label12.Text = "Veri Tabanı Yedekten Yükle";
+            // 
+            // BBrows
+            // 
+            this.BBrows.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BBrows.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BBrows.Appearance.Options.UseBackColor = true;
+            this.BBrows.Appearance.Options.UseFont = true;
+            this.BBrows.Appearance.Options.UseForeColor = true;
+            this.BBrows.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearanceDisabled.Options.UseBackColor = true;
+            this.BBrows.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearanceHovered.Options.UseBackColor = true;
+            this.BBrows.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BBrows.AppearancePressed.Options.UseBackColor = true;
+            this.BBrows.Location = new System.Drawing.Point(524, 33);
+            this.BBrows.Name = "BBrows";
+            this.BBrows.Size = new System.Drawing.Size(106, 29);
+            this.BBrows.TabIndex = 127;
+            this.BBrows.Text = "Konum Seç";
+            this.BBrows.Click += new System.EventHandler(this.BBrows_Click);
             // 
             // BRestore
             // 
@@ -1417,7 +1902,7 @@
             this.BRestore.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BRestore.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BRestore.AppearancePressed.Options.UseBackColor = true;
-            this.BRestore.Location = new System.Drawing.Point(520, 70);
+            this.BRestore.Location = new System.Drawing.Point(522, 186);
             this.BRestore.Name = "BRestore";
             this.BRestore.Size = new System.Drawing.Size(106, 54);
             this.BRestore.TabIndex = 132;
@@ -1442,100 +1927,17 @@
             this.BBrowse2.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BBrowse2.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BBrowse2.AppearancePressed.Options.UseBackColor = true;
-            this.BBrowse2.Location = new System.Drawing.Point(520, 36);
+            this.BBrowse2.Location = new System.Drawing.Point(522, 152);
             this.BBrowse2.Name = "BBrowse2";
             this.BBrowse2.Size = new System.Drawing.Size(106, 29);
             this.BBrowse2.TabIndex = 131;
             this.BBrowse2.Text = "Konum Seç";
             this.BBrowse2.Click += new System.EventHandler(this.BBrowse2_Click);
             // 
-            // TRestore
-            // 
-            this.TRestore.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TRestore.Location = new System.Drawing.Point(10, 40);
-            this.TRestore.Name = "TRestore";
-            this.TRestore.Size = new System.Drawing.Size(507, 26);
-            this.TRestore.TabIndex = 130;
-            // 
-            // labelControl31
-            // 
-            this.labelControl31.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl31.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl31.Appearance.Options.UseFont = true;
-            this.labelControl31.Appearance.Options.UseForeColor = true;
-            this.labelControl31.Location = new System.Drawing.Point(10, 15);
-            this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(170, 19);
-            this.labelControl31.TabIndex = 129;
-            this.labelControl31.Text = "Konumdaki Dosyayı Seçiniz";
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.BBackUp);
-            this.panel5.Controls.Add(this.BBrows);
-            this.panel5.Controls.Add(this.TBackUp);
-            this.panel5.Controls.Add(this.labelControl30);
-            this.panel5.Location = new System.Drawing.Point(15, 109);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(632, 153);
-            this.panel5.TabIndex = 0;
-            // 
-            // BBackUp
-            // 
-            this.BBackUp.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BBackUp.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.BBackUp.Appearance.Options.UseBackColor = true;
-            this.BBackUp.Appearance.Options.UseFont = true;
-            this.BBackUp.Appearance.Options.UseForeColor = true;
-            this.BBackUp.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearanceDisabled.Options.UseBackColor = true;
-            this.BBackUp.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearanceHovered.Options.UseBackColor = true;
-            this.BBackUp.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBackUp.AppearancePressed.Options.UseBackColor = true;
-            this.BBackUp.Location = new System.Drawing.Point(523, 57);
-            this.BBackUp.Name = "BBackUp";
-            this.BBackUp.Size = new System.Drawing.Size(106, 54);
-            this.BBackUp.TabIndex = 128;
-            this.BBackUp.Text = "Yedek Al";
-            this.BBackUp.Click += new System.EventHandler(this.BBackUp_Click);
-            // 
-            // BBrows
-            // 
-            this.BBrows.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BBrows.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.BBrows.Appearance.Options.UseBackColor = true;
-            this.BBrows.Appearance.Options.UseFont = true;
-            this.BBrows.Appearance.Options.UseForeColor = true;
-            this.BBrows.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearanceDisabled.Options.UseBackColor = true;
-            this.BBrows.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearanceHovered.Options.UseBackColor = true;
-            this.BBrows.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BBrows.AppearancePressed.Options.UseBackColor = true;
-            this.BBrows.Location = new System.Drawing.Point(523, 23);
-            this.BBrows.Name = "BBrows";
-            this.BBrows.Size = new System.Drawing.Size(106, 29);
-            this.BBrows.TabIndex = 127;
-            this.BBrows.Text = "Konum Seç";
-            this.BBrows.Click += new System.EventHandler(this.BBrows_Click);
-            // 
             // TBackUp
             // 
             this.TBackUp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TBackUp.Location = new System.Drawing.Point(13, 27);
+            this.TBackUp.Location = new System.Drawing.Point(14, 37);
             this.TBackUp.Name = "TBackUp";
             this.TBackUp.Size = new System.Drawing.Size(507, 26);
             this.TBackUp.TabIndex = 124;
@@ -1552,6 +1954,26 @@
             this.labelControl30.TabIndex = 98;
             this.labelControl30.Text = "Kayıt Edilecek Konumu Seçiniz";
             // 
+            // TRestore
+            // 
+            this.TRestore.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TRestore.Location = new System.Drawing.Point(12, 156);
+            this.TRestore.Name = "TRestore";
+            this.TRestore.Size = new System.Drawing.Size(507, 26);
+            this.TRestore.TabIndex = 130;
+            // 
+            // labelControl31
+            // 
+            this.labelControl31.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl31.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl31.Appearance.Options.UseFont = true;
+            this.labelControl31.Appearance.Options.UseForeColor = true;
+            this.labelControl31.Location = new System.Drawing.Point(12, 131);
+            this.labelControl31.Name = "labelControl31";
+            this.labelControl31.Size = new System.Drawing.Size(170, 19);
+            this.labelControl31.TabIndex = 129;
+            this.labelControl31.Text = "Konumdaki Dosyayı Seçiniz";
+            // 
             // FSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1560,7 +1982,6 @@
             this.ClientSize = new System.Drawing.Size(1523, 618);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TKod);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1575,8 +1996,6 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -1619,7 +2038,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
@@ -1672,7 +2090,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel6;
         private DevExpress.XtraEditors.SimpleButton BRestore;
         private DevExpress.XtraEditors.SimpleButton BBrowse2;
         private System.Windows.Forms.TextBox TRestore;
@@ -1689,5 +2106,32 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.LabelControl labelControl33;
         private System.Windows.Forms.TextBox TKritik;
+        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.SimpleButton B36;
+        private DevExpress.XtraEditors.LabelControl labelControl42;
+        private System.Windows.Forms.TextBox T36;
+        private DevExpress.XtraEditors.SimpleButton B24;
+        private DevExpress.XtraEditors.LabelControl labelControl41;
+        private System.Windows.Forms.TextBox T24;
+        private DevExpress.XtraEditors.LabelControl labelControl40;
+        private DevExpress.XtraEditors.SimpleButton B18;
+        private DevExpress.XtraEditors.LabelControl labelControl37;
+        private System.Windows.Forms.TextBox T18;
+        private DevExpress.XtraEditors.SimpleButton B15;
+        private System.Windows.Forms.TextBox T12;
+        private DevExpress.XtraEditors.LabelControl labelControl38;
+        private DevExpress.XtraEditors.LabelControl labelControl39;
+        private System.Windows.Forms.TextBox T15;
+        private DevExpress.XtraEditors.SimpleButton B12;
+        private DevExpress.XtraEditors.SimpleButton B9;
+        private DevExpress.XtraEditors.LabelControl labelControl34;
+        private System.Windows.Forms.TextBox T9;
+        private DevExpress.XtraEditors.SimpleButton B6;
+        private System.Windows.Forms.TextBox T3;
+        private DevExpress.XtraEditors.LabelControl labelControl35;
+        private DevExpress.XtraEditors.LabelControl labelControl36;
+        private System.Windows.Forms.TextBox T6;
+        private DevExpress.XtraEditors.SimpleButton B3;
+        private DevExpress.XtraEditors.LabelControl labelControl43;
     }
 }
