@@ -125,4 +125,12 @@
 yetkisyi almak için işaretleyiniz / işaretleri kaldırınız. Daha sonra güncellenecek
 departmanı aşağıdaki listeden seçiniz ve 'Kaydet'e basınız. </value>
   </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Veritabanı yedekleme işlemi yapılırken dikkat edilmesi gerekenler;
+1- Tercihen günde max 1 yedek almanız önerilir.
+2- Alan kaplamaması için her haftanın sadece son günü hariç bütün log
+dosyalarını silmeniz tavsiye olunur. Böylece veriler haftalık olarak
+yedeklenmiş olur.
+3-Tercihen aylık olarakta tutabilirsiniz.</value>
+  </data>
 </root>

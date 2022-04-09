@@ -131,7 +131,7 @@ namespace ProjeOdevim.Formlar
             while (reader.Read())
             {
                 CAnaSayfa.Checked = Convert.ToBoolean(reader[2]);
-                CUrunSatis.Checked= Convert.ToBoolean(reader[3]);
+                CUrunSatis.Checked = Convert.ToBoolean(reader[3]);
                 CKrediSorgula.Checked = Convert.ToBoolean(reader[4]);
                 CDuyrular.Checked = Convert.ToBoolean(reader[5]);
                 CPersoneller.Checked = Convert.ToBoolean(reader[6]);
@@ -225,6 +225,85 @@ namespace ProjeOdevim.Formlar
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             YetkiGetir();
+        }
+
+        private void BBrows_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dlg = new FolderBrowserDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                TBackUp.Text = dlg.SelectedPath;
+                BBackUp.Enabled = true;
+
+            }
+        }
+
+        private void BBackUp_Click(object sender, EventArgs e)
+        {
+            string database = connection.Database.ToString();
+            if (TBackUp.Text == string.Empty)
+            {
+                MessageBox.Show("Lütfen yedekleme dosyasının konumunu seçin", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            else
+            {
+                string cmd = "BACKUP DATABASE [" + database + "] TO DISK= '" + TBackUp.Text + "\\" + "database" + "-" + DateTime.Now.ToString("yyyy-MM-dd--HH-mm-ss") + ".bak'";
+                connection.Open();
+                SqlCommand command = new SqlCommand(cmd, connection);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Yedekleme işlemi başarıyla tamamlandı", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                connection.Close();
+                BBackUp.Enabled = false;
+
+            }
+        }
+
+        private void BBrowse2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "Veri tabanı dosyası|*.bak";
+            dlg.Title = "Restorasyon";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                TRestore.Text = dlg.FileName;
+                BRestore.Enabled = true;
+            }
+        }
+
+        private void BRestore_Click(object sender, EventArgs e)
+        {
+
+            DialogResult secenek = MessageBox.Show("Bütün veriler silinip seçtiğiniz veri yedeği yüklenecektir.\n\n Onaylıyor musunuz?", "BİLGİ", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
+            if (secenek==DialogResult.Yes)
+            {
+                string database = connection.Database.ToString();
+                Cursor.Current = Cursors.WaitCursor;
+                connection.Open();
+                try
+                {
+                    string str1 = string.Format("ALTER DATABASE [" + database + "] SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
+                    SqlCommand cmd1 = new SqlCommand(str1, connection);
+                    cmd1.ExecuteNonQuery();
+
+                    string str2 = "USE MASTER RESTORE DATABASE [" + database + "] FROM DISK ='" + TRestore.Text + "' WITH REPLACE;";
+                    SqlCommand cmd2 = new SqlCommand(str2, connection);
+                    cmd2.ExecuteNonQuery();
+
+                    string str3 = string.Format("ALTER DATABASE [" + database + "] SET MULTI_USER");
+                    SqlCommand cmd3 = new SqlCommand(str3, connection);
+                    cmd3.ExecuteNonQuery();
+
+                    MessageBox.Show(" Başarıyla Kayıt Edildi \n\n Programdan çıkış yapılıyor...", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    connection.Close();
+                    Cursor.Current = Cursors.Default;
+                }
+                catch
+                {
+
+
+                }
+            }
+            
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
