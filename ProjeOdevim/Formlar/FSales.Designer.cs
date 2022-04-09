@@ -63,6 +63,10 @@
             this.B15 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Rch = new System.Windows.Forms.RichTextBox();
+            this.ChYazdirma = new System.Windows.Forms.CheckBox();
+            this.ChTaksit = new System.Windows.Forms.CheckBox();
+            this.LTaksit = new System.Windows.Forms.Label();
+            this.CmbTaksit = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -699,6 +703,7 @@
             // 
             // CmbCustomer
             // 
+            this.CmbCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCustomer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbCustomer.FormattingEnabled = true;
             this.CmbCustomer.Location = new System.Drawing.Point(1289, 499);
@@ -711,7 +716,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(1169, 505);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 19);
@@ -796,6 +801,7 @@
             // 
             // CmbEmploye
             // 
+            this.CmbEmploye.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbEmploye.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbEmploye.FormattingEnabled = true;
             this.CmbEmploye.Location = new System.Drawing.Point(1289, 530);
@@ -808,7 +814,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(1159, 536);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 19);
@@ -873,12 +879,73 @@
             this.Rch.TabIndex = 123;
             this.Rch.Text = "";
             // 
+            // ChYazdirma
+            // 
+            this.ChYazdirma.AutoSize = true;
+            this.ChYazdirma.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ChYazdirma.ForeColor = System.Drawing.Color.Black;
+            this.ChYazdirma.Location = new System.Drawing.Point(502, 592);
+            this.ChYazdirma.Name = "ChYazdirma";
+            this.ChYazdirma.Size = new System.Drawing.Size(157, 23);
+            this.ChYazdirma.TabIndex = 124;
+            this.ChYazdirma.Text = "Yazdırma Durumu";
+            this.ChYazdirma.UseVisualStyleBackColor = true;
+            // 
+            // ChTaksit
+            // 
+            this.ChTaksit.AutoSize = true;
+            this.ChTaksit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ChTaksit.ForeColor = System.Drawing.Color.Black;
+            this.ChTaksit.Location = new System.Drawing.Point(1163, 574);
+            this.ChTaksit.Name = "ChTaksit";
+            this.ChTaksit.Size = new System.Drawing.Size(116, 24);
+            this.ChTaksit.TabIndex = 125;
+            this.ChTaksit.Text = "Taksitli Satış";
+            this.ChTaksit.UseVisualStyleBackColor = true;
+            this.ChTaksit.CheckedChanged += new System.EventHandler(this.ChTaksit_CheckedChanged);
+            // 
+            // LTaksit
+            // 
+            this.LTaksit.AutoSize = true;
+            this.LTaksit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LTaksit.ForeColor = System.Drawing.Color.Black;
+            this.LTaksit.Location = new System.Drawing.Point(859, 578);
+            this.LTaksit.Name = "LTaksit";
+            this.LTaksit.Size = new System.Drawing.Size(96, 19);
+            this.LTaksit.TabIndex = 127;
+            this.LTaksit.Text = "Taksit Sayısı";
+            this.LTaksit.Visible = false;
+            // 
+            // CmbTaksit
+            // 
+            this.CmbTaksit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbTaksit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CmbTaksit.FormattingEnabled = true;
+            this.CmbTaksit.Items.AddRange(new object[] {
+            "3",
+            "6",
+            "9",
+            "12",
+            "15",
+            "18",
+            "24",
+            "36"});
+            this.CmbTaksit.Location = new System.Drawing.Point(961, 571);
+            this.CmbTaksit.Name = "CmbTaksit";
+            this.CmbTaksit.Size = new System.Drawing.Size(196, 27);
+            this.CmbTaksit.TabIndex = 128;
+            this.CmbTaksit.Visible = false;
+            // 
             // FSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.CmbTaksit);
+            this.Controls.Add(this.LTaksit);
+            this.Controls.Add(this.ChTaksit);
+            this.Controls.Add(this.ChYazdirma);
             this.Controls.Add(this.Rch);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.B15);
@@ -959,5 +1026,9 @@
         private DevExpress.XtraEditors.SimpleButton B15;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox Rch;
+        private System.Windows.Forms.CheckBox ChYazdirma;
+        private System.Windows.Forms.CheckBox ChTaksit;
+        private System.Windows.Forms.Label LTaksit;
+        private System.Windows.Forms.ComboBox CmbTaksit;
     }
 }

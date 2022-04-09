@@ -21,6 +21,8 @@ namespace ProjeOdevim.Formlar
         DataTable dt1 = new DataTable();
         public string id, kategori, marka, urunadi;
         public decimal alisfiyati = 0, satisfiyatı = 0, indirimorani = 0;
+        DateTime date = DateTime.Now;
+
         void Product2()
         {
             connection.Open();
@@ -61,8 +63,8 @@ namespace ProjeOdevim.Formlar
                 LIslemNo.Text = dr[0].ToString();
             }
             connection.Close();
-            DateTime date = DateTime.Now;
             LTarih.Text = date.ToString("MM/dd/yyyy HH:mm");
+
         }
         void CustomerList()
         {
@@ -88,19 +90,23 @@ namespace ProjeOdevim.Formlar
             CmbEmploye.DataSource = dt;
             connection.Close();
         }
-        void PuanAddEmploye()
+        void Yazdirma()
         {
-
-        }
-        void KrediAddCustomer()
-        {
-
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("Select YAZDIR From TBLXML", connection);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                ChYazdirma.Checked = Convert.ToBoolean(dr[0]);
+            }
+            connection.Close();
         }
         private void FSales_Load(object sender, EventArgs e)
         {
             Employee();
             IslemNo();
             ProductList();
+            Yazdirma();
             CustomerList();
             OranGetir();
             Total.Focus();
@@ -226,7 +232,7 @@ namespace ProjeOdevim.Formlar
         void OranGetir()
         {
             connection.Open();
-            SqlCommand komut = new SqlCommand("Select KMUSTERI,KPERSONEL From TBLKREDI",connection);
+            SqlCommand komut = new SqlCommand("Select KMUSTERI,KPERSONEL From TBLKREDI", connection);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
             {
@@ -295,6 +301,20 @@ namespace ProjeOdevim.Formlar
                 urunadi = dr["ÜRÜN ADI"].ToString();
                 alisfiyati = Convert.ToDecimal(dr["ALIŞ FİYATI"]);
                 satisfiyatı = Convert.ToDecimal(dr["SATIŞ FİYATI"]);
+            }
+        }
+
+        private void ChTaksit_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChTaksit.Checked == true)
+            {
+                LTaksit.Visible = true;
+                CmbTaksit.Visible = true;
+            }
+            else
+            {
+                LTaksit.Visible = false;
+                CmbTaksit.Visible = false;
             }
         }
 
@@ -418,6 +438,26 @@ namespace ProjeOdevim.Formlar
                 Product2();
             }
         }
+        void Taksitle()
+        {
+            int vadefaizi = 3;
+            date.ToString("MM/dd/yyyy HH:mm");
+            int taksitsayisi = int.Parse(CmbTaksit.Text);
+            decimal hesaplabakalim = (satisfiyatı / taksitsayisi) / 100 * vadefaizi;
+            decimal toplam = (satisfiyatı / taksitsayisi) + hesaplabakalim;
+            for (int i = 1; i <= taksitsayisi; i++)
+            {
+                connection.Open();
+                SqlCommand sql = new SqlCommand("insert into TBLTAKSITLER (MUSTERIT,TARIH,KACINCITAKSIT,TAKSITTUTARI,PERSONELT) values (@P1,@P2,@P3,@P4,@P5)", connection);
+                sql.Parameters.AddWithValue("P1", CmbCustomer.SelectedValue);
+                sql.Parameters.AddWithValue("P2", Convert.ToDateTime(date));
+                sql.Parameters.AddWithValue("P3", i);
+                sql.Parameters.AddWithValue("P4", toplam);
+                sql.Parameters.AddWithValue("P5", CmbEmploye.SelectedValue);
+                sql.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
         private void BSatis_Click(object sender, EventArgs e)
         {
             if (gridView2.DataRowCount >= 1)
@@ -435,25 +475,22 @@ namespace ProjeOdevim.Formlar
                         IndirimsizsizSatis();
                     }
                 }
-
-
-
+                if (ChTaksit.Checked == true)
+                {
+                    Taksitle();
+                }
                 connection.Open();
                 SqlCommand komut = new SqlCommand("UPDATE TBLPERSONEL SET PUAN=PUAN+@P1 WHERE ID=@P2 ", connection);
                 komut.Parameters.AddWithValue("@P1", hesapla / 1000 * personelkredi);
                 komut.Parameters.AddWithValue("@P2", CmbEmploye.SelectedValue);
                 komut.ExecuteNonQuery();
                 connection.Close();
-
                 connection.Open();
                 SqlCommand komut2 = new SqlCommand("UPDATE TBLMUSTERI SET KREDILIMIT=KREDILIMIT+@K1 WHERE ID=@K2", connection);
                 komut2.Parameters.AddWithValue("@K1", hesapla * musterikredi);
                 komut2.Parameters.AddWithValue("@K2", CmbCustomer.SelectedValue);
                 komut2.ExecuteNonQuery();
                 connection.Close();
-
-
-
                 Product2();
                 IslemNoArttir();
                 IslemNo();

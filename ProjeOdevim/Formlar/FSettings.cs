@@ -235,22 +235,30 @@ namespace ProjeOdevim.Formlar
 
         private void BBackUp_Click(object sender, EventArgs e)
         {
-            string database = connection.Database.ToString();
-            if (TBackUp.Text == string.Empty)
+            try
             {
-                MessageBox.Show("Lütfen yedekleme dosyasının konumunu seçin", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                string database = connection.Database.ToString();
+                if (TBackUp.Text == string.Empty)
+                {
+                    MessageBox.Show("Lütfen yedekleme dosyasının konumunu seçin", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+                else
+                {
+                    string cmd = "BACKUP DATABASE [" + database + "] TO DISK= '" + TBackUp.Text + "\\" + "database" + "-" + DateTime.Now.ToString("yyyy-MM-dd--HH-mm-ss") + ".bak'";
+                    connection.Open();
+                    SqlCommand command = new SqlCommand(cmd, connection);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Yedekleme işlemi başarıyla tamamlandı", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    connection.Close();
+                    BBackUp.Enabled = false;
+                }
             }
-            else
+            catch (Exception ex )
             {
-                string cmd = "BACKUP DATABASE [" + database + "] TO DISK= '" + TBackUp.Text + "\\" + "database" + "-" + DateTime.Now.ToString("yyyy-MM-dd--HH-mm-ss") + ".bak'";
-                connection.Open();
-                SqlCommand command = new SqlCommand(cmd, connection);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Yedekleme işlemi başarıyla tamamlandı", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                connection.Close();
-                BBackUp.Enabled = false;
 
+                MessageBox.Show(ex.ToString());
             }
+            
         }
 
         private void BBrowse2_Click(object sender, EventArgs e)

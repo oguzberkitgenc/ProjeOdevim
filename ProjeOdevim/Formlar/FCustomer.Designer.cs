@@ -160,6 +160,7 @@
             // CmbIl
             // 
             this.CmbIl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.CmbIl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbIl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CmbIl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbIl.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -173,6 +174,7 @@
             // CmbIlce
             // 
             this.CmbIlce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.CmbIlce.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbIlce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CmbIlce.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbIlce.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -256,6 +258,7 @@
             // CmbGender
             // 
             this.CmbGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
+            this.CmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbGender.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CmbGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbGender.ForeColor = System.Drawing.Color.WhiteSmoke;
