@@ -21,6 +21,8 @@ namespace ProjeOdevim.Formlar
         DataTable dt1 = new DataTable();
         public string id, kategori, marka, urunadi;
         public decimal alisfiyati = 0, satisfiyatı = 0, indirimorani = 0;
+        double hesapla = 0;
+        double grd2fiyatal;
         DateTime date = DateTime.Now;
 
         void Product2()
@@ -109,6 +111,7 @@ namespace ProjeOdevim.Formlar
             Yazdirma();
             CustomerList();
             OranGetir();
+            VadeGetir();
             Total.Focus();
         }
         void IndirimsizsizSatis()
@@ -176,8 +179,16 @@ namespace ProjeOdevim.Formlar
             connection.Close();
 
         }
-        double hesapla = 0;
-        double grd2fiyatal;
+        void VadeGetir()
+        {
+            SqlCommand command = new SqlCommand("Select * From TBLFAIZLER", connection);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CmbTaksit.ValueMember = "ID";
+            CmbTaksit.DisplayMember = "VADE";
+            CmbTaksit.DataSource = dt;
+        }
 
         private void BAdd_Click(object sender, EventArgs e)
         {
@@ -440,23 +451,25 @@ namespace ProjeOdevim.Formlar
         }
         void Taksitle()
         {
-            int vadefaizi = 3;
-            date.ToString("MM/dd/yyyy HH:mm");
+            DateTime tarih1 = DateTime.Now;
+            decimal vadeal = Convert.ToDecimal(CmbTaksit.SelectedValue);
             int taksitsayisi = int.Parse(CmbTaksit.Text);
-            decimal hesaplabakalim = (satisfiyatı / taksitsayisi) / 100 * vadefaizi;
+            decimal hesaplabakalim = (satisfiyatı / taksitsayisi) / 100 * vadeal;
             decimal toplam = (satisfiyatı / taksitsayisi) + hesaplabakalim;
             for (int i = 1; i <= taksitsayisi; i++)
             {
                 connection.Open();
                 SqlCommand sql = new SqlCommand("insert into TBLTAKSITLER (MUSTERIT,TARIH,KACINCITAKSIT,TAKSITTUTARI,PERSONELT) values (@P1,@P2,@P3,@P4,@P5)", connection);
                 sql.Parameters.AddWithValue("P1", CmbCustomer.SelectedValue);
-                sql.Parameters.AddWithValue("P2", Convert.ToDateTime(date));
+                sql.Parameters.AddWithValue("P2", Convert.ToDateTime(tarih1));
                 sql.Parameters.AddWithValue("P3", i);
                 sql.Parameters.AddWithValue("P4", toplam);
                 sql.Parameters.AddWithValue("P5", CmbEmploye.SelectedValue);
                 sql.ExecuteNonQuery();
                 connection.Close();
+                tarih1=tarih1.AddMonths(1);
             }
+            tarih1=DateTime.Now;
         }
         private void BSatis_Click(object sender, EventArgs e)
         {

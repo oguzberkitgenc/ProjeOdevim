@@ -48,12 +48,6 @@ namespace ProjeOdevim.Formlar
             connection.Close();
             MessageBox.Show("XML Dosyaları Başarıyla Kayıt Edildi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void TKod_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void TKod_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (TKod.Text == "Formlar.FDuzenle=NewFormlar.FDuzenle")
@@ -62,7 +56,6 @@ namespace ProjeOdevim.Formlar
                 f.ShowDialog();
             }
         }
-
         private void BMusteri_Click(object sender, EventArgs e)
         {
             try
@@ -82,11 +75,7 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(" Hatalı Giriş. \n\n Lütfen Sadece SAYI VE NOKTA işareti kullanınız. \n\n Lütfen Sayfayı Yenileyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
             }
-
-
-
         }
-
         private void BPersonel_Click(object sender, EventArgs e)
         {
             try
@@ -104,12 +93,6 @@ namespace ProjeOdevim.Formlar
             {
                 MessageBox.Show(" Hatalı Giriş. \n\n Lütfen Sadece SAYI VE NOKTA işareti kullanınız. \n\n Lütfen Sayfayı Yenileyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-
-        }
-
-        private void BPersonel_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
         }
         void DepartmanGetir()
         {
@@ -216,12 +199,10 @@ namespace ProjeOdevim.Formlar
         {
             Clear();
         }
-
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             YetkiGetir();
         }
-
         private void BBrows_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dlg = new FolderBrowserDialog();
@@ -232,7 +213,6 @@ namespace ProjeOdevim.Formlar
 
             }
         }
-
         private void BBackUp_Click(object sender, EventArgs e)
         {
             try
@@ -258,9 +238,7 @@ namespace ProjeOdevim.Formlar
 
                 MessageBox.Show(ex.ToString());
             }
-
         }
-
         private void BBrowse2_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -272,7 +250,6 @@ namespace ProjeOdevim.Formlar
                 BRestore.Enabled = true;
             }
         }
-
         private void BRestore_Click(object sender, EventArgs e)
         {
 
@@ -306,9 +283,7 @@ namespace ProjeOdevim.Formlar
 
                 }
             }
-
         }
-
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -317,9 +292,7 @@ namespace ProjeOdevim.Formlar
             kritik.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show(" Kritik Seviye Kayıt Edildi \n\n ", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
-
         private void B3_Click(object sender, EventArgs e)
         {
             try
@@ -336,9 +309,7 @@ namespace ProjeOdevim.Formlar
 
                 MessageBox.Show(ex.ToString());
             }
-
         }
-
         private void B6_Click(object sender, EventArgs e)
         {
             try
@@ -356,7 +327,6 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void B9_Click(object sender, EventArgs e)
         {
             try
@@ -374,7 +344,6 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void B12_Click(object sender, EventArgs e)
         {
             try
@@ -392,7 +361,6 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void B15_Click(object sender, EventArgs e)
         {
             try
@@ -410,7 +378,6 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void B18_Click(object sender, EventArgs e)
         {
             try
@@ -428,7 +395,6 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void B24_Click(object sender, EventArgs e)
         {
             try
@@ -446,7 +412,6 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void B36_Click(object sender, EventArgs e)
         {
             try
@@ -463,7 +428,6 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(ex.ToString());
             }
         }
-
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();

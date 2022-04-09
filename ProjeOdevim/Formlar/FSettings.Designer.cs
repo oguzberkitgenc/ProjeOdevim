@@ -480,7 +480,6 @@
             this.TKod.Name = "TKod";
             this.TKod.Size = new System.Drawing.Size(1499, 20);
             this.TKod.TabIndex = 122;
-            this.TKod.Enter += new System.EventHandler(this.TKod_Enter);
             this.TKod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TKod_KeyPress);
             // 
             // TMusteri
@@ -573,7 +572,6 @@
             this.BPersonel.TabIndex = 129;
             this.BPersonel.Text = "Kaydet";
             this.BPersonel.Click += new System.EventHandler(this.BPersonel_Click);
-            this.BPersonel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BPersonel_KeyPress);
             // 
             // panel1
             // 
