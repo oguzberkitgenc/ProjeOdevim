@@ -24,7 +24,6 @@ namespace ProjeOdevim.Formlar
         double hesapla = 0;
         double grd2fiyatal;
         DateTime date = DateTime.Now;
-
         void Product2()
         {
             connection.Open();
@@ -66,7 +65,6 @@ namespace ProjeOdevim.Formlar
             }
             connection.Close();
             LTarih.Text = date.ToString("MM/dd/yyyy HH:mm");
-
         }
         void CustomerList()
         {
@@ -153,7 +151,6 @@ namespace ProjeOdevim.Formlar
             sql.Parameters.AddWithValue("@A11", Convert.ToString(LTarih.Text));
             sql.ExecuteNonQuery();
             connection.Close();
-
         }
         void UrunEksilt()
         {
@@ -177,7 +174,6 @@ namespace ProjeOdevim.Formlar
             sql.Parameters.AddWithValue("@P1", islem + 1);
             sql.ExecuteNonQuery();
             connection.Close();
-
         }
         void VadeGetir()
         {
@@ -189,10 +185,8 @@ namespace ProjeOdevim.Formlar
             CmbTaksit.DisplayMember = "VADE";
             CmbTaksit.DataSource = dt;
         }
-
         private void BAdd_Click(object sender, EventArgs e)
         {
-
             DataRow dr1 = dt1.NewRow();
             dr1["ID"] = LId.Text;
             dr1["KATEGORI"] = Convert.ToString(LKategori.Text);
@@ -202,18 +196,14 @@ namespace ProjeOdevim.Formlar
             dr1["SATIŞ FİYATI"] = double.Parse(LSatis.Text);
             dt1.Rows.Add(dr1);
             gridControl2.DataSource = dt1;
-
             gridView2.Columns[0].Width = 5;
             gridView2.Columns[1].Visible = false;
             gridView2.Columns[4].Visible = false;
-
             double fiyatal = Convert.ToDouble(LSatis.Text);
-
             hesapla += fiyatal;
             Total.Text = hesapla.ToString("C2");
             UrunEksilt();
             Product2();
-
         }
         void Clear()
         {
@@ -273,7 +263,6 @@ namespace ProjeOdevim.Formlar
             Product2();
             Clear();
         }
-
         private void BDelete_Click(object sender, EventArgs e)
         {
             if (LblTest.Text != "0" || gridView2.RowCount == 1)
@@ -314,7 +303,6 @@ namespace ProjeOdevim.Formlar
                 satisfiyatı = Convert.ToDecimal(dr["SATIŞ FİYATI"]);
             }
         }
-
         private void ChTaksit_CheckedChanged(object sender, EventArgs e)
         {
             if (ChTaksit.Checked == true)
@@ -328,7 +316,6 @@ namespace ProjeOdevim.Formlar
                 CmbTaksit.Visible = false;
             }
         }
-
         private void B15_Click(object sender, EventArgs e)
         {
             if (Total.Text != "0,00")
@@ -389,7 +376,6 @@ namespace ProjeOdevim.Formlar
                 indirimorani = 5;
             }
         }
-
         private void BSinirsiz_Click(object sender, EventArgs e)
         {
             try
@@ -510,7 +496,6 @@ namespace ProjeOdevim.Formlar
                 Console.Beep(800, 250);
                 Clear();
             }
-
         }
     }
 }

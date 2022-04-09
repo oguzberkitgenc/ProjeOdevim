@@ -298,7 +298,7 @@ namespace ProjeOdevim.Formlar
             try
             {
                 connection.Open();
-                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET UC=" + T3.Text, connection);
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T3.Text + "WHERE VADE='3'", connection);
                 faiz.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show(" Vade 3 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T3.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -315,7 +315,7 @@ namespace ProjeOdevim.Formlar
             try
             {
                 connection.Open();
-                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ALTI=" + T6.Text, connection);
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T6.Text + "WHERE VADE='6'", connection);
                 faiz.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show(" Vade 6 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T6.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -332,7 +332,7 @@ namespace ProjeOdevim.Formlar
             try
             {
                 connection.Open();
-                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET DOKUZ=" + T9.Text, connection);
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T9.Text + "WHERE VADE='9'", connection);
                 faiz.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show(" Vade 9 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T9.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -349,7 +349,7 @@ namespace ProjeOdevim.Formlar
             try
             {
                 connection.Open();
-                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ONIKI=" + T12.Text, connection);
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T12.Text + "WHERE VADE='12'", connection);
                 faiz.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show(" Vade 12 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T12.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -366,7 +366,7 @@ namespace ProjeOdevim.Formlar
             try
             {
                 connection.Open();
-                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ONBES=" + T15.Text, connection);
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T15.Text + "WHERE VADE='15'", connection);
                 faiz.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show(" Vade 15 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T15.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -383,7 +383,7 @@ namespace ProjeOdevim.Formlar
             try
             {
                 connection.Open();
-                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ONSEKIZ=" + T18.Text, connection);
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T18.Text + "WHERE VADE='18'", connection);
                 faiz.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show(" Vade 18 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T18.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -400,7 +400,7 @@ namespace ProjeOdevim.Formlar
             try
             {
                 connection.Open();
-                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET YIRMIDORT=" + T24.Text, connection);
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T24.Text + "WHERE VADE='24'", connection);
                 faiz.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show(" Vade 24 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T24.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -417,7 +417,7 @@ namespace ProjeOdevim.Formlar
             try
             {
                 connection.Open();
-                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET OTUZALTI=" + T36.Text, connection);
+                SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T36.Text + "WHERE VADE='36'", connection);
                 faiz.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show(" Vade 36 Oranı Başarıyla Güncellendi \n Yeni Oran \n " + T36.Text, "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);

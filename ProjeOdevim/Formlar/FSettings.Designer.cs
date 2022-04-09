@@ -1053,7 +1053,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(47, 142);
+            this.label7.Location = new System.Drawing.Point(81, 136);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(300, 30);
             this.label7.TabIndex = 131;
@@ -1066,9 +1066,9 @@
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
             this.label6.Location = new System.Drawing.Point(4, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(384, 16);
+            this.label6.Size = new System.Drawing.Size(371, 16);
             this.label6.TabIndex = 130;
-            this.label6.Text = "Müşteri / Personel Kredi / Puan  Ayarlarınız Bu Kısımdan Yapınız.";
+            this.label6.Text = "Müşteri kredi ve personel puan ayarlarını bu kısımdan yapınız.";
             // 
             // panel2
             // 
@@ -1292,6 +1292,7 @@
             // 
             // CmbList
             // 
+            this.CmbList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbList.FormattingEnabled = true;
             this.CmbList.Location = new System.Drawing.Point(7, 440);
