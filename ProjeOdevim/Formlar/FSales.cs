@@ -523,15 +523,15 @@ namespace ProjeOdevim.Formlar
             {
                 for (int i = 0; i < gridView2.DataRowCount; i++)
                 {
-                    if (indirimorani > 0)
+                    if (indirimorani <= 0)
                     {
                         gridView2.FocusedRowHandle = i;
-                        IndirimliSatis();
+                        IndirimsizsizSatis();
                     }
                     else
                     {
                         gridView2.FocusedRowHandle = i;
-                        IndirimsizsizSatis();
+                        IndirimliSatis();
                     }
                 }
                 if (ChTaksit.Checked == true)

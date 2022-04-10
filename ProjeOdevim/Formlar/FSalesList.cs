@@ -17,6 +17,7 @@ namespace ProjeOdevim.Formlar
             InitializeComponent();
         }
         SqlConnection connection = new SqlConnection(@"Data Source=BERKIT;Initial Catalog=DbProjem;Integrated Security=True");
+        public int idAl = 0;
         void Listele()
         {
             int datasatiri = gridView1.DataRowCount;
@@ -59,7 +60,7 @@ namespace ProjeOdevim.Formlar
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (durum==false)
+            if (durum == false)
             {
                 Listele();
             }
@@ -76,7 +77,25 @@ namespace ProjeOdevim.Formlar
             DtBaslangic.Value = dt;
             DtBitis.Value = dt2;
             durum = false;
+            timer1.Start();
             Listele();
+        }
+        private void detayGösterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FDetay f = new FDetay();
+            f.idal = LId.Text.ToString();
+            f.ShowDialog();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            timer1.Stop();
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            LId.Text = (dr["ISLEMNO"]).ToString();
         }
     }
 }

@@ -147,6 +147,12 @@
     <Compile Include="Formlar\FDepartment.Designer.cs">
       <DependentUpon>FDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FDetay.Designer.cs">
+      <DependentUpon>FDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FDoviz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FDepartment.resx">
       <DependentUpon>FDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FDetay.resx">
+      <DependentUpon>FDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FDoviz.resx">
       <DependentUpon>FDoviz.cs</DependentUpon>
