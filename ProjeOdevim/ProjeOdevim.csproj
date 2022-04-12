@@ -88,6 +88,7 @@
     <Reference Include="DevExpress.XtraTreeMap.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -182,6 +183,12 @@
     </Compile>
     <Compile Include="Formlar\FKredi.Designer.cs">
       <DependentUpon>FKredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FLic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FLic.Designer.cs">
+      <DependentUpon>FLic.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\FLogin.cs">
       <SubType>Form</SubType>
@@ -311,6 +318,9 @@
     <EmbeddedResource Include="Formlar\FKredi.resx">
       <DependentUpon>FKredi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FLic.resx">
+      <DependentUpon>FLic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -403,6 +413,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="image\icons\setting.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ÖMÜR BOYU LİSANS.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

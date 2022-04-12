@@ -35,18 +35,21 @@ namespace ProjeOdevim.Formlar
             da.Fill(dt);
             gridControl1.DataSource = dt;
             double ciro = 0;
-
-            connection.Open();
-            SqlCommand da2 = new SqlCommand("SELECT SUM(SATISFIYAT) FROM TBLSATIS WHERE TARIH BETWEEN @T1 AND @T2", connection);
-            da2.Parameters.AddWithValue("@T1", baslangic);
-            da2.Parameters.AddWithValue("@T2", bitis);
-            SqlDataReader dr2 = da2.ExecuteReader();
-            while (dr2.Read())
+            if (gridView1.DataRowCount > 0)
             {
-                ciro = Convert.ToDouble((dr2[0]));
+                connection.Open();
+                SqlCommand da2 = new SqlCommand("SELECT SUM(SATISFIYAT) FROM TBLSATIS WHERE TARIH BETWEEN @T1 AND @T2", connection);
+                da2.Parameters.AddWithValue("@T1", baslangic);
+                da2.Parameters.AddWithValue("@T2", bitis);
+                SqlDataReader dr2 = da2.ExecuteReader();
+                while (dr2.Read())
+                {
+                    ciro = Convert.ToDouble((dr2[0]));
+                }
+                connection.Close();
+                TCiro.Text = " " + ciro.ToString("C2");
             }
-            connection.Close();
-            TCiro.Text = " " + ciro.ToString("C2");
+
         }
         private void FSalesList_Load(object sender, EventArgs e)
         {
@@ -94,8 +97,12 @@ namespace ProjeOdevim.Formlar
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-            LId.Text = (dr["ISLEMNO"]).ToString();
+            if (gridView1.DataRowCount > 0)
+            {
+                DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                LId.Text = (dr["ISLEMNO"]).ToString();
+            }
+
         }
     }
 }

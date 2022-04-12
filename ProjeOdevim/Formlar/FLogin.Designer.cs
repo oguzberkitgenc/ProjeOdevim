@@ -201,6 +201,7 @@
             this.Name = "FLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GİRİŞ PANELİ";
+            this.Load += new System.EventHandler(this.FLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TPass.Properties)).EndInit();
