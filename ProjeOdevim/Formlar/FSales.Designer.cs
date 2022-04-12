@@ -887,10 +887,10 @@
             this.ChYazdirma.ForeColor = System.Drawing.Color.Black;
             this.ChYazdirma.Location = new System.Drawing.Point(502, 592);
             this.ChYazdirma.Name = "ChYazdirma";
-            this.ChYazdirma.Size = new System.Drawing.Size(157, 23);
+            this.ChYazdirma.Size = new System.Drawing.Size(15, 14);
             this.ChYazdirma.TabIndex = 124;
-            this.ChYazdirma.Text = "Yazdırma Durumu";
             this.ChYazdirma.UseVisualStyleBackColor = true;
+            this.ChYazdirma.Visible = false;
             // 
             // ChTaksit
             // 
