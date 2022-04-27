@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{270F858E-709A-476F-8AC1-BF62BDBBB131}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjeOdevim</RootNamespace>
+    <AssemblyName>ProjeOdevim</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v21.2.Win, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Extensions, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Presets, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Win, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.2.CodeCompletion, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaglantiSinif.cs" />
+    <Compile Include="Formlar\BVadeCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\BVadeCalc.Designer.cs">
+      <DependentUpon>BVadeCalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FBusyHour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FBusyHour.Designer.cs">
+      <DependentUpon>FBusyHour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FDayComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FDayComp.Designer.cs">
+      <DependentUpon>FDayComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FAddShopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FAddShopping.Designer.cs">
+      <DependentUpon>FAddShopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FBasisStatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FBasisStatis.Designer.cs">
+      <DependentUpon>FBasisStatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FCategory.Designer.cs">
+      <DependentUpon>FCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FCustomer.Designer.cs">
+      <DependentUpon>FCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FDaySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FDaySales.Designer.cs">
+      <DependentUpon>FDaySales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FDepartment.Designer.cs">
+      <DependentUpon>FDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FDetay.Designer.cs">
+      <DependentUpon>FDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FDoviz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FDoviz.Designer.cs">
+      <DependentUpon>FDoviz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FEmployee.Designer.cs">
+      <DependentUpon>FEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FHomeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FHomeList.Designer.cs">
+      <DependentUpon>FHomeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FJok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FJok.Designer.cs">
+      <DependentUpon>FJok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FKredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FKredi.Designer.cs">
+      <DependentUpon>FKredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FLic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FLic.Designer.cs">
+      <DependentUpon>FLic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FMonthComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FMonthComp.Designer.cs">
+      <DependentUpon>FMonthComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FMonthSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FMonthSales.Designer.cs">
+      <DependentUpon>FMonthSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FNotlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FNotlar.Designer.cs">
+      <DependentUpon>FNotlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FProductList.Designer.cs">
+      <DependentUpon>FProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FProductStatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FProductStatis.Designer.cs">
+      <DependentUpon>FProductStatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmViewer.Designer.cs">
+      <DependentUpon>frmViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FSales.Designer.cs">
+      <DependentUpon>FSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FSalesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FSalesList.Designer.cs">
+      <DependentUpon>FSalesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FSettings.Designer.cs">
+      <DependentUpon>FSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FShopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FShopping.Designer.cs">
+      <DependentUpon>FShopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FGooglee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FGooglee.Designer.cs">
+      <DependentUpon>FGooglee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FUserList.Designer.cs">
+      <DependentUpon>FUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FVade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FVade.Designer.cs">
+      <DependentUpon>FVade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FVadeShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FVadeShow.Designer.cs">
+      <DependentUpon>FVadeShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FWhoAmi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FWhoAmi.Designer.cs">
+      <DependentUpon>FWhoAmi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHomePage.Designer.cs">
+      <DependentUpon>FrmHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formlar\BVadeCalc.resx">
+      <DependentUpon>BVadeCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FBusyHour.resx">
+      <DependentUpon>FBusyHour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FDayComp.resx">
+      <DependentUpon>FDayComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FAddShopping.resx">
+      <DependentUpon>FAddShopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FBasisStatis.resx">
+      <DependentUpon>FBasisStatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FCategory.resx">
+      <DependentUpon>FCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FCustomer.resx">
+      <DependentUpon>FCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FDaySales.resx">
+      <DependentUpon>FDaySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FDepartment.resx">
+      <DependentUpon>FDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FDetay.resx">
+      <DependentUpon>FDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FDoviz.resx">
+      <DependentUpon>FDoviz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FEmployee.resx">
+      <DependentUpon>FEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FHomeList.resx">
+      <DependentUpon>FHomeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FJok.resx">
+      <DependentUpon>FJok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FKredi.resx">
+      <DependentUpon>FKredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FLic.resx">
+      <DependentUpon>FLic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FMonthComp.resx">
+      <DependentUpon>FMonthComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FMonthSales.resx">
+      <DependentUpon>FMonthSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FNotlar.resx">
+      <DependentUpon>FNotlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FProductList.resx">
+      <DependentUpon>FProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FProductStatis.resx">
+      <DependentUpon>FProductStatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmViewer.resx">
+      <DependentUpon>frmViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FSales.resx">
+      <DependentUpon>FSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FSalesList.resx">
+      <DependentUpon>FSalesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FSettings.resx">
+      <DependentUpon>FSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FShopping.resx">
+      <DependentUpon>FShopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FGooglee.resx">
+      <DependentUpon>FGooglee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FUserList.resx">
+      <DependentUpon>FUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FVade.resx">
+      <DependentUpon>FVade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FVadeShow.resx">
+      <DependentUpon>FVadeShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FWhoAmi.resx">
+      <DependentUpon>FWhoAmi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHomePage.resx">
+      <DependentUpon>FrmHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\giris.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\giden.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\gelen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons\setting.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ÖMÜR BOYU LİSANS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
