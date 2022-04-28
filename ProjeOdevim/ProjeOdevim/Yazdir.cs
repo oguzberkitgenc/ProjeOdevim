@@ -63,8 +63,9 @@ namespace ProjeOdevim
                 garanti=dr[17].ToString();
                 yapikredi=dr[18].ToString();
                 akbank=dr[19].ToString();
-                ziraat=dr[20].ToString();
-                halk=dr[21].ToString();
+                finans=dr[20].ToString();
+                ziraat=dr[21].ToString();
+                halk=dr[22].ToString();
             }
             connection.Close();
 
@@ -162,12 +163,12 @@ namespace ProjeOdevim
             e.Graphics.DrawString("BANKA HESAP NUMALARAIMIZ ", icerikkalin, Brushes.Black, new Point(300, yukseklik + 365));
 
             e.Graphics.DrawString("İŞ BANKASI: "+isbank.ToString(), icerikkalin, Brushes.Black, new Point(5, yukseklik + 385));
-            e.Graphics.DrawString("FİNANS BANKASI: " + finans.ToString(), icerikkalin, Brushes.Black, new Point(350, yukseklik + 405));
-            e.Graphics.DrawString("GARANTİ BANKASI: " + garanti.ToString(), icerikkalin, Brushes.Black, new Point(5, yukseklik + 425));
-            e.Graphics.DrawString("ZİRAAT BANKASI: " + ziraat.ToString(), icerikkalin, Brushes.Black, new Point(350, yukseklik + 445));
-            e.Graphics.DrawString("YAPI KREDİ BANKASI: " + yapikredi.ToString(), icerikkalin, Brushes.Black, new Point(5, yukseklik + 465));
-            e.Graphics.DrawString("HALK BANK: " + halk.ToString(), icerikkalin, Brushes.Black, new Point(350, yukseklik + 485));
-            e.Graphics.DrawString("AK BANK: " + akbank.ToString(), icerikkalin, Brushes.Black, new Point(5, yukseklik + 505));
+            e.Graphics.DrawString("FİNANS BANKASI: " + finans.ToString(), icerikkalin, Brushes.Black, new Point(350, yukseklik + 385));
+            e.Graphics.DrawString("GARANTİ BANKASI: " + garanti.ToString(), icerikkalin, Brushes.Black, new Point(5, yukseklik + 405));
+            e.Graphics.DrawString("ZİRAAT BANKASI: " + ziraat.ToString(), icerikkalin, Brushes.Black, new Point(350, yukseklik + 405));
+            e.Graphics.DrawString("YAPI KREDİ BANKASI: " + yapikredi.ToString(), icerikkalin, Brushes.Black, new Point(5, yukseklik + 425));
+            e.Graphics.DrawString("HALK BANK: " + halk.ToString(), icerikkalin, Brushes.Black, new Point(350, yukseklik + 425));
+            e.Graphics.DrawString("AK BANK: " + akbank.ToString(), icerikkalin, Brushes.Black, new Point(5, yukseklik + 445));
 
 
         }

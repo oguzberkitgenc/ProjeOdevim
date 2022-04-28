@@ -578,7 +578,7 @@ namespace ProjeOdevim.Formlar
         private void BSatis_Click(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(bgl.Adres);
-            if (gridView2.DataRowCount > 0)
+            if (gridView2.DataRowCount > 0 && gridView2.DataRowCount <= 15)
             {
                 gridView2.FocusedRowHandle = 0;
                 for (int i = 0; i < gridView2.DataRowCount; i++)
@@ -598,7 +598,6 @@ namespace ProjeOdevim.Formlar
                 {
                     Taksitle();
                 }
-
                 connection.Open();
                 SqlCommand komut = new SqlCommand("UPDATE TBLPERSONEL SET PUAN=PUAN+@P1 WHERE ID=@P2 ", connection);
                 komut.Parameters.AddWithValue("@P1", hesapla / 100 * personelkredi);
@@ -612,9 +611,6 @@ namespace ProjeOdevim.Formlar
                 komut2.Parameters.AddWithValue("@K2", CmbCustomer.SelectedValue);
                 komut2.ExecuteNonQuery();
                 connection.Close();
-
-
-
                 Console.Beep(800, 250);
                 if (CFatura.Checked == true)
                 {
@@ -629,11 +625,14 @@ namespace ProjeOdevim.Formlar
                     yazdir.YazdirmayaBasla();
                     Process.Start(@"C:/Users/24f4c/Desktop/zxc.pdf");
                 }
-
                 Product2();
                 IslemNoArttir();
                 IslemNumarası();
                 Clear();
+            }
+            else
+            {
+                MessageBox.Show("Rapor Oluşturma Hatası. \nLütfen Tek Seferde 15 Üründen Fazla Ürün Girmeyiniz");
             }
         }
     }

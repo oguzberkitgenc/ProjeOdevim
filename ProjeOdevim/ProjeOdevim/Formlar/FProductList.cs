@@ -149,17 +149,26 @@ namespace ProjeOdevim.Formlar
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-            TId.Text = dr["ID"].ToString();
-            CmbCategory.Text = dr["KATEGORİ"].ToString();
-            CmbMarka.Text = dr["MARKA"].ToString();
-            TProductName.Text = dr["ÜRÜN"].ToString();
-            TBuying.Text = dr["ALIŞ FİYATI"].ToString();
-            TSales.Text = dr["SATIŞ FİYATI"].ToString();
-            NStock.Value = Convert.ToInt32(dr["STOK"].ToString());
-            richTextBox1.Text = dr["AÇIKLAMA"].ToString();
-            TBarkod.Text = dr["BARKOD"].ToString();
-            tutbarkod = dr["BARKOD"].ToString();
+            try
+            {
+                DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                TId.Text = dr["ID"].ToString();
+                CmbCategory.Text = dr["KATEGORİ"].ToString();
+                CmbMarka.Text = dr["MARKA"].ToString();
+                TProductName.Text = dr["ÜRÜN"].ToString();
+                TBuying.Text = dr["ALIŞ FİYATI"].ToString();
+                TSales.Text = dr["SATIŞ FİYATI"].ToString();
+                NStock.Value = Convert.ToInt32(dr["STOK"].ToString());
+                richTextBox1.Text = dr["AÇIKLAMA"].ToString();
+                TBarkod.Text = dr["BARKOD"].ToString();
+                tutbarkod = dr["BARKOD"].ToString();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
 
         private void BSave_Click(object sender, EventArgs e)

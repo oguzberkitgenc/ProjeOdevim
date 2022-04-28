@@ -174,30 +174,8 @@ namespace ProjeOdevim.Formlar
             }
             connection.Close();
         }
-        void PersonelFazla()
-        {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
-            connection.Open();
-            SqlCommand komut = new SqlCommand("Select Top 1 MAGAZA,COUNT(*)  AS 'SIRALA ' FROM TBLPERSONEL INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID = TBLMAGAZA.ID WHERE MAGAZA!='Genel Müdürlük' GROUP BY MAGAZA ORDER BY [SIRALA] DESC", connection);
-            SqlDataReader dr = komut.ExecuteReader();
-            while (dr.Read())
-            {
-                LPErsonelFazla.Text = dr[0].ToString();
-            }
-            connection.Close();
-        }
-        void PersonelAz()
-        {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
-            connection.Open();
-            SqlCommand komut = new SqlCommand("Select Top 1 MAGAZA,COUNT(*)  AS 'SIRALA ' FROM TBLPERSONEL INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID = TBLMAGAZA.ID WHERE MAGAZA!='Genel Müdürlük' GROUP BY MAGAZA ORDER BY [SIRALA] ASC", connection);
-            SqlDataReader dr = komut.ExecuteReader();
-            while (dr.Read())
-            {
-                LPersonelAz.Text = dr[0].ToString();
-            }
-            connection.Close();
-        }
+      
+        
         void Musteriler()
         {
             SqlConnection connection = new SqlConnection(bgl.Adres);
@@ -273,8 +251,6 @@ namespace ProjeOdevim.Formlar
             FazlaMarka();
             FazlaKategori();
             AzKategori();
-            PersonelFazla();
-            PersonelAz();
             Musteriler();
             Personeller();
             PersonelPuan();
