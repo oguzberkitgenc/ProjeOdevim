@@ -119,11 +119,11 @@
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
-            this.LId = new System.Windows.Forms.Label();
-            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.BJoker = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup19 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BJoker = new DevExpress.XtraBars.BarButtonItem();
+            this.LId = new System.Windows.Forms.Label();
+            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -925,7 +925,6 @@
             // ribbonPageGroup9
             // 
             this.ribbonPageGroup9.ItemLinks.Add(this.BUrun);
-            this.ribbonPageGroup9.ItemLinks.Add(this.BMagaza);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             // 
             // BUrun
@@ -976,7 +975,6 @@
             this.BMagaza.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
             this.BMagaza.ItemInMenuAppearance.Pressed.Options.UseFont = true;
             this.BMagaza.Name = "BMagaza";
-            this.BMagaza.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BMagaza_ItemClick);
             // 
             // ribbonPageGroup2
             // 
@@ -1469,22 +1467,30 @@
             this.barButtonItem20.Id = 60;
             this.barButtonItem20.Name = "barButtonItem20";
             // 
-            // LId
+            // BJoker
             // 
-            this.LId.AutoSize = true;
-            this.LId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.LId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LId.Location = new System.Drawing.Point(1296, 47);
-            this.LId.Name = "LId";
-            this.LId.Size = new System.Drawing.Size(25, 19);
-            this.LId.TabIndex = 10;
-            this.LId.Text = "00";
-            this.LId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LId.Visible = false;
-            // 
-            // ribbonPageGroup11
-            // 
-            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            this.BJoker.Caption = "JOKER YARIŞI";
+            this.BJoker.Id = 63;
+            this.BJoker.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BJoker.ImageOptions.Image")));
+            this.BJoker.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BJoker.ImageOptions.LargeImage")));
+            this.BJoker.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BJoker.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BJoker.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BJoker.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BJoker.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BJoker.ItemAppearance.Normal.Options.UseFont = true;
+            this.BJoker.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BJoker.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BJoker.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BJoker.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BJoker.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BJoker.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BJoker.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BJoker.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BJoker.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BJoker.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BJoker.Name = "BJoker";
+            this.BJoker.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BJoker_ItemClick);
             // 
             // ribbonPage2
             // 
@@ -1504,30 +1510,22 @@
             this.ribbonPageGroup19.ItemLinks.Add(this.BJoker);
             this.ribbonPageGroup19.Name = "ribbonPageGroup19";
             // 
-            // BJoker
+            // LId
             // 
-            this.BJoker.Caption = "JOKER YARIŞI";
-            this.BJoker.Id = 63;
-            this.BJoker.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
-            this.BJoker.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
-            this.BJoker.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BJoker.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BJoker.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BJoker.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BJoker.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BJoker.ItemAppearance.Normal.Options.UseFont = true;
-            this.BJoker.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BJoker.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BJoker.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BJoker.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BJoker.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BJoker.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BJoker.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BJoker.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BJoker.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BJoker.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BJoker.Name = "BJoker";
-            this.BJoker.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BJoker_ItemClick);
+            this.LId.AutoSize = true;
+            this.LId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LId.Location = new System.Drawing.Point(1296, 47);
+            this.LId.Name = "LId";
+            this.LId.Size = new System.Drawing.Size(25, 19);
+            this.LId.TabIndex = 10;
+            this.LId.Text = "00";
+            this.LId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LId.Visible = false;
+            // 
+            // ribbonPageGroup11
+            // 
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             // 
             // FrmHomePage
             // 

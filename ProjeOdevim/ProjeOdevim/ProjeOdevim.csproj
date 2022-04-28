@@ -115,6 +115,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaglantiSinif.cs" />
+    <Compile Include="DbProjemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbProjemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\BVadeCalc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,12 +137,6 @@
     </Compile>
     <Compile Include="Formlar\FDayComp.Designer.cs">
       <DependentUpon>FDayComp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formlar\FAddShopping.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formlar\FAddShopping.Designer.cs">
-      <DependentUpon>FAddShopping.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\FBasisStatis.cs">
       <SubType>Form</SubType>
@@ -271,12 +270,6 @@
     <Compile Include="Formlar\FSettings.Designer.cs">
       <DependentUpon>FSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\FShopping.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formlar\FShopping.Designer.cs">
-      <DependentUpon>FShopping.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formlar\FGooglee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +308,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Yazdir.cs" />
     <EmbeddedResource Include="Formlar\BVadeCalc.resx">
       <DependentUpon>BVadeCalc.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,9 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FDayComp.resx">
       <DependentUpon>FDayComp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\FAddShopping.resx">
-      <DependentUpon>FAddShopping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FBasisStatis.resx">
       <DependentUpon>FBasisStatis.cs</DependentUpon>
@@ -393,9 +384,6 @@
     <EmbeddedResource Include="Formlar\FSettings.resx">
       <DependentUpon>FSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\FShopping.resx">
-      <DependentUpon>FShopping.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FGooglee.resx">
       <DependentUpon>FGooglee.cs</DependentUpon>
     </EmbeddedResource>
@@ -411,6 +399,7 @@
     <EmbeddedResource Include="Formlar\FWhoAmi.resx">
       <DependentUpon>FWhoAmi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\RpGenerator.rdlc" />
     <EmbeddedResource Include="FrmHomePage.resx">
       <DependentUpon>FrmHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +414,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DbProjemDataSet.xsc">
+      <DependentUpon>DbProjemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DbProjemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbProjemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbProjemDataSet.xss">
+      <DependentUpon>DbProjemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\ProjeOdevim.Formlar.FSales.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

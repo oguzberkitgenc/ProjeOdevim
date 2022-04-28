@@ -33,8 +33,6 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.RchAdres = new System.Windows.Forms.RichTextBox();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.CmbMagaza = new System.Windows.Forms.ComboBox();
             this.CmbDep = new System.Windows.Forms.ComboBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -121,31 +119,6 @@
             this.RchAdres.Size = new System.Drawing.Size(281, 62);
             this.RchAdres.TabIndex = 8;
             this.RchAdres.Text = "";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(1163, 318);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(55, 19);
-            this.labelControl7.TabIndex = 53;
-            this.labelControl7.Text = "Mağaza :";
-            // 
-            // CmbMagaza
-            // 
-            this.CmbMagaza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.CmbMagaza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbMagaza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CmbMagaza.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CmbMagaza.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CmbMagaza.FormattingEnabled = true;
-            this.CmbMagaza.Location = new System.Drawing.Point(1230, 310);
-            this.CmbMagaza.Name = "CmbMagaza";
-            this.CmbMagaza.Size = new System.Drawing.Size(281, 27);
-            this.CmbMagaza.TabIndex = 10;
             // 
             // CmbDep
             // 
@@ -277,7 +250,7 @@
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl12.Appearance.Options.UseFont = true;
             this.labelControl12.Appearance.Options.UseForeColor = true;
-            this.labelControl12.Location = new System.Drawing.Point(1169, 349);
+            this.labelControl12.Location = new System.Drawing.Point(1169, 316);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(52, 19);
             this.labelControl12.TabIndex = 64;
@@ -285,7 +258,7 @@
             // 
             // TPicture
             // 
-            this.TPicture.Location = new System.Drawing.Point(1230, 374);
+            this.TPicture.Location = new System.Drawing.Point(1230, 341);
             this.TPicture.Name = "TPicture";
             this.TPicture.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.TPicture.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -304,7 +277,7 @@
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl13.Appearance.Options.UseFont = true;
             this.labelControl13.Appearance.Options.UseForeColor = true;
-            this.labelControl13.Location = new System.Drawing.Point(1162, 381);
+            this.labelControl13.Location = new System.Drawing.Point(1162, 348);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(59, 19);
             this.labelControl13.TabIndex = 66;
@@ -312,7 +285,7 @@
             // 
             // TPass
             // 
-            this.TPass.Location = new System.Drawing.Point(1230, 438);
+            this.TPass.Location = new System.Drawing.Point(1230, 405);
             this.TPass.Name = "TPass";
             this.TPass.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.TPass.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -331,7 +304,7 @@
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl14.Appearance.Options.UseFont = true;
             this.labelControl14.Appearance.Options.UseForeColor = true;
-            this.labelControl14.Location = new System.Drawing.Point(1186, 445);
+            this.labelControl14.Location = new System.Drawing.Point(1186, 412);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(35, 19);
             this.labelControl14.TabIndex = 70;
@@ -343,7 +316,7 @@
             this.labelControl15.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl15.Appearance.Options.UseFont = true;
             this.labelControl15.Appearance.Options.UseForeColor = true;
-            this.labelControl15.Location = new System.Drawing.Point(1136, 409);
+            this.labelControl15.Location = new System.Drawing.Point(1136, 376);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(85, 19);
             this.labelControl15.TabIndex = 69;
@@ -351,7 +324,7 @@
             // 
             // TUser
             // 
-            this.TUser.Location = new System.Drawing.Point(1230, 406);
+            this.TUser.Location = new System.Drawing.Point(1230, 373);
             this.TUser.Name = "TUser";
             this.TUser.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.TUser.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -376,7 +349,7 @@
             this.BUpdate.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
             this.BUpdate.AppearancePressed.Options.UseBackColor = true;
             this.BUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BUpdate.ImageOptions.Image")));
-            this.BUpdate.Location = new System.Drawing.Point(1376, 472);
+            this.BUpdate.Location = new System.Drawing.Point(1376, 439);
             this.BUpdate.Name = "BUpdate";
             this.BUpdate.Size = new System.Drawing.Size(135, 30);
             this.BUpdate.TabIndex = 16;
@@ -396,7 +369,7 @@
             this.BClear.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.BClear.AppearancePressed.Options.UseBackColor = true;
             this.BClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BClear.ImageOptions.Image")));
-            this.BClear.Location = new System.Drawing.Point(1235, 508);
+            this.BClear.Location = new System.Drawing.Point(1235, 475);
             this.BClear.Name = "BClear";
             this.BClear.Size = new System.Drawing.Size(276, 30);
             this.BClear.TabIndex = 17;
@@ -416,7 +389,7 @@
             this.BSave.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(163)))), ((int)(((byte)(188)))));
             this.BSave.AppearancePressed.Options.UseBackColor = true;
             this.BSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BSave.ImageOptions.Image")));
-            this.BSave.Location = new System.Drawing.Point(1235, 472);
+            this.BSave.Location = new System.Drawing.Point(1235, 439);
             this.BSave.Name = "BSave";
             this.BSave.Size = new System.Drawing.Size(135, 30);
             this.BSave.TabIndex = 15;
@@ -438,7 +411,7 @@
             // 
             this.MskPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.MskPhone.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.MskPhone.Location = new System.Drawing.Point(1230, 343);
+            this.MskPhone.Location = new System.Drawing.Point(1230, 310);
             this.MskPhone.Mask = "(999) 000-0000";
             this.MskPhone.Name = "MskPhone";
             this.MskPhone.Size = new System.Drawing.Size(281, 26);
@@ -613,8 +586,6 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.RchAdres);
-            this.Controls.Add(this.labelControl7);
-            this.Controls.Add(this.CmbMagaza);
             this.Controls.Add(this.CmbDep);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl4);
@@ -644,8 +615,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.RichTextBox RchAdres;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private System.Windows.Forms.ComboBox CmbMagaza;
         private System.Windows.Forms.ComboBox CmbDep;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl4;

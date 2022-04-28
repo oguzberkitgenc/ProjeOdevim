@@ -62,7 +62,7 @@ namespace ProjeOdevim.Formlar
             dt1.Columns.Add(new DataColumn("ALIŞ FİYATI", typeof(double)));
             dt1.Columns.Add(new DataColumn("SATIŞ FİYATI", typeof(double)));
         }
-        void IslemNo()
+        void IslemNumarası()
         {
             SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
@@ -116,7 +116,7 @@ namespace ProjeOdevim.Formlar
         private void FSales_Load(object sender, EventArgs e)
         {
             Employee();
-            IslemNo();
+            IslemNumarası();
             ProductList();
             Yazdirma();
             CustomerList();
@@ -613,17 +613,25 @@ namespace ProjeOdevim.Formlar
                 komut2.ExecuteNonQuery();
                 connection.Close();
 
-                Product2();
-                IslemNoArttir();
-                IslemNo();
+                
 
                 Console.Beep(800, 250);
                 if (CFatura.Checked == true)
                 {
-                    gridControl2.ExportToPdf(@"C:\Ticari Otomasyon\Raporlar\Fatura\" + CmbCustomer.Text.ToString() + "-" + CmbEmploye.Text.ToString() + ".Pdf");
-                    MessageBox.Show("Fatura Oluşturuldu", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Process.Start(@"C:\Ticari Otomasyon\Raporlar\Fatura\" + CmbCustomer.Text.ToString() + "-" + CmbEmploye.Text.ToString() + ".Pdf");
+                    /*    gridControl2.ExportToPdf(@"C:\Ticari Otomasyon\Raporlar\Fatura\" + CmbCustomer.Text.ToString() + "-" + CmbEmploye.Text.ToString() + ".Pdf");
+                        MessageBox.Show("Fatura Oluşturuldu", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Process.Start(@"C:\Ticari Otomasyon\Raporlar\Fatura\" + CmbCustomer.Text.ToString() + "-" + CmbEmploye.Text.ToString() + ".Pdf");
+                   */
+
+                    Yazdir yazdir = new Yazdir(int.Parse(LIslemNo.Text));
+                    yazdir.IslemNo = int.Parse(LIslemNo.Text);
+                    yazdir.YazdirmayaBasla();
+                    Process.Start(@"C:/Users/24f4c/Desktop/zxc.pdf");
                 }
+
+                Product2();
+                IslemNoArttir();
+                IslemNumarası();
                 Clear();
             }
         }

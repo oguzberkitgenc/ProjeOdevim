@@ -28,17 +28,7 @@ namespace ProjeOdevim.Formlar
             CmbDep.DisplayMember = "DEPARTMAN";
             CmbDep.DataSource = dt;
         }
-        void MagazaList()
-        {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
-            SqlCommand command = new SqlCommand("Select ID,MAGAZA From TBLMAGAZA", connection);
-            SqlDataAdapter da = new SqlDataAdapter(command);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            CmbMagaza.ValueMember = "ID";
-            CmbMagaza.DisplayMember = "MAGAZA";
-            CmbMagaza.DataSource = dt;
-        }
+
         void IlList()
         {
             SqlConnection connection = new SqlConnection(bgl.Adres);
@@ -55,10 +45,10 @@ namespace ProjeOdevim.Formlar
             SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             DataTable dataTable = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select TBLPERSONEL.ID,TC AS 'TC NO',DEPARTMAN,MAGAZA as 'MAĞAZA' ," +
+            SqlDataAdapter da = new SqlDataAdapter("Select TBLPERSONEL.ID,TC AS 'TC NO',DEPARTMAN," +
                 "AD AS 'AD SOYAD',TEL AS 'TELEFON',CINSIYETAD AS 'CİNSİYET',DTARIH AS 'DOĞUM TARİHİ',TBLPERSONEL.IL AS 'İL'," +
                 "TBLPERSONEL.ILCE AS 'İLÇE', TBLPERSONEL.ADRES,FOTO FROM TBLPERSONEL INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
-                "INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID INNER JOIN TBLCINSIYET ON TBLPERSONEL.CINSIYET=TBLCINSIYET.ID " +
+                "INNER JOIN TBLCINSIYET ON TBLPERSONEL.CINSIYET=TBLCINSIYET.ID " +
                 "order by DEPARTMANID asc", connection);
             da.Fill(dataTable);
             gridControl1.DataSource = dataTable;
@@ -80,7 +70,6 @@ namespace ProjeOdevim.Formlar
             TId.Text = "";
             MskTc.Text = "";
             CmbDep.Text = "";
-            CmbMagaza.Text = "";
             TName.Text = "";
             CmbGender.Text = "";
             MskPhone.Text = "";
@@ -97,12 +86,11 @@ namespace ProjeOdevim.Formlar
         {
             EmployeeList();
             DepartmanList();
-            MagazaList();
             CinsiyetGetir();
             IlList();
             Clear();
             gridView1.Columns[0].Visible = false;
-            gridView1.Columns[11].Visible = false;
+            gridView1.Columns[10].Visible = false;
         }
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -142,26 +130,26 @@ namespace ProjeOdevim.Formlar
             if (durum == true)
             {
                 if (TId.Text == "" & MskTc.Text != "" & TName.Text != "" & CmbGender.Text != "" &
-               MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & CmbDep.Text != "" & CmbMagaza.Text != "" &
+               MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & CmbDep.Text != "" &
                MskPhone.Text != "" & TPicture.Text != "" & TUser.Text != "" & TPass.Text != "")
                 {
                     SqlConnection connection = new SqlConnection(bgl.Adres);
                     connection.Open();
-                    SqlCommand command = new SqlCommand("insert into TBLPERSONEL (TC,AD,CINSIYET,DTARIH,IL,ILCE,ADRES,DEPARTMANID,MAGAZAID,TEL,FOTO,KADI,SIFRE,PUAN) values (@p1,@p2,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13,@p14,@p15)", connection);
+                    SqlCommand command = new SqlCommand("insert into TBLPERSONEL (TC,AD,CINSIYET,DTARIH,IL,ILCE,ADRES,DEPARTMANID,TEL," +
+                        "FOTO,KADI,SIFRE,PUAN) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13)", connection);
                     command.Parameters.AddWithValue("@p1", MskTc.Text);
                     command.Parameters.AddWithValue("@p2", TName.Text);
-                    command.Parameters.AddWithValue("@p4", CmbGender.SelectedValue);
-                    command.Parameters.AddWithValue("@p5", MskBirth.Text);
-                    command.Parameters.AddWithValue("@p6", CmbIl.Text);
-                    command.Parameters.AddWithValue("@p7", CmbIlce.Text);
-                    command.Parameters.AddWithValue("@p8", RchAdres.Text);
-                    command.Parameters.AddWithValue("@p9", CmbDep.SelectedValue);
-                    command.Parameters.AddWithValue("@p10", CmbMagaza.SelectedValue);
-                    command.Parameters.AddWithValue("@p11", MskPhone.Text);
-                    command.Parameters.AddWithValue("@p12", TPicture.Text);
-                    command.Parameters.AddWithValue("@p13", TUser.Text);
-                    command.Parameters.AddWithValue("@p14", TPass.Text);
-                    command.Parameters.AddWithValue("@p15", 0);
+                    command.Parameters.AddWithValue("@p3", CmbGender.SelectedValue);
+                    command.Parameters.AddWithValue("@p4", MskBirth.Text);
+                    command.Parameters.AddWithValue("@p5", CmbIl.Text);
+                    command.Parameters.AddWithValue("@p6", CmbIlce.Text);
+                    command.Parameters.AddWithValue("@p7", RchAdres.Text);
+                    command.Parameters.AddWithValue("@p8", CmbDep.SelectedValue);
+                    command.Parameters.AddWithValue("@p9", MskPhone.Text);
+                    command.Parameters.AddWithValue("@p10", TPicture.Text);
+                    command.Parameters.AddWithValue("@p11", TUser.Text);
+                    command.Parameters.AddWithValue("@p12", TPass.Text);
+                    command.Parameters.AddWithValue("@p13", 0);
                     command.ExecuteNonQuery();
                     connection.Close();
                     EmployeeList();
@@ -181,15 +169,11 @@ namespace ProjeOdevim.Formlar
                 MessageBox.Show(" Bu Kullanıcı Veri Tabanında Kayıtlı. \n Lütfen Farklı Kullanıcı Adı İle Tekrar Deneyiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
-        string picture;
         private void TPicture_Properties_DoubleClick(object sender, EventArgs e)
         {
-            OpenFileDialog of = new OpenFileDialog();
-            of.Filter = "Fotoğraf Dosyası |*.jpeg| Fotoğraf Dosyası|*.jpg| Fotoğraf Dosyası|*.png";
-            of.ShowDialog();
-            picture = openFileDialog1.FileName;
-            TPicture.Text = picture;
-            pictureBox1.ImageLocation = picture;
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.ShowDialog();
+            TPicture.Text = opf.FileName;
         }
         private void BUpdate_Click(object sender, EventArgs e)
         {
@@ -200,11 +184,10 @@ namespace ProjeOdevim.Formlar
 
                     SqlConnection connection = new SqlConnection(bgl.Adres);
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand("Update TBLPERSONEL set TC=@T1,DEPARTMANID=@T2,MAGAZAID=@T3,AD=@T4," +
+                    SqlCommand cmd = new SqlCommand("Update TBLPERSONEL set TC=@T1,DEPARTMANID=@T2,AD=@T4," +
                         "CINSIYET=@T6,TEL=@T7,DTARIH=@T8,IL=@T9,ILCE=@T10,ADRES=@T11,FOTO=@T12 WHERE ID=@T13", connection);
                     cmd.Parameters.AddWithValue("@T1", MskTc.Text);
                     cmd.Parameters.AddWithValue("@T2", CmbDep.SelectedValue);
-                    cmd.Parameters.AddWithValue("@T3", CmbMagaza.SelectedValue);
                     cmd.Parameters.AddWithValue("@T4", TName.Text);
                     cmd.Parameters.AddWithValue("@T6", CmbGender.SelectedValue);
                     cmd.Parameters.AddWithValue("@T7", MskPhone.Text);
@@ -227,15 +210,16 @@ namespace ProjeOdevim.Formlar
                         pas.ExecuteNonQuery();
                         connection.Close();
                     }
-                    else
-                    {
-                        MessageBox.Show("Bu Kullanıcı Adı Sistemde Başka Bir Kullanıcı Tarafından Kullanılmaktadır.! \n Kullanıcı Adı ve Şifre Hariç Diğer Bilgiler Başarıyla Güncellendi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
                     MessageBox.Show("  Personel Başarıyla Güncellendi!", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     EmployeeList();
                     Clear();
 
                 }
+                else if (durum == false)
+                {
+                    MessageBox.Show("Bu Kullanıcı Adı Sistemde Başka Bir Kullanıcı Tarafından Kullanılmaktadır.! \n Kullanıcı Adı ve Şifre Hariç Diğer Bilgiler Başarıyla Güncellendi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 else
                 {
                     MessageBox.Show(" Lütfen Güncellemek İstediğiniz Personeli Seçin ", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -254,7 +238,6 @@ namespace ProjeOdevim.Formlar
             TId.Text = dr["ID"].ToString();
             MskTc.Text = dr["TC NO"].ToString();
             CmbDep.Text = dr["DEPARTMAN"].ToString();
-            CmbMagaza.Text = dr["MAĞAZA"].ToString();
             TName.Text = dr["AD SOYAD"].ToString();
             CmbGender.Text = dr["CİNSİYET"].ToString();
             MskPhone.Text = dr["TELEFON"].ToString();

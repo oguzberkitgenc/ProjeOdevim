@@ -68,6 +68,7 @@ namespace ProjeOdevim.Formlar
 
         private void BPdf_Click(object sender, EventArgs e)
         {
+            
             Cursor = Cursors.WaitCursor;
             panel19.Visible = true;
             this.WindowState = FormWindowState.Maximized;
@@ -106,7 +107,7 @@ namespace ProjeOdevim.Formlar
             DataRow dr3 = dt.NewRow();
             dr3["ANAPARA"] = "TOPLAM";
             dr3["VADE"] = "VADE";
-            dr3["TAKSIT"] = "AYLIK TAKSİT";
+            dr3["TAKSIT"] = "TOPLAM";
             dr3["TARIH"] = "SON TAKSİT";
             dr3["VADEFAIZI"] = "FAİZ";
             dt.Rows.Add(dr3);

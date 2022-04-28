@@ -33,9 +33,8 @@ namespace ProjeOdevim.Formlar
         {
             SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,MAGAZA,AD AS 'AD SOYAD'" +
+            SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,AD AS 'AD SOYAD'" +
                 "From TBLPERSONEL  INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
-                "INNER JOIN TBLMAGAZA ON TBLPERSONEL.MAGAZAID=TBLMAGAZA.ID " +
                 "WHERE TBLPERSONEL.DEPARTMANID!=(SELECT ID FROM TBLDEPARTMAN WHERE DEPARTMAN='Stajer') " +
                 "ORDER BY TBLPERSONEL.ID DESC", connection);
             DataTable dataTable = new DataTable();

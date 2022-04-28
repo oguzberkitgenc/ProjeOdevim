@@ -95,16 +95,6 @@ namespace ProjeOdevim
             fDepartment.ShowDialog();
         }
 
-        Formlar.FShopping fShopping;
-        private void BMagaza_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (fShopping == null || fShopping.IsDisposed)
-            {
-                fShopping = new Formlar.FShopping();
-                fShopping.MdiParent = this;
-                fShopping.Show();
-            }
-        }
         Formlar.FEmployee f2;
         private void BPersonel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
