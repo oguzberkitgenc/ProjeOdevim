@@ -60,6 +60,7 @@ namespace ProjeOdevim.Formlar
             {
                 if (Rch.Text != "")
                 {
+                    bool durum = false;
                     SqlConnection connection = new SqlConnection(bgl.Adres);
                     connection.Open();
                     SqlCommand komut = new SqlCommand("SELECT TBLTAKSITLER.ID,TBLMUSTERI.AD AS 'MÜŞTERİ',TBLPERSONEL.AD AS " +
@@ -71,13 +72,37 @@ namespace ProjeOdevim.Formlar
                     da.Fill(dt);
                     gridControl1.DataSource = dt;
                     connection.Close();
-                    gridView1.Columns[0].Visible = false;
                     if (gridView1.DataRowCount == 0)
+                    {
+                        durum = true;
+                    }
+                    if (durum == true)
+                    {
+                        connection.Open();
+                        SqlCommand komut2 = new SqlCommand("SELECT TBLTAKSITLER.ID,TBLMUSTERI.AD AS 'MÜŞTERİ',TBLPERSONEL.AD AS " +
+                            "'PERSONEL',ISLEMNOT AS 'İŞLEM NUMARASI',TARIH,KACINCITAKSIT AS 'VADE',TAKSITTUTARI FROM TBLTAKSITLER INNER JOIN TBLMUSTERI " +
+                            "ON TBLTAKSITLER.MUSTERIT=TBLMUSTERI.ID INNER JOIN TBLPERSONEL ON TBLTAKSITLER.PERSONELT=TBLPERSONEL.ID " +
+                            "WHERE ISLEMNOT=" + Rch.Text + "ORDER BY TARIH ASC", connection);
+                        SqlDataAdapter da2 = new SqlDataAdapter(komut2);
+                        DataTable dt2 = new DataTable();
+                        da2.Fill(dt2);
+                        gridControl1.DataSource = dt2;
+                        connection.Close();
+                        if (gridView1.DataRowCount == 0)
+                        {
+                            MessageBox.Show(Rch.Text + "\n\n Aradığını bulamadım...", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            Rch.Text = "";
+                            Listele();
+                        }
+                    }
+                    else
                     {
                         MessageBox.Show(Rch.Text + "\n\n Aradığını bulamadım...", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                         Rch.Text = "";
                         Listele();
                     }
+                    gridView1.Columns[0].Visible = false;
+
                 }
                 else if (Rch.Text == "")
                 {

@@ -73,9 +73,6 @@ namespace ProjeOdevim
             Font fontIcerikBaslik = new Font("Calibri", 12, FontStyle.Underline);
             Font icerik = new Font("Calibri", 8, FontStyle.Italic);
             Font icerikkalin = new Font("Calibri", 8, FontStyle.Bold);
-            //  StringFormat ortala = new StringFormat(StringFormatFlags.FitBlackBox);
-            //ortala.Alignment = StringAlignment.Center;
-            // RectangleF rcUnvanKonum = new RectangleF(125, 20, 600, 500); // soldan,üstten,genişlik
 
             e.Graphics.DrawString(isyeri.ToString(), new Font("Monotype Corsiva", 24, FontStyle.Bold), Brushes.Black, new Point(460, 15)); // soldan üstten
             Image img = Image.FromFile(@"C:\Ticari Otomasyon\image\employee\logo.png");
@@ -121,7 +118,6 @@ namespace ProjeOdevim
 
 
             e.Graphics.DrawString("      *******************************************************************************************", fontbilgi, Brushes.Black, new Point(5, 285));
-            //   e.Graphics.DrawString("İşlem No: " + IslemNo.ToString(), icerikkalin, Brushes.Black, new Point(5, 310));
             e.Graphics.DrawString("Barkod: ", fontIcerikBaslik, Brushes.Black, new Point(5, 315));
             e.Graphics.DrawString("Marka: ", fontIcerikBaslik, Brushes.Black, new Point(100, 315));
             e.Graphics.DrawString("Ürün: ", fontIcerikBaslik, Brushes.Black, new Point(300, 315));
@@ -131,7 +127,6 @@ namespace ProjeOdevim
 
             connection.Open();
             SqlCommand sabit2 = new SqlCommand("SELECT ISLEMNO,BARKODNO,MARKAADI,URUNADI,INDIRIMORANI,TOPLAMFIYAT FROM TBLSATIS INNER JOIN TBLURUN ON TBLSATIS.URUNID=TBLURUN.ID WHERE ISLEMNO=" + IslemNo, connection);
-            //     sabit2.Parameters.AddWithValue("@ISLEM", IslemNo.ToString());
             SqlDataReader dr2 = sabit2.ExecuteReader();
             while (dr2.Read())
             {

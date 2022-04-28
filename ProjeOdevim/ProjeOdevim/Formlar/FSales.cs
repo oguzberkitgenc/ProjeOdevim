@@ -276,29 +276,44 @@ namespace ProjeOdevim.Formlar
         }
         private void BAdd_Click(object sender, EventArgs e)
         {
-            DataRow dr1 = dt1.NewRow();
-            dr1["ID"] = LId.Text;
-            dr1["BARKOD"] = LBarkod.Text;
-            dr1["KATEGORI"] = Convert.ToString(LKategori.Text);
-            dr1["MARKA"] = Convert.ToString(LMarka.Text);
-            dr1["ÜRÜN ADI"] = Convert.ToString(LUrun.Text);
-            dr1["ALIŞ FİYATI"] = double.Parse(LAlis.Text);
-            dr1["SATIŞ FİYATI"] = double.Parse(LSatis.Text);
-            dt1.Rows.Add(dr1);
-            gridControl2.DataSource = dt1;
-            gridView2.Columns[1].Width = 3;
-            gridView2.Columns[3].Width = 50;
-            gridView2.Columns[4].Width = 100;
-            gridView2.Columns[6].Width = 50;
+            try
+            {
+                if (LId.Text != "")
+                {
+                    DataRow dr1 = dt1.NewRow();
+                    dr1["ID"] = LId.Text;
+                    dr1["BARKOD"] = LBarkod.Text;
+                    dr1["KATEGORI"] = Convert.ToString(LKategori.Text);
+                    dr1["MARKA"] = Convert.ToString(LMarka.Text);
+                    dr1["ÜRÜN ADI"] = Convert.ToString(LUrun.Text);
+                    dr1["ALIŞ FİYATI"] = double.Parse(LAlis.Text);
+                    dr1["SATIŞ FİYATI"] = double.Parse(LSatis.Text);
+                    dt1.Rows.Add(dr1);
+                    gridControl2.DataSource = dt1;
+                    gridView2.Columns[1].Width = 3;
+                    gridView2.Columns[3].Width = 50;
+                    gridView2.Columns[4].Width = 100;
+                    gridView2.Columns[6].Width = 50;
 
-            gridView2.Columns[0].Visible = false;
-            gridView2.Columns[2].Visible = false;
-            gridView2.Columns[5].Visible = false;
-            double fiyatal = Convert.ToDouble(LSatis.Text);
-            hesapla += fiyatal;
-            Total.Text = hesapla.ToString("C2");
-            UrunEksilt();
-            Product2();
+                    gridView2.Columns[0].Visible = false;
+                    gridView2.Columns[2].Visible = false;
+                    gridView2.Columns[5].Visible = false;
+                    double fiyatal = Convert.ToDouble(LSatis.Text);
+                    hesapla += fiyatal;
+                    Total.Text = hesapla.ToString("C2");
+                    UrunEksilt();
+                    Product2();
+                    gridView2.Focus();
+                    LId.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
+            
         }
         void Clear()
         {
@@ -614,10 +629,6 @@ namespace ProjeOdevim.Formlar
                 Console.Beep(800, 250);
                 if (CFatura.Checked == true)
                 {
-                    /*    gridControl2.ExportToPdf(@"C:\Ticari Otomasyon\Raporlar\Fatura\" + CmbCustomer.Text.ToString() + "-" + CmbEmploye.Text.ToString() + ".Pdf");
-                        MessageBox.Show("Fatura Oluşturuldu", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Process.Start(@"C:\Ticari Otomasyon\Raporlar\Fatura\" + CmbCustomer.Text.ToString() + "-" + CmbEmploye.Text.ToString() + ".Pdf");
-                   */
                     int kimo = Convert.ToInt32(CmbCustomer.SelectedValue);
                     Yazdir yazdir = new Yazdir(int.Parse(LIslemNo.Text), kimo);
                     yazdir.IslemNo = int.Parse(LIslemNo.Text);

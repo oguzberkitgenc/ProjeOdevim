@@ -85,9 +85,8 @@
             this.label33 = new System.Windows.Forms.Label();
             this.LKadınPersonel = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.LPersonelAz = new System.Windows.Forms.Label();
+            this.LMErkek = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
@@ -98,9 +97,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.LPErsonelFazla = new System.Windows.Forms.Label();
+            this.LMKadın = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -109,6 +107,8 @@
             this.label37 = new System.Windows.Forms.Label();
             this.LBitikUrun = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -137,23 +137,23 @@
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(243)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(68)))), ((int)(((byte)(173)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.LUrunSayisi);
             this.panel1.Controls.Add(this.label1);
@@ -196,7 +196,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(104)))), ((int)(((byte)(224)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(68)))), ((int)(((byte)(173)))));
             this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.LKategoriSayisi);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -261,7 +261,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(132)))), ((int)(((byte)(241)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
             this.panel3.Controls.Add(this.label27);
             this.panel3.Controls.Add(this.LMarkaSayisi);
             this.panel3.Controls.Add(this.pictureBox11);
@@ -304,7 +304,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(108)))), ((int)(((byte)(240)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
             this.panel4.Controls.Add(this.pictureBox9);
             this.panel4.Controls.Add(this.label28);
             this.panel4.Controls.Add(this.LToplamPersonel);
@@ -347,7 +347,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(30)))), ((int)(((byte)(81)))));
+            this.panel5.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Controls.Add(this.label32);
             this.panel5.Controls.Add(this.LMusteriSayisi);
@@ -412,7 +412,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(52)))), ((int)(((byte)(113)))));
+            this.panel6.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel6.Controls.Add(this.pictureBox10);
             this.panel6.Controls.Add(this.label30);
             this.panel6.Controls.Add(this.LFazlaMarka);
@@ -520,7 +520,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(143)))), ((int)(((byte)(166)))));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(128)))), ((int)(((byte)(147)))));
             this.panel8.Controls.Add(this.pictureBox19);
             this.panel8.Controls.Add(this.label25);
             this.panel8.Controls.Add(this.LEnStokluUrun);
@@ -541,10 +541,10 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel9.Controls.Add(this.pictureBox8);
-            this.panel9.Controls.Add(this.label31);
-            this.panel9.Controls.Add(this.LErkekPersonel);
+            this.panel9.Controls.Add(this.label40);
+            this.panel9.Controls.Add(this.LMErkek);
             this.panel9.Location = new System.Drawing.Point(615, 468);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(300, 150);
@@ -565,7 +565,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(10, 15);
+            this.label31.Location = new System.Drawing.Point(10, 24);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(198, 27);
             this.label31.TabIndex = 14;
@@ -576,7 +576,7 @@
             this.LErkekPersonel.AutoSize = true;
             this.LErkekPersonel.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LErkekPersonel.ForeColor = System.Drawing.Color.White;
-            this.LErkekPersonel.Location = new System.Drawing.Point(120, 60);
+            this.LErkekPersonel.Location = new System.Drawing.Point(120, 69);
             this.LErkekPersonel.Name = "LErkekPersonel";
             this.LErkekPersonel.Size = new System.Drawing.Size(132, 39);
             this.LErkekPersonel.TabIndex = 13;
@@ -584,7 +584,7 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel10.Controls.Add(this.pictureBox16);
             this.panel10.Controls.Add(this.label29);
             this.panel10.Controls.Add(this.LPersonelPuan);
@@ -605,7 +605,7 @@
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(88)))), ((int)(((byte)(226)))));
+            this.panel11.BackColor = System.Drawing.Color.Indigo;
             this.panel11.Controls.Add(this.pictureBox13);
             this.panel11.Controls.Add(this.label34);
             this.panel11.Controls.Add(this.LAzKategori);
@@ -648,7 +648,7 @@
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(95)))), ((int)(((byte)(255)))));
+            this.panel12.BackColor = System.Drawing.Color.Indigo;
             this.panel12.Controls.Add(this.pictureBox20);
             this.panel12.Controls.Add(this.label26);
             this.panel12.Controls.Add(this.LAzStokluUrun);
@@ -701,10 +701,10 @@
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
-            this.panel13.Controls.Add(this.pictureBox6);
-            this.panel13.Controls.Add(this.label33);
-            this.panel13.Controls.Add(this.LKadınPersonel);
+            this.panel13.BackColor = System.Drawing.Color.Teal;
+            this.panel13.Controls.Add(this.label39);
+            this.panel13.Controls.Add(this.pictureBox15);
+            this.panel13.Controls.Add(this.LMKadın);
             this.panel13.Location = new System.Drawing.Point(921, 468);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(300, 150);
@@ -713,7 +713,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(44, 88);
+            this.pictureBox6.Location = new System.Drawing.Point(44, 97);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(50, 50);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -725,7 +725,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(10, 15);
+            this.label33.Location = new System.Drawing.Point(10, 24);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(198, 27);
             this.label33.TabIndex = 14;
@@ -736,7 +736,7 @@
             this.LKadınPersonel.AutoSize = true;
             this.LKadınPersonel.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LKadınPersonel.ForeColor = System.Drawing.Color.White;
-            this.LKadınPersonel.Location = new System.Drawing.Point(120, 60);
+            this.LKadınPersonel.Location = new System.Drawing.Point(120, 69);
             this.LKadınPersonel.Name = "LKadınPersonel";
             this.LKadınPersonel.Size = new System.Drawing.Size(132, 39);
             this.LKadınPersonel.TabIndex = 13;
@@ -744,46 +744,36 @@
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(209)))), ((int)(((byte)(161)))));
-            this.panel14.Controls.Add(this.pictureBox15);
-            this.panel14.Controls.Add(this.label40);
-            this.panel14.Controls.Add(this.LPersonelAz);
+            this.panel14.BackColor = System.Drawing.Color.Teal;
+            this.panel14.Controls.Add(this.pictureBox14);
+            this.panel14.Controls.Add(this.LErkekPersonel);
+            this.panel14.Controls.Add(this.label31);
             this.panel14.Location = new System.Drawing.Point(921, 313);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(300, 150);
             this.panel14.TabIndex = 12;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(235, 99);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 15;
-            this.pictureBox15.TabStop = false;
             // 
             // label40
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(10, 12);
+            this.label40.Location = new System.Drawing.Point(13, 18);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(199, 54);
+            this.label40.Size = new System.Drawing.Size(190, 27);
             this.label40.TabIndex = 14;
-            this.label40.Text = "Personeli En Az Olan\r\nMagaza";
+            this.label40.Text = "Erkek Müşteri Sayısı";
             // 
-            // LPersonelAz
+            // LMErkek
             // 
-            this.LPersonelAz.AutoSize = true;
-            this.LPersonelAz.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LPersonelAz.ForeColor = System.Drawing.Color.White;
-            this.LPersonelAz.Location = new System.Drawing.Point(0, 69);
-            this.LPersonelAz.Name = "LPersonelAz";
-            this.LPersonelAz.Size = new System.Drawing.Size(132, 39);
-            this.LPersonelAz.TabIndex = 13;
-            this.LPersonelAz.Text = "1100101";
+            this.LMErkek.AutoSize = true;
+            this.LMErkek.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LMErkek.ForeColor = System.Drawing.Color.White;
+            this.LMErkek.Location = new System.Drawing.Point(113, 61);
+            this.LMErkek.Name = "LMErkek";
+            this.LMErkek.Size = new System.Drawing.Size(132, 39);
+            this.LMErkek.TabIndex = 13;
+            this.LMErkek.Text = "1100101";
             // 
             // panel15
             // 
@@ -830,7 +820,7 @@
             // 
             // panel16
             // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.panel16.Controls.Add(this.label24);
             this.panel16.Controls.Add(this.LKritikSeviye);
             this.panel16.Controls.Add(this.pictureBox4);
@@ -873,7 +863,7 @@
             // 
             // panel17
             // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(192)))), ((int)(((byte)(235)))));
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(220)))), ((int)(((byte)(255)))));
             this.panel17.Controls.Add(this.label23);
             this.panel17.Controls.Add(this.pictureBox3);
             this.panel17.Controls.Add(this.LStokSayisi);
@@ -885,49 +875,39 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(220)))), ((int)(((byte)(255)))));
-            this.panel18.Controls.Add(this.pictureBox14);
-            this.panel18.Controls.Add(this.label39);
-            this.panel18.Controls.Add(this.LPErsonelFazla);
+            this.panel18.Controls.Add(this.pictureBox6);
+            this.panel18.Controls.Add(this.LKadınPersonel);
+            this.panel18.Controls.Add(this.label33);
             this.panel18.Location = new System.Drawing.Point(1227, 313);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(300, 150);
             this.panel18.TabIndex = 16;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(235, 99);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 14;
-            this.pictureBox14.TabStop = false;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(10, 15);
+            this.label39.Location = new System.Drawing.Point(18, 18);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(225, 54);
+            this.label39.Size = new System.Drawing.Size(190, 27);
             this.label39.TabIndex = 13;
-            this.label39.Text = "Personeli En Fazla Olan \r\nMagaza";
+            this.label39.Text = "Kadın Müşteri Sayısı";
             // 
-            // LPErsonelFazla
+            // LMKadın
             // 
-            this.LPErsonelFazla.AutoSize = true;
-            this.LPErsonelFazla.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LPErsonelFazla.ForeColor = System.Drawing.Color.White;
-            this.LPErsonelFazla.Location = new System.Drawing.Point(0, 69);
-            this.LPErsonelFazla.Name = "LPErsonelFazla";
-            this.LPErsonelFazla.Size = new System.Drawing.Size(132, 39);
-            this.LPErsonelFazla.TabIndex = 12;
-            this.LPErsonelFazla.Text = "1100101";
+            this.LMKadın.AutoSize = true;
+            this.LMKadın.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LMKadın.ForeColor = System.Drawing.Color.White;
+            this.LMKadın.Location = new System.Drawing.Point(120, 61);
+            this.LMKadın.Name = "LMKadın";
+            this.LMKadın.Size = new System.Drawing.Size(132, 39);
+            this.LMKadın.TabIndex = 12;
+            this.LMKadın.Text = "1100101";
             // 
             // panel19
             // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(26)))));
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
             this.panel19.Controls.Add(this.pictureBox17);
             this.panel19.Controls.Add(this.label38);
             this.panel19.Controls.Add(this.LUcuzUrun);
@@ -970,7 +950,7 @@
             // 
             // panel20
             // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(175)))), ((int)(((byte)(64)))));
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
             this.panel20.Controls.Add(this.label37);
             this.panel20.Controls.Add(this.LBitikUrun);
             this.panel20.Controls.Add(this.pictureBox5);
@@ -1010,6 +990,26 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(44, 100);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 16;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.Location = new System.Drawing.Point(44, 88);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 16;
+            this.pictureBox15.TabStop = false;
             // 
             // FProductStatis
             // 
@@ -1082,7 +1082,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
@@ -1093,13 +1092,14 @@
             this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1148,8 +1148,8 @@
         private System.Windows.Forms.Label LPahaliUrun;
         private System.Windows.Forms.Label LKritikSeviye;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label LPersonelAz;
-        private System.Windows.Forms.Label LPErsonelFazla;
+        private System.Windows.Forms.Label LMErkek;
+        private System.Windows.Forms.Label LMKadın;
         private System.Windows.Forms.Label LUcuzUrun;
         private System.Windows.Forms.Label LBitikUrun;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -1182,9 +1182,9 @@
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.PictureBox pictureBox14;
     }
 }

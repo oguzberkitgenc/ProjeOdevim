@@ -266,12 +266,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(738, 7);
+            this.label1.Location = new System.Drawing.Point(595, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 23);
+            this.label1.Size = new System.Drawing.Size(382, 23);
             this.label1.TabIndex = 126;
-            this.label1.Text = "Müşteri veya Personel Adı: ";
+            this.label1.Text = "Müşteri - Personel Adı veya İşlem Numarası:";
             // 
             // Rch
             // 

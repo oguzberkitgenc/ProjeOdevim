@@ -34,6 +34,20 @@ namespace ProjeOdevim.Formlar
                 TMail.Text = sqlDataReader[7].ToString();
                 TWeb.Text = sqlDataReader[8].ToString();
                 TLogo.Text = sqlDataReader[9].ToString();
+                TTicariUnvan.Text = sqlDataReader[10].ToString();
+                MskFax.Text = sqlDataReader[11].ToString();
+                TVergiD.Text=sqlDataReader[12].ToString();
+                TVergiN.Text=sqlDataReader[13].ToString();
+                TTicaretNo.Text=sqlDataReader[14].ToString();
+                TMersisNo.Text=sqlDataReader[15].ToString();
+                Mskisbank.Text=sqlDataReader[16].ToString();
+                MskGaranti.Text=sqlDataReader[17].ToString();
+                MskYapi.Text=sqlDataReader[18].ToString();
+                MskAkbank.Text=sqlDataReader[19].ToString();
+                MskFinans.Text=sqlDataReader[20].ToString();
+                MskZiraat.Text=sqlDataReader[21].ToString();
+                MskHalk.Text=sqlDataReader[22].ToString();
+
             }
             connection.Close();
         }
@@ -79,7 +93,9 @@ namespace ProjeOdevim.Formlar
                 SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand komut = new SqlCommand("UPDATE TBLMAGAZA SET UNVAN=@P1,IL=@P2,ILCE=@P3," +
-                    "ADRES=@P4,TEL1=@P5,TEL2=@P6,MAIL=@P7,WEB=@P8,LOGO=@P9", connection);
+                    "ADRES=@P4,TEL1=@P5,TEL2=@P6,MAIL=@P7,WEB=@P8,LOGO=@P9,TICARIUNVAN=@P10,FAX=@P11," +
+                    "VERGIDAIRESI=@P12,VERGINO=@P13,TICARETNO=@P14,MERSISNO=@P15,ISBANK=@P16," +
+                    "GARANTI=@P17,YAPI=@P18,AKBANK=@P19,FINANS=@P20,ZIRAAT=@P21,HALK=@P22", connection);
                 komut.Parameters.AddWithValue("@P1", TUnvan.Text);
                 komut.Parameters.AddWithValue("@P2", CmbIl.Text);
                 komut.Parameters.AddWithValue("@P3", CmbIlce.Text);
@@ -89,6 +105,20 @@ namespace ProjeOdevim.Formlar
                 komut.Parameters.AddWithValue("@P7", TMail.Text);
                 komut.Parameters.AddWithValue("@P8", TWeb.Text);
                 komut.Parameters.AddWithValue("@P9", TLogo.Text);
+                komut.Parameters.AddWithValue("@P10", TTicariUnvan.Text);
+                komut.Parameters.AddWithValue("@P11", MskFax.Text);
+                komut.Parameters.AddWithValue("@P12", TVergiD.Text);
+                komut.Parameters.AddWithValue("@P13", TVergiN.Text);
+                komut.Parameters.AddWithValue("@P14", TTicaretNo.Text);
+                komut.Parameters.AddWithValue("@P15", TMersisNo.Text);
+                komut.Parameters.AddWithValue("@P16", Mskisbank.Text);
+                komut.Parameters.AddWithValue("@P17", MskGaranti.Text);
+                komut.Parameters.AddWithValue("@P18", MskYapi.Text);
+                komut.Parameters.AddWithValue("@P19", MskAkbank.Text);
+                komut.Parameters.AddWithValue("@P20", MskFinans.Text);
+                komut.Parameters.AddWithValue("@P21", MskZiraat.Text);
+                komut.Parameters.AddWithValue("@P22", MskHalk.Text);
+
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Mağaza Bilgileri Başarıyla Kayıt Edildi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 connection.Close();
@@ -100,6 +130,13 @@ namespace ProjeOdevim.Formlar
             }
             Listele();
 
+        }
+
+        private void TLogo_DoubleClick(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+            TLogo.Text= ofd.FileName;
         }
     }
 }

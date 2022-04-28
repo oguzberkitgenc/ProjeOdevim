@@ -408,7 +408,6 @@
     <EmbeddedResource Include="Formlar\FWhoAmi.resx">
       <DependentUpon>FWhoAmi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\RpGenerator.rdlc" />
     <EmbeddedResource Include="FrmHomePage.resx">
       <DependentUpon>FrmHomePage.cs</DependentUpon>
     </EmbeddedResource>

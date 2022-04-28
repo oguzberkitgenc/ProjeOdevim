@@ -152,28 +152,7 @@ namespace ProjeOdevim.Formlar
             dr8["TARIH"] = "Adres:" + LIl.Text.ToString() + "/" + LIlce.Text.ToString() + "\n" + LAdres.Text.ToString();
             dt.Rows.Add(dr8);
 
-            DataRow dr9 = dt.NewRow();
-            dr9["TARIH"] = "GEREKLİ AÇIKLAMALAR";
-            dt.Rows.Add(dr9);
-
-            DataRow dr10 = dt.NewRow();
-            dr10["TARIH"] = "1. Satılan mal geri alınmaz";
-            dt.Rows.Add(dr10);
-
-            DataRow dr11 = dt.NewRow();
-            dr11["TARIH"] = "2. Mal tesliminden sonra vuku olan";
-            dr11["TAKSIT"] = "arızalarda yetkili servis muhataptır.";
-            dt.Rows.Add(dr11);
-
-            DataRow dr12 = dt.NewRow();
-            dr12["TARIH"] = "3. Faturaya itiraz müddeti 8 gündür, 8 gün içerisinde";
-            dr12["TAKSIT"] = "itiraz edilmediğinde aynen geçerlidir.";
-            dt.Rows.Add(dr12);
-
-            DataRow dr13 = dt.NewRow();
-            dr13["TARIH"] = "4. Vadesinde ödenmeyen alacaklara";
-            dr13["TAKSIT"] = "uygulanmakta olan faiz nispeti farkı\ntahakkuk ettirilir.";
-            dt.Rows.Add(dr13);
+ 
 
             gridControl2.DataSource = dt;
 

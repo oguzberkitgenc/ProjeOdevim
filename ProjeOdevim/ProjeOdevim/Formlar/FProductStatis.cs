@@ -236,6 +236,30 @@ namespace ProjeOdevim.Formlar
             }
             connection.Close();
         }
+        void KadınMusteri()
+        {
+            SqlConnection connection = new SqlConnection(bgl.Adres);
+            connection.Open();
+            SqlCommand komut = new SqlCommand("Select CINSIYET,COUNT(*) From TBLMUSTERI GROUP BY CINSIYET ORDER BY CINSIYET ASC", connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                LMKadın.Text = dr[1].ToString();
+            }
+            connection.Close();
+        }
+        void ErkekMusteri()
+        {
+            SqlConnection connection = new SqlConnection(bgl.Adres);
+            connection.Open();
+            SqlCommand komut = new SqlCommand("Select CINSIYET,COUNT(*) From TBLMUSTERI GROUP BY CINSIYET ORDER BY CINSIYET DESC", connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                LMErkek.Text = dr[1].ToString();
+            }
+            connection.Close();
+        }
         private void FProductStatis_Load(object sender, EventArgs e)
         {
             UrunSayisi();
@@ -256,6 +280,8 @@ namespace ProjeOdevim.Formlar
             PersonelPuan();
             ErkekPersonel();
             KadınPersonel();
+            KadınMusteri();
+            ErkekMusteri();
         }
     }
 }

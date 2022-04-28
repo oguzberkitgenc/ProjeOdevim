@@ -548,7 +548,6 @@
             this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.SmartVertScrollBar = false;
-            this.gridView1.OptionsCustomization.AllowFilter = false;
             this.gridView1.OptionsFilter.AllowMRUFilterList = false;
             this.gridView1.OptionsMenu.EnableColumnMenu = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;

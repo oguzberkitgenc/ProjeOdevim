@@ -79,12 +79,12 @@
             this.BMusteri = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BUrun = new DevExpress.XtraBars.BarButtonItem();
-            this.BMagaza = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BKategori = new DevExpress.XtraBars.BarButtonItem();
             this.BDepartman = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BHareket = new DevExpress.XtraBars.BarButtonItem();
+            this.BMagaza = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.BHomeList = new DevExpress.XtraBars.BarButtonItem();
@@ -952,30 +952,6 @@
             this.BUrun.Name = "BUrun";
             this.BUrun.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BUrun_ItemClick);
             // 
-            // BMagaza
-            // 
-            this.BMagaza.Caption = "MAĞAZALAR";
-            this.BMagaza.Id = 6;
-            this.BMagaza.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMagaza.ImageOptions.Image")));
-            this.BMagaza.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMagaza.ImageOptions.LargeImage")));
-            this.BMagaza.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemAppearance.Disabled.Options.UseFont = true;
-            this.BMagaza.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemAppearance.Hovered.Options.UseFont = true;
-            this.BMagaza.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemAppearance.Normal.Options.UseFont = true;
-            this.BMagaza.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemAppearance.Pressed.Options.UseFont = true;
-            this.BMagaza.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemInMenuAppearance.Disabled.Options.UseFont = true;
-            this.BMagaza.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemInMenuAppearance.Hovered.Options.UseFont = true;
-            this.BMagaza.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.BMagaza.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.BMagaza.ItemInMenuAppearance.Pressed.Options.UseFont = true;
-            this.BMagaza.Name = "BMagaza";
-            // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.BKategori);
@@ -1063,6 +1039,30 @@
             this.BHareket.ItemInMenuAppearance.Pressed.Options.UseFont = true;
             this.BHareket.Name = "BHareket";
             this.BHareket.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BHareket_ItemClick);
+            // 
+            // BMagaza
+            // 
+            this.BMagaza.Caption = "MAĞAZALAR";
+            this.BMagaza.Id = 6;
+            this.BMagaza.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BMagaza.ImageOptions.Image")));
+            this.BMagaza.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BMagaza.ImageOptions.LargeImage")));
+            this.BMagaza.ItemAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemAppearance.Disabled.Options.UseFont = true;
+            this.BMagaza.ItemAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemAppearance.Hovered.Options.UseFont = true;
+            this.BMagaza.ItemAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemAppearance.Normal.Options.UseFont = true;
+            this.BMagaza.ItemAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemAppearance.Pressed.Options.UseFont = true;
+            this.BMagaza.ItemInMenuAppearance.Disabled.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemInMenuAppearance.Disabled.Options.UseFont = true;
+            this.BMagaza.ItemInMenuAppearance.Hovered.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemInMenuAppearance.Hovered.Options.UseFont = true;
+            this.BMagaza.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.BMagaza.ItemInMenuAppearance.Pressed.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.BMagaza.ItemInMenuAppearance.Pressed.Options.UseFont = true;
+            this.BMagaza.Name = "BMagaza";
             // 
             // ribbonPage1
             // 
@@ -1504,6 +1504,7 @@
             this.ribbonPageGroup19});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "MİNİ OYUNLAR";
+            this.ribbonPage2.Visible = false;
             // 
             // ribbonPageGroup19
             // 
