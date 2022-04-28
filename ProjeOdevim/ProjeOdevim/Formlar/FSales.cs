@@ -613,7 +613,7 @@ namespace ProjeOdevim.Formlar
                 komut2.ExecuteNonQuery();
                 connection.Close();
 
-                
+
 
                 Console.Beep(800, 250);
                 if (CFatura.Checked == true)
@@ -622,9 +622,10 @@ namespace ProjeOdevim.Formlar
                         MessageBox.Show("Fatura Oluşturuldu", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Process.Start(@"C:\Ticari Otomasyon\Raporlar\Fatura\" + CmbCustomer.Text.ToString() + "-" + CmbEmploye.Text.ToString() + ".Pdf");
                    */
-
-                    Yazdir yazdir = new Yazdir(int.Parse(LIslemNo.Text));
+                    int kimo = Convert.ToInt32(CmbCustomer.SelectedValue);
+                    Yazdir yazdir = new Yazdir(int.Parse(LIslemNo.Text), kimo);
                     yazdir.IslemNo = int.Parse(LIslemNo.Text);
+                    yazdir.MusteriNo = kimo;
                     yazdir.YazdirmayaBasla();
                     Process.Start(@"C:/Users/24f4c/Desktop/zxc.pdf");
                 }

@@ -216,6 +216,12 @@
     <Compile Include="Formlar\FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FMagBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FMagBilgi.Designer.cs">
+      <DependentUpon>FMagBilgi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FMonthComp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FMagBilgi.resx">
+      <DependentUpon>FMagBilgi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FMonthComp.resx">
       <DependentUpon>FMonthComp.cs</DependentUpon>

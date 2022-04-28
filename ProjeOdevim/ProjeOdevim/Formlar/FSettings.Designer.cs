@@ -141,6 +141,8 @@
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.TRestore = new System.Windows.Forms.TextBox();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.BMagaza = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -552,6 +554,8 @@
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.BMagaza);
+            this.panel1.Controls.Add(this.labelControl10);
             this.panel1.Controls.Add(this.labelControl9);
             this.panel1.Controls.Add(this.CFatura);
             this.panel1.Controls.Add(this.labelControl43);
@@ -602,7 +606,7 @@
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Location = new System.Drawing.Point(36, 210);
+            this.labelControl9.Location = new System.Drawing.Point(36, 243);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(117, 19);
             this.labelControl9.TabIndex = 172;
@@ -613,7 +617,7 @@
             this.CFatura.AutoSize = true;
             this.CFatura.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CFatura.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CFatura.Location = new System.Drawing.Point(164, 209);
+            this.CFatura.Location = new System.Drawing.Point(164, 242);
             this.CFatura.Name = "CFatura";
             this.CFatura.Size = new System.Drawing.Size(99, 23);
             this.CFatura.TabIndex = 34;
@@ -1816,6 +1820,43 @@
             this.labelControl31.TabIndex = 129;
             this.labelControl31.Text = "Konumdaki Dosyayı Seçiniz";
             // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Appearance.Options.UseForeColor = true;
+            this.labelControl10.Location = new System.Drawing.Point(51, 207);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(103, 19);
+            this.labelControl10.TabIndex = 173;
+            this.labelControl10.Text = "Mağaza Bilgileri: ";
+            // 
+            // BMagaza
+            // 
+            this.BMagaza.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Danger;
+            this.BMagaza.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BMagaza.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BMagaza.Appearance.Options.UseBackColor = true;
+            this.BMagaza.Appearance.Options.UseFont = true;
+            this.BMagaza.Appearance.Options.UseForeColor = true;
+            this.BMagaza.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearanceDisabled.Options.UseBackColor = true;
+            this.BMagaza.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearanceHovered.Options.UseBackColor = true;
+            this.BMagaza.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearancePressed.Options.UseBackColor = true;
+            this.BMagaza.Location = new System.Drawing.Point(159, 207);
+            this.BMagaza.Name = "BMagaza";
+            this.BMagaza.Size = new System.Drawing.Size(194, 25);
+            this.BMagaza.TabIndex = 174;
+            this.BMagaza.Text = "GİT";
+            this.BMagaza.Click += new System.EventHandler(this.BMagaza_Click);
+            // 
             // FSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1957,5 +1998,7 @@
         private System.Windows.Forms.CheckBox CVadeRapor;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private System.Windows.Forms.CheckBox CFatura;
+        private DevExpress.XtraEditors.SimpleButton BMagaza;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
     }
 }

@@ -618,6 +618,12 @@ namespace ProjeOdevim.Formlar
             Cursor = Cursors.Default;
         }
 
+        private void BMagaza_Click(object sender, EventArgs e)
+        {
+            FMagBilgi bilgi = new FMagBilgi();
+            bilgi.ShowDialog();
+        }
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
