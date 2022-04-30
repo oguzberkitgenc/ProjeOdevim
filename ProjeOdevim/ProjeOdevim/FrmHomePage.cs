@@ -17,8 +17,31 @@ namespace ProjeOdevim
             InitializeComponent();
         }
         BaglantiSinif bgl = new BaglantiSinif();
+        Formlar.FEmployeeStatis employeeStatis;
+        Formlar.FCustomerStatis customerStatis;
+        Formlar.FEmployeeAnalys employeeAnalys;
+        Formlar.FCustomerAnalys customerAnalys;
+        Formlar.frmViewer frm;
+        Formlar.FSettings settings;
+        Formlar.FHomeList homeList;
+        Formlar.FProductList f1;
+        Formlar.FCustomer fCustomer;
+        Formlar.FEmployee f2;
+        Formlar.FDoviz fDoviz;
+        Formlar.FGooglee FGooglee;
+        Formlar.FProductStatis fProductStatis;
+        Formlar.FBasisStatis fBasis;
+        Formlar.FSales sales;
+        Formlar.FDaySales DaySales;
+        Formlar.FMonthSales monthSales;
+        FDayComp fday;
+        Formlar.FMonthComp monthComp;
+        Formlar.FSalesList FSales;
+        Formlar.FBusyHour fBusy;
+        Formlar.FVade vade;
+        Formlar.FNotlar FNotlar;
+        public int departman;
         public string xml1, xml2, xml3, xml4, xml5, xml6, xml7,xml8;
-
         public void XmlGetir()
         {
             SqlConnection connection = new SqlConnection(bgl.Adres);
@@ -40,7 +63,6 @@ namespace ProjeOdevim
             }
             connection.Close();
         }
-        Formlar.FHomeList homeList;
         private void BHomeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (homeList == null || homeList.IsDisposed)
@@ -50,11 +72,9 @@ namespace ProjeOdevim
                 homeList.Show();
             }
         }
-        public int departman;
         private void FrmAnaSayfa_Load(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(bgl.Adres);
-
             XmlGetir();
             DateTime date = DateTime.Now;
             LDate.Text = date.ToString("MM/dd/yyyy");
@@ -82,7 +102,6 @@ namespace ProjeOdevim
             Formlar.FCategory fCategory = new Formlar.FCategory();
             fCategory.ShowDialog();
         }
-        Formlar.FProductList f1;
         private void BUrun_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (f1 == null || f1.IsDisposed)
@@ -97,8 +116,6 @@ namespace ProjeOdevim
             Formlar.FDepartment fDepartment = new Formlar.FDepartment();
             fDepartment.ShowDialog();
         }
-
-        Formlar.FEmployee f2;
         private void BPersonel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (f2 == null || f2.IsDisposed)
@@ -108,7 +125,6 @@ namespace ProjeOdevim
                 f2.Show();
             }
         }
-        Formlar.FCustomer fCustomer;
         private void BMusteri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (fCustomer == null || fCustomer.IsDisposed)
@@ -122,22 +138,18 @@ namespace ProjeOdevim
         {
             System.Diagnostics.Process.Start("Calc.exe");
         }
-
         private void BWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             System.Diagnostics.Process.Start("winword");
         }
-
         private void BPaint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             System.Diagnostics.Process.Start("mspaint");
         }
-
         private void BExcell_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             System.Diagnostics.Process.Start("excel");
         }
-        Formlar.FDoviz fDoviz;
         private void BDoviz_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (fDoviz == null || fDoviz.IsDisposed)
@@ -147,8 +159,6 @@ namespace ProjeOdevim
                 fDoviz.Show();
             }
         }
-
-        Formlar.FGooglee FGooglee;
         private void BYoutube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (FGooglee == null || FGooglee.IsDisposed)
@@ -158,7 +168,6 @@ namespace ProjeOdevim
                 FGooglee.Show();
             }
         }
-        Formlar.FProductStatis fProductStatis;
         private void BProductSt_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (fProductStatis == null || fProductStatis.IsDisposed)
@@ -168,18 +177,14 @@ namespace ProjeOdevim
                 fProductStatis.Show();
             }
         }
-
         private void BBuyutec_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             System.Diagnostics.Process.Start("magnify");
         }
-
         private void BKlavye_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             System.Diagnostics.Process.Start("notepad");
         }
-
-        Formlar.FBasisStatis fBasis;
         private void BTemelAnaliz_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -190,22 +195,17 @@ namespace ProjeOdevim
                 fBasis.Show();
             }
         }
-
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime dateTime = DateTime.Now;
             LTime.Text = dateTime.ToString("HH:MM:ss");
         }
-
         private void BKullanici_Click(object sender, EventArgs e)
         {
             this.Hide();
             Formlar.FLogin fLogin = new Formlar.FLogin();
             fLogin.Show();
         }
-
-        Formlar.FSales sales;
         private void BSales_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (sales == null || sales.IsDisposed)
@@ -215,8 +215,6 @@ namespace ProjeOdevim
                 sales.Show();
             }
         }
-
-        Formlar.FDaySales DaySales;
         private void BDaySales_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (DaySales == null || DaySales.IsDisposed)
@@ -230,7 +228,6 @@ namespace ProjeOdevim
                 Cursor = Cursors.Default;
             }
         }
-        Formlar.FMonthSales monthSales;
         private void BMonthSales_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (monthSales == null || monthSales.IsDisposed)
@@ -244,7 +241,6 @@ namespace ProjeOdevim
                 Cursor = Cursors.Default;
             }
         }
-        FDayComp fday;
         private void BDayComp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (fday == null || fday.IsDisposed)
@@ -258,7 +254,6 @@ namespace ProjeOdevim
                 Cursor = Cursors.Default;
             }
         }
-        Formlar.FMonthComp monthComp;
         private void BMonthComp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (monthComp == null || monthComp.IsDisposed)
@@ -272,8 +267,6 @@ namespace ProjeOdevim
                 Cursor = Cursors.Default;
             }
         }
-
-        Formlar.FSalesList FSales;
         private void BSaless_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (FSales == null || FSales.IsDisposed)
@@ -283,19 +276,16 @@ namespace ProjeOdevim
                 FSales.Show();
             }
         }
-
         private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.FWhoAmi fWhoAmi = new Formlar.FWhoAmi();
             fWhoAmi.Show();
         }
-
         private void BKredi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.FKredi kredi = new Formlar.FKredi();
             kredi.Show();
         }
-        Formlar.FNotlar FNotlar;
         private void BNot_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (FNotlar == null || FNotlar.IsDisposed)
@@ -305,9 +295,6 @@ namespace ProjeOdevim
                 FNotlar.Show();
             }
         }
-        Formlar.FBusyHour fBusy;
-
-        Formlar.FVade vade;
         private void barButtonItem19_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (vade == null || vade.IsDisposed)
@@ -317,27 +304,21 @@ namespace ProjeOdevim
                 vade.Show();
             }
         }
-
         private void BVadeHesapla_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.BVadeCalc vadecalc = new Formlar.BVadeCalc();
             vadecalc.Show();
         }
-
         private void BHareket_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.FUserList flist = new Formlar.FUserList();
             flist.ShowDialog();
         }
-
         private void BJoker_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Formlar.FJok jok = new Formlar.FJok();
             jok.Show();
         }
-        Formlar.FEmployeeStatis employeeStatis;
-        Formlar.FCustomerStatis customerStatis;
-        Formlar.FEmployeeAnalys employeeAnalys;
         private void FEmployeeAnalys_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (employeeAnalys==null||employeeAnalys.IsDisposed)
@@ -347,7 +328,15 @@ namespace ProjeOdevim
                 employeeAnalys.Show();
             }
         }
-
+        private void BCustomerAnalys_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (customerAnalys==null||customerAnalys.IsDisposed)
+            {
+                customerAnalys = new Formlar.FCustomerAnalys();
+                customerAnalys.MdiParent = this;
+                customerAnalys.Show();
+            }
+        }
         private void FCustomerTakip_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (customerStatis==null||customerStatis.IsDisposed)
@@ -359,7 +348,6 @@ namespace ProjeOdevim
                 customerStatis.Show();
             }
         }
-
         private void BEmployeTakip_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -373,7 +361,6 @@ namespace ProjeOdevim
             }
             Cursor = Cursors.Default;
         }
-
         private void BBusy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -387,8 +374,6 @@ namespace ProjeOdevim
             }
             Cursor = Cursors.Default;
         }
-
-        Formlar.frmViewer frm;
         private void BMoneyList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (frm == null || frm.IsDisposed)
@@ -402,7 +387,6 @@ namespace ProjeOdevim
                 Cursor = Cursors.Default;
             }
         }
-        Formlar.FSettings settings;
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (settings == null || settings.IsDisposed)

@@ -36,7 +36,7 @@ namespace ProjeOdevim.Formlar
         int sol = 0;
         int sayonu = 0;
         bool durum = false;
-        int sl1 = -175;
+        int sl1 = -205;
         int sl4 = 430;
         Random rastgele = new Random(244);
 
@@ -149,7 +149,7 @@ namespace ProjeOdevim.Formlar
             l4.Location = new System.Drawing.Point(sl4, 455);
             if (sl1 >= 885)
             {
-                sl1 = 0;
+                sl1 = -205;
             }
             if (sl4 <= -425)
             {
