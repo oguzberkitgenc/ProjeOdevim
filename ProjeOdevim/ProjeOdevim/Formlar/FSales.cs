@@ -304,7 +304,6 @@ namespace ProjeOdevim.Formlar
                     UrunEksilt();
                     Product2();
                     gridView2.Focus();
-                    LId.Text = "";
                 }
             }
             catch (Exception ex)
@@ -544,7 +543,7 @@ namespace ProjeOdevim.Formlar
             {
                 SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
-                SqlCommand sqlCommand = new SqlCommand("Select TBLURUN.ID,KATEGORIADI AS 'KATEGORİ',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN'," +
+                SqlCommand sqlCommand = new SqlCommand("Select TBLURUN.ID,BARKOD AS 'NO',KATEGORIADI AS 'KATEGORİ',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN'," +
                     "ALISFIYAT AS 'ALIŞ FİYATI', SATISFIYAT AS 'SATIŞ FİYATI', STOK AS 'STOK',ACIKLAMA AS 'AÇIKLAMA' FROM TBLURUN INNER JOIN TBLKATEGORI  " +
                     "ON TBLURUN.KATEGORIID=TBLKATEGORI.ID INNER JOIN TBLMARKA ON TBLURUN.MARKAID=TBLMARKA.ID WHERE URUNADI like '%" + Rch.Text + "%' " +
                     "OR ACIKLAMA like '%" + Rch.Text + " %' order by TBLURUN.ID DESC ", connection);

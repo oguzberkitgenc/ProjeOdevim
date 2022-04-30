@@ -13,23 +13,14 @@
         </Parameters>
       </Connection>
       <Query Type="CustomSqlQuery" Name="Query">
-        <Sql>SELECT * FROM [DbProjem].[dbo].[TBLSATIS]</Sql>
+        <Sql>SELECT ISLEMNO,TOPLAMFIYAT,AD AS 'MÜŞTERİ',TARIH FROM TBLSATIS INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID=TBLMUSTERI.ID</Sql>
       </Query>
       <ResultSchema>
         <DataSet Name="SQL Data Source 1">
           <View Name="Query">
-            <Field Name="ID" Type="Int32" />
             <Field Name="ISLEMNO" Type="Int32" />
-            <Field Name="URUNID" Type="Int32" />
-            <Field Name="BARKODNO" Type="String" />
-            <Field Name="KATEGORIADI" Type="String" />
-            <Field Name="MARKAADI" Type="String" />
-            <Field Name="ALISFIYAT" Type="Decimal" />
-            <Field Name="SATISFIYAT" Type="Decimal" />
-            <Field Name="INDIRIMORANI" Type="String" />
             <Field Name="TOPLAMFIYAT" Type="Decimal" />
-            <Field Name="PERSONEL" Type="Int32" />
-            <Field Name="MUSTERIID" Type="Int32" />
+            <Field Name="MÜŞTERİ" Type="String" />
             <Field Name="TARIH" Type="DateTime" />
           </View>
         </DataSet>
@@ -38,36 +29,25 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="Günlük Satış Çizelgesi" DataSource="dashboardSqlDataSource1" DataMember="Query">
+    <Treemap ComponentName="treemapDashboardItem1" Name="Müşteri Alışları" DataSource="dashboardSqlDataSource1" DataMember="Query">
       <InteractivityOptions MasterFilterMode="Multiple" />
       <DataItems>
-        <Measure DataMember="TOPLAMFIYAT" DefaultId="DataItem0">
+        <Measure DataMember="TOPLAMFIYAT" Name="Toplam" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
         </Measure>
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
-        <Measure DataMember="ALISFIYAT" DefaultId="DataItem2" />
+        <Dimension DataMember="MÜŞTERİ" DefaultId="DataItem1" />
       </DataItems>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
       <Arguments>
         <Argument DefaultId="DataItem1" />
       </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <Series>
-            <Simple Name="Toplam">
-              <Value DefaultId="DataItem0" />
-            </Simple>
-            <Simple>
-              <Value DefaultId="DataItem2" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-      <ChartLegend Visible="false" IsInsidePosition="true" InsidePosition="TopLeftHorizontal" OutsidePosition="TopCenterHorizontal" />
-    </Chart>
+    </Treemap>
   </Items>
   <LayoutTree>
-    <LayoutGroup Weight="100">
-      <LayoutItem DashboardItem="chartDashboardItem1" />
+    <LayoutGroup>
+      <LayoutItem DashboardItem="treemapDashboardItem1" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

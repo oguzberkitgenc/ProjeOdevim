@@ -152,6 +152,7 @@ namespace ProjeOdevim.Formlar
                     command.Parameters.AddWithValue("@p13", 0);
                     command.ExecuteNonQuery();
                     connection.Close();
+
                     EmployeeList();
                     MessageBox.Show(" Yeni Takım Arkadaşımız Sisteme Başarıyla Kayıt Edildi \n\n Hoşgeldin " + TName.Text +
                         "\n\n Görevin: " + CmbDep.Text +

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard CurrencyCulture="tr-TR">
-  <Title Text="Dashboard" />
+  <Title Visible="false" Text="Dashboard" />
   <DataSources>
     <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
       <Connection Name="localhost_DbProjem_Connection" ProviderKey="MSSqlServer">
@@ -21,6 +21,7 @@
             <Field Name="ID" Type="Int32" />
             <Field Name="ISLEMNO" Type="Int32" />
             <Field Name="URUNID" Type="Int32" />
+            <Field Name="BARKODNO" Type="String" />
             <Field Name="KATEGORIADI" Type="String" />
             <Field Name="MARKAADI" Type="String" />
             <Field Name="ALISFIYAT" Type="Decimal" />
@@ -37,29 +38,31 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="Aylık Satış Çizelgesi" DataSource="dashboardSqlDataSource1" DataMember="Query">
+    <Chart ComponentName="chartDashboardItem1" Name="Günlük Satış Çizelgesi" DataSource="dashboardSqlDataSource1" DataMember="Query">
+      <InteractivityOptions MasterFilterMode="Multiple" />
       <DataItems>
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="Month" DefaultId="DataItem0" />
-        <Measure DataMember="SATISFIYAT" DefaultId="DataItem1">
+        <Measure DataMember="TOPLAMFIYAT" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
         </Measure>
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
       </DataItems>
       <Arguments>
-        <Argument DefaultId="DataItem0" />
+        <Argument DefaultId="DataItem1" />
       </Arguments>
       <Panes>
         <Pane Name="Pane 1">
           <Series>
             <Simple Name="Toplam">
-              <Value DefaultId="DataItem1" />
+              <Value DefaultId="DataItem0" />
             </Simple>
           </Series>
         </Pane>
       </Panes>
+      <ChartLegend Visible="false" IsInsidePosition="true" InsidePosition="TopLeftHorizontal" OutsidePosition="TopCenterHorizontal" />
     </Chart>
   </Items>
   <LayoutTree>
-    <LayoutGroup>
+    <LayoutGroup Weight="100">
       <LayoutItem DashboardItem="chartDashboardItem1" />
     </LayoutGroup>
   </LayoutTree>

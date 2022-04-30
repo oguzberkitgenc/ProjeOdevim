@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard CurrencyCulture="tr-TR">
-  <Title Text="Dashboard" />
+  <Title Visible="false" Text="Dashboard" IncludeMasterFilterState="false" />
   <DataSources>
     <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
       <Connection Name="localhost_DbProjem_Connection" ProviderKey="MSSqlServer">
@@ -21,6 +21,7 @@
             <Field Name="ID" Type="Int32" />
             <Field Name="ISLEMNO" Type="Int32" />
             <Field Name="URUNID" Type="Int32" />
+            <Field Name="BARKODNO" Type="String" />
             <Field Name="KATEGORIADI" Type="String" />
             <Field Name="MARKAADI" Type="String" />
             <Field Name="ALISFIYAT" Type="Decimal" />
@@ -39,14 +40,14 @@
   <Items>
     <Gauge ComponentName="gaugeDashboardItem1" Name="Yoğunluk Saatleri" DataSource="dashboardSqlDataSource1" DataMember="Query">
       <DataItems>
-        <Measure DataMember="ISLEMNO" SummaryType="Count" DefaultId="DataItem0" />
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="Hour" DefaultId="DataItem2" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="Hour" DefaultId="DataItem0" />
+        <Measure DataMember="ISLEMNO" SummaryType="Count" DefaultId="DataItem1" />
       </DataItems>
       <SeriesDimensions>
-        <SeriesDimension DefaultId="DataItem2" />
+        <SeriesDimension DefaultId="DataItem0" />
       </SeriesDimensions>
       <GaugeElement>
-        <ActualValue DefaultId="DataItem0" />
+        <ActualValue DefaultId="DataItem1" />
         <AbsoluteVariationNumericFormat />
         <PercentVariationNumericFormat />
         <PercentOfTargetNumericFormat />
@@ -55,7 +56,7 @@
   </Items>
   <LayoutTree>
     <LayoutGroup>
-      <LayoutItem DashboardItem="gaugeDashboardItem1" Weight="0.5" />
+      <LayoutItem DashboardItem="gaugeDashboardItem1" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

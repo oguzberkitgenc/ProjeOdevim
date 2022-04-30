@@ -95,12 +95,6 @@ namespace ProjeOdevim.Formlar
                             Listele();
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show(Rch.Text + "\n\n Aradığını bulamadım...", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                        Rch.Text = "";
-                        Listele();
-                    }
                     gridView1.Columns[0].Visible = false;
 
                 }
@@ -112,7 +106,9 @@ namespace ProjeOdevim.Formlar
             catch (Exception)
             {
 
-                MessageBox.Show("Hatalı Giriş");
+                MessageBox.Show(Rch.Text + "\n\n Aradığını bulamadım...", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                Rch.Text = "";
+                Listele();
             }
         }
 

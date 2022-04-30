@@ -16,7 +16,7 @@ namespace ProjeOdevim
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formlar.FLogin());
+            Application.Run(new FrmHomePage());
         }
     }
 }

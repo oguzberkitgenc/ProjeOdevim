@@ -424,12 +424,15 @@ namespace ProjeOdevim.Formlar
                     MessageBox.Show(" Başarıyla Kayıt Edildi \n\n Programdan çıkış yapılıyor...", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     connection.Close();
                     Cursor.Current = Cursors.Default;
+                    Application.Exit();
                 }
-                catch
+                catch (Exception ex)
                 {
 
-
+                    MessageBox.Show(ex.ToString());
                 }
+                    
+                
             }
         }
         private void simpleButton4_Click(object sender, EventArgs e)

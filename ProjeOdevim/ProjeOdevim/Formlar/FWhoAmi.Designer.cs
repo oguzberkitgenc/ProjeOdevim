@@ -30,62 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FWhoAmi));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.l4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.l1 = new System.Windows.Forms.Label();
+            this.l2 = new System.Windows.Forms.Label();
+            this.l3 = new System.Windows.Forms.Label();
             this.BKos = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.BKos1 = new System.Windows.Forms.Button();
+            this.BKos2 = new System.Windows.Forms.Button();
+            this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // label1
+            // l4
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label1.Location = new System.Drawing.Point(521, 425);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 95);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bu yazılım;\r\n\r\nÇukurova Üniversitesi Karaisali Meslek Yüksek Okulu\r\nBilgisayar Pr" +
-    "ogramcılığı Öğrencisi Oğuz Berkit GENÇ \r\ntarafından proje ödevi amaçlı geliştiri" +
-    "lmiştir.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label2.Location = new System.Drawing.Point(717, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 95);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Kullanılan Teknolojiler\r\nC#\r\nADO.NET\r\nMS SQL\r\nDevExpress";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label3.Location = new System.Drawing.Point(12, 425);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(358, 95);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Yazılımın Genel Misyonu;\r\n\r\nBir veya birden fazla mağazası bulunun  Şirketin/İşle" +
-    "tmenin\r\ntek veri tabanı üzerinden  kolay/detaylı/hızlı \r\nbir şekilde yönetilmesi" +
-    "ni amaçlar.\r\n";
+            this.l4.AutoSize = true;
+            this.l4.BackColor = System.Drawing.Color.Transparent;
+            this.l4.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.l4.ForeColor = System.Drawing.Color.GreenYellow;
+            this.l4.Location = new System.Drawing.Point(850, 455);
+            this.l4.Name = "l4";
+            this.l4.Size = new System.Drawing.Size(440, 19);
+            this.l4.TabIndex = 1;
+            this.l4.Text = "Kullanılan Teknolojiler: C# - ADO.NET - MS SQL - DevExpress";
+            this.l4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -119,54 +92,54 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label5.Location = new System.Drawing.Point(457, 38);
+            this.label5.Location = new System.Drawing.Point(397, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 19);
             this.label5.TabIndex = 5;
             this.label5.Text = "copyright © 2022 ";
             // 
-            // label7
+            // l1
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label7.Location = new System.Drawing.Point(23, 156);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 19);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Sistem Analizi ve Tasarımı";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.l1.AutoSize = true;
+            this.l1.BackColor = System.Drawing.Color.Transparent;
+            this.l1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.l1.ForeColor = System.Drawing.SystemColors.Window;
+            this.l1.Location = new System.Drawing.Point(0, 260);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(186, 19);
+            this.l1.TabIndex = 7;
+            this.l1.Text = "Sistem Analizi ve Tasarımı";
+            this.l1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // l2
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label8.Location = new System.Drawing.Point(7, 175);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(200, 19);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Araştırma ve Yöntem Teknikleri";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.l2.AutoSize = true;
+            this.l2.BackColor = System.Drawing.Color.Transparent;
+            this.l2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.l2.ForeColor = System.Drawing.SystemColors.Window;
+            this.l2.Location = new System.Drawing.Point(0, 280);
+            this.l2.Name = "l2";
+            this.l2.Size = new System.Drawing.Size(222, 19);
+            this.l2.TabIndex = 8;
+            this.l2.Text = "Araştırma ve Yöntem Teknikleri";
+            this.l2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // l3
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label9.Location = new System.Drawing.Point(12, 194);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(192, 19);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Ömer Tuğrul KURDOĞLU";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.l3.AutoSize = true;
+            this.l3.BackColor = System.Drawing.Color.Transparent;
+            this.l3.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.l3.ForeColor = System.Drawing.SystemColors.Window;
+            this.l3.Location = new System.Drawing.Point(0, 300);
+            this.l3.Name = "l3";
+            this.l3.Size = new System.Drawing.Size(192, 19);
+            this.l3.TabIndex = 9;
+            this.l3.Text = "Ömer Tuğrul KURDOĞLU";
+            this.l3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BKos
             // 
-            this.BKos.Location = new System.Drawing.Point(20, 0);
+            this.BKos.Location = new System.Drawing.Point(40, 0);
             this.BKos.Name = "BKos";
             this.BKos.Size = new System.Drawing.Size(19, 18);
             this.BKos.TabIndex = 10;
@@ -194,11 +167,24 @@
             // 
             // BKos1
             // 
-            this.BKos1.Location = new System.Drawing.Point(0, 0);
+            this.BKos1.Location = new System.Drawing.Point(20, 0);
             this.BKos1.Name = "BKos1";
             this.BKos1.Size = new System.Drawing.Size(19, 18);
             this.BKos1.TabIndex = 11;
             this.BKos1.UseVisualStyleBackColor = true;
+            // 
+            // BKos2
+            // 
+            this.BKos2.Location = new System.Drawing.Point(0, 0);
+            this.BKos2.Name = "BKos2";
+            this.BKos2.Size = new System.Drawing.Size(19, 18);
+            this.BKos2.TabIndex = 12;
+            this.BKos2.UseVisualStyleBackColor = true;
+            // 
+            // timer5
+            // 
+            this.timer5.Interval = 1;
+            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
             // 
             // FWhoAmi
             // 
@@ -208,17 +194,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(872, 522);
+            this.Controls.Add(this.BKos2);
             this.Controls.Add(this.BKos1);
             this.Controls.Add(this.BKos);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.l3);
+            this.Controls.Add(this.l2);
+            this.Controls.Add(this.l1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.l4);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -234,21 +219,20 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label l4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label l1;
+        private System.Windows.Forms.Label l2;
+        private System.Windows.Forms.Label l3;
         private System.Windows.Forms.Button BKos;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Button BKos1;
+        private System.Windows.Forms.Button BKos2;
+        private System.Windows.Forms.Timer timer5;
     }
 }

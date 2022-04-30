@@ -17,7 +17,7 @@ namespace ProjeOdevim
             InitializeComponent();
         }
         BaglantiSinif bgl = new BaglantiSinif();
-        public string xml1, xml2, xml3, xml4, xml5, xml6;
+        public string xml1, xml2, xml3, xml4, xml5, xml6, xml7,xml8;
 
         public void XmlGetir()
         {
@@ -34,6 +34,9 @@ namespace ProjeOdevim
                 xml4 = dr["XML4"].ToString();
                 xml5 = dr["XML5"].ToString();
                 xml6 = dr["XML6"].ToString();
+                xml7 = dr["XML7"].ToString();
+                xml8 = dr["XML8"].ToString();
+
             }
             connection.Close();
         }
@@ -331,6 +334,44 @@ namespace ProjeOdevim
         {
             Formlar.FJok jok = new Formlar.FJok();
             jok.Show();
+        }
+        Formlar.FEmployeeStatis employeeStatis;
+        Formlar.FCustomerStatis customerStatis;
+        Formlar.FEmployeeAnalys employeeAnalys;
+        private void FEmployeeAnalys_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (employeeAnalys==null||employeeAnalys.IsDisposed)
+            {
+                employeeAnalys = new Formlar.FEmployeeAnalys();
+                employeeAnalys.MdiParent = this;
+                employeeAnalys.Show();
+            }
+        }
+
+        private void FCustomerTakip_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (customerStatis==null||customerStatis.IsDisposed)
+            {
+                string filename8 = xml8;
+                customerStatis = new Formlar.FCustomerStatis();
+                customerStatis.FCustomerStatis_Load(filename8);
+                customerStatis.MdiParent = this;
+                customerStatis.Show();
+            }
+        }
+
+        private void BEmployeTakip_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            if (employeeStatis == null || employeeStatis.IsDisposed)
+            {
+                string filename7 = xml7;
+                employeeStatis = new Formlar.FEmployeeStatis();
+                employeeStatis.FEmployeeStatis_Load(filename7);
+                employeeStatis.MdiParent = this;
+                employeeStatis.Show();
+            }
+            Cursor = Cursors.Default;
         }
 
         private void BBusy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

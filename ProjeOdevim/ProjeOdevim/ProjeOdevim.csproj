@@ -132,6 +132,12 @@
     <Compile Include="Formlar\FBusyHour.Designer.cs">
       <DependentUpon>FBusyHour.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FCustomerStatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FCustomerStatis.Designer.cs">
+      <DependentUpon>FCustomerStatis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FDayComp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,11 +186,29 @@
     <Compile Include="Formlar\FDoviz.Designer.cs">
       <DependentUpon>FDoviz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FDuzenle.Designer.cs">
+      <DependentUpon>FDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\FEmployee.Designer.cs">
       <DependentUpon>FEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FEmployeeAnalys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FEmployeeAnalys.Designer.cs">
+      <DependentUpon>FEmployeeAnalys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FEmployeeStatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FEmployeeStatis.Designer.cs">
+      <DependentUpon>FEmployeeStatis.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\FHomeList.cs">
       <SubType>Form</SubType>
@@ -321,6 +345,9 @@
     <EmbeddedResource Include="Formlar\FBusyHour.resx">
       <DependentUpon>FBusyHour.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FCustomerStatis.resx">
+      <DependentUpon>FCustomerStatis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FDayComp.resx">
       <DependentUpon>FDayComp.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,8 +372,17 @@
     <EmbeddedResource Include="Formlar\FDoviz.resx">
       <DependentUpon>FDoviz.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FDuzenle.resx">
+      <DependentUpon>FDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FEmployee.resx">
       <DependentUpon>FEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FEmployeeAnalys.resx">
+      <DependentUpon>FEmployeeAnalys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FEmployeeStatis.resx">
+      <DependentUpon>FEmployeeStatis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FHomeList.resx">
       <DependentUpon>FHomeList.cs</DependentUpon>

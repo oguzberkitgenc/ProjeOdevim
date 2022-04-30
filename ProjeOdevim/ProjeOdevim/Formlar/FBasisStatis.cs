@@ -85,15 +85,6 @@ namespace ProjeOdevim.Formlar
         }
         private void FBasisStatis_Load(object sender, EventArgs e)
         {
-            timer1.Start();
-            GridDoldur();
-            MarkaChat();
-            AlisFiyat();
-            SatisFiyat();
-            Hesapla();
-        }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
             GridDoldur();
             MarkaChat();
             AlisFiyat();

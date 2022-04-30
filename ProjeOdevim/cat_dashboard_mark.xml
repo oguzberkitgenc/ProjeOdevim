@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard CurrencyCulture="tr-TR">
-  <Title Text="Dashboard" />
+  <Title Visible="false" Text="Dashboard" />
   <DataSources>
     <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
-      <Connection Name="localhost_Connection" ProviderKey="MSSqlServer">
+      <Connection Name="localhost_DbProjem_Connection" ProviderKey="MSSqlServer">
         <Parameters>
           <Parameter Name="server" Value="localhost" />
           <Parameter Name="database" Value="DbProjem" />
@@ -21,6 +21,7 @@
             <Field Name="ID" Type="Int32" />
             <Field Name="ISLEMNO" Type="Int32" />
             <Field Name="URUNID" Type="Int32" />
+            <Field Name="BARKODNO" Type="String" />
             <Field Name="KATEGORIADI" Type="String" />
             <Field Name="MARKAADI" Type="String" />
             <Field Name="ALISFIYAT" Type="Decimal" />
@@ -37,10 +38,12 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Pie ComponentName="pieDashboardItem1" Name="Satılan Kategori Oranları" DataSource="dashboardSqlDataSource1" DataMember="Query">
+    <Pie ComponentName="pieDashboardItem1" Name="Kategori Satış Oranları" DataSource="dashboardSqlDataSource1" DataMember="Query">
       <DataItems>
         <Dimension DataMember="KATEGORIADI" DefaultId="DataItem0" />
-        <Measure DataMember="SATISFIYAT" Name="Toplam" DefaultId="DataItem1" />
+        <Measure DataMember="TOPLAMFIYAT" Name="Toplam" DefaultId="DataItem1">
+          <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
+        </Measure>
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem0" />
@@ -49,16 +52,16 @@
         <Value DefaultId="DataItem1" />
       </Values>
     </Pie>
-    <Pie ComponentName="pieDashboardItem2" Name="Satılan Marka Oranları" DataSource="dashboardSqlDataSource1" DataMember="Query">
+    <Pie ComponentName="pieDashboardItem2" Name="Marka Satış Oranları" DataSource="dashboardSqlDataSource1" DataMember="Query">
       <DataItems>
-        <Dimension DataMember="MARKAADI" DefaultId="DataItem0" />
-        <Measure DataMember="SATISFIYAT" Name="Toplam" DefaultId="DataItem1" />
+        <Measure DataMember="TOPLAMFIYAT" Name="Toplam" DefaultId="DataItem0" />
+        <Dimension DataMember="MARKAADI" DefaultId="DataItem1" />
       </DataItems>
       <Arguments>
-        <Argument DefaultId="DataItem0" />
+        <Argument DefaultId="DataItem1" />
       </Arguments>
       <Values>
-        <Value DefaultId="DataItem1" />
+        <Value DefaultId="DataItem0" />
       </Values>
     </Pie>
   </Items>
