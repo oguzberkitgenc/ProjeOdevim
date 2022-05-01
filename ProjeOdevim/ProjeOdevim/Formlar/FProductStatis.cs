@@ -16,10 +16,10 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         void UrunSayisi()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Count(*) From TBLURUN",connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -31,7 +31,6 @@ namespace ProjeOdevim.Formlar
         }
         void KategoriSayisi()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Count(*) From TBLKATEGORI",connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -43,7 +42,6 @@ namespace ProjeOdevim.Formlar
         }
         void StokSayisi()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Sum(STOK) From TBLURUN",connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -55,7 +53,6 @@ namespace ProjeOdevim.Formlar
         }
         void KritikSeviye()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Count(*) From TBLURUN where STOK<=5",connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -67,7 +64,6 @@ namespace ProjeOdevim.Formlar
         }
         void BitikUrun()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Count(*) From TBLURUN where STOK=0", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -80,7 +76,6 @@ namespace ProjeOdevim.Formlar
         
         void EnStokluUrun()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Top 1 URUNADI,STOK From TBLURUN order by STOK desc",connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -92,7 +87,6 @@ namespace ProjeOdevim.Formlar
         }
         void EnAzStokluUrun()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Top 1 URUNADI,STOK From TBLURUN order by STOK asc", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -104,7 +98,6 @@ namespace ProjeOdevim.Formlar
         }
         void PahaliUrun()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Top 1 URUNADI,SATISFIYAT From TBLURUN order by STOK asc", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -116,7 +109,6 @@ namespace ProjeOdevim.Formlar
         }
         void UcuzUrun()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Top 1 URUNADI,SATISFIYAT From TBLURUN order by STOK desc", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -128,7 +120,6 @@ namespace ProjeOdevim.Formlar
         }
         void MarkaSayısı()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Count(*) From TBLMARKA",connection);
             SqlDataReader dr=komut.ExecuteReader();
@@ -140,7 +131,6 @@ namespace ProjeOdevim.Formlar
         }
         void FazlaMarka()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select TOP 1 MARKAADI,COUNT(*)  AS 'SIRALA 'FROM TBLURUN  INNER JOIN TBLMARKA ON TBLURUN.MARKAID = TBLMARKA.ID GROUP BY MARKAADI ORDER BY [SIRALA] DESC",connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -152,7 +142,6 @@ namespace ProjeOdevim.Formlar
         }
         void FazlaKategori()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select TOP 1 KATEGORIADI,COUNT(*)  AS 'SIRALA 'FROM TBLURUN INNER JOIN TBLKATEGORI ON TBLURUN.KATEGORIID = TBLKATEGORI.ID GROUP BY KATEGORIADI ORDER BY [SIRALA] DESC", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -164,7 +153,6 @@ namespace ProjeOdevim.Formlar
         }
         void AzKategori()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select TOP 1 KATEGORIADI,COUNT(*)  AS 'SIRALA 'FROM TBLURUN INNER JOIN TBLKATEGORI ON TBLURUN.KATEGORIID = TBLKATEGORI.ID GROUP BY KATEGORIADI ORDER BY [SIRALA] ASC", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -178,7 +166,6 @@ namespace ProjeOdevim.Formlar
         
         void Musteriler()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Count(*) From TBLMUSTERI",connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -190,7 +177,6 @@ namespace ProjeOdevim.Formlar
         }
         void Personeller()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select Count(*) From TBLPERSONEL", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -202,7 +188,6 @@ namespace ProjeOdevim.Formlar
         }
         void PersonelPuan()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select TOP 1 AD,PUAN From TBLPERSONEL ORDER BY PUAN DESC",connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -214,7 +199,6 @@ namespace ProjeOdevim.Formlar
         }
         void ErkekPersonel()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select CINSIYET,COUNT(*) From TBLPERSONEL GROUP BY CINSIYET ORDER BY CINSIYET DESC", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -226,7 +210,6 @@ namespace ProjeOdevim.Formlar
         }
         void KadınPersonel()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select CINSIYET,COUNT(*) From TBLPERSONEL GROUP BY CINSIYET ORDER BY CINSIYET ASC", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -238,7 +221,6 @@ namespace ProjeOdevim.Formlar
         }
         void KadınMusteri()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select CINSIYET,COUNT(*) From TBLMUSTERI GROUP BY CINSIYET ORDER BY CINSIYET ASC", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -250,7 +232,6 @@ namespace ProjeOdevim.Formlar
         }
         void ErkekMusteri()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select CINSIYET,COUNT(*) From TBLMUSTERI GROUP BY CINSIYET ORDER BY CINSIYET DESC", connection);
             SqlDataReader dr = komut.ExecuteReader();

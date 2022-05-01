@@ -16,12 +16,12 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         private void BSave2_Click(object sender, EventArgs e)
         {
             if (TTc.Text != "" && TTc.TextLength >= 11)
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand komut = new SqlCommand("SELECT TC,AD,KREDILIMIT FROM TBLMUSTERI WHERE TC=" + TTc.Text, connection);
                 SqlDataAdapter da = new SqlDataAdapter(komut);

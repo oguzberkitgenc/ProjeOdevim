@@ -18,7 +18,7 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
         DataTable dt1 = new DataTable();
         public string id, kategori, marka, urunadi;
         public decimal alisfiyati = 0, satisfiyatı = 0, indirimorani = 0;
@@ -27,7 +27,6 @@ namespace ProjeOdevim.Formlar
         DateTime date = DateTime.Now;
         void Product2()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("Select TBLURUN.ID,BARKOD AS 'NO',KATEGORIADI AS 'KATEGORİ',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN',ALISFIYAT AS 'ALIŞ FİYATI'," +
                 "SATISFIYAT AS 'SATIŞ FİYATI', STOK AS 'STOK',ACIKLAMA AS 'AÇIKLAMA' FROM TBLURUN INNER JOIN TBLKATEGORI ON " +
@@ -64,7 +63,6 @@ namespace ProjeOdevim.Formlar
         }
         void IslemNumarası()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand command = new SqlCommand("Select * From TBLISLEM", connection);
             SqlDataReader dr = command.ExecuteReader();
@@ -77,7 +75,6 @@ namespace ProjeOdevim.Formlar
         }
         void CustomerList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select ID,AD From TBLMUSTERI ORDER BY AD ASC", connection);
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -90,7 +87,6 @@ namespace ProjeOdevim.Formlar
         }
         void Employee()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select ID,AD From TBLPERSONEL ORDER BY AD ASC", connection);
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -103,7 +99,6 @@ namespace ProjeOdevim.Formlar
         }
         void Yazdirma()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand cmd = new SqlCommand("Select YAZDIR From TBLXML", connection);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -128,7 +123,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 decimal faizorani = Convert.ToDecimal(CmbTaksit.SelectedValue); // Faiz Oranı
                 decimal toplam = satisfiyatı; // Normal Tutar
                 decimal netice = toplam + (toplam / 100 * faizorani); // Taksitli Tutar
@@ -183,7 +177,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 decimal faizorani = Convert.ToDecimal(CmbTaksit.SelectedValue); // Faiz Oranı
                 decimal toplam = satisfiyatı - (satisfiyatı / 100) * indirimorani; // Normal Tutar
                 decimal netice = toplam + (toplam / 100 * faizorani); // Taksitli Tutar
@@ -239,7 +232,6 @@ namespace ProjeOdevim.Formlar
         }
         void UrunEksilt()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("UPDATE TBLURUN SET STOK=STOK-1 WHERE ID=" + LId.Text, connection);
             komut.ExecuteNonQuery();
@@ -247,7 +239,6 @@ namespace ProjeOdevim.Formlar
         }
         void UrunArttir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut2 = new SqlCommand("UPDATE TBLURUN SET STOK=STOK+1 WHERE ID=" + id, connection);
             komut2.ExecuteNonQuery();
@@ -255,7 +246,6 @@ namespace ProjeOdevim.Formlar
         }
         void IslemNoArttir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             int islem = int.Parse(LIslemNo.Text);
             connection.Open();
             SqlCommand sql = new SqlCommand("update TBLISLEM set IslemNo=@p1", connection);
@@ -265,7 +255,6 @@ namespace ProjeOdevim.Formlar
         }
         void VadeGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlCommand command = new SqlCommand("Select * From TBLFAIZLER", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
@@ -342,7 +331,6 @@ namespace ProjeOdevim.Formlar
         public double musterikredi = 0, personelkredi = 0;
         void OranGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select KMUSTERI,KPERSONEL From TBLKREDI", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -541,7 +529,6 @@ namespace ProjeOdevim.Formlar
         {
             if (Rch.Text != "")
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand sqlCommand = new SqlCommand("Select TBLURUN.ID,BARKOD AS 'NO',KATEGORIADI AS 'KATEGORİ',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN'," +
                     "ALISFIYAT AS 'ALIŞ FİYATI', SATISFIYAT AS 'SATIŞ FİYATI', STOK AS 'STOK',ACIKLAMA AS 'AÇIKLAMA' FROM TBLURUN INNER JOIN TBLKATEGORI  " +
@@ -567,7 +554,6 @@ namespace ProjeOdevim.Formlar
         }
         void Taksitle()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             DateTime tarih1 = DateTime.Now;
             decimal vadeal = Convert.ToDecimal(CmbTaksit.SelectedValue);
             int taksitsayisi = int.Parse(CmbTaksit.Text);
@@ -591,7 +577,6 @@ namespace ProjeOdevim.Formlar
         }
         private void BSatis_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             if (gridView2.DataRowCount > 0 && gridView2.DataRowCount <= 15)
             {
                 gridView2.FocusedRowHandle = 0;
@@ -633,7 +618,6 @@ namespace ProjeOdevim.Formlar
                     yazdir.IslemNo = int.Parse(LIslemNo.Text);
                     yazdir.MusteriNo = kimo;
                     yazdir.YazdirmayaBasla();
-                    Process.Start(@"C:/Users/24f4c/Desktop/zxc.pdf");
                 }
                 Product2();
                 IslemNoArttir();

@@ -1803,15 +1803,15 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup19;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem BEmployeTakip;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup20;
-        private DevExpress.XtraBars.BarButtonItem FCustomerTakip;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup21;
         private DevExpress.XtraBars.BarButtonItem barButtonItem19;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup22;
         public DevExpress.XtraBars.BarButtonItem BCustomerAnalys;
         public DevExpress.XtraBars.BarButtonItem BEmployeeAnalys;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        public DevExpress.XtraBars.BarButtonItem BEmployeTakip;
+        public DevExpress.XtraBars.BarButtonItem FCustomerTakip;
     }
 }
 

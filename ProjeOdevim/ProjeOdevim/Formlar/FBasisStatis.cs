@@ -17,11 +17,11 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
 
         void GridDoldur()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             ///// Marka Grid Doldur
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("Select MARKAADI,SUM(STOK) AS 'STOK SAYISI' FROM TBLURUN  INNER JOIN TBLMARKA ON TBLURUN.MARKAID = TBLMARKA.ID WHERE STOK>=1 GROUP BY MARKAADI ORDER BY MARKAADI ASC", connection);
@@ -32,7 +32,6 @@ namespace ProjeOdevim.Formlar
         }
         void MarkaChat()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             ///// Marka Chart Doldur
             connection.Open();
             SqlCommand komut1 = new SqlCommand("Select MARKAADI,SUM(STOK) AS 'STOK SAYISI' FROM TBLURUN  INNER JOIN TBLMARKA ON TBLURUN.MARKAID = TBLMARKA.ID WHERE STOK>=1 GROUP BY MARKAADI ORDER BY MARKAADI ASC", connection);
@@ -45,7 +44,6 @@ namespace ProjeOdevim.Formlar
         }
         void AlisFiyat()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             //// Alış Fiyatı Getir
             connection.Open();
             SqlCommand komut2 = new SqlCommand("Select Sum(ALISFIYAT*STOK) From TBLURUN WHERE STOK>=1", connection);
@@ -58,7 +56,6 @@ namespace ProjeOdevim.Formlar
         }
         void SatisFiyat()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             //// Satış Fiyatı Getir
             connection.Open();
             SqlCommand komut3 = new SqlCommand("Select Sum(SATISFIYAT*STOK) From TBLURUN WHERE STOK>=1 ", connection);

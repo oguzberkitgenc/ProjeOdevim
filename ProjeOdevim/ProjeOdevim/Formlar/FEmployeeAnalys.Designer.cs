@@ -63,7 +63,7 @@
             // gridControl1
             // 
             this.gridControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridControl1.Location = new System.Drawing.Point(1135, 2);
+            this.gridControl1.Location = new System.Drawing.Point(1128, 4);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(0);
             this.gridControl1.Name = "gridControl1";
@@ -235,7 +235,7 @@
             this.chartControl1.Legend.MarkerMode = DevExpress.XtraCharts.LegendMarkerMode.CheckBoxAndMarker;
             this.chartControl1.Legend.TextVisible = false;
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.Location = new System.Drawing.Point(13, 2);
+            this.chartControl1.Location = new System.Drawing.Point(3, 4);
             this.chartControl1.Name = "chartControl1";
             series1.Name = "Series 1";
             series1.ShowInLegend = false;
@@ -250,7 +250,7 @@
             // 
             this.chartControl2.Legend.MarkerMode = DevExpress.XtraCharts.LegendMarkerMode.None;
             this.chartControl2.Legend.TextVisible = false;
-            this.chartControl2.Location = new System.Drawing.Point(12, 303);
+            this.chartControl2.Location = new System.Drawing.Point(2, 305);
             this.chartControl2.Name = "chartControl2";
             series2.Name = "Cisim";
             series2.View = pieSeriesView1;
@@ -265,13 +265,13 @@
             xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl3.Diagram = xyDiagram2;
             this.chartControl3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl3.Location = new System.Drawing.Point(421, 303);
+            this.chartControl3.Location = new System.Drawing.Point(411, 305);
             this.chartControl3.Name = "chartControl3";
             series3.Name = "Nekadar";
             series3.View = stepLineSeriesView1;
             this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series3};
-            this.chartControl3.Size = new System.Drawing.Size(1099, 303);
+            this.chartControl3.Size = new System.Drawing.Size(1109, 303);
             this.chartControl3.TabIndex = 119;
             // 
             // label1
@@ -279,7 +279,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Aqua;
-            this.label1.Location = new System.Drawing.Point(21, 311);
+            this.label1.Location = new System.Drawing.Point(12, 578);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 20);
             this.label1.TabIndex = 120;
@@ -290,7 +290,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Aqua;
-            this.label2.Location = new System.Drawing.Point(1375, 318);
+            this.label2.Location = new System.Drawing.Point(1365, 320);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 20);
             this.label2.TabIndex = 121;
@@ -301,7 +301,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Aqua;
-            this.label3.Location = new System.Drawing.Point(958, 12);
+            this.label3.Location = new System.Drawing.Point(948, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 20);
             this.label3.TabIndex = 122;

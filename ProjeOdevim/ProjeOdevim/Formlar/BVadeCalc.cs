@@ -16,10 +16,9 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
         private void BVadeCalc_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlCommand command = new SqlCommand("Select * From TBLFAIZLER", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();

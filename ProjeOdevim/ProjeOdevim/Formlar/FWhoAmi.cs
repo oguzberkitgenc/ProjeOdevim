@@ -144,7 +144,7 @@ namespace ProjeOdevim.Formlar
             sl1 += 3;
             sl4 -= 3;
             l1.Location = new System.Drawing.Point(sl1, 260);
-            l2.Location = new System.Drawing.Point(sl1, 280);
+            l2.Location = new System.Drawing.Point(sl1-10, 280);
             l3.Location = new System.Drawing.Point(sl1, 300);
             l4.Location = new System.Drawing.Point(sl4, 455);
             if (sl1 >= 885)

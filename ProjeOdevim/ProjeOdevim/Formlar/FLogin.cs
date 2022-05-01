@@ -18,8 +18,9 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        private BaglantiSinif bgl = new BaglantiSinif();
+        //   private BaglantiSinif bgl = new BaglantiSinif();
 
+        SqlConnection connection = new SqlConnection(@"Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
         private void BExit_Click(object sender, EventArgs e)
         {
             if (TPass.Text=="AYARLARA GİREMİYORUM")
@@ -27,7 +28,6 @@ namespace ProjeOdevim.Formlar
                 DialogResult secenek =  MessageBox.Show("Bütün Kullanıcılara Ayarlara Girme Yetkisi Verilecek Onaylıyor musun?","UYARI",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
                 if (secenek==DialogResult.Yes)
                 {
-                    SqlConnection connection = new SqlConnection(bgl.Adres);
                     connection.Open();
                     SqlCommand cmd = new SqlCommand("UPDATE TBLDEPARTMAN SET AYARLAR=1", connection);
                     cmd.ExecuteNonQuery();
@@ -46,7 +46,6 @@ namespace ProjeOdevim.Formlar
         bool durum;
         private void FLogin_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
 
             connection.Open();
             SqlCommand cmd = new SqlCommand("SELECT XLIC FROM TBLXML", connection);
@@ -59,7 +58,6 @@ namespace ProjeOdevim.Formlar
         }
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
 
             if (lic != "")
             {
@@ -113,6 +111,10 @@ namespace ProjeOdevim.Formlar
                         frm.BVadeliList.Enabled = Convert.ToBoolean(dr2[22]);
                         frm.BHareket.Enabled= Convert.ToBoolean(dr2[23]);
                         frm.BVadeHesapla.Enabled=Convert.ToBoolean(dr2[24]);
+                        frm.BEmployeTakip.Enabled= Convert.ToBoolean(dr2[25]);
+                        frm.FCustomerTakip.Enabled = Convert.ToBoolean(dr2[26]);
+                        frm.BEmployeeAnalys.Enabled= Convert.ToBoolean(dr2[27]);
+                        frm.BCustomerAnalys.Enabled = Convert.ToBoolean(dr2[28]);
                     }
                 }
                 connection.Close();

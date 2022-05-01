@@ -16,10 +16,10 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         void Listele()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("SELECT TBLNOTLAR.ID,BASLIK AS 'BAŞLIK',AD AS 'OLUŞTURAN'," +
                 "DEPARTMAN AS 'HİTAP',MESAJ,TARIH FROM TBLNOTLAR INNER JOIN TBLPERSONEL ON TBLNOTLAR.OLUSTURAN=TBLPERSONEL.ID " +
@@ -32,7 +32,6 @@ namespace ProjeOdevim.Formlar
         }
         void OlusturanList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT ID,AD FROM TBLPERSONEL ORDER BY ID ASC", connection);
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -45,7 +44,6 @@ namespace ProjeOdevim.Formlar
         }
         void HitapList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT ID,DEPARTMAN FROM TBLDEPARTMAN ORDER BY ID ASC", connection);
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -78,7 +76,6 @@ namespace ProjeOdevim.Formlar
             DateTime dt = DateTime.Now;
             if (TBaslik.Text != "" && CmbOlusturan.Text != "" && CmbHitap.Text != "" && TId.Text == "")
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand komut = new SqlCommand("insert into TBLNOTLAR (BASLIK,OLUSTURAN,HITAP,MESAJ,TARIH) values (@P1,@P2,@P3,@P4,@P5)", connection);
                 komut.Parameters.AddWithValue("@P1", TBaslik.Text);
@@ -104,7 +101,6 @@ namespace ProjeOdevim.Formlar
         {
             if (TBaslik.Text != "" && CmbOlusturan.Text != "" && CmbHitap.Text != "" && TId.Text != "")
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand komut2 = new SqlCommand("UPDATE TBLNOTLAR SET BASLIK=@P1,OLUSTURAN=@P2,HITAP=@P3,MESAJ=@P4 WHERE ID=@P5", connection);
                 komut2.Parameters.AddWithValue("@P1", TBaslik.Text);

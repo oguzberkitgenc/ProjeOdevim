@@ -58,6 +58,8 @@
             this.TPersonel = new System.Windows.Forms.TextBox();
             this.BPersonel = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BMagaza = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.CFatura = new System.Windows.Forms.CheckBox();
             this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
@@ -141,8 +143,10 @@
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.TRestore = new System.Windows.Forms.TextBox();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.BMagaza = new DevExpress.XtraEditors.SimpleButton();
+            this.CPerAnaliz = new System.Windows.Forms.CheckBox();
+            this.CPerSatis = new System.Windows.Forms.CheckBox();
+            this.CMusAnaliz = new System.Windows.Forms.CheckBox();
+            this.CMusSatis = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -599,6 +603,43 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(403, 595);
             this.panel1.TabIndex = 130;
+            // 
+            // BMagaza
+            // 
+            this.BMagaza.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Danger;
+            this.BMagaza.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BMagaza.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BMagaza.Appearance.Options.UseBackColor = true;
+            this.BMagaza.Appearance.Options.UseFont = true;
+            this.BMagaza.Appearance.Options.UseForeColor = true;
+            this.BMagaza.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearanceDisabled.Options.UseBackColor = true;
+            this.BMagaza.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearanceHovered.Options.UseBackColor = true;
+            this.BMagaza.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BMagaza.AppearancePressed.Options.UseBackColor = true;
+            this.BMagaza.Location = new System.Drawing.Point(159, 207);
+            this.BMagaza.Name = "BMagaza";
+            this.BMagaza.Size = new System.Drawing.Size(194, 25);
+            this.BMagaza.TabIndex = 174;
+            this.BMagaza.Text = "GİT";
+            this.BMagaza.Click += new System.EventHandler(this.BMagaza_Click);
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Appearance.Options.UseForeColor = true;
+            this.labelControl10.Location = new System.Drawing.Point(51, 207);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(103, 19);
+            this.labelControl10.TabIndex = 173;
+            this.labelControl10.Text = "Mağaza Bilgileri: ";
             // 
             // labelControl9
             // 
@@ -1183,6 +1224,10 @@
             // 
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.CMusAnaliz);
+            this.panel3.Controls.Add(this.CMusSatis);
+            this.panel3.Controls.Add(this.CPerAnaliz);
+            this.panel3.Controls.Add(this.CPerSatis);
             this.panel3.Controls.Add(this.CVadeRapor);
             this.panel3.Controls.Add(this.CHareket);
             this.panel3.Controls.Add(this.CVade);
@@ -1223,7 +1268,7 @@
             this.CVadeRapor.AutoSize = true;
             this.CVadeRapor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CVadeRapor.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CVadeRapor.Location = new System.Drawing.Point(204, 405);
+            this.CVadeRapor.Location = new System.Drawing.Point(203, 388);
             this.CVadeRapor.Name = "CVadeRapor";
             this.CVadeRapor.Size = new System.Drawing.Size(112, 23);
             this.CVadeRapor.TabIndex = 22;
@@ -1235,7 +1280,7 @@
             this.CHareket.AutoSize = true;
             this.CHareket.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CHareket.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CHareket.Location = new System.Drawing.Point(11, 405);
+            this.CHareket.Location = new System.Drawing.Point(10, 388);
             this.CHareket.Name = "CHareket";
             this.CHareket.Size = new System.Drawing.Size(151, 23);
             this.CHareket.TabIndex = 11;
@@ -1247,7 +1292,7 @@
             this.CVade.AutoSize = true;
             this.CVade.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CVade.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CVade.Location = new System.Drawing.Point(204, 378);
+            this.CVade.Location = new System.Drawing.Point(203, 361);
             this.CVade.Margin = new System.Windows.Forms.Padding(4);
             this.CVade.Name = "CVade";
             this.CVade.Size = new System.Drawing.Size(140, 23);
@@ -1273,7 +1318,7 @@
             this.simpleButton3.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.simpleButton3.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.simpleButton3.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton3.Location = new System.Drawing.Point(279, 497);
+            this.simpleButton3.Location = new System.Drawing.Point(279, 519);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(141, 29);
             this.simpleButton3.TabIndex = 25;
@@ -1298,7 +1343,7 @@
             this.simpleButton2.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.simpleButton2.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.simpleButton2.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton2.Location = new System.Drawing.Point(10, 530);
+            this.simpleButton2.Location = new System.Drawing.Point(10, 552);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(130, 29);
             this.simpleButton2.TabIndex = 27;
@@ -1311,7 +1356,7 @@
             this.labelControl29.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelControl29.Appearance.Options.UseFont = true;
             this.labelControl29.Appearance.Options.UseForeColor = true;
-            this.labelControl29.Location = new System.Drawing.Point(10, 472);
+            this.labelControl29.Location = new System.Drawing.Point(10, 494);
             this.labelControl29.Name = "labelControl29";
             this.labelControl29.Size = new System.Drawing.Size(97, 19);
             this.labelControl29.TabIndex = 178;
@@ -1322,7 +1367,7 @@
             this.CmbList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CmbList.FormattingEnabled = true;
-            this.CmbList.Location = new System.Drawing.Point(6, 497);
+            this.CmbList.Location = new System.Drawing.Point(6, 519);
             this.CmbList.Name = "CmbList";
             this.CmbList.Size = new System.Drawing.Size(270, 27);
             this.CmbList.TabIndex = 24;
@@ -1356,7 +1401,7 @@
             this.BYetkiKaydet.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BYetkiKaydet.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BYetkiKaydet.AppearancePressed.Options.UseBackColor = true;
-            this.BYetkiKaydet.Location = new System.Drawing.Point(146, 530);
+            this.BYetkiKaydet.Location = new System.Drawing.Point(146, 552);
             this.BYetkiKaydet.Name = "BYetkiKaydet";
             this.BYetkiKaydet.Size = new System.Drawing.Size(130, 29);
             this.BYetkiKaydet.TabIndex = 26;
@@ -1368,7 +1413,7 @@
             this.CTemelIstatisk.AutoSize = true;
             this.CTemelIstatisk.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CTemelIstatisk.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CTemelIstatisk.Location = new System.Drawing.Point(205, 192);
+            this.CTemelIstatisk.Location = new System.Drawing.Point(204, 175);
             this.CTemelIstatisk.Name = "CTemelIstatisk";
             this.CTemelIstatisk.Size = new System.Drawing.Size(111, 23);
             this.CTemelIstatisk.TabIndex = 15;
@@ -1380,7 +1425,7 @@
             this.CAyarlar.AutoSize = true;
             this.CAyarlar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CAyarlar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CAyarlar.Location = new System.Drawing.Point(204, 435);
+            this.CAyarlar.Location = new System.Drawing.Point(203, 472);
             this.CAyarlar.Name = "CAyarlar";
             this.CAyarlar.Size = new System.Drawing.Size(72, 23);
             this.CAyarlar.TabIndex = 23;
@@ -1392,7 +1437,7 @@
             this.CAylikKarsilastir.AutoSize = true;
             this.CAylikKarsilastir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CAylikKarsilastir.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CAylikKarsilastir.Location = new System.Drawing.Point(205, 347);
+            this.CAylikKarsilastir.Location = new System.Drawing.Point(204, 330);
             this.CAylikKarsilastir.Name = "CAylikKarsilastir";
             this.CAylikKarsilastir.Size = new System.Drawing.Size(142, 23);
             this.CAylikKarsilastir.TabIndex = 20;
@@ -1404,7 +1449,7 @@
             this.CGenelVeriler.AutoSize = true;
             this.CGenelVeriler.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CGenelVeriler.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CGenelVeriler.Location = new System.Drawing.Point(205, 161);
+            this.CGenelVeriler.Location = new System.Drawing.Point(204, 144);
             this.CGenelVeriler.Name = "CGenelVeriler";
             this.CGenelVeriler.Size = new System.Drawing.Size(106, 23);
             this.CGenelVeriler.TabIndex = 14;
@@ -1416,7 +1461,7 @@
             this.CKategoriMarkaIstatisk.AutoSize = true;
             this.CKategoriMarkaIstatisk.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CKategoriMarkaIstatisk.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CKategoriMarkaIstatisk.Location = new System.Drawing.Point(205, 223);
+            this.CKategoriMarkaIstatisk.Location = new System.Drawing.Point(204, 206);
             this.CKategoriMarkaIstatisk.Name = "CKategoriMarkaIstatisk";
             this.CKategoriMarkaIstatisk.Size = new System.Drawing.Size(191, 23);
             this.CKategoriMarkaIstatisk.TabIndex = 16;
@@ -1428,7 +1473,7 @@
             this.CGunlukCiro.AutoSize = true;
             this.CGunlukCiro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CGunlukCiro.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CGunlukCiro.Location = new System.Drawing.Point(205, 254);
+            this.CGunlukCiro.Location = new System.Drawing.Point(204, 237);
             this.CGunlukCiro.Name = "CGunlukCiro";
             this.CGunlukCiro.Size = new System.Drawing.Size(102, 23);
             this.CGunlukCiro.TabIndex = 17;
@@ -1440,7 +1485,7 @@
             this.CAylikCiro.AutoSize = true;
             this.CAylikCiro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CAylikCiro.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CAylikCiro.Location = new System.Drawing.Point(205, 285);
+            this.CAylikCiro.Location = new System.Drawing.Point(204, 268);
             this.CAylikCiro.Name = "CAylikCiro";
             this.CAylikCiro.Size = new System.Drawing.Size(90, 23);
             this.CAylikCiro.TabIndex = 18;
@@ -1452,7 +1497,7 @@
             this.CGunlukKarsilastir.AutoSize = true;
             this.CGunlukKarsilastir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CGunlukKarsilastir.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CGunlukKarsilastir.Location = new System.Drawing.Point(205, 316);
+            this.CGunlukKarsilastir.Location = new System.Drawing.Point(204, 299);
             this.CGunlukKarsilastir.Name = "CGunlukKarsilastir";
             this.CGunlukKarsilastir.Size = new System.Drawing.Size(154, 23);
             this.CGunlukKarsilastir.TabIndex = 19;
@@ -1464,7 +1509,7 @@
             this.CYogunluk.AutoSize = true;
             this.CYogunluk.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CYogunluk.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CYogunluk.Location = new System.Drawing.Point(205, 130);
+            this.CYogunluk.Location = new System.Drawing.Point(204, 113);
             this.CYogunluk.Name = "CYogunluk";
             this.CYogunluk.Size = new System.Drawing.Size(133, 23);
             this.CYogunluk.TabIndex = 13;
@@ -1476,7 +1521,7 @@
             this.CUrunler.AutoSize = true;
             this.CUrunler.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CUrunler.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CUrunler.Location = new System.Drawing.Point(11, 285);
+            this.CUrunler.Location = new System.Drawing.Point(10, 268);
             this.CUrunler.Name = "CUrunler";
             this.CUrunler.Size = new System.Drawing.Size(73, 23);
             this.CUrunler.TabIndex = 7;
@@ -1488,7 +1533,7 @@
             this.CMagazalar.AutoSize = true;
             this.CMagazalar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CMagazalar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CMagazalar.Location = new System.Drawing.Point(11, 316);
+            this.CMagazalar.Location = new System.Drawing.Point(10, 299);
             this.CMagazalar.Name = "CMagazalar";
             this.CMagazalar.Size = new System.Drawing.Size(91, 23);
             this.CMagazalar.TabIndex = 8;
@@ -1500,7 +1545,7 @@
             this.CKategoriMarkaEkle.AutoSize = true;
             this.CKategoriMarkaEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CKategoriMarkaEkle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CKategoriMarkaEkle.Location = new System.Drawing.Point(11, 347);
+            this.CKategoriMarkaEkle.Location = new System.Drawing.Point(10, 330);
             this.CKategoriMarkaEkle.Name = "CKategoriMarkaEkle";
             this.CKategoriMarkaEkle.Size = new System.Drawing.Size(157, 23);
             this.CKategoriMarkaEkle.TabIndex = 9;
@@ -1512,7 +1557,7 @@
             this.CDepartmanEkle.AutoSize = true;
             this.CDepartmanEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CDepartmanEkle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CDepartmanEkle.Location = new System.Drawing.Point(11, 378);
+            this.CDepartmanEkle.Location = new System.Drawing.Point(10, 361);
             this.CDepartmanEkle.Name = "CDepartmanEkle";
             this.CDepartmanEkle.Size = new System.Drawing.Size(126, 23);
             this.CDepartmanEkle.TabIndex = 10;
@@ -1524,7 +1569,7 @@
             this.CCiroVerileri.AutoSize = true;
             this.CCiroVerileri.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CCiroVerileri.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CCiroVerileri.Location = new System.Drawing.Point(205, 99);
+            this.CCiroVerileri.Location = new System.Drawing.Point(204, 82);
             this.CCiroVerileri.Name = "CCiroVerileri";
             this.CCiroVerileri.Size = new System.Drawing.Size(101, 23);
             this.CCiroVerileri.TabIndex = 12;
@@ -1536,7 +1581,7 @@
             this.CMusteriler.AutoSize = true;
             this.CMusteriler.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CMusteriler.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CMusteriler.Location = new System.Drawing.Point(11, 254);
+            this.CMusteriler.Location = new System.Drawing.Point(10, 237);
             this.CMusteriler.Name = "CMusteriler";
             this.CMusteriler.Size = new System.Drawing.Size(89, 23);
             this.CMusteriler.TabIndex = 6;
@@ -1548,7 +1593,7 @@
             this.CAnaSayfa.AutoSize = true;
             this.CAnaSayfa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CAnaSayfa.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CAnaSayfa.Location = new System.Drawing.Point(11, 99);
+            this.CAnaSayfa.Location = new System.Drawing.Point(10, 82);
             this.CAnaSayfa.Name = "CAnaSayfa";
             this.CAnaSayfa.Size = new System.Drawing.Size(91, 23);
             this.CAnaSayfa.TabIndex = 1;
@@ -1560,7 +1605,7 @@
             this.CUrunSatis.AutoSize = true;
             this.CUrunSatis.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CUrunSatis.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CUrunSatis.Location = new System.Drawing.Point(11, 130);
+            this.CUrunSatis.Location = new System.Drawing.Point(10, 113);
             this.CUrunSatis.Name = "CUrunSatis";
             this.CUrunSatis.Size = new System.Drawing.Size(91, 23);
             this.CUrunSatis.TabIndex = 2;
@@ -1572,7 +1617,7 @@
             this.CKrediSorgula.AutoSize = true;
             this.CKrediSorgula.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CKrediSorgula.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CKrediSorgula.Location = new System.Drawing.Point(11, 161);
+            this.CKrediSorgula.Location = new System.Drawing.Point(10, 144);
             this.CKrediSorgula.Name = "CKrediSorgula";
             this.CKrediSorgula.Size = new System.Drawing.Size(113, 23);
             this.CKrediSorgula.TabIndex = 3;
@@ -1584,7 +1629,7 @@
             this.CDuyrular.AutoSize = true;
             this.CDuyrular.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CDuyrular.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CDuyrular.Location = new System.Drawing.Point(11, 192);
+            this.CDuyrular.Location = new System.Drawing.Point(10, 175);
             this.CDuyrular.Name = "CDuyrular";
             this.CDuyrular.Size = new System.Drawing.Size(87, 23);
             this.CDuyrular.TabIndex = 4;
@@ -1596,7 +1641,7 @@
             this.CPersoneller.AutoSize = true;
             this.CPersoneller.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CPersoneller.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CPersoneller.Location = new System.Drawing.Point(11, 223);
+            this.CPersoneller.Location = new System.Drawing.Point(10, 206);
             this.CPersoneller.Name = "CPersoneller";
             this.CPersoneller.Size = new System.Drawing.Size(95, 23);
             this.CPersoneller.TabIndex = 5;
@@ -1820,42 +1865,53 @@
             this.labelControl31.TabIndex = 129;
             this.labelControl31.Text = "Konumdaki Dosyayı Seçiniz";
             // 
-            // labelControl10
+            // CPerAnaliz
             // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Appearance.Options.UseForeColor = true;
-            this.labelControl10.Location = new System.Drawing.Point(51, 207);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(103, 19);
-            this.labelControl10.TabIndex = 173;
-            this.labelControl10.Text = "Mağaza Bilgileri: ";
+            this.CPerAnaliz.AutoSize = true;
+            this.CPerAnaliz.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CPerAnaliz.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CPerAnaliz.Location = new System.Drawing.Point(203, 414);
+            this.CPerAnaliz.Name = "CPerAnaliz";
+            this.CPerAnaliz.Size = new System.Drawing.Size(138, 23);
+            this.CPerAnaliz.TabIndex = 180;
+            this.CPerAnaliz.Text = "Personel Analizleri";
+            this.CPerAnaliz.UseVisualStyleBackColor = true;
             // 
-            // BMagaza
+            // CPerSatis
             // 
-            this.BMagaza.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Danger;
-            this.BMagaza.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BMagaza.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BMagaza.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.BMagaza.Appearance.Options.UseBackColor = true;
-            this.BMagaza.Appearance.Options.UseFont = true;
-            this.BMagaza.Appearance.Options.UseForeColor = true;
-            this.BMagaza.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BMagaza.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BMagaza.AppearanceDisabled.Options.UseBackColor = true;
-            this.BMagaza.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BMagaza.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BMagaza.AppearanceHovered.Options.UseBackColor = true;
-            this.BMagaza.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BMagaza.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.BMagaza.AppearancePressed.Options.UseBackColor = true;
-            this.BMagaza.Location = new System.Drawing.Point(159, 207);
-            this.BMagaza.Name = "BMagaza";
-            this.BMagaza.Size = new System.Drawing.Size(194, 25);
-            this.BMagaza.TabIndex = 174;
-            this.BMagaza.Text = "GİT";
-            this.BMagaza.Click += new System.EventHandler(this.BMagaza_Click);
+            this.CPerSatis.AutoSize = true;
+            this.CPerSatis.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CPerSatis.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CPerSatis.Location = new System.Drawing.Point(10, 414);
+            this.CPerSatis.Name = "CPerSatis";
+            this.CPerSatis.Size = new System.Drawing.Size(131, 23);
+            this.CPerSatis.TabIndex = 179;
+            this.CPerSatis.Text = "Personel Satışları";
+            this.CPerSatis.UseVisualStyleBackColor = true;
+            // 
+            // CMusAnaliz
+            // 
+            this.CMusAnaliz.AutoSize = true;
+            this.CMusAnaliz.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CMusAnaliz.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CMusAnaliz.Location = new System.Drawing.Point(203, 443);
+            this.CMusAnaliz.Name = "CMusAnaliz";
+            this.CMusAnaliz.Size = new System.Drawing.Size(132, 23);
+            this.CMusAnaliz.TabIndex = 182;
+            this.CMusAnaliz.Text = "Müşteri Analizleri";
+            this.CMusAnaliz.UseVisualStyleBackColor = true;
+            // 
+            // CMusSatis
+            // 
+            this.CMusSatis.AutoSize = true;
+            this.CMusSatis.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CMusSatis.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CMusSatis.Location = new System.Drawing.Point(10, 443);
+            this.CMusSatis.Name = "CMusSatis";
+            this.CMusSatis.Size = new System.Drawing.Size(125, 23);
+            this.CMusSatis.TabIndex = 181;
+            this.CMusSatis.Text = "Müşteri Satışları";
+            this.CMusSatis.UseVisualStyleBackColor = true;
             // 
             // FSettings
             // 
@@ -2000,5 +2056,9 @@
         private System.Windows.Forms.CheckBox CFatura;
         private DevExpress.XtraEditors.SimpleButton BMagaza;
         private DevExpress.XtraEditors.LabelControl labelControl10;
+        private System.Windows.Forms.CheckBox CMusAnaliz;
+        private System.Windows.Forms.CheckBox CMusSatis;
+        private System.Windows.Forms.CheckBox CPerAnaliz;
+        private System.Windows.Forms.CheckBox CPerSatis;
     }
 }

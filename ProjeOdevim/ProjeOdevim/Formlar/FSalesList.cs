@@ -18,11 +18,11 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         public int idAl = 0;
         void Listele()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             int datasatiri = gridView1.DataRowCount;
             DateTime baslangic = DateTime.Parse(DtBaslangic.Value.ToShortDateString());
             DateTime bitis = DateTime.Parse(DtBitis.Value.ToShortDateString());

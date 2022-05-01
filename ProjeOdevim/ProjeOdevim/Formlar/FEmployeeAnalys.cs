@@ -16,10 +16,10 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         void ChartDoldur()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT ILCE,COUNT(ILCE) AS 'SAYI' FROM TBLPERSONEL GROUP BY ILCE", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -31,9 +31,8 @@ namespace ProjeOdevim.Formlar
         }
         void GridDoldur()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
-            SqlCommand komut = new SqlCommand("SELECT COUNT(ILCE) AS 'SAYI',ILCE AS 'İLÇE' FROM TBLPERSONEL GROUP BY ILCE ", connection);
+            SqlCommand komut = new SqlCommand("SELECT COUNT(ILCE) AS 'SAYI',ILCE AS 'İLÇE' FROM TBLPERSONEL GROUP BY ILCE ORDER BY SAYI DESC ", connection);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -43,7 +42,6 @@ namespace ProjeOdevim.Formlar
         }
         void CinsiyetGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut2 = new SqlCommand("SELECT CINSIYETAD,COUNT(CINSIYETAD) FROM TBLPERSONEL INNER JOIN TBLCINSIYET ON TBLPERSONEL.CINSIYET=TBLCINSIYET.ID GROUP BY CINSIYETAD ORDER BY CINSIYETAD ASC", connection);
             SqlDataReader dr2 = komut2.ExecuteReader();
@@ -55,7 +53,6 @@ namespace ProjeOdevim.Formlar
         }
         void CiroGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut3 = new SqlCommand("SELECT  TOP 20 AD,SUM(TOPLAMFIYAT) AS 'TOPLAM' FROM TBLSATIS  INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID GROUP BY AD ORDER BY TOPLAM DESC", connection);
             SqlDataReader dr3 = komut3.ExecuteReader();

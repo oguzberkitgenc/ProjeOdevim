@@ -16,10 +16,10 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         void CategoryList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             DataTable dataTable = new DataTable();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("Select * From TBLKATEGORI ORDER BY KATEGORIADI ASC ", connection);
@@ -29,7 +29,6 @@ namespace ProjeOdevim.Formlar
         }
         void MarkaList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open ();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * From TBLMARKA ORDER BY MARKAADI ASC ", connection);
@@ -70,7 +69,6 @@ namespace ProjeOdevim.Formlar
         }
         private void BSave_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             if (TId.Text == "" & TName.Text != "")
             {
                 connection.Open();
@@ -91,7 +89,6 @@ namespace ProjeOdevim.Formlar
 
         private void BUpdate_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             if (TId.Text != "" & TName.Text != "")
             {
                 connection.Open();
@@ -120,7 +117,6 @@ namespace ProjeOdevim.Formlar
 
         private void BSave2_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             if (TId2.Text == "" & TName2.Text != "")
             {
                 connection.Open();
@@ -141,7 +137,6 @@ namespace ProjeOdevim.Formlar
 
         private void BUpdate2_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             if (TId2.Text != "" & TName2.Text != "")
             {
                 connection.Open();

@@ -8,6 +8,6 @@ namespace ProjeOdevim
 {
     class BaglantiSinif
     {
-        public string Adres = System.IO.File.ReadAllText(@"C:\Ticari Otomasyon\XConML.txt");
+        public string Adres = @"Data Source=.;Initial Catalog=DbProjem;Integrated Security=True";
     }
 }

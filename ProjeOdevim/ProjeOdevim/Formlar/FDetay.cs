@@ -17,7 +17,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         public string idal="";
         public string urun="";
         void Satis()
@@ -26,7 +27,6 @@ namespace ProjeOdevim.Formlar
         }
         private void FDetay_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             if (idal!="")
             {
                 connection.Open();

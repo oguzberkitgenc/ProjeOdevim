@@ -16,12 +16,12 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         string xml1, xml2, xml3, xml4, xml5, xml6;
 
         void KritikGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT KRITIK FROM TBLXML", connection);
             SqlDataReader sqlDataReader = komut.ExecuteReader();
@@ -33,7 +33,6 @@ namespace ProjeOdevim.Formlar
         }
         void MusteriPuan()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT KMUSTERI,KPERSONEL FROM TBLKREDI", connection);
             SqlDataReader sqlDataReader = komut.ExecuteReader();
@@ -47,7 +46,6 @@ namespace ProjeOdevim.Formlar
         }
         void VadeGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT ID FROM TBLFAIZLER WHERE VADE='3'", connection);
             SqlDataReader sqlDataReader = komut.ExecuteReader();
@@ -136,7 +134,6 @@ namespace ProjeOdevim.Formlar
 
         private void BSave_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             try
             {
                 SqlCommand cmd = new SqlCommand("UPDATE TBLXML SET XML1=@P1,XML2=@P2,XML3=@P3,XML4=@P4,XML5=@P5,XML=@6", connection);
@@ -162,7 +159,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 if (TMusteri.Text != "")
                 {
                     connection.Open();
@@ -182,7 +178,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 if (TPersonel.Text != "")
                 {
                     connection.Open();
@@ -199,7 +194,6 @@ namespace ProjeOdevim.Formlar
         }
         void DepartmanGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select ID,DEPARTMAN From TBLDEPARTMAN", connection);
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -212,7 +206,6 @@ namespace ProjeOdevim.Formlar
         }
         void YetkiGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlCommand cmd2 = new SqlCommand("Select * FROM TBLDEPARTMAN WHERE ID=" + CmbList.SelectedValue, connection);
             connection.Open();
             SqlDataReader reader = cmd2.ExecuteReader();
@@ -241,13 +234,15 @@ namespace ProjeOdevim.Formlar
                 CVade.Checked = Convert.ToBoolean(reader[22]);
                 CHareket.Checked = Convert.ToBoolean(reader[23]);
                 CVadeRapor.Checked = Convert.ToBoolean(reader[24]);
-
+                CPerSatis.Checked = Convert.ToBoolean(reader[25]);
+                CMusSatis.Checked=Convert.ToBoolean(reader[26]);
+                CPerAnaliz.Checked = Convert.ToBoolean(reader[27]);
+                CMusAnaliz.Checked=Convert.ToBoolean(reader[28]);
             }
             connection.Close();
         }
         void Yazdirma()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand cmd = new SqlCommand("Select YAZDIR From TBLXML", connection);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -288,12 +283,12 @@ namespace ProjeOdevim.Formlar
             DialogResult secenek = MessageBox.Show(CmbList.Text + " Departmanına seçili olan değerler güncellenecek.\n\nDevam etmek istiyor musun? ", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (secenek == DialogResult.Yes)
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand command = new SqlCommand("UPDATE TBLDEPARTMAN SET ANASAYFA=@P1,URUNSATIS=@P2,KREDISORGULA=@P3,DUYURULAR=@P4," +
                     "PERSONELLER=@P5,MUSTERILER=@P6,URUNLER=@P7,MAGAZALAR=@P8,KATEGORIEKLE=@P9,DEPARTKONTROL=@P10,CIROVERI=@P11," +
                     "YOGUNLUK=@P12,GENELVERI=@P13,TEMELISTATISK=@P14,KATEGORIMARKA=@P15,GUNLUKCIRO=@P16,AYLIKCIRO=@P17,GUNLUKKARSI=@P18," +
-                    "AYLIKKARSI=@P19,AYARLAR=@P20,VADELER=@P21,HAREKET=@P22,VADERAPOR=@P23 WHERE ID=@P24", connection);
+                    "AYLIKKARSI=@P19,AYARLAR=@P20,VADELER=@P21,HAREKET=@P22,VADERAPOR=@P23,PERSATIS=@P24,MUSSATIS=@P25,PERANALIZ=@P26,MUSANALIZ=@P27" +
+                    " WHERE ID=@P28", connection);
                 command.Parameters.AddWithValue("@P1", Convert.ToBoolean(CAnaSayfa.Checked));
                 command.Parameters.AddWithValue("@P2", Convert.ToBoolean(CUrunSatis.Checked));
                 command.Parameters.AddWithValue("@P3", Convert.ToBoolean(CKrediSorgula.Checked));
@@ -317,7 +312,11 @@ namespace ProjeOdevim.Formlar
                 command.Parameters.AddWithValue("@P21", Convert.ToBoolean(CVade.Checked));
                 command.Parameters.AddWithValue("@P22", Convert.ToBoolean(CHareket.Checked));
                 command.Parameters.AddWithValue("@P23", Convert.ToBoolean(CVadeRapor.Checked));
-                command.Parameters.AddWithValue("@P24", CmbList.SelectedValue);
+                command.Parameters.AddWithValue("@P24", Convert.ToBoolean(CPerSatis.Checked));
+                command.Parameters.AddWithValue("@P25", Convert.ToBoolean(CMusSatis.Checked));
+                command.Parameters.AddWithValue("@P26", Convert.ToBoolean(CPerAnaliz.Checked));
+                command.Parameters.AddWithValue("@P27", Convert.ToBoolean(CMusAnaliz.Checked));
+                command.Parameters.AddWithValue("@P28", CmbList.SelectedValue);
                 command.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show(CmbList.Text + " Departmanına seçili olan değerler başarıyla güncellendi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -354,7 +353,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 string database = connection.Database.ToString();
                 if (TBackUp.Text == string.Empty)
                 {
@@ -403,7 +401,6 @@ namespace ProjeOdevim.Formlar
             DialogResult secenek = MessageBox.Show("Bütün veriler silinip seçtiğiniz veri yedeği yüklenecektir.\n\n Onaylıyor musunuz?", "BİLGİ", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
             if (secenek == DialogResult.Yes)
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 string database = connection.Database.ToString();
                 Cursor.Current = Cursors.WaitCursor;
                 connection.Open();
@@ -431,15 +428,14 @@ namespace ProjeOdevim.Formlar
 
                     MessageBox.Show(ex.ToString());
                 }
-                    
-                
+
+
             }
         }
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand kritik = new SqlCommand("UPDATE TBLXML SET KRITIK=@X1", connection);
                 kritik.Parameters.AddWithValue("@X1", int.Parse(TKritik.Text));
@@ -458,7 +454,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T3.Text + "WHERE VADE='3'", connection);
                 faiz.ExecuteNonQuery();
@@ -476,7 +471,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T6.Text + "WHERE VADE='6'", connection);
                 faiz.ExecuteNonQuery();
@@ -494,7 +488,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T9.Text + "WHERE VADE='9'", connection);
                 faiz.ExecuteNonQuery();
@@ -512,7 +505,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T12.Text + "WHERE VADE='12'", connection);
                 faiz.ExecuteNonQuery();
@@ -530,7 +522,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T15.Text + "WHERE VADE='15'", connection);
                 faiz.ExecuteNonQuery();
@@ -548,7 +539,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T18.Text + "WHERE VADE='18'", connection);
                 faiz.ExecuteNonQuery();
@@ -566,7 +556,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T24.Text + "WHERE VADE='24'", connection);
                 faiz.ExecuteNonQuery();
@@ -584,7 +573,6 @@ namespace ProjeOdevim.Formlar
         {
             try
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand faiz = new SqlCommand("UPDATE TBLFAIZLER SET ID=" + T36.Text + "WHERE VADE='36'", connection);
                 faiz.ExecuteNonQuery();
@@ -602,7 +590,6 @@ namespace ProjeOdevim.Formlar
             Cursor = Cursors.WaitCursor;
             if (CFatura.Checked == true)
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand komut = new SqlCommand("UPDATE TBLXML SET YAZDIR=1", connection);
                 komut.ExecuteNonQuery();
@@ -611,7 +598,6 @@ namespace ProjeOdevim.Formlar
             }
             else if (CFatura.Checked == false)
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand komut = new SqlCommand("UPDATE TBLXML SET YAZDIR=0", connection);
                 komut.ExecuteNonQuery();
@@ -651,7 +637,7 @@ namespace ProjeOdevim.Formlar
             xml1 = openFileDialog1.FileName;
             checkBox1.Checked = true;
         }
-        
+
         private void FSettings_Load(object sender, EventArgs e)
         {
             simpleButton3.Focus();

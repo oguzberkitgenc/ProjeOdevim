@@ -17,10 +17,11 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         void DepartmentList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
+            
             connection.Open();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select ID,DEPARTMAN From TBLDEPARTMAN", connection);
@@ -48,13 +49,12 @@ namespace ProjeOdevim.Formlar
         {
             if (TId.Text == "" & TName.Text != "")
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand sqlCommand = new SqlCommand("insert into TBLDEPARTMAN (DEPARTMAN,ANASAYFA,URUNSATIS," +
                     "KREDISORGULA,DUYURULAR,PERSONELLER,MUSTERILER,URUNLER,MAGAZALAR,KATEGORIEKLE,DEPARTKONTROL," +
                     "CIROVERI,YOGUNLUK,GENELVERI,TEMELISTATISK,KATEGORIMARKA,GUNLUKCIRO,AYLIKCIRO,GUNLUKKARSI," +
-                    "AYLIKKARSI,AYARLAR,VADELER,HAREKET) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11," +
-                    "@p12,@p13,@p14,@p15,@p16,@p17,@p18,@p19,@p20,@p21,@p22,@p23)", connection);
+                    "AYLIKKARSI,AYARLAR,VADELER,HAREKET,PERSATIS,MUSSATIS,PERANALIZ,MUSANALIZ) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11," +
+                    "@p12,@p13,@p14,@p15,@p16,@p17,@p18,@p19,@p20,@p21,@p22,@p23,@p24,@p25,@p26,@p27)", connection);
                 sqlCommand.Parameters.AddWithValue("@p1", TName.Text);
                 sqlCommand.Parameters.AddWithValue("@p2", 0);
                 sqlCommand.Parameters.AddWithValue("@p3", 0);
@@ -78,6 +78,10 @@ namespace ProjeOdevim.Formlar
                 sqlCommand.Parameters.AddWithValue("@p21", 0);
                 sqlCommand.Parameters.AddWithValue("@p22", 0);
                 sqlCommand.Parameters.AddWithValue("@p23", 0);
+                sqlCommand.Parameters.AddWithValue("@p24", 0);
+                sqlCommand.Parameters.AddWithValue("@p25", 0);
+                sqlCommand.Parameters.AddWithValue("@p26", 0);
+                sqlCommand.Parameters.AddWithValue("@p27", 0);
                 sqlCommand.ExecuteNonQuery();
                 connection.Close();
                 MessageBox.Show("Departman Sisteme Başarıyla Kayıt Edildi", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -94,7 +98,6 @@ namespace ProjeOdevim.Formlar
 
             if (TId.Text != "" & TName.Text != "")
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand sql = new SqlCommand("Update TBLDEPARTMAN set DEPARTMAN=@k1 where ID=@k2", connection);
                 sql.Parameters.AddWithValue("@k1", TName.Text);

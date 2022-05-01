@@ -18,7 +18,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         long toplam3 = 0;
         private void FLic_Load(object sender, EventArgs e)
         {
@@ -70,7 +71,6 @@ namespace ProjeOdevim.Formlar
             {
                 if (toplam3 == long.Parse(textBox1.Text))
                 {
-                    SqlConnection connection = new SqlConnection(bgl.Adres);
                     connection.Open();
                     SqlCommand komut = new SqlCommand("UPDATE TBLXML SET XLIC=" + toplam3.ToString(), connection);
                     komut.ExecuteNonQuery();

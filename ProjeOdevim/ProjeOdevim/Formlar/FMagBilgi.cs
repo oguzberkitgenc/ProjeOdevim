@@ -16,10 +16,10 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         void Listele()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT * FROM TBLMAGAZA", connection);
             SqlDataReader sqlDataReader = komut.ExecuteReader();
@@ -53,7 +53,6 @@ namespace ProjeOdevim.Formlar
         }
         void IlGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM ILLER", connection);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -73,7 +72,6 @@ namespace ProjeOdevim.Formlar
 
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM ILCELER WHERE SEHIR=" + CmbIl.SelectedValue, connection);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -90,7 +88,6 @@ namespace ProjeOdevim.Formlar
             DialogResult secenek = MessageBox.Show("Yeni Mağaza Bilgileri Kayıt Edilecek. \nOnaylıyor musun?", "BİLGİ", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
             if (secenek == DialogResult.Yes)
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand komut = new SqlCommand("UPDATE TBLMAGAZA SET UNVAN=@P1,IL=@P2,ILCE=@P3," +
                     "ADRES=@P4,TEL1=@P5,TEL2=@P6,MAIL=@P7,WEB=@P8,LOGO=@P9,TICARIUNVAN=@P10,FAX=@P11," +

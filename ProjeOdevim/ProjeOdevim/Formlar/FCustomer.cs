@@ -16,10 +16,10 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         void CustomerList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlDataAdapter da = new SqlDataAdapter("Select TBLMUSTERI.ID,TC,AD AS 'AD SOYAD',IL,ILCE,ADRES,CINSIYETAD " +
                 "AS 'CİNSİYET',DOGUMT AS 'D. TARİHİ',TEL,KREDILIMIT From TBLMUSTERI INNER JOIN TBLCINSIYET ON " +
                 "TBLMUSTERI.CINSIYET=TBLCINSIYET.ID", connection);
@@ -29,7 +29,6 @@ namespace ProjeOdevim.Formlar
         }
         void IlList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlCommand command = new SqlCommand("Select * From ILLER", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
@@ -41,7 +40,6 @@ namespace ProjeOdevim.Formlar
         }
         void GenderList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlCommand command = new SqlCommand("Select * From TBLCINSIYET", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
@@ -53,7 +51,6 @@ namespace ProjeOdevim.Formlar
 
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             CmbIlce.Items.Clear();
             SqlCommand sqlCommand = new SqlCommand("Select ILCE From ILCELER where SEHIR=@p1", connection);
@@ -106,7 +103,6 @@ namespace ProjeOdevim.Formlar
             if (TId.Text == "" & MskTc.Text != "" & TName.Text != "" & CmbGender.Text != "" &
                 MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & MskPhone.Text != "")
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand sql = new SqlCommand("insert into TBLMUSTERI (TC,AD,IL,ILCE,ADRES,DOGUMT,TEL,CINSIYET,KREDILIMIT) values (@p1,@p2,@p4,@p5,@p6,@p7,@p8,@p9,@p10)", connection);
                 sql.Parameters.AddWithValue("@P1", MskTc.Text);
@@ -135,7 +131,6 @@ namespace ProjeOdevim.Formlar
         {
             if (TId.Text != "")
             {
-                SqlConnection connection = new SqlConnection(bgl.Adres);
                 connection.Open();
                 SqlCommand komut = new SqlCommand("update TBLMUSTERI set TC=@P1,AD=@P2,DOGUMT=@P4,IL=@P5,ILCE=@P6,ADRES=@P7,CINSIYET=@P8,TEL=@P9 WHERE ID=@P10", connection);
                 komut.Parameters.AddWithValue("@p1", MskTc.Text);

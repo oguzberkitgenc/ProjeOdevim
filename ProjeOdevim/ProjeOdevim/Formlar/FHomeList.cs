@@ -16,10 +16,10 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         void DecliningStok()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 BARKOD,MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN ADI'," +
                 "SATISFIYAT AS 'SATIŞ FİYATI',STOK,ACIKLAMA AS 'AÇIKLAMA' From TBLURUN INNER JOIN TBLMARKA ON " +
@@ -31,7 +31,6 @@ namespace ProjeOdevim.Formlar
         }
         void NewEmployee()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlDataAdapter adapter = new SqlDataAdapter("Select TOP 12 TBLPERSONEL.ID,DEPARTMAN,AD AS 'AD SOYAD'" +
                 "From TBLPERSONEL  INNER JOIN TBLDEPARTMAN ON TBLPERSONEL.DEPARTMANID=TBLDEPARTMAN.ID " +
@@ -44,7 +43,6 @@ namespace ProjeOdevim.Formlar
         }
         void Taksitler()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             DateTime dt = DateTime.Now;
             connection.Open();
             SqlDataAdapter adapter = new SqlDataAdapter("SET DATEFORMAT DMY SELECT TOP 60 AD,TARIH,KACINCITAKSIT,TAKSITTUTARI FROM TBLTAKSITLER INNER JOIN TBLMUSTERI ON TBLTAKSITLER.MUSTERIT=TBLMUSTERI.ID WHERE TARIH>= '" + dt + "' order by TARIH ASC", connection);
@@ -55,7 +53,6 @@ namespace ProjeOdevim.Formlar
         }
         void NewLogin()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("Select TOP 12 KULLANICI,ADSOYAD,DEPARTMAN,TARIH From TBLKULLANICIHAREKET " +
                 "INNER JOIN TBLDEPARTMAN ON TBLKULLANICIHAREKET.DEPART=TBLDEPARTMAN.ID ORDER BY TARIH DESC", connection);
@@ -67,7 +64,6 @@ namespace ProjeOdevim.Formlar
         }
         void NewSales()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 12 ISLEMNO,TARIH,SUM(TOPLAMFIYAT) AS 'SATIŞ TUTARI', TBLPERSONEL.AD AS 'PERSONEL' FROM TBLSATIS INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID GROUP BY TARIH,ISLEMNO," +
                 "TBLPERSONEL.AD ORDER BY ISLEMNO DESC", connection);
@@ -78,7 +74,6 @@ namespace ProjeOdevim.Formlar
         }
         void NewNote()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 12 TBLNOTLAR.ID,BASLIK AS 'BAŞLIK',AD AS 'OLUŞTURAN'," +
                 "DEPARTMAN AS 'HİTAP' FROM TBLNOTLAR INNER JOIN TBLPERSONEL ON TBLNOTLAR.OLUSTURAN=TBLPERSONEL.ID " +

@@ -18,11 +18,11 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         string tutbarkod;
         void CategoryName()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             // Combobax Kategori Getir
             SqlCommand command = new SqlCommand("Select * From TBLKATEGORI ORDER BY KATEGORIADI DESC ", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
@@ -35,7 +35,6 @@ namespace ProjeOdevim.Formlar
 
         void MarkaName()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             // Combobax Marka Getir
             SqlCommand command = new SqlCommand("Select * From TBLMARKA ORDER BY MARKAADI DESC ", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
@@ -47,7 +46,6 @@ namespace ProjeOdevim.Formlar
         }
         void ProductList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select TBLURUN.ID,BARKOD,KATEGORIADI AS 'KATEGORİ',MARKAADI AS 'MARKA',URUNADI AS 'ÜRÜN',ALISFIYAT AS 'ALIŞ FİYATI'," +
                 "SATISFIYAT AS 'SATIŞ FİYATI', STOK AS 'STOK',ACIKLAMA AS 'AÇIKLAMA' FROM TBLURUN INNER JOIN TBLKATEGORI ON T" +
@@ -71,7 +69,6 @@ namespace ProjeOdevim.Formlar
         int barkod, barkodhafiza;
         void BarkodGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT Barkod FROM TBLISLEM", connection);
             SqlDataReader sqlDataReader = komut.ExecuteReader();
@@ -87,7 +84,6 @@ namespace ProjeOdevim.Formlar
         {
             int barkodguncelle;
             barkodguncelle = barkod + 1;
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("UPDATE TBLISLEM SET Barkod=" + barkodguncelle, connection);
             komut.ExecuteNonQuery();
@@ -96,7 +92,6 @@ namespace ProjeOdevim.Formlar
         bool durum;
         void MukerrerEngelle()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand command = new SqlCommand("SELECT BARKOD FROM TBLURUN WHERE BARKOD=@P1", connection);
             command.Parameters.AddWithValue("@P1", TBarkod.Text);
@@ -120,7 +115,6 @@ namespace ProjeOdevim.Formlar
             Clear();
             gridView1.Columns[0].Visible = false;
             BarkodGetir();
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select ID,KRITIK From TBLXML", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -180,7 +174,6 @@ namespace ProjeOdevim.Formlar
                 {
                     if (CmbCategory.Text != "" & CmbMarka.Text != "" & TProductName.Text != "" & TBuying.Text != "" & TSales.Text != "" & NStock.Value >= 0 & TId.Text == "")
                     {
-                        SqlConnection connection = new SqlConnection(bgl.Adres);
                         connection.Open();
                         SqlCommand command = new SqlCommand("insert into TBLURUN (KATEGORIID,MARKAID,URUNADI,ALISFIYAT,SATISFIYAT,STOK,ACIKLAMA,BARKOD)" +
                             "  values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", connection);
@@ -226,7 +219,6 @@ namespace ProjeOdevim.Formlar
         private void BUpdate_Click(object sender, EventArgs e)
         {
             MukerrerEngelle();
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             if (tutbarkod==TBarkod.Text)
             {
                 if (TId.Text != "")

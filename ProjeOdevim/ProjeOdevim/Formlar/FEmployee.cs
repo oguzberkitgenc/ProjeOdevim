@@ -16,10 +16,10 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+
         void DepartmanList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlCommand command = new SqlCommand("Select * From TBLDEPARTMAN", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
@@ -31,7 +31,6 @@ namespace ProjeOdevim.Formlar
 
         void IlList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlCommand command = new SqlCommand("Select * From ILLER", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
@@ -42,7 +41,6 @@ namespace ProjeOdevim.Formlar
         }
         void EmployeeList()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             DataTable dataTable = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select TBLPERSONEL.ID,TC AS 'TC NO',DEPARTMAN," +
@@ -56,7 +54,6 @@ namespace ProjeOdevim.Formlar
         }
         void CinsiyetGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlCommand command = new SqlCommand("Select * From TBLCINSIYET", connection);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
@@ -94,7 +91,6 @@ namespace ProjeOdevim.Formlar
         }
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             CmbIlce.Items.Clear();
             SqlCommand sqlCommand = new SqlCommand("Select ILCE From ILCELER where SEHIR=@p1", connection);
@@ -109,7 +105,6 @@ namespace ProjeOdevim.Formlar
         bool durum;
         void UserMukkerrerNo()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand command = new SqlCommand("SELECT KADI FROM TBLPERSONEL WHERE KADI=@P1", connection);
             command.Parameters.AddWithValue("@P1", TUser.Text);
@@ -133,7 +128,6 @@ namespace ProjeOdevim.Formlar
                MskBirth.Text != "" & CmbIl.Text != "" & CmbIlce.Text != "" & RchAdres.Text != "" & CmbDep.Text != "" &
                MskPhone.Text != "" & TPicture.Text != "" & TUser.Text != "" & TPass.Text != "")
                 {
-                    SqlConnection connection = new SqlConnection(bgl.Adres);
                     connection.Open();
                     SqlCommand command = new SqlCommand("insert into TBLPERSONEL (TC,AD,CINSIYET,DTARIH,IL,ILCE,ADRES,DEPARTMANID,TEL," +
                         "FOTO,KADI,SIFRE,PUAN) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13)", connection);
@@ -183,7 +177,6 @@ namespace ProjeOdevim.Formlar
                 if (TId.Text != "")
                 {
 
-                    SqlConnection connection = new SqlConnection(bgl.Adres);
                     connection.Open();
                     SqlCommand cmd = new SqlCommand("Update TBLPERSONEL set TC=@T1,DEPARTMANID=@T2,AD=@T4," +
                         "CINSIYET=@T6,TEL=@T7,DTARIH=@T8,IL=@T9,ILCE=@T10,ADRES=@T11,FOTO=@T12 WHERE ID=@T13", connection);
