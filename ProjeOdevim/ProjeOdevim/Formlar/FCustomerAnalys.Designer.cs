@@ -31,20 +31,30 @@
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.StepLineSeriesView stepLineSeriesView1 = new DevExpress.XtraCharts.StepLineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.PointSeriesView pointSeriesView1 = new DevExpress.XtraCharts.PointSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.RadarDiagram radarDiagram1 = new DevExpress.XtraCharts.RadarDiagram();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.ScatterRadarLineSeriesView scatterRadarLineSeriesView1 = new DevExpress.XtraCharts.ScatterRadarLineSeriesView();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCustomerAnalys));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chartControl3 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.label4 = new System.Windows.Forms.Label();
+            this.LGenel = new System.Windows.Forms.Label();
+            this.LKadın = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.LErkek = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.chartControl4 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl3)).BeginInit();
@@ -58,17 +68,21 @@
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(radarDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(scatterRadarLineSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
             this.gridControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridControl1.Location = new System.Drawing.Point(1128, 4);
+            this.gridControl1.Location = new System.Drawing.Point(1223, 4);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(0);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Padding = new System.Windows.Forms.Padding(3);
-            this.gridControl1.Size = new System.Drawing.Size(395, 294);
+            this.gridControl1.Size = new System.Drawing.Size(365, 294);
             this.gridControl1.TabIndex = 123;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -227,34 +241,12 @@
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.Aqua;
-            this.label3.Location = new System.Drawing.Point(964, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 20);
-            this.label3.TabIndex = 129;
-            this.label3.Text = "Müşteri İlçe Dağılımı";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.Aqua;
-            this.label2.Location = new System.Drawing.Point(1378, 317);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 20);
-            this.label2.TabIndex = 128;
-            this.label2.Text = "TOP 20 Müşteri";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Aqua;
-            this.label1.Location = new System.Drawing.Point(12, 579);
+            this.label1.Location = new System.Drawing.Point(12, 267);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 20);
             this.label1.TabIndex = 127;
@@ -266,26 +258,32 @@
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl3.Diagram = xyDiagram1;
             this.chartControl3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl3.Location = new System.Drawing.Point(411, 301);
+            this.chartControl3.Location = new System.Drawing.Point(510, 302);
             this.chartControl3.Name = "chartControl3";
             series1.Name = "Nekadar";
             series1.View = stepLineSeriesView1;
             this.chartControl3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl3.Size = new System.Drawing.Size(1112, 310);
+            this.chartControl3.Size = new System.Drawing.Size(1030, 310);
             this.chartControl3.TabIndex = 126;
+            chartTitle1.Indent = 0;
+            chartTitle1.Text = "Top 20 Müşteri";
+            chartTitle1.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            chartTitle1.WordWrap = true;
+            this.chartControl3.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle1});
             // 
             // chartControl2
             // 
             this.chartControl2.Legend.MarkerMode = DevExpress.XtraCharts.LegendMarkerMode.None;
             this.chartControl2.Legend.TextVisible = false;
-            this.chartControl2.Location = new System.Drawing.Point(2, 307);
+            this.chartControl2.Location = new System.Drawing.Point(7, 3);
             this.chartControl2.Name = "chartControl2";
             series2.Name = "Cisim";
             series2.View = pieSeriesView1;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series2};
-            this.chartControl2.Size = new System.Drawing.Size(402, 303);
+            this.chartControl2.Size = new System.Drawing.Size(333, 295);
             this.chartControl2.TabIndex = 125;
             // 
             // chartControl1
@@ -296,7 +294,7 @@
             this.chartControl1.Legend.MarkerMode = DevExpress.XtraCharts.LegendMarkerMode.CheckBoxAndMarker;
             this.chartControl1.Legend.TextVisible = false;
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.Location = new System.Drawing.Point(3, 4);
+            this.chartControl1.Location = new System.Drawing.Point(338, 3);
             this.chartControl1.Name = "chartControl1";
             series3.Name = "Series 1";
             series3.ShowInLegend = false;
@@ -304,8 +302,102 @@
             series3.View = pointSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series3};
-            this.chartControl1.Size = new System.Drawing.Size(1122, 296);
+            this.chartControl1.Size = new System.Drawing.Size(882, 296);
             this.chartControl1.TabIndex = 124;
+            chartTitle2.Indent = 0;
+            chartTitle2.Text = "Müşteri İlçe Dağılımı";
+            this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle2});
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.Aqua;
+            this.label4.Location = new System.Drawing.Point(4, 310);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 40);
+            this.label4.TabIndex = 130;
+            this.label4.Text = "Müşterilerin Genel\r\nYaş Ortalaması";
+            // 
+            // LGenel
+            // 
+            this.LGenel.AutoSize = true;
+            this.LGenel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LGenel.ForeColor = System.Drawing.Color.Yellow;
+            this.LGenel.Location = new System.Drawing.Point(130, 340);
+            this.LGenel.Name = "LGenel";
+            this.LGenel.Size = new System.Drawing.Size(49, 33);
+            this.LGenel.TabIndex = 131;
+            this.LGenel.Text = "00";
+            // 
+            // LKadın
+            // 
+            this.LKadın.AutoSize = true;
+            this.LKadın.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LKadın.ForeColor = System.Drawing.Color.Yellow;
+            this.LKadın.Location = new System.Drawing.Point(130, 430);
+            this.LKadın.Name = "LKadın";
+            this.LKadın.Size = new System.Drawing.Size(49, 33);
+            this.LKadın.TabIndex = 133;
+            this.LKadın.Text = "00";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.Aqua;
+            this.label7.Location = new System.Drawing.Point(4, 390);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 40);
+            this.label7.TabIndex = 132;
+            this.label7.Text = "Kadın Müşterilerin\r\nYaş Ortalaması";
+            // 
+            // LErkek
+            // 
+            this.LErkek.AutoSize = true;
+            this.LErkek.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LErkek.ForeColor = System.Drawing.Color.Yellow;
+            this.LErkek.Location = new System.Drawing.Point(130, 510);
+            this.LErkek.Name = "LErkek";
+            this.LErkek.Size = new System.Drawing.Size(49, 33);
+            this.LErkek.TabIndex = 135;
+            this.LErkek.Text = "00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.Aqua;
+            this.label9.Location = new System.Drawing.Point(10, 470);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(127, 40);
+            this.label9.TabIndex = 134;
+            this.label9.Text = "Erkek Müşterilen\r\nYaş Ortalaması";
+            // 
+            // chartControl4
+            // 
+            radarDiagram1.AxisX.GridLines.MinorVisible = true;
+            radarDiagram1.AxisX.Label.TextDirection = DevExpress.XtraCharts.RadarAxisXLabelTextDirection.Tangent;
+            radarDiagram1.AxisX.Label.Visible = false;
+            radarDiagram1.AxisY.Visible = false;
+            this.chartControl4.Diagram = radarDiagram1;
+            this.chartControl4.Legend.TextVisible = false;
+            this.chartControl4.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl4.Location = new System.Drawing.Point(189, 301);
+            this.chartControl4.Name = "chartControl4";
+            series4.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Numerical;
+            series4.Name = "Yaslar";
+            scatterRadarLineSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            scatterRadarLineSeriesView1.LineMarkerOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(240)))));
+            scatterRadarLineSeriesView1.LineMarkerOptions.Kind = DevExpress.XtraCharts.MarkerKind.Hexagon;
+            scatterRadarLineSeriesView1.LineMarkerOptions.Size = 8;
+            scatterRadarLineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series4.View = scatterRadarLineSeriesView1;
+            this.chartControl4.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series4};
+            this.chartControl4.Size = new System.Drawing.Size(323, 310);
+            this.chartControl4.TabIndex = 136;
             // 
             // FCustomerAnalys
             // 
@@ -313,9 +405,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(59)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1523, 618);
+            this.Controls.Add(this.chartControl4);
+            this.Controls.Add(this.LErkek);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.LKadın);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.LGenel);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chartControl3);
             this.Controls.Add(this.chartControl2);
@@ -337,6 +434,10 @@
             ((System.ComponentModel.ISupportInitialize)(pointSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(radarDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(scatterRadarLineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,11 +447,16 @@
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         protected DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraCharts.ChartControl chartControl3;
         private DevExpress.XtraCharts.ChartControl chartControl2;
         private DevExpress.XtraCharts.ChartControl chartControl1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LGenel;
+        private System.Windows.Forms.Label LKadın;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LErkek;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraCharts.ChartControl chartControl4;
     }
 }

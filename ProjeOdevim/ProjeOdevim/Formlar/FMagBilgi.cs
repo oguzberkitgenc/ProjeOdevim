@@ -26,6 +26,7 @@ namespace ProjeOdevim.Formlar
             while (sqlDataReader.Read())
             {
                 TUnvan.Text = sqlDataReader[1].ToString();
+                LUn.Text = sqlDataReader[1].ToString();
                 LTicariUn.Text = sqlDataReader[1].ToString();
 
                 CmbIl.Text = sqlDataReader[2].ToString();

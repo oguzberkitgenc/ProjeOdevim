@@ -61,12 +61,69 @@ namespace ProjeOdevim.Formlar
             }
             connection.Close();
         }
+        int g, k, e = 0;
+        DateTime dt = DateTime.Now;
+        void Genel()
+        {
+            connection.Open();
+            SqlCommand komut = new SqlCommand("SELECT AVG(DOGUMT) FROM TBLMUSTERI", connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                g = Convert.ToInt32(dr[0]);
+            }
+            connection.Close();
+            g = Convert.ToInt32(dt.Year) - g;
+            LGenel.Text = g.ToString();
+        }
+        void Kadın()
+        {
+            connection.Open();
+            SqlCommand komut = new SqlCommand("SELECT AVG(DOGUMT) FROM TBLMUSTERI where CINSIYET=2", connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                k = Convert.ToInt32(dr[0]);
+            }
+            connection.Close();
+            k = Convert.ToInt32(dt.Year) - k;
+            LKadın.Text = k.ToString();
+
+        }
+        void Erkek()
+        {
+            connection.Open();
+            SqlCommand komut = new SqlCommand("SELECT AVG(DOGUMT) FROM TBLMUSTERI where CINSIYET=1", connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                e = Convert.ToInt32(dr[0]);
+            }
+            connection.Close();
+            e = Convert.ToInt32(dt.Year) - e;
+            LErkek.Text = e.ToString();
+        }
+        void YasChart()
+        {
+            connection.Open();
+            SqlCommand komut = new SqlCommand("SELECT 2022-DOGUMT,COUNT(DOGUMT) FROM TBLMUSTERI GROUP BY DOGUMT",connection);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                chartControl4.Series["Yaslar"].Points.AddPoint(Convert.ToString(dr[0].ToString()), Convert.ToInt32(dr[1].ToString()));
+            }
+            connection.Close();
+        }
         private void FCustomerAnalys_Load(object sender, EventArgs e)
         {
             ChartDoldur();
             GridDoldur();
             CinsiyetGetir();
             CiroGetir();
+            Genel();
+            Kadın();
+            Erkek();
+            YasChart();
         }
     }
 }

@@ -920,11 +920,11 @@
             // LUn
             // 
             this.LUn.AutoSize = true;
-            this.LUn.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LUn.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LUn.ForeColor = System.Drawing.Color.Black;
             this.LUn.Location = new System.Drawing.Point(474, 14);
             this.LUn.Name = "LUn";
-            this.LUn.Size = new System.Drawing.Size(144, 43);
+            this.LUn.Size = new System.Drawing.Size(67, 18);
             this.LUn.TabIndex = 14;
             this.LUn.Text = "ÜNVAN";
             // 
