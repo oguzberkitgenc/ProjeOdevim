@@ -26,28 +26,49 @@ namespace ProjeOdevim.Formlar
             while (sqlDataReader.Read())
             {
                 TUnvan.Text = sqlDataReader[1].ToString();
+                LTicariUn.Text = sqlDataReader[1].ToString();
+
                 CmbIl.Text = sqlDataReader[2].ToString();
                 CmbIlce.Text = sqlDataReader[3].ToString();
+                LIlIlce.Text=sqlDataReader[2]+" / " + sqlDataReader[2].ToString();
+
                 TAdres.Text = sqlDataReader[4].ToString();
+                LAdres.Text= sqlDataReader[4].ToString();
+
                 MskTel1.Text = sqlDataReader[5].ToString();
                 MskTel2.Text = sqlDataReader[6].ToString();
-                TMail.Text = sqlDataReader[7].ToString();
-                TWeb.Text = sqlDataReader[8].ToString();
-                TLogo.Text = sqlDataReader[9].ToString();
-                TTicariUnvan.Text = sqlDataReader[10].ToString();
-                MskFax.Text = sqlDataReader[11].ToString();
-                TVergiD.Text=sqlDataReader[12].ToString();
-                TVergiN.Text=sqlDataReader[13].ToString();
-                TTicaretNo.Text=sqlDataReader[14].ToString();
-                TMersisNo.Text=sqlDataReader[15].ToString();
-                Mskisbank.Text=sqlDataReader[16].ToString();
-                MskGaranti.Text=sqlDataReader[17].ToString();
-                MskYapi.Text=sqlDataReader[18].ToString();
-                MskAkbank.Text=sqlDataReader[19].ToString();
-                MskFinans.Text=sqlDataReader[20].ToString();
-                MskZiraat.Text=sqlDataReader[21].ToString();
-                MskHalk.Text=sqlDataReader[22].ToString();
+                LTeller.Text=sqlDataReader[5].ToString() + " " + sqlDataReader[6].ToString() + " " + sqlDataReader[11].ToString();
 
+                TMail.Text = sqlDataReader[7].ToString();
+                LMail.Text = sqlDataReader[7].ToString();
+
+                TWeb.Text = sqlDataReader[8].ToString();
+                LWeb.Text=sqlDataReader[8].ToString();
+
+                TLogo.Text = sqlDataReader[9].ToString();
+                pictureBox1.ImageLocation=sqlDataReader[9].ToString();
+
+                TTicariUnvan.Text = sqlDataReader[10].ToString();
+                LTicariUn.Text=sqlDataReader[10].ToString();
+
+                MskFax.Text = sqlDataReader[11].ToString(); //
+
+                TVergiD.Text = sqlDataReader[12].ToString();
+                TVergiN.Text = sqlDataReader[13].ToString();
+                LVergiDN.Text = sqlDataReader[12].ToString() + " / " + sqlDataReader[13].ToString();
+
+                TTicaretNo.Text = sqlDataReader[14].ToString();
+                LTicarNo.Text=sqlDataReader[14].ToString();
+
+                TMersisNo.Text = sqlDataReader[15].ToString();
+                LMersisNo.Text=sqlDataReader[15].ToString();
+                Mskisbank.Text = sqlDataReader[16].ToString();
+                MskGaranti.Text = sqlDataReader[17].ToString();
+                MskYapi.Text = sqlDataReader[18].ToString();
+                MskAkbank.Text = sqlDataReader[19].ToString();
+                MskFinans.Text = sqlDataReader[20].ToString();
+                MskZiraat.Text = sqlDataReader[21].ToString();
+                MskHalk.Text = sqlDataReader[22].ToString();
             }
             connection.Close();
         }
@@ -61,18 +82,17 @@ namespace ProjeOdevim.Formlar
             CmbIl.ValueMember = "ID";
             CmbIl.DisplayMember = "SEHIR";
             CmbIl.DataSource = dt;
-            connection.Close();
         }
 
         private void FMagBilgi_Load(object sender, EventArgs e)
         {
-            IlGetir();
             Listele();
+            IlGetir();
         }
 
         private void CmbIl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            connection.Open();
+            
             SqlCommand cmd = new SqlCommand("SELECT * FROM ILCELER WHERE SEHIR=" + CmbIl.SelectedValue, connection);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -115,7 +135,6 @@ namespace ProjeOdevim.Formlar
                 komut.Parameters.AddWithValue("@P20", MskFinans.Text);
                 komut.Parameters.AddWithValue("@P21", MskZiraat.Text);
                 komut.Parameters.AddWithValue("@P22", MskHalk.Text);
-
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Mağaza Bilgileri Başarıyla Kayıt Edildi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 connection.Close();
@@ -133,7 +152,7 @@ namespace ProjeOdevim.Formlar
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
-            TLogo.Text= ofd.FileName;
+            TLogo.Text = ofd.FileName;
         }
     }
 }

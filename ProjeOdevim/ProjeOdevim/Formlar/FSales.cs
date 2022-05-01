@@ -292,7 +292,7 @@ namespace ProjeOdevim.Formlar
                     Total.Text = hesapla.ToString("C2");
                     UrunEksilt();
                     Product2();
-                    gridView2.Focus();
+                    CmbCustomer.Focus();
                 }
             }
             catch (Exception ex)
@@ -613,20 +613,24 @@ namespace ProjeOdevim.Formlar
                 Console.Beep(800, 250);
                 if (CFatura.Checked == true)
                 {
-                    int kimo = Convert.ToInt32(CmbCustomer.SelectedValue);
-                    Yazdir yazdir = new Yazdir(int.Parse(LIslemNo.Text), kimo);
-                    yazdir.IslemNo = int.Parse(LIslemNo.Text);
-                    yazdir.MusteriNo = kimo;
-                    yazdir.YazdirmayaBasla();
+                    try
+                    {
+                        int kimo = Convert.ToInt32(CmbCustomer.SelectedValue);
+                        Yazdir yazdir = new Yazdir(int.Parse(LIslemNo.Text), kimo);
+                        yazdir.IslemNo = int.Parse(LIslemNo.Text);
+                        yazdir.MusteriNo = kimo;
+                        yazdir.YazdirmayaBasla();
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Fatura oluştururken bilinmeyen bir nedenle hata oluştu","UYARI",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    }
                 }
                 Product2();
                 IslemNoArttir();
                 IslemNumarası();
                 Clear();
-            }
-            else
-            {
-                MessageBox.Show("Rapor Oluşturma Hatası. \nLütfen Tek Seferde 15 Üründen Fazla Ürün Girmeyiniz");
             }
         }
     }

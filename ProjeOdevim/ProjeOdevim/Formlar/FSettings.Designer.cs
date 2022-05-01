@@ -46,11 +46,6 @@
             this.BXml4 = new DevExpress.XtraEditors.SimpleButton();
             this.BXml5 = new DevExpress.XtraEditors.SimpleButton();
             this.BSave = new DevExpress.XtraEditors.SimpleButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.TMusteri = new System.Windows.Forms.TextBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.BMusteri = new DevExpress.XtraEditors.SimpleButton();
@@ -94,12 +89,15 @@
             this.TKritik = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.CMusAnaliz = new System.Windows.Forms.CheckBox();
+            this.CMusSatis = new System.Windows.Forms.CheckBox();
+            this.CPerAnaliz = new System.Windows.Forms.CheckBox();
+            this.CPerSatis = new System.Windows.Forms.CheckBox();
             this.CVadeRapor = new System.Windows.Forms.CheckBox();
             this.CHareket = new System.Windows.Forms.CheckBox();
             this.CVade = new System.Windows.Forms.CheckBox();
@@ -143,10 +141,12 @@
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.TRestore = new System.Windows.Forms.TextBox();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
-            this.CPerAnaliz = new System.Windows.Forms.CheckBox();
-            this.CPerSatis = new System.Windows.Forms.CheckBox();
-            this.CMusAnaliz = new System.Windows.Forms.CheckBox();
-            this.CMusSatis = new System.Windows.Forms.CheckBox();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.BXml7 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.BXml8 = new DevExpress.XtraEditors.SimpleButton();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -160,11 +160,11 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(1, 8);
+            this.labelControl4.Location = new System.Drawing.Point(3, 8);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(49, 19);
+            this.labelControl4.Size = new System.Drawing.Size(45, 19);
             this.labelControl4.TabIndex = 97;
-            this.labelControl4.Text = "XML 1:";
+            this.labelControl4.Text = "XML1:";
             // 
             // labelControl1
             // 
@@ -172,11 +172,11 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(1, 40);
+            this.labelControl1.Location = new System.Drawing.Point(3, 40);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(53, 19);
+            this.labelControl1.Size = new System.Drawing.Size(45, 19);
             this.labelControl1.TabIndex = 99;
-            this.labelControl1.Text = "XML 2: ";
+            this.labelControl1.Text = "XML2:";
             // 
             // labelControl2
             // 
@@ -184,11 +184,11 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(1, 72);
+            this.labelControl2.Location = new System.Drawing.Point(3, 72);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(57, 19);
+            this.labelControl2.Size = new System.Drawing.Size(45, 19);
             this.labelControl2.TabIndex = 101;
-            this.labelControl2.Text = "XML 3 : ";
+            this.labelControl2.Text = "XML3:";
             // 
             // labelControl3
             // 
@@ -196,11 +196,11 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(1, 100);
+            this.labelControl3.Location = new System.Drawing.Point(3, 100);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(53, 19);
+            this.labelControl3.Size = new System.Drawing.Size(45, 19);
             this.labelControl3.TabIndex = 103;
-            this.labelControl3.Text = "XML 4 :";
+            this.labelControl3.Text = "XML4:";
             // 
             // labelControl5
             // 
@@ -208,11 +208,11 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(1, 126);
+            this.labelControl5.Location = new System.Drawing.Point(3, 126);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(57, 19);
+            this.labelControl5.Size = new System.Drawing.Size(45, 19);
             this.labelControl5.TabIndex = 105;
-            this.labelControl5.Text = "XML 5 : ";
+            this.labelControl5.Text = "XML5:";
             // 
             // openFileDialog1
             // 
@@ -236,7 +236,7 @@
             this.BXml1.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml1.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml1.AppearancePressed.Options.UseBackColor = true;
-            this.BXml1.Location = new System.Drawing.Point(62, 8);
+            this.BXml1.Location = new System.Drawing.Point(54, 8);
             this.BXml1.Name = "BXml1";
             this.BXml1.Size = new System.Drawing.Size(126, 23);
             this.BXml1.TabIndex = 55;
@@ -246,46 +246,56 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(195, 11);
+            this.checkBox1.ForeColor = System.Drawing.Color.Cyan;
+            this.checkBox1.Location = new System.Drawing.Point(183, 10);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.Size = new System.Drawing.Size(126, 17);
             this.checkBox1.TabIndex = 107;
+            this.checkBox1.Text = "cat_dashboard_mark";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(195, 43);
+            this.checkBox2.ForeColor = System.Drawing.Color.Cyan;
+            this.checkBox2.Location = new System.Drawing.Point(183, 42);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.Size = new System.Drawing.Size(144, 17);
             this.checkBox2.TabIndex = 108;
+            this.checkBox2.Text = "dat_dashboard_chartday";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(195, 71);
+            this.checkBox3.ForeColor = System.Drawing.Color.Cyan;
+            this.checkBox3.Location = new System.Drawing.Point(183, 70);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.Size = new System.Drawing.Size(156, 17);
             this.checkBox3.TabIndex = 109;
+            this.checkBox3.Text = "dat_dashboard_chartmonth";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(195, 103);
+            this.checkBox4.ForeColor = System.Drawing.Color.Cyan;
+            this.checkBox4.Location = new System.Drawing.Point(183, 102);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
+            this.checkBox4.Size = new System.Drawing.Size(197, 17);
             this.checkBox4.TabIndex = 110;
+            this.checkBox4.Text = "dat_dashboard_chart_comparmonth";
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(195, 135);
+            this.checkBox5.ForeColor = System.Drawing.Color.Cyan;
+            this.checkBox5.Location = new System.Drawing.Point(183, 134);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
+            this.checkBox5.Size = new System.Drawing.Size(185, 17);
             this.checkBox5.TabIndex = 111;
+            this.checkBox5.Text = "dat_dashboard_chart_comparday";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // BXml2
@@ -306,7 +316,7 @@
             this.BXml2.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml2.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml2.AppearancePressed.Options.UseBackColor = true;
-            this.BXml2.Location = new System.Drawing.Point(62, 37);
+            this.BXml2.Location = new System.Drawing.Point(54, 37);
             this.BXml2.Name = "BXml2";
             this.BXml2.Size = new System.Drawing.Size(126, 23);
             this.BXml2.TabIndex = 57;
@@ -331,7 +341,7 @@
             this.BXml3.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml3.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml3.AppearancePressed.Options.UseBackColor = true;
-            this.BXml3.Location = new System.Drawing.Point(62, 66);
+            this.BXml3.Location = new System.Drawing.Point(54, 66);
             this.BXml3.Name = "BXml3";
             this.BXml3.Size = new System.Drawing.Size(126, 23);
             this.BXml3.TabIndex = 59;
@@ -356,7 +366,7 @@
             this.BXml4.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml4.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml4.AppearancePressed.Options.UseBackColor = true;
-            this.BXml4.Location = new System.Drawing.Point(62, 97);
+            this.BXml4.Location = new System.Drawing.Point(54, 97);
             this.BXml4.Name = "BXml4";
             this.BXml4.Size = new System.Drawing.Size(126, 23);
             this.BXml4.TabIndex = 61;
@@ -381,7 +391,7 @@
             this.BXml5.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BXml5.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.BXml5.AppearancePressed.Options.UseBackColor = true;
-            this.BXml5.Location = new System.Drawing.Point(62, 126);
+            this.BXml5.Location = new System.Drawing.Point(54, 126);
             this.BXml5.Name = "BXml5";
             this.BXml5.Size = new System.Drawing.Size(126, 23);
             this.BXml5.TabIndex = 63;
@@ -412,56 +422,6 @@
             this.BSave.TabIndex = 67;
             this.BSave.Text = "Kaydet";
             this.BSave.Click += new System.EventHandler(this.BSave_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Cyan;
-            this.label1.Location = new System.Drawing.Point(216, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 13);
-            this.label1.TabIndex = 58;
-            this.label1.Text = "dat_dashboard_chartday";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Cyan;
-            this.label2.Location = new System.Drawing.Point(216, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 13);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "dat_dashboard_chartmonth";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Cyan;
-            this.label3.Location = new System.Drawing.Point(216, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 13);
-            this.label3.TabIndex = 64;
-            this.label3.Text = "dat_dashboard_chart_comparday";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Cyan;
-            this.label4.Location = new System.Drawing.Point(216, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 13);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "dat_dashboard_chart_comparmonth";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Cyan;
-            this.label5.Location = new System.Drawing.Point(216, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 13);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "cat_dashboard_mark";
             // 
             // TMusteri
             // 
@@ -1121,7 +1081,12 @@
             // 
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.checkBox8);
+            this.panel2.Controls.Add(this.checkBox7);
+            this.panel2.Controls.Add(this.labelControl12);
+            this.panel2.Controls.Add(this.BXml8);
+            this.panel2.Controls.Add(this.labelControl11);
+            this.panel2.Controls.Add(this.BXml7);
             this.panel2.Controls.Add(this.labelControl8);
             this.panel2.Controls.Add(this.simpleButton1);
             this.panel2.Controls.Add(this.label8);
@@ -1129,15 +1094,10 @@
             this.panel2.Controls.Add(this.BSave);
             this.panel2.Controls.Add(this.labelControl4);
             this.panel2.Controls.Add(this.labelControl1);
-            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.labelControl2);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.labelControl3);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.labelControl5);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.BXml1);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.checkBox2);
             this.panel2.Controls.Add(this.BXml5);
@@ -1152,27 +1112,17 @@
             this.panel2.Size = new System.Drawing.Size(625, 219);
             this.panel2.TabIndex = 131;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Cyan;
-            this.label9.Location = new System.Drawing.Point(216, 164);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 13);
-            this.label9.TabIndex = 66;
-            this.label9.Text = "busy_dashboard_chart_hour";
-            // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(1, 155);
+            this.labelControl8.Location = new System.Drawing.Point(3, 155);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(57, 19);
+            this.labelControl8.Size = new System.Drawing.Size(45, 19);
             this.labelControl8.TabIndex = 132;
-            this.labelControl8.Text = "XML 6 : ";
+            this.labelControl8.Text = "XML6:";
             // 
             // simpleButton1
             // 
@@ -1192,7 +1142,7 @@
             this.simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
             this.simpleButton1.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
             this.simpleButton1.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton1.Location = new System.Drawing.Point(62, 155);
+            this.simpleButton1.Location = new System.Drawing.Point(54, 155);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(126, 23);
             this.simpleButton1.TabIndex = 65;
@@ -1204,20 +1154,22 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.Cyan;
-            this.label8.Location = new System.Drawing.Point(420, 152);
+            this.label8.Location = new System.Drawing.Point(364, 169);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(198, 52);
+            this.label8.Size = new System.Drawing.Size(254, 39);
             this.label8.TabIndex = 131;
-            this.label8.Text = "Bu kısım yazılımın ilk kurulumunda\r\nyapılması gereken ayarlardır. \r\nLütfen İhtiya" +
-    "ç Halinde Dağıtıcı\r\nİle İletişime Geçiniz. ";
+            this.label8.Text = "Bu kısım grafiklerde oluşabilecek her hangi \r\nbir soruna karşı çözüm kısmıdır.\r\nG" +
+    "erekli olmadıkça kullanmayınız.";
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(195, 164);
+            this.checkBox6.ForeColor = System.Drawing.Color.Cyan;
+            this.checkBox6.Location = new System.Drawing.Point(183, 163);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
+            this.checkBox6.Size = new System.Drawing.Size(161, 17);
             this.checkBox6.TabIndex = 133;
+            this.checkBox6.Text = "busy_dashboard_chart_hour";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // panel3
@@ -1262,6 +1214,54 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(434, 595);
             this.panel3.TabIndex = 132;
+            // 
+            // CMusAnaliz
+            // 
+            this.CMusAnaliz.AutoSize = true;
+            this.CMusAnaliz.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CMusAnaliz.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CMusAnaliz.Location = new System.Drawing.Point(203, 443);
+            this.CMusAnaliz.Name = "CMusAnaliz";
+            this.CMusAnaliz.Size = new System.Drawing.Size(132, 23);
+            this.CMusAnaliz.TabIndex = 182;
+            this.CMusAnaliz.Text = "Müşteri Analizleri";
+            this.CMusAnaliz.UseVisualStyleBackColor = true;
+            // 
+            // CMusSatis
+            // 
+            this.CMusSatis.AutoSize = true;
+            this.CMusSatis.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CMusSatis.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CMusSatis.Location = new System.Drawing.Point(10, 443);
+            this.CMusSatis.Name = "CMusSatis";
+            this.CMusSatis.Size = new System.Drawing.Size(125, 23);
+            this.CMusSatis.TabIndex = 181;
+            this.CMusSatis.Text = "Müşteri Satışları";
+            this.CMusSatis.UseVisualStyleBackColor = true;
+            // 
+            // CPerAnaliz
+            // 
+            this.CPerAnaliz.AutoSize = true;
+            this.CPerAnaliz.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CPerAnaliz.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CPerAnaliz.Location = new System.Drawing.Point(203, 414);
+            this.CPerAnaliz.Name = "CPerAnaliz";
+            this.CPerAnaliz.Size = new System.Drawing.Size(138, 23);
+            this.CPerAnaliz.TabIndex = 180;
+            this.CPerAnaliz.Text = "Personel Analizleri";
+            this.CPerAnaliz.UseVisualStyleBackColor = true;
+            // 
+            // CPerSatis
+            // 
+            this.CPerSatis.AutoSize = true;
+            this.CPerSatis.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CPerSatis.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CPerSatis.Location = new System.Drawing.Point(10, 414);
+            this.CPerSatis.Name = "CPerSatis";
+            this.CPerSatis.Size = new System.Drawing.Size(131, 23);
+            this.CPerSatis.TabIndex = 179;
+            this.CPerSatis.Text = "Personel Satışları";
+            this.CPerSatis.UseVisualStyleBackColor = true;
             // 
             // CVadeRapor
             // 
@@ -1865,53 +1865,101 @@
             this.labelControl31.TabIndex = 129;
             this.labelControl31.Text = "Konumdaki Dosyayı Seçiniz";
             // 
-            // CPerAnaliz
+            // labelControl11
             // 
-            this.CPerAnaliz.AutoSize = true;
-            this.CPerAnaliz.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CPerAnaliz.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CPerAnaliz.Location = new System.Drawing.Point(203, 414);
-            this.CPerAnaliz.Name = "CPerAnaliz";
-            this.CPerAnaliz.Size = new System.Drawing.Size(138, 23);
-            this.CPerAnaliz.TabIndex = 180;
-            this.CPerAnaliz.Text = "Personel Analizleri";
-            this.CPerAnaliz.UseVisualStyleBackColor = true;
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Appearance.Options.UseForeColor = true;
+            this.labelControl11.Location = new System.Drawing.Point(337, 8);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(45, 19);
+            this.labelControl11.TabIndex = 136;
+            this.labelControl11.Text = "XML7:";
             // 
-            // CPerSatis
+            // BXml7
             // 
-            this.CPerSatis.AutoSize = true;
-            this.CPerSatis.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CPerSatis.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CPerSatis.Location = new System.Drawing.Point(10, 414);
-            this.CPerSatis.Name = "CPerSatis";
-            this.CPerSatis.Size = new System.Drawing.Size(131, 23);
-            this.CPerSatis.TabIndex = 179;
-            this.CPerSatis.Text = "Personel Satışları";
-            this.CPerSatis.UseVisualStyleBackColor = true;
+            this.BXml7.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Warning;
+            this.BXml7.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BXml7.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BXml7.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BXml7.Appearance.Options.UseBackColor = true;
+            this.BXml7.Appearance.Options.UseFont = true;
+            this.BXml7.Appearance.Options.UseForeColor = true;
+            this.BXml7.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BXml7.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BXml7.AppearanceDisabled.Options.UseBackColor = true;
+            this.BXml7.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BXml7.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BXml7.AppearanceHovered.Options.UseBackColor = true;
+            this.BXml7.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BXml7.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BXml7.AppearancePressed.Options.UseBackColor = true;
+            this.BXml7.Location = new System.Drawing.Point(386, 5);
+            this.BXml7.Name = "BXml7";
+            this.BXml7.Size = new System.Drawing.Size(126, 23);
+            this.BXml7.TabIndex = 134;
+            this.BXml7.Text = "Seç";
+            this.BXml7.Click += new System.EventHandler(this.BXml7_Click);
             // 
-            // CMusAnaliz
+            // labelControl12
             // 
-            this.CMusAnaliz.AutoSize = true;
-            this.CMusAnaliz.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CMusAnaliz.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CMusAnaliz.Location = new System.Drawing.Point(203, 443);
-            this.CMusAnaliz.Name = "CMusAnaliz";
-            this.CMusAnaliz.Size = new System.Drawing.Size(132, 23);
-            this.CMusAnaliz.TabIndex = 182;
-            this.CMusAnaliz.Text = "Müşteri Analizleri";
-            this.CMusAnaliz.UseVisualStyleBackColor = true;
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Appearance.Options.UseForeColor = true;
+            this.labelControl12.Location = new System.Drawing.Point(335, 37);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(45, 19);
+            this.labelControl12.TabIndex = 139;
+            this.labelControl12.Text = "XML8:";
             // 
-            // CMusSatis
+            // BXml8
             // 
-            this.CMusSatis.AutoSize = true;
-            this.CMusSatis.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CMusSatis.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CMusSatis.Location = new System.Drawing.Point(10, 443);
-            this.CMusSatis.Name = "CMusSatis";
-            this.CMusSatis.Size = new System.Drawing.Size(125, 23);
-            this.CMusSatis.TabIndex = 181;
-            this.CMusSatis.Text = "Müşteri Satışları";
-            this.CMusSatis.UseVisualStyleBackColor = true;
+            this.BXml8.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Warning;
+            this.BXml8.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BXml8.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BXml8.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BXml8.Appearance.Options.UseBackColor = true;
+            this.BXml8.Appearance.Options.UseFont = true;
+            this.BXml8.Appearance.Options.UseForeColor = true;
+            this.BXml8.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BXml8.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BXml8.AppearanceDisabled.Options.UseBackColor = true;
+            this.BXml8.AppearanceHovered.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BXml8.AppearanceHovered.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BXml8.AppearanceHovered.Options.UseBackColor = true;
+            this.BXml8.AppearancePressed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BXml8.AppearancePressed.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.BXml8.AppearancePressed.Options.UseBackColor = true;
+            this.BXml8.Location = new System.Drawing.Point(386, 34);
+            this.BXml8.Name = "BXml8";
+            this.BXml8.Size = new System.Drawing.Size(126, 23);
+            this.BXml8.TabIndex = 137;
+            this.BXml8.Text = "Seç";
+            this.BXml8.Click += new System.EventHandler(this.BXml8_Click);
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.ForeColor = System.Drawing.Color.Cyan;
+            this.checkBox7.Location = new System.Drawing.Point(519, 10);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(101, 17);
+            this.checkBox7.TabIndex = 140;
+            this.checkBox7.Text = "employee_statis";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.ForeColor = System.Drawing.Color.Cyan;
+            this.checkBox8.Location = new System.Drawing.Point(517, 37);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(76, 17);
+            this.checkBox8.TabIndex = 141;
+            this.checkBox8.Text = "cust_statis";
+            this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // FSettings
             // 
@@ -1959,11 +2007,6 @@
         private DevExpress.XtraEditors.SimpleButton BXml4;
         private DevExpress.XtraEditors.SimpleButton BXml5;
         private DevExpress.XtraEditors.SimpleButton BSave;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TMusteri;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.SimpleButton BMusteri;
@@ -1974,7 +2017,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label9;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.CheckBox checkBox6;
@@ -2060,5 +2102,11 @@
         private System.Windows.Forms.CheckBox CMusSatis;
         private System.Windows.Forms.CheckBox CPerAnaliz;
         private System.Windows.Forms.CheckBox CPerSatis;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.SimpleButton BXml8;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.SimpleButton BXml7;
     }
 }

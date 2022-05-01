@@ -18,7 +18,7 @@ namespace ProjeOdevim.Formlar
         }
         SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
 
-        string xml1, xml2, xml3, xml4, xml5, xml6;
+        string xml1, xml2, xml3, xml4, xml5, xml6, xml7, xml8;
 
         void KritikGetir()
         {
@@ -235,9 +235,9 @@ namespace ProjeOdevim.Formlar
                 CHareket.Checked = Convert.ToBoolean(reader[23]);
                 CVadeRapor.Checked = Convert.ToBoolean(reader[24]);
                 CPerSatis.Checked = Convert.ToBoolean(reader[25]);
-                CMusSatis.Checked=Convert.ToBoolean(reader[26]);
+                CMusSatis.Checked = Convert.ToBoolean(reader[26]);
                 CPerAnaliz.Checked = Convert.ToBoolean(reader[27]);
-                CMusAnaliz.Checked=Convert.ToBoolean(reader[28]);
+                CMusAnaliz.Checked = Convert.ToBoolean(reader[28]);
             }
             connection.Close();
         }
@@ -607,10 +607,24 @@ namespace ProjeOdevim.Formlar
             Cursor = Cursors.Default;
         }
 
+        private void BXml8_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            xml8 = openFileDialog1.FileName;
+            checkBox8.Checked = true;
+        }
+
         private void BMagaza_Click(object sender, EventArgs e)
         {
             FMagBilgi bilgi = new FMagBilgi();
             bilgi.ShowDialog();
+        }
+
+        private void BXml7_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            xml7 = openFileDialog1.FileName;
+            checkBox7.Checked = true;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
