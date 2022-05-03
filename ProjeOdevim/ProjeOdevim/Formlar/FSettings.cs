@@ -16,7 +16,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
 
         string xml1, xml2, xml3, xml4, xml5, xml6, xml7, xml8;
 
@@ -277,6 +278,10 @@ namespace ProjeOdevim.Formlar
             CAyarlar.Checked = false;
             CHareket.Checked = false;
             CVadeRapor.Checked = false;
+            CMusSatis.Checked = false;
+            CPerSatis.Checked=false;
+            CMusAnaliz.Checked = false;
+            CPerAnaliz.Checked = false;
         }
         private void BYetkiKaydet_Click(object sender, EventArgs e)
         {

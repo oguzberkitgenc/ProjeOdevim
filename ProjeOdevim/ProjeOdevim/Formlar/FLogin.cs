@@ -18,15 +18,14 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        //   private BaglantiSinif bgl = new BaglantiSinif();
-
-        SqlConnection connection = new SqlConnection(@"Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+        //    SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DbProjem.mdf;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(@"Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
         private void BExit_Click(object sender, EventArgs e)
         {
-            if (TPass.Text=="AYARLARA GİREMİYORUM")
+            if (TPass.Text == "AYARLARA GİREMİYORUM")
             {
-                DialogResult secenek =  MessageBox.Show("Bütün Kullanıcılara Ayarlara Girme Yetkisi Verilecek Onaylıyor musun?","UYARI",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-                if (secenek==DialogResult.Yes)
+                DialogResult secenek = MessageBox.Show("Bütün Kullanıcılara Ayarlara Girme Yetkisi Verilecek Onaylıyor musun?", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (secenek == DialogResult.Yes)
                 {
                     connection.Open();
                     SqlCommand cmd = new SqlCommand("UPDATE TBLDEPARTMAN SET AYARLAR=1", connection);
@@ -34,13 +33,13 @@ namespace ProjeOdevim.Formlar
                     MessageBox.Show("Bütün Kullanıcılara 'Ayarlar' yetkisi verildi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     connection.Close();
                 }
-                
+
             }
             else
             {
                 Application.Exit();
             }
-            
+
         }
         string adsoy, depart, lic = "";
         bool durum;
@@ -58,7 +57,6 @@ namespace ProjeOdevim.Formlar
         }
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-
             if (lic != "")
             {
                 FrmHomePage frm = new FrmHomePage();
@@ -109,11 +107,11 @@ namespace ProjeOdevim.Formlar
                         frm.BMonthComp.Enabled = Convert.ToBoolean(dr2[20]);
                         frm.BSettings.Enabled = Convert.ToBoolean(dr2[21]);
                         frm.BVadeliList.Enabled = Convert.ToBoolean(dr2[22]);
-                        frm.BHareket.Enabled= Convert.ToBoolean(dr2[23]);
-                        frm.BVadeHesapla.Enabled=Convert.ToBoolean(dr2[24]);
-                        frm.BEmployeTakip.Enabled= Convert.ToBoolean(dr2[25]);
+                        frm.BHareket.Enabled = Convert.ToBoolean(dr2[23]);
+                        frm.BVadeHesapla.Enabled = Convert.ToBoolean(dr2[24]);
+                        frm.BEmployeTakip.Enabled = Convert.ToBoolean(dr2[25]);
                         frm.FCustomerTakip.Enabled = Convert.ToBoolean(dr2[26]);
-                        frm.BEmployeeAnalys.Enabled= Convert.ToBoolean(dr2[27]);
+                        frm.BEmployeeAnalys.Enabled = Convert.ToBoolean(dr2[27]);
                         frm.BCustomerAnalys.Enabled = Convert.ToBoolean(dr2[28]);
                     }
                 }
@@ -127,7 +125,7 @@ namespace ProjeOdevim.Formlar
                     SqlCommand komut = new SqlCommand("insert into TBLKULLANICIHAREKET (KULLANICI,ADSOYAD,DEPART,TARIH) VALUES (@A1,@A2,@A3,@A4)", connection);
                     komut.Parameters.AddWithValue("@A1", TUser.Text);
                     komut.Parameters.AddWithValue("@A2", adsoy.ToString());
-                    komut.Parameters.AddWithValue("@a3", depart.ToString());
+                    komut.Parameters.AddWithValue("@A3", depart.ToString());
                     komut.Parameters.AddWithValue("@A4", dt.ToString());
                     komut.ExecuteNonQuery();
                     connection.Close();

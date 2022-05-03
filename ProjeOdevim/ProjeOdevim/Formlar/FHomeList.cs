@@ -16,7 +16,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
 
         void DecliningStok()
         {
@@ -45,7 +46,7 @@ namespace ProjeOdevim.Formlar
         {
             DateTime dt = DateTime.Now;
             connection.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter("SET DATEFORMAT DMY SELECT TOP 60 AD,TARIH,KACINCITAKSIT,TAKSITTUTARI FROM TBLTAKSITLER INNER JOIN TBLMUSTERI ON TBLTAKSITLER.MUSTERIT=TBLMUSTERI.ID WHERE TARIH>= '" + dt + "' order by TARIH ASC", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("SET DATEFORMAT DMY SELECT TOP 60 TARIH,KACINCITAKSIT,TAKSITTUTARI FROM TBLTAKSITLER INNER JOIN TBLMUSTERI ON TBLTAKSITLER.MUSTERIT=TBLMUSTERI.ID WHERE TARIH>= '" + dt + "' order by TARIH ASC", connection);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             gridControl5.DataSource = dataTable;

@@ -18,7 +18,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
 
         public int idAl = 0;
         void Listele()

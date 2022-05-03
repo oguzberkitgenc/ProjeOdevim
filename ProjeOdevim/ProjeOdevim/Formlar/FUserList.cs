@@ -16,7 +16,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
 
         void Listele()
         {
@@ -24,7 +25,6 @@ namespace ProjeOdevim.Formlar
             DateTime bitis = DateTime.Parse(DtBitis.Value.ToShortDateString());
             bitis = bitis.AddDays(1);
             DataTable dt = new DataTable();
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlDataAdapter da = new SqlDataAdapter("Select KULLANICI,ADSOYAD,DEPARTMAN,TARIH From TBLKULLANICIHAREKET " +
                 "INNER JOIN TBLDEPARTMAN ON TBLKULLANICIHAREKET.DEPART=TBLDEPARTMAN.ID WHERE TARIH BETWEEN @P1 AND @P2 ORDER BY TARIH DESC", connection);

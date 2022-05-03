@@ -16,10 +16,10 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
         void Listele()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT TBLTAKSITLER.ID,TBLMUSTERI.AD AS 'MÜŞTERİ',TBLPERSONEL.AD AS 'PERSONEL',ISLEMNOT AS 'İŞLEM NUMARASI'," +
                 "TARIH,KACINCITAKSIT AS 'VADE',TAKSITTUTARI FROM TBLTAKSITLER INNER JOIN TBLMUSTERI ON TBLTAKSITLER.MUSTERIT=TBLMUSTERI.ID " +
@@ -61,7 +61,6 @@ namespace ProjeOdevim.Formlar
                 if (Rch.Text != "")
                 {
                     bool durum = false;
-                    SqlConnection connection = new SqlConnection(bgl.Adres);
                     connection.Open();
                     SqlCommand komut = new SqlCommand("SELECT TBLTAKSITLER.ID,TBLMUSTERI.AD AS 'MÜŞTERİ',TBLPERSONEL.AD AS " +
                         "'PERSONEL',ISLEMNOT AS 'İŞLEM NUMARASI',TARIH,KACINCITAKSIT AS 'VADE',TAKSITTUTARI FROM TBLTAKSITLER INNER JOIN TBLMUSTERI " +

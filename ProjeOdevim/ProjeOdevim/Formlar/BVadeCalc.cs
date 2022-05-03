@@ -16,7 +16,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
         private void BVadeCalc_Load(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand("Select * From TBLFAIZLER", connection);

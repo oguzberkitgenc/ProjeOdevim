@@ -18,7 +18,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
         DataTable dt1 = new DataTable();
         public string id, kategori, marka, urunadi;
         public decimal alisfiyati = 0, satisfiyatı = 0, indirimorani = 0;

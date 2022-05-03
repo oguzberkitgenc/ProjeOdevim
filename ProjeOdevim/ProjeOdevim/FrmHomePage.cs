@@ -12,11 +12,13 @@ namespace ProjeOdevim
 {
     public partial class FrmHomePage : DevExpress.XtraEditors.XtraForm
     {
+
         public FrmHomePage()
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
         Formlar.FEmployeeStatis employeeStatis;
         Formlar.FCustomerStatis customerStatis;
         Formlar.FEmployeeAnalys employeeAnalys;
@@ -44,7 +46,6 @@ namespace ProjeOdevim
         public string xml1, xml2, xml3, xml4, xml5, xml6, xml7,xml8;
         public void XmlGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("Select * From TBLXML", connection);
             SqlDataReader dr = komut.ExecuteReader();
@@ -59,7 +60,6 @@ namespace ProjeOdevim
                 xml6 = dr["XML6"].ToString();
                 xml7 = dr["XML7"].ToString();
                 xml8 = dr["XML8"].ToString();
-
             }
             connection.Close();
         }
@@ -74,7 +74,6 @@ namespace ProjeOdevim
         }
         private void FrmAnaSayfa_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             XmlGetir();
             DateTime date = DateTime.Now;
             LDate.Text = date.ToString("MM/dd/yyyy");

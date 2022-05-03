@@ -45,6 +45,8 @@
             this.BKos1 = new System.Windows.Forms.Button();
             this.BKos2 = new System.Windows.Forms.Button();
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.WM = new AxWMPLib.AxWindowsMediaPlayer();
+            ((System.ComponentModel.ISupportInitialize)(this.WM)).BeginInit();
             this.SuspendLayout();
             // 
             // l4
@@ -186,6 +188,16 @@
             this.timer5.Interval = 1;
             this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
             // 
+            // WM
+            // 
+            this.WM.Enabled = true;
+            this.WM.Location = new System.Drawing.Point(84, 451);
+            this.WM.Name = "WM";
+            this.WM.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WM.OcxState")));
+            this.WM.Size = new System.Drawing.Size(328, 23);
+            this.WM.TabIndex = 38;
+            this.WM.Visible = false;
+            // 
             // FWhoAmi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +206,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(872, 522);
+            this.Controls.Add(this.WM);
             this.Controls.Add(this.BKos2);
             this.Controls.Add(this.BKos1);
             this.Controls.Add(this.BKos);
@@ -213,6 +226,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MİSYON";
             this.Load += new System.EventHandler(this.FWhoAmi_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.WM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +248,6 @@
         private System.Windows.Forms.Button BKos1;
         private System.Windows.Forms.Button BKos2;
         private System.Windows.Forms.Timer timer5;
+        private AxWMPLib.AxWindowsMediaPlayer WM;
     }
 }

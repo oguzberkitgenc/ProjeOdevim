@@ -135,16 +135,14 @@ namespace ProjeOdevim.Formlar
         private void FJok_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = 0;
-            try
+            if (WM.URL!="")
             {
                 WM.URL = @"C:\Ticari Otomasyon\videoplayback.mp4";
 
             }
-            catch (Exception ex)
-            {
 
-                MessageBox.Show(ex.ToString());
-            }
+
+
             kasa = Math.Round(kasa);
             LKasa.Text = kasa.ToString("C2");
             TSpeed.Text = speed.ToString();

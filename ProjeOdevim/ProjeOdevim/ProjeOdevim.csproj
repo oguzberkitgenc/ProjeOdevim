@@ -153,7 +153,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaglantiSinif.cs" />
     <Compile Include="Formlar\BVadeCalc.cs">
       <SubType>Form</SubType>
     </Compile>

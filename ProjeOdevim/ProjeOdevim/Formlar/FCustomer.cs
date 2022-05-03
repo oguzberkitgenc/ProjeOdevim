@@ -16,7 +16,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
 
         void CustomerList()
         {
@@ -34,7 +35,7 @@ namespace ProjeOdevim.Formlar
             DataTable dt = new DataTable();
             da.Fill(dt);
             CmbIl.ValueMember = "ID";
-            CmbIl.DisplayMember = "SEHIR";
+            CmbIl.DisplayMember = "IL";
             CmbIl.DataSource = dt;
 
         }

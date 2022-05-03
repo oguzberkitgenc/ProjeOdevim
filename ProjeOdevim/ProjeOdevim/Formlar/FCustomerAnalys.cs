@@ -16,7 +16,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=DbProjem;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
         void ChartDoldur()
         {
             connection.Open();
@@ -116,14 +117,23 @@ namespace ProjeOdevim.Formlar
         }
         private void FCustomerAnalys_Load(object sender, EventArgs e)
         {
-            ChartDoldur();
-            GridDoldur();
-            CinsiyetGetir();
-            CiroGetir();
-            Genel();
-            Kadın();
-            Erkek();
-            YasChart();
+            try
+            {
+                ChartDoldur();
+                GridDoldur();
+                CinsiyetGetir();
+                CiroGetir();
+                Genel();
+                Kadın();
+                Erkek();
+                YasChart();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
     }
 }

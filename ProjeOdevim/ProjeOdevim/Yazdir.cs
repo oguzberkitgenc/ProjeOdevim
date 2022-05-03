@@ -11,6 +11,7 @@ namespace ProjeOdevim
 {
     class Yazdir
     {
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
         public int? IslemNo { get; set; }
         public int? MusteriNo { get; set; }
         public Yazdir(int? islemno, int? musterino)
@@ -26,8 +27,6 @@ namespace ProjeOdevim
             pd.Print();
 
         }
-        BaglantiSinif bgl = new BaglantiSinif();
-
         private void Pd_PrintPage(object sender, PrintPageEventArgs e)
         {
             string mposta = "", mersis = "", ticaretno = "", vergino = "", vergi = "",
@@ -39,7 +38,6 @@ namespace ProjeOdevim
             double geneltoplam = 0;
             DateTime dt = DateTime.Now;
 
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand sabit = new SqlCommand("SELECT * FROM TBLMAGAZA", connection);
             SqlDataReader dr = sabit.ExecuteReader();

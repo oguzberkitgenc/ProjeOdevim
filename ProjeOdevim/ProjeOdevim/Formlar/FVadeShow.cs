@@ -18,7 +18,8 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        BaglantiSinif bgl = new BaglantiSinif();
+        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+
         DataTable dt = new DataTable();
         public int vade = 0;
         public double anmony = 0;
@@ -49,7 +50,6 @@ namespace ProjeOdevim.Formlar
         }
         void MusteriGetir()
         {
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             SqlCommand komut = new SqlCommand("SELECT ID,AD FROM TBLMUSTERI ORDER BY AD ASC", connection);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
@@ -74,7 +74,6 @@ namespace ProjeOdevim.Formlar
             this.WindowState = FormWindowState.Maximized;
             gridView2.Columns[0].Width = 325;
             gridView2.Columns[1].Width = 325;
-            SqlConnection connection = new SqlConnection(bgl.Adres);
             connection.Open();
             SqlCommand komut = new SqlCommand("SELECT TC,AD,IL,ILCE,ADRES,TEL FROM TBLMUSTERI WHERE ID=" + CmbMusteri.SelectedValue, connection);
             SqlDataReader reader = komut.ExecuteReader();
