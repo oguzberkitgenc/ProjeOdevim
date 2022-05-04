@@ -3,17 +3,17 @@
   <Title Visible="false" Text="Dashboard" />
   <DataSources>
     <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
-      <Connection Name="localhost_DbProjem_Connection" ProviderKey="MSSqlServer">
+      <Connection Name="localhost_TicariOtomasyon_Connection" ProviderKey="MSSqlServer">
         <Parameters>
           <Parameter Name="server" Value="localhost" />
-          <Parameter Name="database" Value="DbProjem" />
+          <Parameter Name="database" Value="TicariOtomasyon" />
           <Parameter Name="useIntegratedSecurity" Value="True" />
           <Parameter Name="read only" Value="1" />
           <Parameter Name="generateConnectionHelper" Value="false" />
         </Parameters>
       </Connection>
       <Query Type="CustomSqlQuery" Name="Query">
-        <Sql>SELECT * FROM [DbProjem].[dbo].[TBLSATIS]</Sql>
+        <Sql>SELECT * FROM [TicariOtomasyon].[dbo].[TBLSATIS]</Sql>
       </Query>
       <ResultSchema>
         <DataSet Name="SQL Data Source 1">
@@ -26,7 +26,7 @@
             <Field Name="MARKAADI" Type="String" />
             <Field Name="ALISFIYAT" Type="Decimal" />
             <Field Name="SATISFIYAT" Type="Decimal" />
-            <Field Name="INDIRIMORANI" Type="String" />
+            <Field Name="INDIRIMORANI" Type="Decimal" />
             <Field Name="TOPLAMFIYAT" Type="Decimal" />
             <Field Name="PERSONEL" Type="Int32" />
             <Field Name="MUSTERIID" Type="Int32" />
@@ -38,7 +38,7 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Pie ComponentName="pieDashboardItem1" Name="Kategori Satış Oranları" DataSource="dashboardSqlDataSource1" DataMember="Query">
+    <Pie ComponentName="pieDashboardItem1" Name="Satılan Kategori Oranları" DataSource="dashboardSqlDataSource1" DataMember="Query" ShowPieCaptions="false">
       <DataItems>
         <Dimension DataMember="KATEGORIADI" DefaultId="DataItem0" />
         <Measure DataMember="TOPLAMFIYAT" Name="Toplam" DefaultId="DataItem1">
@@ -52,7 +52,7 @@
         <Value DefaultId="DataItem1" />
       </Values>
     </Pie>
-    <Pie ComponentName="pieDashboardItem2" Name="Marka Satış Oranları" DataSource="dashboardSqlDataSource1" DataMember="Query">
+    <Pie ComponentName="pieDashboardItem2" Name="Satılan Marka Oranları" DataSource="dashboardSqlDataSource1" DataMember="Query">
       <DataItems>
         <Measure DataMember="TOPLAMFIYAT" Name="Toplam" DefaultId="DataItem0" />
         <Dimension DataMember="MARKAADI" DefaultId="DataItem1" />

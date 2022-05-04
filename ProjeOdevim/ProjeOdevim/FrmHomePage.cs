@@ -17,8 +17,10 @@ namespace ProjeOdevim
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
-
+        //   SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+        // SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\TicariOtomasyon.mdf;Integrated Security=True");
+        //SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\24f4c\Desktop\Proje\ProjeOdevim\ProjeOdevim\bin\Debug\TicariOtomasyon.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+        SqlConnection connection = new SqlConnection(@"Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\24f4c\Desktop\Proje\ProjeOdevim\ProjeOdevim\bin\Debug\TicariOtomasyon.mdf;");
         Formlar.FEmployeeStatis employeeStatis;
         Formlar.FCustomerStatis customerStatis;
         Formlar.FEmployeeAnalys employeeAnalys;
@@ -43,7 +45,7 @@ namespace ProjeOdevim
         Formlar.FVade vade;
         Formlar.FNotlar FNotlar;
         public int departman;
-        public string xml1, xml2, xml3, xml4, xml5, xml6, xml7,xml8;
+        public string xml1, xml2, xml3, xml4, xml5, xml6, xml7, xml8;
         public void XmlGetir()
         {
             connection.Open();
@@ -320,7 +322,7 @@ namespace ProjeOdevim
         }
         private void FEmployeeAnalys_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (employeeAnalys==null||employeeAnalys.IsDisposed)
+            if (employeeAnalys == null || employeeAnalys.IsDisposed)
             {
                 employeeAnalys = new Formlar.FEmployeeAnalys();
                 employeeAnalys.MdiParent = this;
@@ -329,7 +331,7 @@ namespace ProjeOdevim
         }
         private void BCustomerAnalys_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (customerAnalys==null||customerAnalys.IsDisposed)
+            if (customerAnalys == null || customerAnalys.IsDisposed)
             {
                 customerAnalys = new Formlar.FCustomerAnalys();
                 customerAnalys.MdiParent = this;
@@ -338,7 +340,7 @@ namespace ProjeOdevim
         }
         private void FCustomerTakip_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (customerStatis==null||customerStatis.IsDisposed)
+            if (customerStatis == null || customerStatis.IsDisposed)
             {
                 string filename8 = xml8;
                 customerStatis = new Formlar.FCustomerStatis();

@@ -107,46 +107,55 @@ namespace ProjeOdevim.Formlar
 
         private void BSave_Click(object sender, EventArgs e)
         {
-            DialogResult secenek = MessageBox.Show("Yeni Mağaza Bilgileri Kayıt Edilecek. \nOnaylıyor musun?", "BİLGİ", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
-            if (secenek == DialogResult.Yes)
+            try
             {
-                connection.Open();
-                SqlCommand komut = new SqlCommand("UPDATE TBLMAGAZA SET UNVAN=@P1,IL=@P2,ILCE=@P3," +
-                    "ADRES=@P4,TEL1=@P5,TEL2=@P6,MAIL=@P7,WEB=@P8,LOGO=@P9,TICARIUNVAN=@P10,FAX=@P11," +
-                    "VERGIDAIRESI=@P12,VERGINO=@P13,TICARETNO=@P14,MERSISNO=@P15,ISBANK=@P16," +
-                    "GARANTI=@P17,YAPI=@P18,AKBANK=@P19,FINANS=@P20,ZIRAAT=@P21,HALK=@P22", connection);
-                komut.Parameters.AddWithValue("@P1", TUnvan.Text);
-                komut.Parameters.AddWithValue("@P2", CmbIl.Text);
-                komut.Parameters.AddWithValue("@P3", CmbIlce.Text);
-                komut.Parameters.AddWithValue("@P4", TAdres.Text);
-                komut.Parameters.AddWithValue("@P5", MskTel1.Text);
-                komut.Parameters.AddWithValue("@P6", MskTel2.Text);
-                komut.Parameters.AddWithValue("@P7", TMail.Text);
-                komut.Parameters.AddWithValue("@P8", TWeb.Text);
-                komut.Parameters.AddWithValue("@P9", TLogo.Text);
-                komut.Parameters.AddWithValue("@P10", TTicariUnvan.Text);
-                komut.Parameters.AddWithValue("@P11", MskFax.Text);
-                komut.Parameters.AddWithValue("@P12", TVergiD.Text);
-                komut.Parameters.AddWithValue("@P13", TVergiN.Text);
-                komut.Parameters.AddWithValue("@P14", TTicaretNo.Text);
-                komut.Parameters.AddWithValue("@P15", TMersisNo.Text);
-                komut.Parameters.AddWithValue("@P16", Mskisbank.Text);
-                komut.Parameters.AddWithValue("@P17", MskGaranti.Text);
-                komut.Parameters.AddWithValue("@P18", MskYapi.Text);
-                komut.Parameters.AddWithValue("@P19", MskAkbank.Text);
-                komut.Parameters.AddWithValue("@P20", MskFinans.Text);
-                komut.Parameters.AddWithValue("@P21", MskZiraat.Text);
-                komut.Parameters.AddWithValue("@P22", MskHalk.Text);
-                komut.ExecuteNonQuery();
-                MessageBox.Show("Mağaza Bilgileri Başarıyla Kayıt Edildi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                connection.Close();
-            }
-            else
-            {
-                MessageBox.Show("İşlem İptal Edildi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult secenek = MessageBox.Show("Yeni Mağaza Bilgileri Kayıt Edilecek. \nOnaylıyor musun?", "BİLGİ", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                if (secenek == DialogResult.Yes)
+                {
+                    connection.Open();
+                    SqlCommand komut = new SqlCommand("UPDATE TBLMAGAZA SET UNVAN=@P1,IL=@P2,ILCE=@P3," +
+                        "ADRES=@P4,TEL1=@P5,TEL2=@P6,MAIL=@P7,WEB=@P8,LOGO=@P9,TICARIUNVAN=@P10,FAX=@P11," +
+                        "VERGIDAIRESI=@P12,VERGINO=@P13,TICARETNO=@P14,MERSISNO=@P15,ISBANK=@P16," +
+                        "GARANTI=@P17,YAPI=@P18,AKBANK=@P19,FINANS=@P20,ZIRAAT=@P21,HALK=@P22", connection);
+                    komut.Parameters.AddWithValue("@P1", TUnvan.Text);
+                    komut.Parameters.AddWithValue("@P2", CmbIl.Text);
+                    komut.Parameters.AddWithValue("@P3", CmbIlce.Text);
+                    komut.Parameters.AddWithValue("@P4", TAdres.Text);
+                    komut.Parameters.AddWithValue("@P5", MskTel1.Text);
+                    komut.Parameters.AddWithValue("@P6", MskTel2.Text);
+                    komut.Parameters.AddWithValue("@P7", TMail.Text);
+                    komut.Parameters.AddWithValue("@P8", TWeb.Text);
+                    komut.Parameters.AddWithValue("@P9", TLogo.Text);
+                    komut.Parameters.AddWithValue("@P10", TTicariUnvan.Text);
+                    komut.Parameters.AddWithValue("@P11", MskFax.Text);
+                    komut.Parameters.AddWithValue("@P12", TVergiD.Text);
+                    komut.Parameters.AddWithValue("@P13", TVergiN.Text);
+                    komut.Parameters.AddWithValue("@P14", TTicaretNo.Text);
+                    komut.Parameters.AddWithValue("@P15", TMersisNo.Text);
+                    komut.Parameters.AddWithValue("@P16", Mskisbank.Text);
+                    komut.Parameters.AddWithValue("@P17", MskGaranti.Text);
+                    komut.Parameters.AddWithValue("@P18", MskYapi.Text);
+                    komut.Parameters.AddWithValue("@P19", MskAkbank.Text);
+                    komut.Parameters.AddWithValue("@P20", MskFinans.Text);
+                    komut.Parameters.AddWithValue("@P21", MskZiraat.Text);
+                    komut.Parameters.AddWithValue("@P22", MskHalk.Text);
+                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Mağaza Bilgileri Başarıyla Kayıt Edildi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("İşlem İptal Edildi.", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                }
+                Listele();
             }
-            Listele();
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+          
 
         }
 

@@ -3,29 +3,23 @@
   <Title Visible="false" Text="Dashboard" />
   <DataSources>
     <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
-      <Connection Name="localhost_DbProjem_Connection" ProviderKey="MSSqlServer">
+      <Connection Name="localhost_TicariOtomasyon_Connection" ProviderKey="MSSqlServer">
         <Parameters>
           <Parameter Name="server" Value="localhost" />
-          <Parameter Name="database" Value="DbProjem" />
+          <Parameter Name="database" Value="TicariOtomasyon" />
           <Parameter Name="useIntegratedSecurity" Value="True" />
           <Parameter Name="read only" Value="1" />
           <Parameter Name="generateConnectionHelper" Value="false" />
         </Parameters>
       </Connection>
       <Query Type="CustomSqlQuery" Name="Query">
-        <Sql>SELECT ISLEMNO,ALISFIYAT,SATISFIYAT,TOPLAMFIYAT,INDIRIMORANI,TBLPERSONEL.AD AS 'PERSONEL',TBLMUSTERI.AD AS 'MÜŞTERİ',TARIH FROM TBLSATIS INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID=TBLMUSTERI.ID</Sql>
+        <Sql>SELECT TBLPERSONEL.AD,TOPLAMFIYAT FROM TBLSATIS INNER JOIN TBLPERSONEL ON TBLSATIS.PERSONEL=TBLPERSONEL.ID</Sql>
       </Query>
       <ResultSchema>
         <DataSet Name="SQL Data Source 1">
           <View Name="Query">
-            <Field Name="ISLEMNO" Type="Int32" />
-            <Field Name="ALISFIYAT" Type="Decimal" />
-            <Field Name="SATISFIYAT" Type="Decimal" />
+            <Field Name="AD" Type="String" />
             <Field Name="TOPLAMFIYAT" Type="Decimal" />
-            <Field Name="INDIRIMORANI" Type="String" />
-            <Field Name="PERSONEL" Type="String" />
-            <Field Name="MÜŞTERİ" Type="String" />
-            <Field Name="TARIH" Type="DateTime" />
           </View>
         </DataSet>
       </ResultSchema>
@@ -33,26 +27,24 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Treemap ComponentName="treemapDashboardItem1" Name="Personel Satışları" DataSource="dashboardSqlDataSource1" DataMember="Query">
-      <ColoringOptions UseGlobalColors="false" />
-      <InteractivityOptions IgnoreMasterFilters="true" MasterFilterMode="Single" />
+    <Treemap ComponentName="treemapDashboardItem1" Name="Personel Satış Dağılımı" DataSource="dashboardSqlDataSource1" DataMember="Query">
       <DataItems>
-        <Dimension DataMember="PERSONEL" DefaultId="DataItem0" />
-        <Measure DataMember="TOPLAMFIYAT" Name="Toplam" DefaultId="DataItem1">
+        <Measure DataMember="TOPLAMFIYAT" Name="Toplam" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
         </Measure>
+        <Dimension DataMember="AD" DefaultId="DataItem1" />
       </DataItems>
       <Values>
-        <Value DefaultId="DataItem1" />
+        <Value DefaultId="DataItem0" />
       </Values>
       <Arguments>
-        <Argument DefaultId="DataItem0" />
+        <Argument DefaultId="DataItem1" />
       </Arguments>
     </Treemap>
   </Items>
   <LayoutTree>
     <LayoutGroup>
-      <LayoutItem DashboardItem="treemapDashboardItem1" Weight="0.25" />
+      <LayoutItem DashboardItem="treemapDashboardItem1" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

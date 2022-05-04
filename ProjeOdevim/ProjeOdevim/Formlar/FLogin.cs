@@ -18,8 +18,13 @@ namespace ProjeOdevim.Formlar
         {
             InitializeComponent();
         }
-        //    SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DbProjem.mdf;Integrated Security=True");
         SqlConnection connection = new SqlConnection(@"Data Source=.;Initial Catalog=TicariOtomasyon;Integrated Security=True");
+      //  SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|=C:\Users\24f4c\Desktop\Proje\ProjeOdevim\ProjeOdevim\bin\Debug\TicariOtomasyon.mdf;Integrated Security=True");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\TicariOtomasyon.mdf;Integrated Security=True");
+        //SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\24f4c\Desktop\Proje\ProjeOdevim\ProjeOdevim\bin\Debug\TicariOtomasyon.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+        //SqlConnection connection = new SqlConnection(@"Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\24f4c\Desktop\Proje\ProjeOdevim\ProjeOdevim\bin\Debug\TicariOtomasyon.mdf");
+        //SqlConnection connection = new SqlConnection(@"Server=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=C:\Users\24f4c\Desktop\Proje\ProjeOdevim\ProjeOdevim\bin\Debug\TicariOtomasyon.mdf");
+     //   SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\TicariOtomasyon.mdf;Initial Catalog=Movies;Integrated Security=True");
         private void BExit_Click(object sender, EventArgs e)
         {
             if (TPass.Text == "AYARLARA GİREMİYORUM")

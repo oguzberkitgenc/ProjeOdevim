@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard CurrencyCulture="tr-TR">
-  <Title Visible="false" Text="Dashboard" IncludeMasterFilterState="false" />
+  <Title Visible="false" Text="Dashboard" />
   <DataSources>
     <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
-      <Connection Name="localhost_DbProjem_Connection" ProviderKey="MSSqlServer">
+      <Connection Name="localhost_TicariOtomasyon_Connection" ProviderKey="MSSqlServer">
         <Parameters>
           <Parameter Name="server" Value="localhost" />
-          <Parameter Name="database" Value="DbProjem" />
+          <Parameter Name="database" Value="TicariOtomasyon" />
           <Parameter Name="useIntegratedSecurity" Value="True" />
           <Parameter Name="read only" Value="1" />
           <Parameter Name="generateConnectionHelper" Value="false" />
         </Parameters>
       </Connection>
       <Query Type="CustomSqlQuery" Name="Query">
-        <Sql>SELECT * FROM [DbProjem].[dbo].[TBLSATIS]</Sql>
+        <Sql>SELECT * FROM [TicariOtomasyon].dbo.[TBLSATIS]</Sql>
       </Query>
       <ResultSchema>
         <DataSet Name="SQL Data Source 1">
@@ -26,7 +26,7 @@
             <Field Name="MARKAADI" Type="String" />
             <Field Name="ALISFIYAT" Type="Decimal" />
             <Field Name="SATISFIYAT" Type="Decimal" />
-            <Field Name="INDIRIMORANI" Type="String" />
+            <Field Name="INDIRIMORANI" Type="Decimal" />
             <Field Name="TOPLAMFIYAT" Type="Decimal" />
             <Field Name="PERSONEL" Type="Int32" />
             <Field Name="MUSTERIID" Type="Int32" />
@@ -41,22 +41,23 @@
     <Gauge ComponentName="gaugeDashboardItem1" Name="Yoğunluk Saatleri" DataSource="dashboardSqlDataSource1" DataMember="Query">
       <DataItems>
         <Dimension DataMember="TARIH" DateTimeGroupInterval="Hour" DefaultId="DataItem0" />
-        <Measure DataMember="ISLEMNO" SummaryType="Count" DefaultId="DataItem1" />
+        <Measure DataMember="ISLEMNO" SummaryType="Count" DefaultId="DataItem2" />
       </DataItems>
       <SeriesDimensions>
         <SeriesDimension DefaultId="DataItem0" />
       </SeriesDimensions>
       <GaugeElement>
-        <ActualValue DefaultId="DataItem1" />
+        <ActualValue DefaultId="DataItem2" />
         <AbsoluteVariationNumericFormat />
         <PercentVariationNumericFormat />
         <PercentOfTargetNumericFormat />
+        <ScaleLabelNumericFormat Unit="Ones" CustomFormatString="" />
       </GaugeElement>
     </Gauge>
   </Items>
   <LayoutTree>
-    <LayoutGroup>
-      <LayoutItem DashboardItem="gaugeDashboardItem1" />
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutItem DashboardItem="gaugeDashboardItem1" Weight="50.07727975270479" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

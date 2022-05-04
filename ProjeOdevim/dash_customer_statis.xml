@@ -3,25 +3,23 @@
   <Title Visible="false" Text="Dashboard" />
   <DataSources>
     <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
-      <Connection Name="localhost_DbProjem_Connection" ProviderKey="MSSqlServer">
+      <Connection Name="localhost_TicariOtomasyon_Connection" ProviderKey="MSSqlServer">
         <Parameters>
           <Parameter Name="server" Value="localhost" />
-          <Parameter Name="database" Value="DbProjem" />
+          <Parameter Name="database" Value="TicariOtomasyon" />
           <Parameter Name="useIntegratedSecurity" Value="True" />
           <Parameter Name="read only" Value="1" />
           <Parameter Name="generateConnectionHelper" Value="false" />
         </Parameters>
       </Connection>
       <Query Type="CustomSqlQuery" Name="Query">
-        <Sql>SELECT ISLEMNO,TOPLAMFIYAT,AD AS 'MÜŞTERİ',TARIH FROM TBLSATIS INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID=TBLMUSTERI.ID</Sql>
+        <Sql>SELECT TBLMUSTERI.AD,TOPLAMFIYAT FROM TBLSATIS INNER JOIN TBLMUSTERI ON TBLSATIS.MUSTERIID=TBLMUSTERI.ID</Sql>
       </Query>
       <ResultSchema>
         <DataSet Name="SQL Data Source 1">
           <View Name="Query">
-            <Field Name="ISLEMNO" Type="Int32" />
+            <Field Name="AD" Type="String" />
             <Field Name="TOPLAMFIYAT" Type="Decimal" />
-            <Field Name="MÜŞTERİ" Type="String" />
-            <Field Name="TARIH" Type="DateTime" />
           </View>
         </DataSet>
       </ResultSchema>
@@ -29,13 +27,12 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Treemap ComponentName="treemapDashboardItem1" Name="Müşteri Alışları" DataSource="dashboardSqlDataSource1" DataMember="Query">
-      <InteractivityOptions MasterFilterMode="Multiple" />
+    <Treemap ComponentName="treemapDashboardItem1" Name="Müşteri Satış Dağılımı" DataSource="dashboardSqlDataSource1" DataMember="Query">
       <DataItems>
         <Measure DataMember="TOPLAMFIYAT" Name="Toplam" DefaultId="DataItem0">
           <NumericFormat FormatType="Number" Unit="Ones" IncludeGroupSeparator="true" CustomFormatString="" />
         </Measure>
-        <Dimension DataMember="MÜŞTERİ" DefaultId="DataItem1" />
+        <Dimension DataMember="AD" DefaultId="DataItem1" />
       </DataItems>
       <Values>
         <Value DefaultId="DataItem0" />
